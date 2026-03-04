@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Middle East Oil & Gas Job Board</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#f0f2f5; color:#1a1a2e; }
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color:white; padding:30px 20px; text-align:center; }
+.header h1 { font-size:2em; margin-bottom:8px; }
+.header p { opacity:0.8; font-size:0.95em; }
+.stats { display:flex; justify-content:center; gap:30px; margin-top:15px; flex-wrap:wrap; }
+.stat { text-align:center; }
+.stat .num { font-size:1.8em; font-weight:700; color:#E3713F; }
+.stat .label { font-size:0.8em; opacity:0.7; }
+.container { max-width:1200px; margin:0 auto; padding:20px; }
+.filters { background:white; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+.filter-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.filter-row input, .filter-row select { padding:10px 14px; border:1px solid #ddd; border-radius:8px; font-size:14px; background:white; }
+.filter-row input { flex:1; min-width:200px; }
+.filter-row select { min-width:160px; }
+.results-count { padding:10px 0; font-size:14px; color:#666; }
+.job-list { display:flex; flex-direction:column; gap:10px; }
+.job-card { background:white; border-radius:10px; padding:18px 20px; box-shadow:0 1px 4px rgba(0,0,0,0.06); transition:transform 0.2s, box-shadow 0.2s; border-left:4px solid #0f3460; }
+.job-card:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+.job-title { font-size:1.1em; font-weight:600; color:#1a1a2e; margin-bottom:6px; }
+.job-top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:6px; }
+.btn-apply { display:inline-block; padding:6px 16px; background:#E3713F; color:white; border-radius:6px; font-size:0.8em; font-weight:600; text-decoration:none; white-space:nowrap; transition:background 0.2s; }
+.btn-apply:hover { background:#c95e33; }
+.job-meta { display:flex; flex-wrap:wrap; gap:12px; font-size:0.85em; color:#666; }
+.job-meta span { display:flex; align-items:center; gap:4px; }
+.badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:0.75em; font-weight:600; }
+.badge-company { background:#e8f0fe; color:#1a73e8; }
+.badge-country { background:#fce8e6; color:#d93025; }
+.badge-category { background:#e6f4ea; color:#137333; }
+.pagination { display:flex; justify-content:center; gap:8px; margin-top:20px; flex-wrap:wrap; }
+.pagination button { padding:8px 14px; border:1px solid #ddd; border-radius:6px; background:white; cursor:pointer; font-size:14px; }
+.pagination button.active { background:#0f3460; color:white; border-color:#0f3460; }
+.pagination button:hover:not(.active) { background:#f0f2f5; }
+footer { text-align:center; padding:20px; color:#999; font-size:0.8em; }
+@media (max-width:768px) {
+  .filter-row { flex-direction:column; }
+  .filter-row input, .filter-row select { width:100%; }
+  .stats { gap:15px; }
+  .header h1 { font-size:1.5em; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Middle East <span style="color:#E3713F">Oil &amp; Gas</span> Job Board</h1>
+<p>Latest job vacancies from top oil &amp; gas companies in the Middle East</p>
+<div class="stats">
+<div class="stat"><div class="num">{{TOTAL_JOBS}}</div><div class="label">Total Jobs</div></div>
+<div class="stat"><div class="num">{{TOTAL_COMPANIES}}</div><div class="label">Companies</div></div>
+<div class="stat"><div class="num">{{TOTAL_COUNTRIES}}</div><div class="label">Countries</div></div>
+</div>
+<p style="margin-top:10px;opacity:0.6;font-size:0.8em;">Last updated: {{LAST_UPDATED}}</p>
+</div>
+
+<div class="container">
+<div class="filters">
+<div class="filter-row">
+<input type="text" id="searchInput" placeholder="Search jobs by title, company, or location..." oninput="filterJobs()">
+<select id="companyFilter" onchange="filterJobs()">
+<option value="">All Companies</option>
+{{COMPANY_OPTIONS}}
+</select>
+<select id="countryFilter" onchange="filterJobs()">
+<option value="">All Countries</option>
+{{COUNTRY_OPTIONS}}
+</select>
+<select id="categoryFilter" onchange="filterJobs()">
+<option value="">All Categories</option>
+{{CATEGORY_OPTIONS}}
+</select>
+</div>
+<div class="results-count" id="resultsCount"></div>
+</div>
+
+<div class="job-list" id="jobList"></div>
+<div class="pagination" id="pagination"></div>
+</div>
+
+<footer>
+<p>Data collected from official company career portals. Jobs may have been updated since last scrape.</p>
+<p>Generated on {{LAST_UPDATED}} | {{TOTAL_JOBS}} jobs from {{TOTAL_COMPANIES}} companies across {{TOTAL_COUNTRIES}} countries</p>
+</footer>
+
+<script>
+const JOBS = {{JOBS_JSON}};
+const PER_PAGE = 25;
+let filtered = JOBS;
+let page = 1;
+
+function filterJobs() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const comp = document.getElementById('companyFilter').value;
+  const ctry = document.getElementById('countryFilter').value;
+  const cat = document.getElementById('categoryFilter').value;
+  filtered = JOBS.filter(j => {
+    if (q && !(j.title.toLowerCase().includes(q) || j.company.toLowerCase().includes(q) || j.location.toLowerCase().includes(q) || j.category.toLowerCase().includes(q))) return false;
+    if (comp && j.company !== comp) return false;
+    if (ctry && j.country !== ctry) return false;
+    if (cat && j.category !== cat) return false;
+    return true;
+  });
+  page = 1;
+  render();
+}
+
+function render() {
+  const start = (page - 1) * PER_PAGE;
+  const end = start + PER_PAGE;
+  const slice = filtered.slice(start, end);
+
+  document.getElementById('resultsCount').textContent = `Showing ${start+1}-${Math.min(end, filtered.length)} of ${filtered.length} jobs`;
+
+  const list = document.getElementById('jobList');
+  list.innerHTML = slice.map(j => `
+    <div class="job-card">
+      <div class="job-top"><div class="job-title">${j.title}</div><a class="btn-apply" href="${j.link}" target="_blank" rel="noopener">Apply →</a></div>
+      <div class="job-meta">
+        <span class="badge badge-company">${j.company}</span>
+        <span class="badge badge-country">${j.country}</span>
+        ${j.category ? '<span class="badge badge-category">' + j.category + '</span>' : ''}
+        <span>📍 ${j.location}</span>
+        <span>📅 ${j.date}</span>
+      </div>
+    </div>
+  `).join('');
+
+  const pages = Math.ceil(filtered.length / PER_PAGE);
+  const pag = document.getElementById('pagination');
+  if (pages <= 1) { pag.innerHTML = ''; return; }
+  let btns = '';
+  if (page > 1) btns += `<button onclick="goPage(${page-1})">← Prev</button>`;
+  const startP = Math.max(1, page - 3);
+  const endP = Math.min(pages, page + 3);
+  if (startP > 1) btns += `<button onclick="goPage(1)">1</button><button disabled>...</button>`;
+  for (let i = startP; i <= endP; i++) btns += `<button class="${i===page?'active':''}" onclick="goPage(${i})">${i}</button>`;
+  if (endP < pages) btns += `<button disabled>...</button><button onclick="goPage(${pages})">${pages}</button>`;
+  if (page < pages) btns += `<button onclick="goPage(${page+1})">Next →</button>`;
+  pag.innerHTML = btns;
+}
+
+function goPage(p) { page = p; render(); window.scrollTo(0, document.querySelector('.filters').offsetTop - 10); }
+
+filterJobs();
+</script>
+</body>
+</html>
