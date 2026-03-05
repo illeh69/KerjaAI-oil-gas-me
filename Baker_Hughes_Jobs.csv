@@ -1,33 +1,742 @@
 Country,Company,Title,Category,Location,Date Posted,Link
-Saudi Arabia,Baker Hughes,Mechanical Assembler,Manufacturing,"Dammam, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R142486
-Saudi Arabia,Baker Hughes,Electrician,Manufacturing,"Dammam, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R151880
-Saudi Arabia,Baker Hughes,Gas Tech Equipment - Technician,Manufacturing,"Dammam, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R138858
-Saudi Arabia,Baker Hughes,Thin Section Specialist,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R158960
-Saudi Arabia,Baker Hughes,Coiled Tubing Drilling Field Specialist,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R158961
-UAE,Baker Hughes,Field Service Engineer - Centrifugal Compressor,Field Operations,"Abu Dhabi, Abu Dhabi, United Arab Emirates",2026-03-04,https://careers.bakerhughes.com/global/en/job/R159211
-Qatar,Baker Hughes,Field Service Engineer - Mechanical Heavy-Duty Gas Turbine,Field Operations,"Doha, Ad Dawhah, Qatar",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160536
-Qatar,Baker Hughes,Control Field Service Engineer,Field Operations,"Doha, Ad Dawhah, Qatar",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160498
-Saudi Arabia,Baker Hughes,Field Operator - Coiled Tubing (Saudi Nationals),Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R159531
-Oman,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Oman) 2026 Opportunities,Field Operations,Oman,2026-03-04,https://careers.bakerhughes.com/global/en/job/R158144
-UAE,Baker Hughes,Emerging Talent: Aspire - Sales & Commercial (UAE Nationals Only) 2026 opportunities,Sales,"Dubai, Dubai, United Arab Emirates",2026-03-04,https://careers.bakerhughes.com/global/en/job/R158557
-Saudi Arabia,Baker Hughes,Field Operator - Coiled Tubing,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R159913
-Saudi Arabia,Baker Hughes,Field Specialist - Drilling Services Measuring while Drilling,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160424
-Saudi Arabia,Baker Hughes,New Built Sales Manager MENAT,Sales,"Saudi Arabia, Riyadh, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R153558
-UAE,Baker Hughes,Cordant Solutions Technical Delivery Advisor,Digital Technology,"Jebel Ali, Dubai, United Arab Emirates",2026-03-04,https://careers.bakerhughes.com/global/en/job/R159723
-Kuwait,Baker Hughes,Junior Electronic Technician - Kuwaiti National Preferred,Services,"Al Ahmadi, Al Ahmadi, Kuwait",2026-03-04,https://careers.bakerhughes.com/global/en/job/R146933
-Saudi Arabia,Baker Hughes,Field Operator - Pressure Pumping,Field Operations,"Dhahran, Eastern Province, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160000
-UAE,Baker Hughes,Baker Hughes - UAE National Talent pool,Support Services,United Arab Emirates,2026-03-04,https://careers.bakerhughes.com/global/en/job/R160001
-UAE,Baker Hughes,Service Delivery Coordinator - Wellbore Intervention,Field Operations,"Abu Dhabi, Abu Dhabi, United Arab Emirates",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160002
-UAE,Baker Hughes,"Assembly, Maintenance, and Overhaul Technician - UAE National",Services,"Abu Dhabi, United Arab Emirates",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160003
-Iraq,Baker Hughes,Field Specialist - Artificial Lift,Field Operations,Iraq,2026-03-04,https://careers.bakerhughes.com/global/en/job/R160761
-Kuwait,Baker Hughes,Field Specialist - Artificial Lift,Field Operations,"Al Ahmadi, Al Ahmadi, Kuwait",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160762
-Saudi Arabia,Baker Hughes,New Frontiers - Middle East Sales Advisor,Sales,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160406
-UAE,Baker Hughes,Emerging Talent: LEAD - Field Engineer (UAE Nationals Only) 2026 Opportunities,Field Operations,United Arab Emirates,2026-03-04,https://careers.bakerhughes.com/global/en/job/R158336
-Iraq,Baker Hughes,Lead Sales Specialist - Artificial Lift,Sales,"Al Basrah, Al Basrah, Iraq",2026-03-04,https://careers.bakerhughes.com/global/en/job/R158138
-Saudi Arabia,Baker Hughes,Drilling Services Applications Engineer,Services,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160811
-Saudi Arabia,Baker Hughes,Service Delivery Coordinator - Drilling Services (Saudi national),Services,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R161132
-Saudi Arabia,Baker Hughes,Field Specialist - Directional Drilling,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R161427
-Saudi Arabia,Baker Hughes,Welder,Manufacturing,Saudi Arabia,2026-03-04,https://careers.bakerhughes.com/global/en/job/R152299
-Kuwait,Baker Hughes,Field Specialist - Wireline Services,Field Operations,"Al Ahmadi, Al Ahmadi, Kuwait",2026-03-04,https://careers.bakerhughes.com/global/en/job/R148417
-UAE,Baker Hughes,Warehouse and Yards manager - Completions and Wellbore Intervention,Services,"Dubai, Dubai, United Arab Emirates",2026-03-04,https://careers.bakerhughes.com/global/en/job/R157853
-Saudi Arabia,Baker Hughes,Lead Sales Specialist - Drilling Services,Sales,"Dhahran, Eastern Region, Saudi Arabia",2026-03-04,https://careers.bakerhughes.com/global/en/job/R160812
+Oman,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Oman) 2026 Opportunities,Field Operations,"Muscat, Masqaţ, Oman",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158144
+Iraq,Baker Hughes,Lead Sales Specialist - Artificial Lift,Sales,"Al Basrah, Al Başrah, Iraq",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158138
+Iraq,Baker Hughes,Field Specialist - Artificial Lift,Field Operations,"الرميله الشماليه, البصرة محافظة, Iraq",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100956
+Kuwait,Baker Hughes,Junior Electronic Technician - Kuwaiti National Preferred,Services,"Al Ahmadi, Al Aḩmadi, Kuwait",2026-03-05,https://careers.bakerhughes.com/global/en/job/R146933
+Kuwait,Baker Hughes,Field Specialist - Artificial Lift,Field Operations,"Al Ahmadi, Al Aḩmadi, Kuwait",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160762
+Kuwait,Baker Hughes,Field Specialist - Wireline Services,Field Operations,"Al Ahmadi, Al Aḩmadi, Kuwait",2026-03-05,https://careers.bakerhughes.com/global/en/job/R148417
+Germany,Baker Hughes,Ausbildung zur Fachkraft für Lagerlogistik (d/m/w),Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156554
+Italy,Baker Hughes,Flow Assembly & Testing Cell – Lead Manufacturing Engineer,Manufacturing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150807
+Italy,Baker Hughes,Contract Manager and Outsourcing Process Lead- IET Engineering Operations,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155873
+United States of America,Baker Hughes,"Product Management - Spring Co-op Internship (Skaneateles, NY) 2026 Opportunities",Business Leadership Programs,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156044
+Saudi Arabia,Baker Hughes,Mechanical Assembler,Manufacturing,"Dammam, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R142486
+Saudi Arabia,Baker Hughes,Electrician,Manufacturing,"Dammam, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151880
+China,Baker Hughes,University Internship - LEAD Intern 2026 Opportunities (China),Business Leadership Programs,"Tianjin, Tianjin, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156148
+Kazakhstan,Baker Hughes,Directional Drilling Field Specialist,Field Operations,"Aksay, Kazakhstan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R61875
+Brazil,Baker Hughes,Field Specialist - WLS,Field Operations,"Macaé, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153954
+Vietnam,Baker Hughes,University Internship - Software Test and Integration 2025 Opportunities (Vietnam),Business Leadership Programs,"Ho Chi Minh, Hồ Chí Minh, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157908
+Gabon,Baker Hughes,"Emerging Talent–Assembly, Maintenance & Overhaul Intern 2026 Opportunities (Gabon)",Business Leadership Programs,"Port Gentil, Gabon",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158345
+Saudi Arabia,Baker Hughes,Gas Tech Equipment - Technician,Manufacturing,"Dammam, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R138858
+Thailand,Baker Hughes,Sand Core Technician Operator,Manufacturing,"Chon Buri, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158455
+Thailand,Baker Hughes,Field Specialist – Drilling & Completion Fluids,Field Operations,"Bangkok, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150954
+Vietnam,Baker Hughes,Well Systems Mechanical Engineer - Project,Engineering/Technology,"Ho Chi Minh, Hồ Chí Minh, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155698
+Colombia,Baker Hughes,Aprendiz SENA,Business Leadership Programs,"Yopal, Casanare, Colombia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158835
+United Kingdom,Baker Hughes,UKAS Calibration Technician,Services,"Leicester, Leicestershire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156611
+Germany,Baker Hughes,Ausbildung zum Industriemechaniker (d/m/w),Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156403
+Germany,Baker Hughes,Ausbildung zum Zerspanungsmechaniker (d/m/w),Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156402
+Colombia,Baker Hughes,Aprendiz SENA,Business Leadership Programs,"Neiva, Huila, Colombia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158609
+Colombia,Baker Hughes,Aprendiz SENA,Business Leadership Programs,"Neiva, Huila, Colombia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158833
+Colombia,Baker Hughes,Aprendiz SENA,Business Leadership Programs,"Neiva, Huila, Colombia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158840
+Saudi Arabia,Baker Hughes,Thin Section Specialist,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158960
+Italy,Baker Hughes,Operatore di Controlli Non Distruttivi,Manufacturing,"Avenza, Massa-Carrara, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152211
+United States of America,Baker Hughes,"Wireline Field Operator - Tallmadge, OH",Field Operations,"Tallmadge, Ohio, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157836
+Saudi Arabia,Baker Hughes,Coiled Tubing Drilling Field Specialist,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158961
+Italy,Baker Hughes,Junior Control Software Engineer,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R135479
+Mexico,Baker Hughes,Lead Mechanical Design Engineer (Drill Bits),Engineering/Technology,"Queretaro, Querétaro, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152652
+Italy,Baker Hughes,Project Engineering Manager,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158472
+United Arab Emirates,Baker Hughes,Field Service Engineer - Centrifugal Compressor,Field Operations,"Abu Dhabi, Abu Dhabi, United Arab Emirates",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159211
+Brunei,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Brunei) 2026 Opportunities,Field Operations,"Kuala Belait, Belait, Brunei",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158913
+China,Baker Hughes,Emerging Talent: LEAD - Field Engineer (China) 2026 Opportunities,Field Operations,"Tianjin, Tianjin, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156149
+Australia,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Australia) 2026 Opportunities,Field Operations,"Jandakot, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158894
+Thailand,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Thailand) 2026 Opportunities,Field Operations,"Songkhla, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159517
+Vietnam,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Vietnam) 2026 Opportunities,Field Operations,"Vung Tau City, Bà Rịa–Vũng Tàu, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159516
+Thailand,Baker Hughes,Field Specialist - Cementing,Field Operations,"Songkhla, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156169
+United Kingdom,Baker Hughes,Warehouse Operative,Manufacturing,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159790
+Malaysia,Baker Hughes,University Internship - LEAD Intern 2026 Opportunities (Malaysia),Business Leadership Programs,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159727
+United States of America,Baker Hughes,Gear Repair Specialist,Manufacturing,"Lufkin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156082
+Germany,Baker Hughes,Ausbildung zum Mechatroniker (d/m/w),Business Leadership Programs,"Ahrensburg, Hamburg, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159873
+United States of America,Baker Hughes,Machinist-CNC/Manual,Manufacturing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R145338
+Germany,Baker Hughes,Ausbildung für Fachlagerist/Fachkraft für Lagerlogistik (d/f/m),Business Leadership Programs,"Wunstorf, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159906
+India,Baker Hughes,"Repair engineer  (Shop support, Departure Records)management",Engineering/Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150662
+United Kingdom,Baker Hughes,Mechanical technician,Manufacturing,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159910
+Italy,Baker Hughes,Junior Control System Engineer,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R135475
+United States of America,Baker Hughes,Assembly Operator,Manufacturing,"Pittsburgh, Pennsylvania, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159796
+Mexico,Baker Hughes,Mechanical Design Engineer,Engineering/Technology,"Queretaro, Querétaro, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153947
+Germany,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Germany) 2026 Opportunities,Field Operations,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159537
+United States of America,Baker Hughes,"Field Specialist - ESP (Artificial Lift) - Midland TX, Andrews TX,  Big Spring TX, & Carlsbad, NM",Field Operations,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155525
+Norway,Baker Hughes,"Lærlinger i Tananger, Norge / Apprenticeship in Tananger, Norway",Business Leadership Programs,"Tananger, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159862
+Malaysia,Baker Hughes,University Internship - Finance & Accounting 2026 Opportunities (Malaysia),Business Leadership Programs,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154616
+United States of America,Baker Hughes,Field Service Electrical Engineer,Field Operations,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160331
+Norway,Baker Hughes,"Assembly, Repair, Maintenance & Overhaul Technician - Electro Mechanic - Tractor",Services,"Stavanger, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159872
+United States of America,Baker Hughes,Turbomachinery- Controls Engineers (Houston or Remote),Engineering/Technology,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R119548
+United States of America,Baker Hughes,Field Service Winder Engineer,Field Operations,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160330
+United States of America,Baker Hughes,Field Service Mechanical Engineer,Field Operations,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160332
+United States of America,Baker Hughes,"AMO Electro-Mechanical Technician (Drilling Services) - Mt Pleasant, PA",Services,"Mount Pleasant, Pennsylvania, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157860
+United Kingdom,Baker Hughes,Electronics Technician,Manufacturing,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160540
+Qatar,Baker Hughes,Field Service Engineer - Mechanical Heavy-Duty Gas Turbine,Field Operations,"Doha, Ad Dawhah, Qatar",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160536
+Qatar,Baker Hughes,Control Field Service Engineer,Field Operations,"Doha, Ad Dawhah, Qatar",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160498
+India,Baker Hughes,Field Service Engineer - Mechanical Aero Derivative Gas Turbine,Field Operations,"Gurgaon, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R125383
+Italy,Baker Hughes,Equipment & Project Lead Project Manager,Project Management,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155170
+Mexico,Baker Hughes,"GTC Senior Tax Analyst Caribbean, Canada & AR WHT",Finance,"Mexico City, Ciudad de Mexico, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R149879
+United Kingdom,Baker Hughes,Project support Coordinator,Services,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158854
+Italy,Baker Hughes,Senior Project Manager,Project Management,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159909
+United States of America,Baker Hughes,Lead Commercial Specialist - Proposals,Sales,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R149867
+Italy,Baker Hughes,Process Quality Engineer - Farm Out,Manufacturing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R148842
+Mexico,Baker Hughes,"GTC Tax Analyst Caribbean, Canada & AR WHT",Finance,"Mexico City, Ciudad de Mexico, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R149877
+Italy,Baker Hughes,Process Quality Engineer - Talamona Plant,Manufacturing,"Talamona, Sondrio, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R148839
+United Kingdom,Baker Hughes,Lead Procurement Specialist,Sourcing,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156063
+United States of America,Baker Hughes,Global Sourcing Leader,Sourcing,"Sugar Land, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157226
+Italy,Baker Hughes,GTS Commodity/Buyer – Aero,Sourcing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156557
+United States of America,Baker Hughes,Commercial Governance leader,Sales,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158767
+Poland,Baker Hughes,Structural Lead Engineer – Subsea Manifolds Systems,Engineering/Technology,"Warsaw, Masovian, Poland",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156371
+China,Baker Hughes,Supplier Quality Engineer,Sourcing,"Shanghai, Shanghai, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151093
+Azerbaijan,Baker Hughes,Field Operator ( Cementing),Field Operations,"Baku, Balakən, Azerbaijan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153203
+India,Baker Hughes,Aero derivative Mechanical Design Engineer,Engineering/Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159691
+India,Baker Hughes,Lead Sourcing Specialist -Supplier Quality Assurance (Machining),Sourcing,"Hyderabad, Telangāna, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R142705
+Netherlands,Baker Hughes,Field Specialist- PPS,Field Operations,"Son En Breugel, North Brabant, Netherlands",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160036
+Netherlands,Baker Hughes,Field Engineer I - PPS_FLD-G,Field Operations,"Son En Breugel, North Brabant, Netherlands",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160038
+Italy,Baker Hughes,New Energy Solutions Product Manager,Product Management,"Bari, Bari, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153369
+Kazakhstan,Baker Hughes,Cementing Field Specialist,Field Operations,"Aksay, Kazakhstan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153534
+China,Baker Hughes,Field Specialist - SPS,Field Operations,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156733
+Nigeria,Baker Hughes,Service Delivery Coordinator – Drilling & Completion Fluids,Services,"Port Harcourt, Rivers, Nigeria",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157235
+United States of America,Baker Hughes,"LEAD - Field Engineer (Victoria, TX) 2026 Opportunities",Field Operations,"Victoria, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156047
+India,Baker Hughes,Aero derivative Mechanical Design Engineer,Engineering/Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155983
+United States of America,Baker Hughes,"Manufacturing - Fall Co-op Internship (Skaneateles, NY) 2026 Opportunities",Business Leadership Programs,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155980
+Thailand,Baker Hughes,Service Delivery Coordinator – Drilling & Completion Fluids,Services,"Bangkok, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150623
+United States of America,Baker Hughes,Lead R&D Mechanical Engineer,Engineering/Technology,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150831
+Italy,Baker Hughes,Aeroderivative Mechanical Design Engineer,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156346
+United States of America,Baker Hughes,CDL Delivery / Treater Driver,Field Operations,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160748
+United States of America,Baker Hughes,Applications Engineer Gen - Service Delivery Applications,Services,"Carlsbad, New Mexico, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160385
+Indonesia,Baker Hughes,Production Technologist,Engineering/Technology,"Jakarta, Jakarta Raya, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151947
+Guyana,Baker Hughes,"Field Specialist - Georgetown, GY",Field Operations,"Georgetown, Demerara-Mahaica, Guyana",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154244
+Czechia,Baker Hughes,Zámečník (m/ž),Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160186
+United Kingdom,Baker Hughes,Product Manager - Customer Qualifications,Product Management,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160067
+Brazil,Baker Hughes,Field Specialist - Controls - Gas Turbine / Compressors,Field Operations,"Macae, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R108792
+Italy,Baker Hughes,Mechanical Field Service Engineer - Heavy Duty/Aero Gas Turbine Specialist,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155975
+Japan,Baker Hughes,Plant Leader - Valves,Manufacturing,"Kariwa, Niigata, Japan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159136
+United States of America,Baker Hughes,"Senior Principal, Product Design and Engineering - Automation & Control",Engineering/Technology,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160135
+United Kingdom,Baker Hughes,Pipe Systems Tendering Engineer,Engineering/Technology,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160662
+United States of America,Baker Hughes,Sales Advisor - Completion & Well Intervention,Sales,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160568
+Italy,Baker Hughes,Lead Logistics Specialist - Logistics,Logistics,"Avenza, Massa-Carrara, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159962
+Italy,Baker Hughes,Manufacturing Engineer (d/f/m),Manufacturing,"Talamona, Sondrio, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154748
+China,Baker Hughes,"Enterprise Sales Leader, China (Cordant Solutions)",Sales,"Shanghai, Shanghai, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159291
+United Kingdom,Baker Hughes,Lead Sales Specialist,Sales,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160658
+India,Baker Hughes,Senior Full Stack Developer (Node + Angular),Digital Technology,"Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160400
+United States of America,Baker Hughes,Junior Field Services Engineer,Services,"Columbus, Ohio, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153126
+Canada,Baker Hughes,"LEAD - Field Engineer (Leduc, AB) 2026 Opportunities",Field Operations,"Leduc, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156050
+Canada,Baker Hughes,"LEAD - Field Engineer (Calgary, AB) 2026 Opportunities",Field Operations,"Calgary, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156051
+United States of America,Baker Hughes,"Sourcing Initiatives Lead - Houston, TX/Aberdeen, UK",Sourcing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152642
+United States of America,Baker Hughes,Lead Sales Specialist,Sales,"Columbus, Ohio, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160417
+United States of America,Baker Hughes,"Engineer 1, Product Design and Engineering - Mechanical",Engineering/Technology,"Pasadena, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159901
+United States of America,Baker Hughes,Services Experienced Professional - Commissioning,Services,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160684
+Netherlands,Baker Hughes,Field Operator,Field Operations,"Son En Breugel, North Brabant, Netherlands",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160746
+China,Baker Hughes,Mechanical Design Engineer - Valves,Engineering/Technology,"Suzhou, Jiangsu, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R146161
+Norway,Baker Hughes,ARMO Mechanic,Services,"Tananger, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160758
+United States of America,Baker Hughes,Wireline Field Crew Lead,Field Operations,"Tallmadge, Ohio, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157851
+United States of America,Baker Hughes,Manufacturing Equipment Operator,Manufacturing,"Claremore, Oklahoma, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160720
+Italy,Baker Hughes,Control Field Service Engineer,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155974
+Saudi Arabia,Baker Hughes,Field Operator - Coiled Tubing (Saudi Nationals),Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159531
+Thailand,Baker Hughes,Field Specialist – Drilling & Completion Fluids,Field Operations,"Songkhla, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158909
+United States of America,Baker Hughes,Sales Senior Specialist - Completions & Well Intervention,Sales,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160719
+India,Baker Hughes,Radiography Systems Sales Manager,Sales,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159843
+United States of America,Baker Hughes,Manufacturing Equipment Operator,Manufacturing,"Claremore, Oklahoma, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160688
+Taiwan,Baker Hughes,Machinist,Manufacturing,"Hsinchu, Hsinchu County, Taiwan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151535
+Singapore,Baker Hughes,Service Enablement Lead-Singapore,Services,"Singapore, Central Singapore, Singapore",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156910
+China,Baker Hughes,Field Service Engineer - Subsea Christmas Tree,Field Operations,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158911
+China,Baker Hughes,Field Service Engineer - Controls,Field Operations,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158912
+United Kingdom,Baker Hughes,Senior Electronic Engineer,Engineering/Technology,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160000
+United States of America,Baker Hughes,Lead Sales Specialist,Sales,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160418
+France,Baker Hughes,Technicien(ne) Services Après-vente (F/H),Field Operations,"Fougerolles, Haute-Saone, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156146
+Malaysia,Baker Hughes,Remote Professional General,Field Operations,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160344
+United States of America,Baker Hughes,Petrochemical and Process Fouling Control Technical Support Specialist,Engineering/Technology,"Sugar Land, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159735
+Czechia,Baker Hughes,Dělník v cívkárně (m/ž),Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150103
+United States of America,Baker Hughes,"Field Specialist (Upstream Chemicals) - Pecos, TX",Field Operations,"Carlsbad, New Mexico, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154919
+Algeria,Baker Hughes,Aero Senior Field Service Engineer,Field Operations,"Boufarik, Blida, Algeria",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160852
+Italy,Baker Hughes,Aero Senior Field Service Engineer,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160849
+China,Baker Hughes,Senior Sales Manager - Technical Sales,Sales,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159220
+United Kingdom,Baker Hughes,Emerging Talent – Purchasing Intern 2026 Opportunities (Montrose),Business Leadership Programs,"Montrose, Angus, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159882
+Italy,Baker Hughes,Emerging Talent – Finance 2026 Opportunities (Florence),Finance,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158417
+Germany,Baker Hughes,Emerging Talent: ASPIRE - Supply Chain (Germany) 2026 Opportunities,Manufacturing,"Frankfurt, Hesse, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156074
+Italy,Baker Hughes,Emerging Talent: ASPIRE - Supply Chain (Italy) 2026 Opportunities,Manufacturing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156075
+Germany,Baker Hughes,Emerging Talent – Function Development/Modelling and Simulation Intern 2026 Opportunities (Celle),Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158057
+Slovakia,Baker Hughes,Emerging Talent – Engineering Intern 2026 Opportunities (Nové Mesto),Business Leadership Programs,"Bratislavský kraj, Slovakia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158469
+United Kingdom,Baker Hughes,Emerging Talent – Manufacturing Intern 2026 Opportunities (Newcastle),Business Leadership Programs,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159879
+Italy,Baker Hughes,Emerging Talent – Sales and Commercial Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158403
+Italy,Baker Hughes,Emerging Talent – Engineering Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158404
+Italy,Baker Hughes,Emerging Talent– Manufacturing Intern 2026 Opportunities (Massa),Business Leadership Programs,"Avenza, Massa-Carrara, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158412
+Italy,Baker Hughes,Emerging Talent – Strategy & Growth Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159877
+Italy,Baker Hughes,"Emerging Talent – Manufacturing Intern 2026 Opportunities (Talamona, Sondrio)",Business Leadership Programs,"Talamona, Sondrio, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158415
+Singapore,Baker Hughes,"Lead Engineer, Mechanical, Customer Order Engineering - Customer Application Engineering (Subsea Wellhead Casing Solution)",Engineering/Technology,"Singapore, Central Singapore, Singapore",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160590
+Singapore,Baker Hughes,"Lead Engineer, Mechanical, Customer Order Engineering - Customer Project Engineering (Subsea Wellhead Casing Solution)",Engineering/Technology,"Singapore, Central Singapore, Singapore",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160589
+Australia,Baker Hughes,Field Supervisor - Process & Pipeline Services,Field Operations,"Welshpool, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R149921
+United Arab Emirates,Baker Hughes,Emerging Talent: Aspire - Sales & Commercial (UAE Nationals Only) 2026 opportunities,Sales,"Dubai, Dubai, United Arab Emirates",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158557
+France,Baker Hughes,Ingénieur(e) Support Technique sites Clients (spécialité moteurs électriques et variateurs) (F/H),Engineering/Technology,"Le Creusot, Saone-et-Loire, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R148661
+France,Baker Hughes,Usineur CN F/H,Manufacturing,"Fougerolles, Haute-Saone, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158142
+United Kingdom,Baker Hughes,Aero Senior Field Service Engineer,Field Operations,"London, London, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160853
+United States of America,Baker Hughes,Quality Specialist – TRS,Quality,"Lufkin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160415
+United States of America,Baker Hughes,Executive Assistant I,Support Services,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160646
+United States of America,Baker Hughes,Reliability Engineer,Services,"Minden, Nevada, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160371
+United Kingdom,Baker Hughes,Emerging Talent – Quality Intern 2026 Opportunities (Aberdeen),Business Leadership Programs,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159885
+United Kingdom,Baker Hughes,Emerging Talent – Engineering Intern 2026 Opportunities (Nailsea),Business Leadership Programs,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159886
+Germany,Baker Hughes,"Emerging Talent - Praktikum, Bachelor- und Masterarbeit– Firmware, Software und Informatik 2026 (Celle)",Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158066
+United Kingdom,Baker Hughes,Emerging Talent – Finance 2026 Opportunities (Newcastle),Business Leadership Programs,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159878
+Norway,Baker Hughes,Sourcing Intern,Business Leadership Programs,"Stavanger, Rogaland, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157779
+Italy,Baker Hughes,Emerging Talent – Marketing Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158414
+United Kingdom,Baker Hughes,Emerging Talent – Purchasing Intern 2026 Opportunities (Aberdeen),Business Leadership Programs,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159887
+Germany,Baker Hughes,"Emerging Talent - Praktikum, Bachelor- und Masterarbeit– Elektrotechnik und Elektronik 2026 (Celle)",Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158058
+United Kingdom,Baker Hughes,Engineering Intern,Business Leadership Programs,"Abingdon, Oxfordshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157688
+Germany,Baker Hughes,"Emerging Talent – Geology, Geosciences or Geophysics Intern 2026 Opportunities (Celle)",Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158056
+United Kingdom,Baker Hughes,Emerging Talent – Sourcing Intern 2026 Opportunities (Newcastle),Business Leadership Programs,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159888
+United Kingdom,Baker Hughes,Commercial Operations Intern,Business Leadership Programs,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157680
+Italy,Baker Hughes,Emerging Talent – Business Leadership Programs Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159874
+Italy,Baker Hughes,Emerging Talent: ASPIRE – Finance Italy 2026 Opportunities,Finance,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156974
+United Kingdom,Baker Hughes,Emerging Talent: ASPIRE – Finance United Kingdom 2026 Opportunities,Finance,"London, London, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156972
+Italy,Baker Hughes,Emerging Talent – HR Intern – Analytics 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159775
+Italy,Baker Hughes,Emerging Talent – Manufacturing Intern 2026 Opportunities (Vibo),Business Leadership Programs,"Vibo Valentia, Vibo Valentia, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158419
+Kazakhstan,Baker Hughes,Emerging Talent –Field Service Engineering Intern 2026 Opportunities (Kazakhstan ),Business Leadership Programs,"Aksay, Kazakhstan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159150
+Italy,Baker Hughes,Emerging Talent – Business System Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159849
+Germany,Baker Hughes,"Emerging Talent - Praktikum, Bachelor- und Masterarbeit – System- und Datenanalyse 2026 (Celle)",Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158064
+United Kingdom,Baker Hughes,Emerging Talent – Sourcing Intern 2026 Opportunities (Nailsea),Business Leadership Programs,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159881
+Italy,Baker Hughes,Emerging Talent – Communications Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158406
+Italy,Baker Hughes,Emerging Talent – Project Management Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158409
+United States of America,Baker Hughes,Gas Turbine Mechanic,Manufacturing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160898
+United States of America,Baker Hughes,Lead Sales Specialist (eligible to Sales Incentive Plan) - Channel Sales,Sales,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159972
+Guyana,Baker Hughes,Field Specialist (Surface Logging Systems),Field Operations,"Georgetown, Guyana",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160754
+United States of America,Baker Hughes,Lead Sales Specialist (eligible to Sales Incentive Plan) - SalesA,Sales,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159971
+United Kingdom,Baker Hughes,Lead Buyer,Sourcing,"Montrose, Angus, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160653
+France,Baker Hughes,Global Nuclear Supplier Quality Lead (F/H),Sourcing,"Conde-Sur-Noireau, Calvados, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160517
+France,Baker Hughes,Ingénieur(e) matériaux et procédés confirmé(e) (F/H),Engineering/Technology,"Le Creusot, Saone-et-Loire, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159285
+Saudi Arabia,Baker Hughes,Field Operator - Coiled Tubing,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159913
+United Kingdom,Baker Hughes,Emerging Talent – Engineering Intern 2026 Opportunities (Aberdeen),Business Leadership Programs,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159893
+United Kingdom,Baker Hughes,Emerging Talent – Purchasing Intern 2026 Opportunities (Newcastle),Business Leadership Programs,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159911
+United Kingdom,Baker Hughes,Emerging Talent – Quality Intern 2026 Opportunities (Nailsea),Business Leadership Programs,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159892
+Italy,Baker Hughes,Emerging Talent: ASPIRE - Digital Technology (Italy) 2026 Opportunities,Digital Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159914
+United Kingdom,Baker Hughes,Emerging Talent: ASPIRE - Supply Chain (United Kingdom) 2026 Opportunities,Manufacturing,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156068
+Belgium,Baker Hughes,Emerging Talent: ASPIRE - Sales & Commercial (Belgium) 2026 Opportunities,Sales,"Belgium - Remote, Brussels-Capital Region, Belgium",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158526
+Norway,Baker Hughes,Emerging Talent – Quality Intern 2026 Opportunities (Norway),Business Leadership Programs,"Stavanger, Rogaland, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158421
+Malaysia,Baker Hughes,Technical Delivery Lead,Digital Technology,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159721
+United Kingdom,Baker Hughes,Emerging Talent – Digital Technology Intern 2026 Opportunities (Cramlington),Business Leadership Programs,"Cramlington, Northumberland, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159889
+United Kingdom,Baker Hughes,Emerging Talent – Legal Intern 2026 Opportunities (London),Business Leadership Programs,"London, London, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159890
+United Kingdom,Baker Hughes,Emerging Talent – Digital Technology Intern 2026 Opportunities (Aberdeen),Business Leadership Programs,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159891
+Italy,Baker Hughes,Emerging Talent – GTS Training Academy Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158413
+United States of America,Baker Hughes,"Engineering & Technology - Summer Internship (Midland, TX) 2026 Opportunities",Business Leadership Programs,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155889
+Brazil,Baker Hughes,Aero Senior Field Service Engineer,Field Operations,"Macae, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160956
+United States of America,Baker Hughes,Field Specialist III - DSC,Field Operations,"El Dorado, Arkansas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160914
+India,Baker Hughes,Field Service Engineer – Heavy Duty Gas Turbine,Field Operations,"Gurgaon, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R90095
+India,Baker Hughes,Field Service Engineer - Instrumentation & Controls (Mark VIe/Mark VI/ Mark V),Field Operations,"Gurgaon, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R139460
+Azerbaijan,Baker Hughes,Wireline General Field Engineer,Field Operations,"Baku, Azerbaijan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160347
+Italy,Baker Hughes,Finance Senior Advisor - Controllership Management,Finance,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160733
+United States of America,Baker Hughes,Service Technician,Manufacturing,"Pasadena, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160927
+Malaysia,Baker Hughes,Finance Professional - Operational,Finance,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161050
+Nigeria,Baker Hughes,Emerging Talent: LEAD - Field Engineer (NIGERIA) 2026 Opportunities,Field Operations,"Nigeria - Remote, Federal Capital, Nigeria",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159543
+Guyana,Baker Hughes,Offshore Lab Technician,Field Operations,"Georgetown, Guyana",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161047
+United States of America,Baker Hughes,Field Specialist I - PT,Field Operations,"Harrisburg, Pennsylvania, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160984
+United States of America,Baker Hughes,Field Specialist II - DSC,Field Operations,"Sugar Land, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160913
+Suriname,Baker Hughes,"LEAD - Field Engineer (Paramaribo, Suriname) 2026 Opportunities",Field Operations,"Paramaribo, Suriname",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157802
+Italy,Baker Hughes,Emerging Talent - Sourcing Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158134
+Guyana,Baker Hughes,"Field Engineer - Fall Co-op Internship (Georgetown, GY) 2026 Opportunities",Business Leadership Programs,"Georgetown, Guyana",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155927
+United States of America,Baker Hughes,ASPIRE - Finance (United States) 2026 Opportunities,Finance,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156084
+United States of America,Baker Hughes,ASPIRE - Sales & Commercial (United States) 2026 Opportunities,Sales,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156085
+United Kingdom,Baker Hughes,Product Delivery Manager- Procurement,Sourcing,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160964
+Saudi Arabia,Baker Hughes,Field Specialist - Drilling Services Measuring while Drilling,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160424
+Saudi Arabia,Baker Hughes,New Built Sales Manager MENAT,Sales,"Saudi Arabia, Riyadh, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153558
+Peru,Baker Hughes,Sr. Contract Performance Manager,Services,"Lima, Lima, Peru",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151773
+United States of America,Baker Hughes,"Engineering & Technology - Summer Internship (Skaneateles, NY) 2026 Opportunities",Business Leadership Programs,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155882
+United States of America,Baker Hughes,"Quality - Summer Internship (Houston, TX) 2026 Opportunities",Business Leadership Programs,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155910
+United States of America,Baker Hughes,Rotor Shop Machinist,Manufacturing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R149451
+United Kingdom,Baker Hughes,Account Manager,Services,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160669
+United Kingdom,Baker Hughes,Warehouse Operator,Manufacturing,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160863
+India,Baker Hughes,Field Service Engineer – Steam Turbine,Field Operations,"Gurgaon, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152196
+Norway,Baker Hughes,Field Specialist – Cased Hole Wellbore Intervention,Field Operations,"Tananger, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159270
+China,Baker Hughes,Product Marketing Specialist,Marketing,"Suzhou, Jiangsu, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160132
+Namibia,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Namibia) 2026 Opportunities,Field Operations,"Windhoek, Namibia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159542
+Thailand,Baker Hughes,Applications Engineer Gen,Services,"Bangkok, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160309
+Thailand,Baker Hughes,Applications Engineer II,Services,"Bangkok, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160308
+Indonesia,Baker Hughes,Quality Specialist - Records Control,Manufacturing,"Batam, Riau, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159302
+Canada,Baker Hughes,"LEAD - Field Engineer (Quebec City, QC) 2026 Opportunities",Field Operations,"Quebec City, Quebec, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156266
+Guyana,Baker Hughes,"LEAD - Field Engineer (Georgetown, Guyana) 2026 Opportunities",Field Operations,"Georgetown, Guyana",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157801
+Norway,Baker Hughes,Service Delivery Coordinator-Wellbore Intervention,Services,"Tananger, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159272
+United States of America,Baker Hughes,Electromechanical Assembly Technician – Rotating Equipment,Manufacturing,"Pittsburgh, Pennsylvania, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159797
+United States of America,Baker Hughes,"LEAD - Field Engineer (Buckhannon, WV) 2026 Opportunities",Field Operations,"Buckhannon, West Virginia, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156048
+United Kingdom,Baker Hughes,Manufacturing Equipment Operator,Manufacturing,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161067
+Malaysia,Baker Hughes,Senior Software Sales Manager - Oilfield Services & Equipment,Sales,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159169
+Vietnam,Baker Hughes,"Engineer 1, Customer Order Engineering - Embedded Software",Engineering/Technology,"Ho Chi Minh, Hồ Chí Minh, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160622
+Kazakhstan,Baker Hughes,Field Specialist - Logging / Measurement while Drilling,Field Operations,"Aksay, Kazakhstan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160668
+United Kingdom,Baker Hughes,Manufacturing Intern,Business Leadership Programs,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157685
+United Kingdom,Baker Hughes,Project ITO Quality Specialist,Quality,"Montrose, Angus, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159386
+United States of America,Baker Hughes,Wireline Field Operator,Field Operations,"Buckhannon, West Virginia, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158498
+United States of America,Baker Hughes,Sales Manager - Industrial Power Generation - Steam Turbines,Sales,"Richmond, Virginia, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159119
+Vietnam,Baker Hughes,"Lead Engineer, Customer Order Engineering - Embedded Software",Engineering/Technology,"Ho Chi Minh, Hồ Chí Minh, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160621
+United States of America,Baker Hughes,Business Development Manager - SMR,Business Development,"Richmond, Virginia, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159127
+India,Baker Hughes,Field Service Engineer - Centrifugal Compressor,Field Operations,"Gurgaon, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R69642
+Poland,Baker Hughes,"Senior / Lead Engineer, Product Development & New Technology (multiple positions)",Engineering/Technology,"Warsaw, Masovian, Poland",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160466
+Italy,Baker Hughes,Facility maintenance manager,Manufacturing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152206
+Germany,Baker Hughes,Customer Advocate (d/f/m) Fixed-Term (2 years),Services,"Wunstorf, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159817
+Germany,Baker Hughes,Customer Advocate (d/f/m),Services,"Wunstorf, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159823
+Malaysia,Baker Hughes,Sales Manager,Sales,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160365
+Saudi Arabia,Baker Hughes,Field Operator - Pressure Pumping,Field Operations,"Dhahran, Eastern Province, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100978
+United Arab Emirates,Baker Hughes,Baker Hughes – UAE National Talent pool,Support Services,United Arab Emirates,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100979
+India,Baker Hughes,Field Specialist II,Field Operations,"Taloja, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161080
+India,Baker Hughes,Field Specialist-I,Field Operations,"Taloja, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161079
+United Kingdom,Baker Hughes,Key Account Manager,Sourcing,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160901
+India,Baker Hughes,Pneumatic Components Design Engineer,Engineering/Technology,"Coimbatore, Tamil Nādu, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160414
+Canada,Baker Hughes,Project Management Senior Specialist - Installation Leadership,Project Management,"Calgary, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160925
+United States of America,Baker Hughes,Field Specialist III,Field Operations,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160890
+United States of America,Baker Hughes,"Machinery Diagnostics Field Engineer (East Region, US)",Services,"Springfield, Illinois, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160742
+Italy,Baker Hughes,Digital Services Product Growth Manager,Services,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159967
+Italy,Baker Hughes,QC NDT Coordinator,Manufacturing,"Avenza, Massa-Carrara, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156573
+United Kingdom,Baker Hughes,Emerging Talent – Project Management Intern 2026 Opportunities (Ashby),Business Leadership Programs,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159884
+United States of America,Baker Hughes,Machinist V,Manufacturing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159371
+United States of America,Baker Hughes,Data Scientist,Digital Technology,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156820
+United States of America,Baker Hughes,"Engineering & Technology - Fall Co-op Internship (Skaneateles, NY) 2026 Opportunities",Business Leadership Programs,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155879
+Czechia,Baker Hughes,"Balič/Obalář (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160895
+United States of America,Baker Hughes,Field Specialist - Power Transmission,Field Operations,"Montgomery, Alabama, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158314
+United States of America,Baker Hughes,Field Technician Foreman - API 653,Field Operations,"Oklahoma City, Oklahoma, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154130
+United States of America,Baker Hughes,Machinery Diagnostics Field Engineer,Services,"Baton Rouge, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154657
+Canada,Baker Hughes,Senior Sales Manager – Software Sales,Sales,"Calgary, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159183
+United States,Baker Hughes,R109188 CNC Machinist,Manufacturing,"Houston, Texas, United States",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100736
+Australia,Baker Hughes,Workshop Mechanic - Process & Pipeline Services,Services,"Welshpool, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100760
+Malaysia,Baker Hughes,Payroll Accounting Senior Analyst,Finance,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100761
+China,Baker Hughes,Mechanical Field Service Engineer,Services,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100768
+China,Baker Hughes,Sales Manager,Business Development,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100782
+China,Baker Hughes,Control Field Service Engineer,Services,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100806
+China,Baker Hughes,Valves Sales Specialist - Nuclear Industry,Sales,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100808
+Singapore,Baker Hughes,Valve Assembly Technician,Engineering/Technology,Singapore,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100812
+Italy,Baker Hughes,Project Manager,Project Management,"Milan, Lombardy, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100821
+Italy,Baker Hughes,Estimating and Proposal Manager,Engineering/Technology,"Milan, Lombardy, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100822
+Vietnam,Baker Hughes,Field Service Engineer Light Well Intervention (LWI),O&G Field,Vietnam,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100835
+Vietnam,Baker Hughes,Field Service Engineer – Wellheads,O&G Field,Vietnam,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100836
+Vietnam,Baker Hughes,Field Service Engineer – Completions,O&G Field,Vietnam,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100837
+Vietnam,Baker Hughes,Field Service Engineer – Controls,O&G Field,Vietnam,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100838
+New Zealand,Baker Hughes,Materials Engineer,Other,"Upper Hutt, Wellington, New Zealand",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100845
+Papua New Guinea,Baker Hughes,"APAC-OFSE- Warehouse & Yard Associate, REG Supply Chain - PNG",Logistics,Papua New Guinea,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100854
+Taiwan,Baker Hughes,Machinery Diagnostics Service Engineer - Industrial Solutions,Engineering/Technology,"Hsinchu City, Taiwan",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100858
+China,Baker Hughes,Reliability Engineer- Drilling Services,Engineering/Technology,"Ürümqi, Xinjiang, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100859
+China,Baker Hughes,Field Specialist - Pressure Pumping,Field Operations,"Tianjin, Tianjin, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100862
+China,Baker Hughes,Reliability Engineer- Drilling Services,Engineering/Technology,"Haikou, Hainan, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100865
+Thailand,Baker Hughes,Cementing Field Specialist,Field Operations,"Songkhla, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100880
+Australia,Baker Hughes,General Field Operator – Wireline / E-Line,Field Operations,"Gidgealpa, South Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100888
+Australia,Baker Hughes,General Field Engineer – Wireline / E-Line,Field Operations,"Gidgealpa, South Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100889
+Australia,Baker Hughes,Senior Field Engineer – Wireline / E-Line,Field Operations,"Gidgealpa, South Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100890
+Australia,Baker Hughes,Senior Field Operator – Wireline / E-Line,Field Operations,"Gidgealpa, South Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100891
+Australia,Baker Hughes,General Field Specialist – Wireline / E-Line,Field Operations,"Gidgealpa, South Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100892
+Italy,Baker Hughes,Lead Compressor Design Engineer,Engineering/Technology,"Florence, Tuscany, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100898
+Italy,Baker Hughes,Shop Operator,Manufacturing,"Florence, Tuscany, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100899
+Malaysia,Baker Hughes,InterCompany Analyst,Finance,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100904
+France,Baker Hughes,Forum Emploi UIMM,Other,"Le Creusot, Bourgogne-Franche-Comté, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100905
+China,Baker Hughes,Mechanical Field Service Engineer,Engineering/Technology,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100907
+China,Baker Hughes,Control Field Service Engineer,Engineering/Technology,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100908
+China,Baker Hughes,AMO Technician,Support Services,"Tianjin, Tianjin, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100911
+Malaysia,Baker Hughes,Senior Internal Auditor,Finance,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100915
+Malaysia,Baker Hughes,Tax Analyst (Corporate tax),Finance,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100916
+Malaysia,Baker Hughes,Tax Analyst (Indirect tax),Finance,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100917
+Malaysia,Baker Hughes,Global Tax Analyst (Mandarin speaker),Finance,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100918
+China,Baker Hughes,Masoneilan Product Manager - China,Engineering/Technology,"Suzhou, Jiangsu, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100922
+Indonesia,Baker Hughes,Area Sales Representative - Completions & Well Intervention,Sales,"Jakarta, Jakarta, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100926
+Australia,Baker Hughes,R146646 Workshop Technician,Engineering/Technology,"Jandakot, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100927
+South Korea,Baker Hughes,HSE Manager,Other,"Seoul, South Korea",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100930
+Singapore,Baker Hughes,Project Execution Account Manager,Project Management,Singapore,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100931
+Malaysia,Baker Hughes,Lead Diagnostic Engineer,Other,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100937
+Malaysia,Baker Hughes,Lead Sales Specialist - Valves,Sales,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100938
+United Arab Emirates,Baker Hughes,Service Delivery Coordinator - Wellbore Intervention,O&G Field,"Abu Dhabi, Abu Dhabi, United Arab Emirates",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100939
+South Korea,Baker Hughes,Project Manager - Valves,Project Management,"Seoul, South Korea",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100941
+India,Baker Hughes,Cased Hole Geoscientist,Engineering/Technology,"Mumbai, Maharashtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100942
+France,Baker Hughes,Dessinateur(trice) Projeteur(se) (F/H),Engineering/Technology,"Le Creusot, Bourgogne-Franche-Comté, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100946
+United Arab Emirates,Baker Hughes,"Assembly, Maintenance, and Overhaul Technician - UAE National",Services,"Abu Dhabi, Abu Dhabi, United Arab Emirates",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100948
+France,Baker Hughes,Superviseur(se) mécanique (F/H),Field Operations,"Le Creusot, Bourgogne-Franche-Comté, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100962
+Australia,Baker Hughes,Field Specialist - Wellbore Intervention/Fishing,Field Operations,"Jandakot, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100963
+Vietnam,Baker Hughes,Lead Design Engineer,Engineering/Technology,Vietnam,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100967
+Vietnam,Baker Hughes,Lead Engineer – Subsea Distribution Systems,Engineering/Technology,Vietnam,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100968
+Indonesia,Baker Hughes,Service Delivery Technical Manager,Engineering/Technology,"Jakarta, Jakarta, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100969
+Indonesia,Baker Hughes,Service Delivery Coordinator – Gravel Pack & Sand Control Tools,Field Operations,"Jakarta, Jakarta, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100970
+Japan,Baker Hughes,Sales Specialist - Panametrics,Sales,"Chuo City, Tokyo, Japan",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100971
+Malaysia,Baker Hughes,Consortium Interface Manager - Subsea Projects,Engineering/Technology,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100972
+Australia,Baker Hughes,Service Delivery Coordinator – Wireline Services,Engineering/Technology,"Victoria, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100974
+Australia,Baker Hughes,Field Specialist - Wellbore Intervention/Fishing,Engineering/Technology,"Perth, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100976
+Italy,Baker Hughes,Field Service Control Systems Engineer,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158660
+Italy,Baker Hughes,Control Field Service Engineer,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158747
+United States of America,Baker Hughes,Electrical Technician,Manufacturing,"Pittsburgh, Pennsylvania, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159795
+United States of America,Baker Hughes,Sr Quality Manager Lean Sensei - Operational Excellence,Quality,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159307
+United States of America,Baker Hughes,Lead Treasury Analyst,Finance,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159354
+Canada,Baker Hughes,Field Manager (Upstream Chemicals),Services,"Fort Mcmurray, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159189
+United States of America,Baker Hughes,Refinery Site Manager (Downstream Chemicals),Sales,"New Orleans, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156953
+Indonesia,Baker Hughes,Field Specialist – Wellbore Construction,Field Operations,"Jakarta, Jakarta Raya, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159265
+Indonesia,Baker Hughes,Field Supervisor I - Wellbore Intervention,Field Operations,"Jakarta, Jakarta Raya, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153901
+Australia,Baker Hughes,Junior Control Field Service Engineer - Field Specialist I,Field Operations,"Perth, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158928
+India,Baker Hughes,"Software Engineer (C#, WPF)",Digital Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160979
+India,Baker Hughes,"Software Engineering Manager (C#, WPF, X-Ray/NDT)",Digital Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160981
+India,Baker Hughes,"Senior Software Engineer (C#, WPF)",Digital Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160978
+United States of America,Baker Hughes,Field Specialist III LWD/DD,Field Operations,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160011
+Czechia,Baker Hughes,"Dílenské plánování výroby (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157133
+Czechia,Baker Hughes,"Zkušební technik vysokého napětí (m,ž)",Quality,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160210
+United States of America,Baker Hughes,Field Specialist IV.,Field Operations,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152651
+United States of America,Baker Hughes,Gas Turbines Repair Engineers,Engineering/Technology,"Channelview, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151434
+United States of America,Baker Hughes,"Manufacturing Engineer (Chemicals) – Sugar Land, TX",Manufacturing,"Sugar Land, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153023
+United States of America,Baker Hughes,Digital Technical Pre-Sales Leader,Digital Technology,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159200
+Czechia,Baker Hughes,"Project Management Specialist - Project Leadership (m,ž)",Project Management,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160176
+France,Baker Hughes,Préparateur Qualité SAV (F/H),Services,"Conde-Sur-Noireau, Calvados, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159016
+Poland,Baker Hughes,Emerging Talent: Engineering Intern 2026 Opportunities (Warsaw),Business Leadership Programs,"Warsaw, Masovian, Poland",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158192
+United States of America,Baker Hughes,CDL Driver Class A plus Hazmat. Treater / Delivery Driver,Field Operations,"Jena, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157193
+United Kingdom,Baker Hughes,Service Delivery Coordinator-Wellbore Intervention,Services,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159273
+Canada,Baker Hughes,Account Manager (Upstream Chemicals),Services,"Virden, Manitoba, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161085
+United States of America,Baker Hughes,Field/Site Account Specialist - Sales Enabler,Sales,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156954
+United States of America,Baker Hughes,Services Customer Care Representative,Sales,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161001
+United States of America,Baker Hughes,Field Specialist II,Field Operations,"Oklahoma City, Oklahoma, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160926
+United States of America,Baker Hughes,CDL Delivery / Treater Driver,Field Operations,"Hobbs, New Mexico, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161112
+United States of America,Baker Hughes,Lead Sourcing Specialist - Buying/Procurement,Sourcing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160381
+Czechia,Baker Hughes,"Dílenské plánování výroby (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157122
+Czechia,Baker Hughes,"Process Engineer for Energy Systems (m,ž)",Engineering/Technology,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160175
+Czechia,Baker Hughes,Quality Engineer (ž/m),Engineering/Technology,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157088
+Slovakia,Baker Hughes,Operátor predvýroby,Manufacturing,"Bratislavský kraj, Slovakia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155728
+Slovakia,Baker Hughes,Production Planning Manager,Manufacturing,"Bratislavský kraj, Slovakia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159139
+Italy,Baker Hughes,Digital and Technical Program Manager,Digital Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155554
+Italy,Baker Hughes,"Supplier Quality Engineering Valves, QMS and Continuous Improvement",Sourcing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160315
+Italy,Baker Hughes,Lead Infrastructure Solution Architect,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160524
+Indonesia,Baker Hughes,Manufacturing Quality Engineer,Quality,"Batam, Riau, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160882
+Malaysia,Baker Hughes,Finance Professional - Accounting Operations,Finance,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160737
+Singapore,Baker Hughes,Product Delivery Manager,Project Management,Singapore,2026-03-05,https://careers.bakerhughes.com/global/en/job/P-100980
+Azerbaijan,Baker Hughes,Tax Specialist,Finance,"Baku, Azerbaijan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161092
+United Kingdom,Baker Hughes,Senior Systems Engineer,Engineering/Technology,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158936
+United Kingdom,Baker Hughes,Lead Project Engineer,Engineering/Technology,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159836
+Italy,Baker Hughes,IET Service Lead Production Planner,Manufacturing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159301
+United Kingdom,Baker Hughes,Lead Knowledge Management Specialist - Power Apps/ SharePoint,Other,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160071
+United Kingdom,Baker Hughes,Buyer,Sourcing,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158849
+United Kingdom,Baker Hughes,Project Quality Specialist,Quality,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160106
+United Kingdom,Baker Hughes,Engineer - Condition Monitoring System,Engineering/Technology,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155095
+Czechia,Baker Hughes,"Quality Engineer (m,ž)",Quality,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160209
+Italy,Baker Hughes,Emerging Talent– Facility Specialist Intern 2026 Opportunities (Bari),Business Leadership Programs,"Bari, Bari, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158408
+India,Baker Hughes,Shop/Plant Operations Trainee,Manufacturing,"Coimbatore, Tamil Nādu, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159840
+United States of America,Baker Hughes,LTSA Lead Project Manager,Project Management,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160889
+United States of America,Baker Hughes,Gas Turbine Mechanic - 2nd Shift,Manufacturing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157055
+Czechia,Baker Hughes,"Zkušební technik/Test engineer (m,ž)",Quality,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157083
+United Kingdom,Baker Hughes,"Senior Petroleum Economist – GaffneyCline energy advisory, Farnham UK (Office Based Role)",Engineering/Technology,"Farnham, Surrey, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160389
+Saudi Arabia,Baker Hughes,New Frontiers – Middle East Sales Advisor,Sales,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160406
+Spain,Baker Hughes,Technical Customer Success Manager,Sales,"Madrid, Madrid, Spain",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160356
+United Kingdom,Baker Hughes,Enterprise Customer Experience PMO,Business Management,"London, London, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159351
+Italy,Baker Hughes,Saldatore di Officina,Manufacturing,"Vibo Valentia, Vibo Valentia, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160642
+United States of America,Baker Hughes,Department Administrator II,Support Services,"Sugar Land, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161113
+United Kingdom,Baker Hughes,Global Well Intervention Engineering CoE Leader,Engineering/Technology,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160856
+Czechia,Baker Hughes,Pracovník výroby generátorů - navíječ (m/ž),Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R149704
+Italy,Baker Hughes,Emerging Talent – Services Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158468
+Hungary,Baker Hughes,Production Quality Specialist,Manufacturing,"Fot, Pest, Hungary",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160221
+Hungary,Baker Hughes,Manufacturing Engineer Manager – LEAN,Manufacturing,"Fot, Pest, Hungary",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160220
+United Kingdom,Baker Hughes,Operator - Equipment,Manufacturing,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160864
+United States of America,Baker Hughes,Services Professional - Commissioning,Services,"Shorewood, Illinois, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160743
+Czechia,Baker Hughes,"Inženýr systémové kvality (m,ž)",Quality,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160896
+United States of America,Baker Hughes,"Slickline Specialist - Broussard, LA",Field Operations,"Broussard, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159288
+United States of America,Baker Hughes,"Hydraulic & Diesel Mechanic (Wireline Services) - Broussard, LA",Services,"Broussard, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153281
+Czechia,Baker Hughes,"Dílenské plánování výroby (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157105
+Czechia,Baker Hughes,"Dílenské plánování výroby (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157130
+Czechia,Baker Hughes,"Dílenské plánování výroby (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157129
+Czechia,Baker Hughes,"Zkušební technik/Test engineer (m,ž)",Quality,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157081
+United States of America,Baker Hughes,CDL Delivery Driver (Upstream Chemicals),Field Operations,"Odessa, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161110
+United States of America,Baker Hughes,CDL Delivery Driver (Upstream Chemicals),Field Operations,"Pecos, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161111
+United States of America,Baker Hughes,Senior Sales Manager – Proposal (Digital) Cordant,Sales,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159720
+Czechia,Baker Hughes,"Finanční kontrolor (m,ž)",Finance,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161207
+United States of America,Baker Hughes,Lead Product Service Engineer - Centrifugal compressors,Engineering/Technology,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R144648
+Czechia,Baker Hughes,"Projektový manažer (m,ž)",Services,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161152
+United States of America,Baker Hughes,Machine Maintenance Technician,Manufacturing,"Minden, Nevada, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161145
+India,Baker Hughes,Digital Technology Advisor - Digital Operations,Digital Technology,"Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160610
+Italy,Baker Hughes,Application Engineer,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159504
+United Kingdom,Baker Hughes,Project Technician,Engineering/Technology,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160800
+Germany,Baker Hughes,Senior Marketing Manager - Market Development (Marine Gear Systems) (d/f/m),Marketing,"Other, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159072
+Brazil,Baker Hughes,Especialista de Fluidos IV,Field Operations,"Macaé, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161209
+Brazil,Baker Hughes,Especialista de Fluídos III,Field Operations,"Macaé, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161210
+Australia,Baker Hughes,ARMO Mech Gen,Services,"Welshpool, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161205
+India,Baker Hughes,Integrated Commercial Project Manager,Sales,"Navi Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153743
+United Kingdom,Baker Hughes,Systems Flow Assurance Engineer - Subsea,Engineering/Technology,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160620
+United Kingdom,Baker Hughes,Quality Compliance Specialist,Quality,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156747
+United Kingdom,Baker Hughes,Manufacturing Team leader - Production Planning & Scheduling,Manufacturing,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160624
+United Kingdom,Baker Hughes,Manufacturing Engineer Team Leader - Operations,Engineering/Technology,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160623
+United Kingdom,Baker Hughes,Quality Control Inspector,Manufacturing,"Montrose, Angus, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160470
+United Kingdom,Baker Hughes,Project Planner - P6,Manufacturing,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160772
+United Kingdom,Baker Hughes,Mechanical Fitter,Manufacturing,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160625
+United Kingdom,Baker Hughes,Mechanical Field Specialist - Power Transmission Equipment,Field Operations,"Worcester, Worcestershire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161156
+Canada,Baker Hughes,DRA Sales and Commercial Leader,Sales,"Calgary, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159466
+Canada,Baker Hughes,Account Manager (Upstream Chemicals),Services,"Virden, Manitoba, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159298
+Malaysia,Baker Hughes,Senior Internal Auditor,Finance,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160738
+Australia,Baker Hughes,Field Specialist III,Field Operations,"Welshpool, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159858
+India,Baker Hughes,Senior Specialist - Data Science,Digital Technology,"Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160403
+Australia,Baker Hughes,Regional Sales Manager – BRUSH Power Generation,Sales,"Jandakot, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160806
+United Kingdom,Baker Hughes,NPI Senior Systems Engineer – Subsea Control Systems,Engineering/Technology,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159426
+United Kingdom,Baker Hughes,Senior Mechanical Design Engineer (Ansys/ FEA),Engineering/Technology,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160801
+United States of America,Baker Hughes,Field Specialist II - Power Transmission,Field Operations,"Lufkin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158313
+Mexico,Baker Hughes,Heavy Duty Gas Turbines Specialist,Field Operations,"Veracruz, Veracruz, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161040
+United States of America,Baker Hughes,Product Line Scheduling and Competency Specialist (Upstream Chemicals),Services,"Odessa, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151754
+Italy,Baker Hughes,Operatore della transizione energetica (d/f/m),Manufacturing,"Talamona, Sondrio, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R148566
+United Kingdom,Baker Hughes,Commercial Leader-Process & Pipeline Services,Sales,"Portlethen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159857
+United States of America,Baker Hughes,"Regional Sales Manager, Masoneilan Products",Sales,"Harrisburg, Pennsylvania, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160756
+Norway,Baker Hughes,Engineering Specialist - Materials Science and Engineering,Engineering/Technology,"Stavanger, Rogaland, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161088
+China,Baker Hughes,ASPIRE Associate - Supply Chain,Manufacturing,"Shanghai, Shanghai, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156523
+United States of America,Baker Hughes,"Business/Sales & Commercial - Fall Co-op Internship (Skaneateles, NY) 2026 Opportunities",Business Leadership Programs,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161270
+Mexico,Baker Hughes,Steam Turbines Specialist,Field Operations,"Veracruz, Veracruz, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161008
+United States of America,Baker Hughes,Territory Sales Manager - Non-Destructive Testing Systems,Sales,"Albany, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R142356
+Italy,Baker Hughes,Project Engineering - Technical Support & Management,Engineering/Technology,"Bari, Bari, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161096
+Angola,Baker Hughes,Services Professional - Field Svc Ops,Services,"Luanda, Luanda, Angola",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161138
+United States of America,Baker Hughes,ARMO Mechanic II,Services,"Broussard, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160500
+Vietnam,Baker Hughes,Lead Engineer - Customer Project Engineering,Engineering/Technology,"Ho Chi Minh, Hồ Chí Minh, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159997
+Norway,Baker Hughes,Lead Sales Specialist,Sales,"Blomsterdalen, Hordaland, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159089
+Czechia,Baker Hughes,"Dispečer údržby (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158855
+Czechia,Baker Hughes,"Dílenské plánování výroby (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157121
+Malaysia,Baker Hughes,South East Asia – Installation Manger Leader,Project Management,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160665
+United Kingdom,Baker Hughes,Manufacturing Specialist,Manufacturing,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160789
+Nigeria,Baker Hughes,Geomechanics Specialist,Engineering/Technology,"Lagos, Lagos, Nigeria",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160588
+United Kingdom,Baker Hughes,Commodity Manager,Sourcing,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158853
+Italy,Baker Hughes,Lead Mechanical Field Service Engineer - Centrifugal Compressors,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160617
+Czechia,Baker Hughes,"Specialista na optimalizaci kvality produktů a snižování nákladů (m,ž)",Engineering/Technology,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R144488
+Czechia,Baker Hughes,"Obráběč kovů - karuselář (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157027
+Germany,Baker Hughes,Service Delivery Coordinator - Field Services Operations (d/f/m),Services,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160384
+India,Baker Hughes,Project Management Specialist - Project Planning,Project Management,"Pune, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160771
+Malaysia,Baker Hughes,Payroll Accounting Analyst,Finance,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158395
+Italy,Baker Hughes,Emerging Talent – Digital Technology Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158411
+Hungary,Baker Hughes,Emerging Talent: Payroll Intern 2026 Opportunities (Budapest),Business Leadership Programs,"Budapest, Budapest, Hungary",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157775
+United Kingdom,Baker Hughes,Lead Operations Engineer,Engineering/Technology,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159998
+China,Baker Hughes,Assembly Operator,Manufacturing,"Suzhou, Jiangsu, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152694
+China,Baker Hughes,Sales Senior Advisor - Sales,Sales,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161261
+Canada,Baker Hughes,Telecom Expense Analyst,Digital Technology,"Calgary, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160781
+United States of America,Baker Hughes,Assembler – Mechanical II,Manufacturing,"Minden, Nevada, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160370
+Brazil,Baker Hughes,Operador de Equipamentos S II,Field Operations,"Macaé, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161212
+India,Baker Hughes,Project Management Specialist - Project Planning,Project Management,"Pune, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160298
+China,Baker Hughes,Project Manager,Project Management,"Suzhou, Jiangsu, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154364
+Australia,Baker Hughes,Enterprise Solutions Architect – Asset Strategy Management & Reliability,Sales,"Jandakot, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159218
+India,Baker Hughes,Project Management Specialist - Project Planning,Project Management,"Pune, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160299
+China,Baker Hughes,AMO Technician,Services,"Xinjiang, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160465
+United Kingdom,Baker Hughes,Product Delivery Manager,Project Management,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158571
+India,Baker Hughes,Field Operator IV,Field Operations,"Taloja, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161083
+India,Baker Hughes,Field Operator III,Field Operations,"Taloja, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161082
+Singapore,Baker Hughes,ASPIRE Associate - Supply Chain,Manufacturing,"Singapore, Central Singapore, Singapore",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156524
+China,Baker Hughes,Emerging Talent: ASPIRE- Sales & Commercial (China) 2026 Opportunities,Sales,"Shanghai, Shanghai, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157790
+Hungary,Baker Hughes,Manufacturing Engineer,Manufacturing,"Fot, Pest, Hungary",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159597
+Japan,Baker Hughes,Aftermarket Sales Manager,Sales,"Kanto, Tokyo, Japan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153212
+Spain,Baker Hughes,Machinery Diagnostic Engineer,Services,"Madrid, Madrid, Spain",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155777
+Italy,Baker Hughes,Europe Strategic CPS Integrated Energy Solutions Architect,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R144332
+United States of America,Baker Hughes,Field Specialist – Junior Mechanic Aero Derivative Gas Turbines,Field Operations,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161317
+Canada,Baker Hughes,"Wireline Tractor Field Specialist (Altus Intervention) - Bonnyville, AB CA",Field Operations,"Bonnyville, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161171
+France,Baker Hughes,Technical Customer Success Manager (F/H),Sales,"Dardilly, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160359
+United States of America,Baker Hughes,Welder,Manufacturing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157213
+Mexico,Baker Hughes,Junior Mechanic Aero Derivative Gas Turbines,Field Operations,"Mexico City, Ciudad de Mexico, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161246
+Italy,Baker Hughes,Lead Project Planning Specialist,Project Management,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160663
+Canada,Baker Hughes,Reliability Specialist,Services,"Leduc, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161097
+United Kingdom,Baker Hughes,Deputy Project Director,Project Management,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160870
+Canada,Baker Hughes,Chemical Process Technician,Services,"Calgary, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161124
+Brazil,Baker Hughes,Services Specialist - Materials Management,Services,"Macae, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159936
+Norway,Baker Hughes,Service Delivery Coordinator,Services,"Stavanger, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159869
+Angola,Baker Hughes,Quality Engineer - Product Quality Assurance,Quality,"Luanda, Luanda, Angola",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158667
+India,Baker Hughes,Engineering Specialist - Applications and Software,Engineering/Technology,"Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160606
+Azerbaijan,Baker Hughes,HR Specialist,Human Resources,"Baku, Azerbaijan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160673
+Brazil,Baker Hughes,Assistente Administrativo - Exclusivo para PCDs,Support Services,"Macaé, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161211
+Czechia,Baker Hughes,"Projektový manažer (m,ž)",Services,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161150
+Czechia,Baker Hughes,"Horizontkář (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157114
+India,Baker Hughes,"Lead Engineer, Customer Order Engineering - Automation & Control",Engineering/Technology,"Hyderabad, Telangāna, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159282
+United Kingdom,Baker Hughes,Emerging Talent – Customer Experience Specialist Intern 2026 Opportunities (Aberdeen),Business Leadership Programs,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161403
+India,Baker Hughes,Services Professional - ARMO Management,Services,"Gandhinagar, Gujarāt, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161402
+United Kingdom,Baker Hughes,"​​Lead System Engineer  (Generator, Motor, PRISMIC, Synchronous Condenser)​",Engineering/Technology,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158903
+Malaysia,Baker Hughes,Lead Audit Specialist - Internal Control,Finance,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159083
+Nigeria,Baker Hughes,Application Engineer – Completions & Wellbore Intervention - West Africa,Services,"Nigeria - Remote, Federal Capital, Nigeria",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155501
+United Kingdom,Baker Hughes,Emerging Talent: LEAD - Field Engineer (United Kingdom) 2026 Opportunities,Field Operations,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159538
+United States of America,Baker Hughes,Service Rep GEN Chemical,Services,"Carrizo Springs, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161140
+United States of America,Baker Hughes,Finished Fuels and Additives Product Portfolio Manager (Downstream Chemicals Leader),Product Management,"Sugar Land, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161099
+United States of America,Baker Hughes,"Product Cost Optimization Lead (Chemicals) - Sugar Land, TX",Manufacturing,"Sugar Land, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155304
+Germany,Baker Hughes,Werkstudent für System- und Datenanalyse 2025 (Celle),Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158060
+Brazil,Baker Hughes,Project Quality Specialist - Engineering,Quality,"Niteroi, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160103
+Italy,Baker Hughes,Emerging Talent – AI and Computer engineering Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161407
+United States of America,Baker Hughes,Outage Project Engineer,Engineering/Technology,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160741
+United States of America,Baker Hughes,Sales Professional - Account Management,Sales,"Baton Rouge, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160911
+Mexico,Baker Hughes,Services Professional - Customer Service Management,Services,"Mexico City, Ciudad de Mexico, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160639
+Italy,Baker Hughes,Field services - Customer Application Engineer,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159649
+Peru,Baker Hughes,Field Specialist Compressor,Field Operations,"Lima, Lima, Peru",2026-03-05,https://careers.bakerhughes.com/global/en/job/R126507
+Angola,Baker Hughes,Emerging Talent: LEAD - Field Engineer (ANGOLA) 2026 Opportunities,Field Operations,"Luanda, Luanda, Angola",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159535
+United Arab Emirates,Baker Hughes,Emerging Talent: LEAD - Field Engineer (UAE Nationals Only) 2026 Opportunities,Field Operations,"Abu Dhabi, Abu Dhabi, United Arab Emirates",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158336
+Italy,Baker Hughes,Emerging Talent – Engineering Intern 2026 Opportunities (Vibo),Business Leadership Programs,"Vibo Valentia, Vibo Valentia, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158420
+France,Baker Hughes,Emerging Talent: ASPIRE - Supply Chain (France) 2026 Opportunities,Manufacturing,"Conde-Sur-Noireau, Calvados, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156071
+Mexico,Baker Hughes,Service Pusher II - Integrated Solutions_FLD-K,Field Operations,"Ciudad Del Carmen, Campeche, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159443
+Brazil,Baker Hughes,Lean Manufacturing Specialist,Manufacturing,"Niteroi, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160468
+United States of America,Baker Hughes,Industrial Maintenance Technician,Manufacturing,"Claremore, Oklahoma, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160550
+United States of America,Baker Hughes,Industrial Maintenance Technician,Manufacturing,"Claremore, Oklahoma, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153877
+Colombia,Baker Hughes,Aprendiz Sena,Business Leadership Programs,"Neiva, Huila, Colombia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R147833
+Mexico,Baker Hughes,Control Systems Specialist,Field Operations,"Veracruz, Veracruz, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161408
+Czechia,Baker Hughes,Emerging Talent: ASPIRE - Supply Chain (Czech Republic) 2026 Opportunities,Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156067
+Cameroon,Baker Hughes,Emerging Talent: LEAD - Field Engineer (CAMEROON) 2026 Opportunities,Field Operations,"Yaounde, Littoral, Cameroon",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159536
+Canada,Baker Hughes,Junior Mechanical Field Specialist (Aero Derivative Gas Turbines),Field Operations,"Calgary, Alberta, Canada",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161247
+United Kingdom,Baker Hughes,Emerging Talent – Engineering Intern 2026 Opportunities (Ashby),Business Leadership Programs,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159894
+Azerbaijan,Baker Hughes,Emerging Talent –Field Service Engineering Intern 2026 Opportunities (Azerbaijan),Business Leadership Programs,"Baku, Balakən, Azerbaijan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159151
+France,Baker Hughes,Ingénieur(e) Qualité Fournisseurs Nucléaire (F/H),Sourcing,"Conde-Sur-Noireau, Calvados, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161355
+Italy,Baker Hughes,Lead Project Engineer,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156875
+India,Baker Hughes,Lead Sales Specialist (eligible to Sales Incentive Plan) - Sales,Sales,"Gurgaon, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160059
+United Kingdom,Baker Hughes,Engineering Intern,Business Leadership Programs,"Worcester, Worcestershire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157501
+Italy,Baker Hughes,Supplier Quality Engineering -  GTS Repair and Program Management,Sourcing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160318
+Norway,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Norway) 2026 Opportunities,Field Operations,"Stavanger, Rogaland, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161434
+Uzbekistan,Baker Hughes,Emerging Talent: LEAD - Field Engineer (Uzbekistan) 2026 Opportunities,Field Operations,"Tashkent, Toshkent, Uzbekistan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161433
+Italy,Baker Hughes,Emerging Talent – Operational Excellence Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158407
+United States of America,Baker Hughes,I&S Global Fulfillment Director,Services,"The Woodlands, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158429
+United States of America,Baker Hughes,New Product Quality Engineer,Quality,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156131
+United States of America,Baker Hughes,Operator - Production I,Manufacturing,"Rayne, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159331
+Italy,Baker Hughes,Machining Shop Operator,Manufacturing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R147885
+Congo,Baker Hughes,Emerging Talent– Sustainability Intern 2026 Opportunities (Congo),Business Leadership Programs,"Pointe Noire, Kouilou, Congo",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158334
+Mexico,Baker Hughes,ITC Program Manager,Legal,"Veracruz, Veracruz, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157901
+United States of America,Baker Hughes,Quality Assurance Engineer,Digital Technology,"Minden, Nevada, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159225
+United Kingdom,Baker Hughes,Manufacturing Specialist - Material Planning & Execution,Manufacturing,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160443
+United States of America,Baker Hughes,Mechanic II,Services,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161098
+Malaysia,Baker Hughes,Project Lead Stat Tax,Finance,"Jalan Tun Razak, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157203
+Thailand,Baker Hughes,"Quality Manager, Compliance",Quality,"Songkhla, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R145595
+India,Baker Hughes,Senior Cyber Security Engineer,Digital Technology,"Gurgaon, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150273
+India,Baker Hughes,Teamcenter PLM Solution Architect,Digital Technology,"Hyderabad, Telangāna, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150076
+Italy,Baker Hughes,Flow Machining - Operations Supervisor,Manufacturing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157139
+Italy,Baker Hughes,Modules Technology & ITO Leader,Manufacturing,"Avenza, Massa-Carrara, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158625
+Vietnam,Baker Hughes,Services Specialist - Field Svc & Technical Advising,Services,"Ba Dinh District, Hà Nội, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159816
+Austria,Baker Hughes,Service-Techniker (d/m/w) Außendienst,Services,"Vienna, Vienna, Austria",2026-03-05,https://careers.bakerhughes.com/global/en/job/R148175
+Saudi Arabia,Baker Hughes,Drilling Services Applications Engineer,Services,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160811
+Thailand,Baker Hughes,Field Specialist - Upstream Chemical,Field Operations,"Bangkok, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159456
+Malaysia,Baker Hughes,Contract Performance Manager,Services,"Jalan Tun Razak, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159646
+India,Baker Hughes,Senior DevOps Engineer,Digital Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154024
+Germany,Baker Hughes,Ausbildung Mechatroniker (d/w/m),Business Leadership Programs,"Wunstorf, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153445
+Azerbaijan,Baker Hughes,Field Specialist - Cementing,Field Operations,"Baku, Balakən, Azerbaijan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153205
+Colombia,Baker Hughes,Aprendiz Sena,Business Leadership Programs,"Villavicencio, Colombia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R147827
+India,Baker Hughes,"Senior Engineer, Customer Order Engineering - Automation & Control",Engineering/Technology,"Hyderabad, Telangāna, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160022
+Australia,Baker Hughes,Field Specialist Intelligent Production System,Field Operations,"Jandakot, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160087
+United Kingdom,Baker Hughes,Operator - Manufacturing Equipment,Manufacturing,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161070
+United States of America,Baker Hughes,Account Manager (Artificial Lift),Sales,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159296
+United States of America,Baker Hughes,Principal Geologist/3D Geomodeler,Engineering/Technology,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160749
+United Kingdom,Baker Hughes,Emerging Talent Apprenticeship Programme 2026 (Montrose),Business Leadership Programs,"Montrose, Angus, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161358
+Brazil,Baker Hughes,Quality Engineer,Quality,"Niteroi, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160104
+United Kingdom,Baker Hughes,Emerging Talent Apprenticeship Programme 2026 (Aberdeen),Business Leadership Programs,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161359
+Malaysia,Baker Hughes,Finance Professional - Accounting Operations,Finance,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161292
+United Kingdom,Baker Hughes,Product Delivery Manager,Project Management,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160546
+India,Baker Hughes,Senior Full Stack Developer,Digital Technology,"Pune, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157787
+China,Baker Hughes,Lead Project Management Specialist - Operation Leadership,Project Management,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159677
+Malaysia,Baker Hughes,Services Specialist - Training,Services,"Shah Alam, Selangor, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161251
+Vietnam,Baker Hughes,Service Delivery Coordinator – Drilling & Completion Fluids,Services,"Ho Chi Minh, Hồ Chí Minh, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153367
+Saudi Arabia,Baker Hughes,Service Delivery Coordinator - Drilling Services (Saudi national),Services,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161132
+China,Baker Hughes,Indirect Sourcing Specialist,Sourcing,"Changzhou, Jiangsu, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161055
+China,Baker Hughes,Lead Sales Specialist - Sales,Sales,"Chengdu, Sichuan, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159138
+Italy,Baker Hughes,"Engineering & Technoloogy Manager, Project Engineering",Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160947
+Malaysia,Baker Hughes,Finance Professional - Operational,Finance,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161291
+Saudi Arabia,Baker Hughes,Field Specialist - Directional Drilling,Field Operations,"Dhahran, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161427
+Malaysia,Baker Hughes,Heavy Duty Gas Turbine Field Service Engineer Engineer,Field Operations,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R150450
+United States of America,Baker Hughes,Engineering Senior Specialist - Customer Application Engineering,Engineering/Technology,"Lufkin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161208
+Italy,Baker Hughes,Senior Engineer - Subsea Distribution Systems,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158821
+Italy,Baker Hughes,Global Product Manager,Product Management,"Milan, Milano, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159968
+Italy,Baker Hughes,Finance Specialist - Accounting Operations,Finance,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160637
+Italy,Baker Hughes,Manufacturing Engineer,Manufacturing,"Vibo Valentia, Vibo Valentia, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160240
+United States of America,Baker Hughes,Lead Sourcing Specialist - Buying/Procurement,Sourcing,"Columbia, South Carolina, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158592
+Kazakhstan,Baker Hughes,Emerging Talent: LEAD - Field Engineer (KAZAKHSTAN) 2026 Opportunities,Field Operations,"Astana, Astana, Kazakhstan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159539
+Azerbaijan,Baker Hughes,Emerging Talent: LEAD - Field Engineer (AZERBAIJAN) 2026 Opportunities,Field Operations,"Baku, Balakən, Azerbaijan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159534
+United States of America,Baker Hughes,Field Service Electrical Engineer,Field Operations,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R144123
+India,Baker Hughes,Senior Site Reliability Engineer- Cloud Platform,Digital Technology,"Kochi, Kerala, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R142209
+Brazil,Baker Hughes,Field Specialist - Mechanical Gas Turbine / Compressors - Brazil,Field Operations,"Macae, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R108800
+Mexico,Baker Hughes,Incident Response Analyst LATAM,Digital Technology,"Mexico City, Ciudad de Mexico, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R148352
+United States of America,Baker Hughes,"Wireline Field Operator - Mt Pleasant, MI",Field Operations,"Mount Pleasant, Michigan, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158499
+Cameroon,Baker Hughes,"Emerging Talent–Assembly, Maintenance & Overhaul Intern 2026 Opportunities (Cameroon)",Business Leadership Programs,"Douala, Littoral, Cameroon",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158340
+Italy,Baker Hughes,Aero Supplier Quality Engineer – Gas Technology Services,Sourcing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156547
+Nigeria,Baker Hughes,"Emerging Talent–Assembly, Maintenance & Overhaul Intern 2026 Opportunities (Nigeria)",Business Leadership Programs,"Port Harcourt, Rivers, Nigeria",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158348
+Germany,Baker Hughes,"Emerging Talent - Praktikum, Bachelor- und Masterarbeit– Maschinenbau und Mechatronik 2026 (Celle)",Business Leadership Programs,"Celle, Lower Saxony, Germany",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158055
+United Kingdom,Baker Hughes,Manufacturing Operator,Manufacturing,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160795
+Saudi Arabia,Baker Hughes,Welder,Manufacturing,"Dammam, Eastern Region, Saudi Arabia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152299
+United States of America,Baker Hughes,"Manufacturing Equipment Operator - Midland, TX",Manufacturing,"Midland, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153647
+India,Baker Hughes,Lead Design Engineer – Turbomachinery & Auxiliary Systems,Engineering/Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R139234
+France,Baker Hughes,Expert(e) Lean (F/H),Manufacturing,"Le Creusot, Saone-et-Loire, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155296
+Australia,Baker Hughes,Services Specialist - Commissioning,Services,"Jandakot, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159050
+Poland,Baker Hughes,"Lead Electrical Engineer, Product Design and Engineering",Engineering/Technology,"Warsaw, Masovian, Poland",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158876
+Australia,Baker Hughes,Eastern Hemisphere Projects Leader,Project Management,"Perth, Western Australia, Australia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160875
+France,Baker Hughes,Gestionnaire Logistique Réception et Magasin (F/H),Manufacturing,"Fougerolles, Haute-Saone, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160986
+Poland,Baker Hughes,Senior  Controls Engineer,Engineering/Technology,"Warsaw, Masovian, Poland",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157287
+Norway,Baker Hughes,Mechanical Technician – Cement workshop,Manufacturing,"Tananger, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151616
+Brazil,Baker Hughes,Supervior de Logística,Logistics,"Curitiba, Paraná, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160880
+Italy,Baker Hughes,Assembly Shop Operator,Manufacturing,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R147560
+Brazil,Baker Hughes,Almoxarife Pleno,Manufacturing,"Curitiba, Paraná, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160881
+Italy,Baker Hughes,Mechanical Field Service Engineer Reciprocating Compressor,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R145519
+United Kingdom,Baker Hughes,Emerging Talent – Engineering Intern 2026 Opportunities (Montrose),Business Leadership Programs,"Montrose, Angus, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158418
+Italy,Baker Hughes,Services Experienced Professional - Lean Field Service Operations,Services,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161498
+United Kingdom,Baker Hughes,Lead Sales Specialist,Sales,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158806
+United Arab Emirates,Baker Hughes,Warehouse and Yards manager - Completions and Wellbore Intervention,Services,"Dubai, Dubai, United Arab Emirates",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157853
+Poland,Baker Hughes,Key Account Manager,Sourcing,"Warsaw, Masovian, Poland",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156742
+India,Baker Hughes,"Senior Engineer, Customer Order Engineering - Automation & Control",Engineering/Technology,"Hyderabad, Telangāna, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157214
+Norway,Baker Hughes,Emerging Talent – Purchasing Intern 2026 Opportunities (Norway),Business Leadership Programs,"Stavanger, Rogaland, Norway",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158422
+United Kingdom,Baker Hughes,Emerging Talent – Engineering Intern 2026 Opportunities (Newcastle),Business Leadership Programs,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159149
+Kazakhstan,Baker Hughes,HSE Specialist,Environmental Health & Safety,"Astana, Astana, Kazakhstan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161144
+Trinidad and Tobago,Baker Hughes,Field Specialist (Surface Logging Systems),Field Operations,"Port of Spain, Trinidad and Tobago",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160957
+Italy,Baker Hughes,Emerging Talent – Manufacturing Intern 2026 Opportunities (Florence),Finance,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158416
+United States of America,Baker Hughes,Field Specialist - Quality System,Field Operations,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161017
+United States of America,Baker Hughes,Product Owner (Demand 2 Deliver),Product Management,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160601
+Czechia,Baker Hughes,"Obráběč kovů - drážkování rotoru (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157117
+United Kingdom,Baker Hughes,Emerging Talent – Project Control Intern 2026 Opportunities (Aberdeen),Business Leadership Programs,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159875
+United Kingdom,Baker Hughes,Senior Sales Manager PMS,Sales,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159259
+China,Baker Hughes,Field Service Engineer,Field Operations,"Liaoning, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158929
+China,Baker Hughes,Field Service Engineer,Field Operations,"Beijing, Beijing, China",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158968
+Malaysia,Baker Hughes,Senior Production Technologist,Engineering/Technology,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158482
+Malaysia,Baker Hughes,Senior Reservoir Engineer (GaffneyCline),Engineering/Technology,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152267
+Ecuador,Baker Hughes,Especialista de campo Hpumps,Field Operations,"Coca, Orellana, Ecuador",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161068
+Mexico,Baker Hughes,Control and Instrumentation Specialist,Field Operations,"Ciudad del Carmen, Campeche, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R135103
+Mexico,Baker Hughes,Centrifugal Compressors Specialist,Field Operations,"Veracruz, Veracruz, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161041
+Colombia,Baker Hughes,Services Senior Team leader - Field Svc & Technical Advising / Technical Manager (Wireline),Services,"Villavicencio, Colombia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161137
+Czechia,Baker Hughes,"Zámečník (m,ž)",Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161306
+United States of America,Baker Hughes,Global Product Line Sales & Operational Planning & Materials Manager,Manufacturing,"Tomball, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159105
+Kenya,Baker Hughes,ESP Technician,Field Operations,"Nairobi, Nairobi Municipality, Kenya",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161552
+Indonesia,Baker Hughes,Account Sales Lead,Sales,"Jakarta, Jakarta Raya, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161074
+India,Baker Hughes,Sr. Data Management,Engineering/Technology,"Pune, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160527
+India,Baker Hughes,Sales Senior Specialist - Proposals,Sales,"Navi Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160905
+Malaysia,Baker Hughes,Lead Finance Specialist - FP&A Operations,Finance,"Jalan Tun Razak, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159146
+United States of America,Baker Hughes,NAM CTS sales leader,Sales,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158902
+United States of America,Baker Hughes,Manufacturing Engineer - Manuf Eng Specialist,Manufacturing,"Minden, Nevada, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159377
+Indonesia,Baker Hughes,Lead Sales Specialist - Drill Bits,Sales,"Balikpapan, Indonesia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R153751
+India,Baker Hughes,Staff Data Engineer,Digital Technology,"Bangalore, Karnātaka, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152396
+United States of America,Baker Hughes,CDL Delivery/Treater Driver,Field Operations,"Bossier City, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159338
+United States of America,Baker Hughes,Digital and Automation Portfolio Manager ( DOwnstream ),Product Management,"Sugar Land, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R147725
+United States of America,Baker Hughes,"Senior Legal Counsel, International Trade Compliance - Houston, TX",Legal,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R151326
+France,Baker Hughes,Technicien SAV (F/H),Field Operations,"Conde-Sur-Noireau, Calvados, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159017
+United States of America,Baker Hughes,Manufacturing Manager - Production Supervision,Manufacturing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R152578
+United Kingdom,Baker Hughes,Lead Project Management Specialist - Project Planning,Project Management,"Aberdeen, Aberdeenshire, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158871
+United States of America,Baker Hughes,CNC Machinist,Manufacturing,"Skaneateles, New York, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159963
+United States of America,Baker Hughes,Assembler - Mechanical II,Manufacturing,"Minden, Nevada, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160048
+Italy,Baker Hughes,Lead Generative AI Specialist,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157951
+United Kingdom,Baker Hughes,Controls Engineer,Engineering/Technology,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158848
+United States of America,Baker Hughes,Lead Manufacturing Specialist - Prod Process and Equip,Manufacturing,"Minden, Nevada, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159378
+United Kingdom,Baker Hughes,Lead Project Quality Engineer,Quality,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154980
+United States of America,Baker Hughes,"Account Manager (Downstream Chemicals) – Evansville, IN / Nashville, TN Area",Sales,"Nashville, Tennessee, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158550
+United States of America,Baker Hughes,"Senior Engineer, Product Design and Engineering - Mechanical",Engineering/Technology,"Pasadena, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158938
+Italy,Baker Hughes,CSA - Customer Application Engineer,Engineering/Technology,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159648
+Thailand,Baker Hughes,Enterprise Sales Leader,Sales,"Bangkok, Thailand",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160363
+United States of America,Baker Hughes,Materials Specialist - Materials Planning and Execution,Manufacturing,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160501
+Malaysia,Baker Hughes,Finance Specialist - Operational,Finance,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160073
+Singapore,Baker Hughes,Product Management Specialist,Services,"Singapore, Central Singapore, Singapore",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158969
+Singapore,Baker Hughes,Customer Care Specialist - Valves,Services,"Singapore, Central Singapore, Singapore",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155869
+United Kingdom,Baker Hughes,Project Management Senior Advisor,Project Management,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161141
+Brazil,Baker Hughes,Técnico de Montagem Sênior,Manufacturing,"Curitiba, Paraná, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160878
+Egypt,Baker Hughes,Service Delivery Coordinator – Drilling and Completion Fluids,Services,"Cairo, Egypt",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156791
+Brazil,Baker Hughes,Manufacturing Senior Specialist - Production,Manufacturing,"Curitiba, Paraná, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160879
+Brazil,Baker Hughes,Técnico de Teste Senior,Manufacturing,"Curitiba, Paraná, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160877
+India,Baker Hughes,Emerging Talent: LEAD - Field Engineer (India) 2026 Opportunities,Field Operations,"Taloja, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159131
+Italy,Baker Hughes,Maintenance Operator Specialist,Manufacturing,"Talamona, Sondrio, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161553
+Argentina,Baker Hughes,Field Specialist III - LWD/DD,Field Operations,"Neuquen, Neuquen, Argentina",2026-03-05,https://careers.bakerhughes.com/global/en/job/R138692
+Azerbaijan,Baker Hughes,Logistics Specialist,Logistics,"Baku, Balakən, Azerbaijan",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160999
+United Kingdom,Baker Hughes,Controls Engineer,Engineering/Technology,"Ashby de la Zouch, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158846
+Italy,Baker Hughes,Emerging Talent – Computer Vision Engineering Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161610
+Italy,Baker Hughes,Emerging Talent – Robotics Engineering Intern 2026 Opportunities (Florence),Business Leadership Programs,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161611
+Italy,Baker Hughes,Junior Field Specialist,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160159
+India,Baker Hughes,Workday Adaptive Planning Specialist,Digital Technology,"Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159545
+Italy,Baker Hughes,Junior Field Specialist,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160158
+United Kingdom,Baker Hughes,Lead Operator – Manufacturing Equipment,Manufacturing,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160797
+United Kingdom,Baker Hughes,Operator - Manufacturing Equipment,Manufacturing,"Newcastle-Upon-Tyne, Tyne and Wear, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160798
+United Kingdom,Baker Hughes,Senior Application Engineer,Engineering/Technology,"Nailsea, Somerset, United Kingdom",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157510
+United States of America,Baker Hughes,Reliability Engineer,Services,"Broussard, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161404
+United States of America,Baker Hughes,I&S New Energy Projects CoE (Center of Excellence) Leader,Engineering/Technology,"The Woodlands, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160854
+Mexico,Baker Hughes,Digital Technology Specialist - Security Operations Engineering,Digital Technology,"Mexico City, Ciudad de Mexico, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160950
+United States of America,Baker Hughes,Support Operator,Manufacturing,"Pasadena, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161622
+Italy,Baker Hughes,Lead Services Specialist - Resource Management,Services,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158975
+Brazil,Baker Hughes,Assistente Administrativo (Vaga Exclusiva PCD),Support Services,"Macaé, Rio de Janeiro, Brazil",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160006
+Czechia,Baker Hughes,Obráběč kovů – drážkování rotoru (m/ž),Manufacturing,"Pilsen, Czechia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157116
+France,Baker Hughes,Ingénieur Projet Qualité Fournisseurs – Nucléaire (F/H),Sourcing,"Conde-Sur-Noireau, Calvados, France",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161221
+United States of America,Baker Hughes,Field Specialist III - UC_FLD-H,Field Operations,"Big Spring, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161108
+Mexico,Baker Hughes,Applications Engineer Gen - Service Delivery Applications,Services,"Villahermosa, Tabasco, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159319
+United States of America,Baker Hughes,Field Service Engineer – Mechanical (Rotating Equipment),Field Operations,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161002
+United States of America,Baker Hughes,Field Service Engineer - Controls Systems,Field Operations,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161078
+Vietnam,Baker Hughes,"Applications Engineer, DCF",Services,"Ho Chi Minh, Hồ Chí Minh, Vietnam",2026-03-05,https://careers.bakerhughes.com/global/en/job/R157337
+United States of America,Baker Hughes,Services Specialist - Resource Management,Services,"Broussard, Louisiana, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161123
+United States of America,Baker Hughes,People & Culture – Experience & Performance Partner,Human Resources,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160917
+United States of America,Baker Hughes,Technician Chemical,Engineering/Technology,"Kilgore, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161125
+United States of America,Baker Hughes,Solution Architect – SAP Sales & Commercial,Digital Technology,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160614
+United States of America,Baker Hughes,"Field Operator/CDL Driver (Class A or B) (Wireline Services) - Victoria, TX",Field Operations,"Victoria, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R139838
+United States of America,Baker Hughes,Field Specialist - Global Rotator (AccessESP) – Global Remote,Field Operations,"Austin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161702
+United States of America,Baker Hughes,"Engineer, Product Design and Engineering – Mechanical",Engineering/Technology,"Lufkin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161700
+Mexico,Baker Hughes,Aeroderivatives GTS Turbines Specialist,Field Operations,"Veracruz, Veracruz, Mexico",2026-03-05,https://careers.bakerhughes.com/global/en/job/R161701
+United States of America,Baker Hughes,Solution Architecture - CPQ,Digital Technology,"Houston, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R160607
+India,Baker Hughes,Senior Data Scientist,Digital Technology,"Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R155085
+United States of America,Baker Hughes,Engineer - Mechanical Component,Engineering/Technology,"Lufkin, Texas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159523
+Italy,Baker Hughes,Customer Success Manager,Product Management,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159673
+Italy,Baker Hughes,Mechanical Field Service Engineer for ITP,Field Operations,"Florence, Firenze, Italy",2026-03-05,https://careers.bakerhughes.com/global/en/job/R158505
+India,Baker Hughes,SSPS Proposal Specialist - Services,Sales,"Navi Mumbai, Mahārāshtra, India",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156634
+United States of America,Baker Hughes,Field Service Winder Engineer,Field Operations,"Richmond, Virginia, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R154134
+Malaysia,Baker Hughes,APAC GTS Sales Leader,Sales,"Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159049
+Netherlands,Baker Hughes,Procurement Specialist (Dutch Speaker),Sourcing,"Son En Breugel, North Brabant, Netherlands",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159787
+United States of America,Baker Hughes,Account Manager (Upstream Chemicals) - Garden City - KS,Services,"Garden City, Kansas, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R156161
+United States of America,Baker Hughes,"Regional Sales Manager, Consolidated",Sales,"Remote, Pennsylvania, United States of America",2026-03-05,https://careers.bakerhughes.com/global/en/job/R159134

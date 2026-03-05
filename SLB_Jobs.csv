@@ -1,56 +1,825 @@
 Country,Company,Title,Category,Location,Date Posted,Link
+Uzbekistan,SLB,Account Manager,Other,"Tashkent, Uzbekistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85657
+Kazakhstan,SLB,Account Manager,Other,"Astana, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85656
+United States,SLB,Account Manager,Sales & Commercial,"Broussard, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134914
+United States,SLB,Account Manager,Other,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134828
+Canada,SLB,Account Manager,Other,"Fort Mcmurray, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133481
 Egypt,SLB,Account manager,Sales & Commercial,Egypt,2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133093
+United States,SLB,Account Manager,Sales & Commercial,"Anchorage, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132828
 Saudi Arabia,SLB,Account Manager,Sales & Commercial,"Dammam, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133754
-Iraq,SLB,AL Field Specialist,Operations,"Basrah, Iraq",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12452-en_US%201
-Egypt,SLB,Artificial Lift Field Specialist,Operations,"Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12688-en_US%201
-Egypt,SLB,Artificial Lift Field Specialist Trainee,Operations,"Madinat Sittah Uktubar, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11750-en_US%201
-Egypt,SLB,Cased Hole Wireline Operator,Operations,"Madinat Sittah Uktubar, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14883-en_US%201
-Egypt,SLB,Coiled Tubing Equipment Operator,Operations,"Madinat Sittah Uktubar, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14884-en_US%201
-Saudi Arabia,SLB,Commercial and Business Internship,Operations,"Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US%201
-Oman,SLB,Commercial and Business Internship,Operations,"Multi-Location, Oman",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US%206
-Qatar,SLB,Commercial and Business Internship,Operations,"Multi-Location, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US%202
-UAE,SLB,Commercial and Business Internship,Operations,"Multi-Location, UAE",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US%203
-Bahrain,SLB,Commercial and Business Internship,Operations,"Multi-Location, Bahrain",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US%204
-Kuwait,SLB,Commercial and Business Internship,Operations,"Multi-Location, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US%205
-Iraq,SLB,Commercial and Business Internship,Operations,"Basrah, Iraq",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12502-en_US%201
-Kuwait,SLB,Customer Engagement Coordinator,Operations,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14636-en_US%201
-Kuwait,SLB,D&I Data Scientist,Operations,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12881-en_US%201
+Canada,SLB,Account Manager,Sales & Commercial,"Bonnyville, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134594
+United States,SLB,Account Manager - Upstream Chemicals,Other,"Williston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133801
+Argentina,SLB,Accounts Payable Analyst Junior,Finance,"Buenos Aires, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134569
+Romania,SLB,Accounts Payable Student Intern,Supply Chain,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13591-en_US 1
+United States,SLB,Administrative Assistant,Other,"Garden City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134903
+Suriname,SLB,Administrator/Office Supervisor,Administration,"Sara Maria, Suriname",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12968-en_US 1
+Mexico,SLB,AL Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Ciudad Del Carmen, Mexico",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14350-en_US 1
+Iraq,SLB,AL Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Basrah, Iraq",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12452-en_US 1
+United States,SLB,AL Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Dickinson, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13984-en_US 1
+Brazil,SLB,Analista de Contratos I - TEMPORÁRIA,Operations Support/Management,"Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13973-en_US 1
+Malaysia,SLB,AP Analyst - VMD OD - Portugeese Speaker,Supply Chain,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14697-en_US 1
+Australia,SLB,Application Engineer,Sales & Commercial,"Adelaide, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134819
+United States,SLB,Application Engineer I,Sales & Commercial,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134579
+Nigeria,SLB,Artificial Lift Field Specialist,Other,"Port Harcourt, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=86154
+Egypt,SLB,Artificial Lift Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12688-en_US 1
+Egypt,SLB,Artificial Lift Field Specialist Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Madinat Sittah Uktubar, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11750-en_US 1
+France,SLB,ASICs Design Architect,Digital Technology & Research,"Clamart, France",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85272
+United States,SLB,Assembler,Digital Technology & Research,"Katy, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14871-en_US 1
+United States,SLB,Assembler,"Operations (Engineers, Geoscience, Specialists, Operators)","Florence, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14598-en_US 1
+United States,SLB,Assembler,Operations Support/Management,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14387-en_US 1
+United States,SLB,Assembly Worker,Other,"West Valley City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134969
+United States,SLB,Assembly Worker,Other,"West Valley City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134821
+United States,SLB,Assistant Process Operators,Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134876
+United States,SLB,Automation Engineer,Digital Technology & Research,"Rosharon, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9961-en_US 1
+United States,SLB,Billing Support Specialist,Other,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135154
+United States,SLB,Business Development Manager,Sales & Commercial,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134591
+United States,SLB,Business Development Manager - Emissions,Sales & Commercial,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134555
+United Kingdom,SLB,C# Software Engineer Intern (12 months),Digital Technology & Research,"Stonehouse, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85372
+Canada,SLB,CAM Field Specialists,"Operations (Engineers, Geoscience, Specialists, Operators)","St. John's, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14383-en_US 1
+Libya,SLB,CAM Field Specialists,"Operations (Engineers, Geoscience, Specialists, Operators)","103 Oilfield, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12902-en_US 1
+Papua New Guinea,SLB,CAM Field Specialists,"Operations (Engineers, Geoscience, Specialists, Operators)","Porebada, Papua New Guinea",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13847-en_US 1
+United States,SLB,CAM Field Specialists II,"Operations (Engineers, Geoscience, Specialists, Operators)","Longview, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14872-en_US 1
+United States,SLB,Capillary Spooling Technician,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135143
+Egypt,SLB,Cased Hole Wireline Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","Madinat Sittah Uktubar, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14883-en_US 1
+United States,SLB,Chemical Engineer,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13333-en_US 1
+United States,SLB,Chemical Engineer - development,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10476-en_US 1
+United States,SLB,Chemical Service Technician,Other,"Carlsbad, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132954
+United States,SLB,Chemical Service Technician,Other,"Bakersfield, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133084
+United States,SLB,Chemical Service Technician,Other,"Pecos, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132904
+United States,SLB,Chemical Service Technician,Other,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132930
+United States,SLB,Chemical Service Technician,Other,"Williston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133800
+United States,SLB,Chemist,Other,"Vernal, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133828
+Colombia,SLB,Cloud Operations Support Engineer,Operations Support/Management,"Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11781-en_US 1
+United States,SLB,Cloud Software Engineer,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14269-en_US 1
+Canada,SLB,CNC Programmer/Operator,Other,"Calgary, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135023
+United States,SLB,Coil Tubing Equipment Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","Lafayette, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14769-en_US 1
+Egypt,SLB,Coiled Tubing Equipment Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","Madinat Sittah Uktubar, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14884-en_US 1
+India,SLB,Collections Manager,Finance,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14120-en_US 1
+Peru,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Peru",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3388-en_US 6
+Saudi Arabia,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US 1
+Bahrain,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Bahrain",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US 4
+Kuwait,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US 5
+Colombia,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3388-en_US 1
+United States,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11773-en_US 1
+Ecuador,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Ecuador",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3388-en_US 4
+Iraq,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Basrah, Iraq",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12502-en_US 1
+Chile,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Chile",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3388-en_US 5
+Argentina,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3388-en_US 2
+Qatar,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US 2
+Pakistan,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Pakistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US 7
+United Arab Emirates,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Arab Emirates",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US 3
+Oman,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Oman",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6449-en_US 6
+Bolivia,SLB,Commercial and Business Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Bolivia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3388-en_US 3
+United States,SLB,Commercial Sales Intern,Other,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133603
+United States,SLB,Commercial Sales Intern,Other,"Williston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133623
+India,SLB,Commercialization Geophysicist,Digital Technology & Research,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14372-en_US 1
+United Kingdom,SLB,Communications Intern (12 months),Digital Technology & Research,"Crawley, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85972
+Uganda,SLB,Communications Specialist Intern,Other,"Kampala, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85900
+Romania,SLB,Compensation Accounting Analyst,Finance,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14006-en_US 1
+Thailand,SLB,Completions Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Hat Yai, Thailand",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14806-en_US 1
+Nigeria,SLB,Completions Field Supervisor / Senior Specialist,Other,"Onne, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=86073
+Indonesia,SLB,Completions Mechanical Technician,Maintenance,"Balikpapan, Indonesia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14579-en_US 1
+United States,SLB,Construction Project Manager,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135041
+Brazil,SLB,Coordenador de Serviços de Cimentação,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12935-en_US 1
+Colombia,SLB,Corporate Entity Attorney,Legal,"Cota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14805-en_US 1
+Malaysia,SLB,Corporate Entity Manager,Legal,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14881-en_US 1
+Romania,SLB,CPL Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Aricestii-Rahtivani, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13789-en_US 1
+India,SLB,CPL Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14485-en_US 1
+United States,SLB,CPL Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Houma, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10127-en_US 1
+India,SLB,CPL Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12498-en_US 1
+India,SLB,CPL Multilateral Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14531-en_US 1
+India,SLB,Credit Analyst,Finance,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12962-en_US 1
+Malaysia,SLB,Customer Contracts Attorney,Legal,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12736-en_US 1
+Romania,SLB,Customer Contracts Attorney,Legal,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13385-en_US 1
+Kuwait,SLB,Customer Engagement Coordinator,"Operations (Engineers, Geoscience, Specialists, Operators)","Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14636-en_US 1
+Pakistan,SLB,Customer Engagement Coordinator - Cement,Operations Support/Management,"Islamabad, Pakistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10480-en_US 1
+United States,SLB,Customer Service Specialist,Sales & Commercial,"Florence, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14016-en_US 1
+Canada,SLB,Customer Service Specialist,Sales & Commercial,"Clairmont, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13877-en_US 1
+Poland,SLB,Cyber Security Operations Center Analyst / Engineer,Other,"Warsaw, Poland",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=86092
+Kuwait,SLB,D&I Data Scientist,"Operations (Engineers, Geoscience, Specialists, Operators)","Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12881-en_US 1
+Libya,SLB,D&I Data Scientist,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13358-en_US 1
+Malaysia,SLB,Data Analytics & Engineering Intern,Digital Technology & Research,"Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13887-en_US 1
+Viet Nam,SLB,Data and Infrastructure Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Ho Chi Minh City, Viet Nam",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13726-en_US 1
+Libya,SLB,Data and Infrastructure Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13357-en_US 1
+Algeria,SLB,Data and Infrastructure Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Algiers, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13366-en_US 1
+India,SLB,Data Logger,Administration,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14630-en_US 1
+Malaysia,SLB,Data Management Intern,Digital Technology & Research,"Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14702-en_US 1
+Colombia,SLB,Demand Planner II,Other,"Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133167
+India,SLB,DevOps Lead,Digital Technology & Research,"Pune, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14507-en_US 1
+Brazil,SLB,Digital & Directional Drilling Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Rio De Janeiro, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13288-en_US 1
+Libya,SLB,Digital Drilling Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13356-en_US 1
+United States,SLB,Digital Enterprise Architect -13868,"Operations (Engineers, Geoscience, Specialists, Operators)","Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13868-en_US 1
+United Kingdom,SLB,Digital IT Operations Specialist L1,Other,"Aberdeen, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85952
+Indonesia,SLB,Digital Technology Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Indonesia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12065-en_US 1
+United States,SLB,District Account Manager,Sales & Commercial,"San Antonio, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133916
+United States,SLB,District Rep III,Sales & Commercial,"Vernal, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134405
+United States,SLB,District Representative - Sales Development Program,Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134624
+United States,SLB,District Representative II,Sales & Commercial,"Hobbs, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00131392
 Egypt,SLB,District Sales Representative,Sales & Commercial,Egypt,2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133054
-Saudi Arabia,SLB,Early Careers - Commercial and Business,Sales & Commercial,"Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6456-en_US%201
-Saudi Arabia,SLB,Early Careers - Field Operations,Operations,"Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US%201
-Qatar,SLB,Early Careers - Field Operations,Operations,"Multi-Location, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US%202
-Bahrain,SLB,Early Careers - Field Operations,Operations,"Multi-Location, Bahrain",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US%204
-UAE,SLB,Early Careers - Field Operations,Operations,"Multi-Location, UAE",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US%203
-Oman,SLB,Early Careers - Field Operations,Operations,"Multi-Location, Oman",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US%206
-Kuwait,SLB,Early Careers - Field Operations,Operations,"Multi-Location, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US%205
-Egypt,SLB,Early Careers - Functions Internship,Operations,"Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14459-en_US%201
-Egypt,SLB,Early Careers - Maintenance Internship,Operations,"Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14458-en_US%201
-Egypt,SLB,Early Careers - Operations,Operations,"Multi-Location, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12074-en_US%201
-Saudi Arabia,SLB,Early Careers - Operations Internship,Operations,"Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US%201
-Saudi Arabia,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US%201
-Oman,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Oman",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US%206
-Qatar,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US%202
-UAE,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, UAE",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US%203
-Bahrain,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Bahrain",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US%204
-Kuwait,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US%205
-Oman,SLB,Early Careers -Geoscience&Petrotechnical,Operations,"Multi-Location, Oman",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US%206
-Kuwait,SLB,Early Careers -Geoscience&Petrotechnical,Operations,"Multi-Location, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US%205
-UAE,SLB,Early Careers -Geoscience&Petrotechnical,Operations,"Multi-Location, UAE",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US%203
-Bahrain,SLB,Early Careers -Geoscience&Petrotechnical,Operations,"Multi-Location, Bahrain",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US%204
-Qatar,SLB,Early Careers -Geoscience&Petrotechnical,Operations,"Multi-Location, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US%202
-Saudi Arabia,SLB,Early Careers -Geoscience&Petrotechnical,Operations,"Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US%201
-UAE,SLB,EPC Contracts Manager,Legal,"Dubai, UAE",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14911-en_US%201
-Iraq,SLB,Equipment Operator,Operations,"Basrah, Iraq",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13641-en_US%201
-Egypt,SLB,Fresh Graduate Geosolutions Geophysicist,Operations Support/Management,"Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14223-en_US%201
-Kuwait,SLB,Geologist,Operations,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13555-en_US%201
-Kuwait,SLB,Geologist,Operations,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13554-en_US%201
-Kuwait,SLB,Geophysicist,Operations,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13557-en_US%201
-Egypt,SLB,Geoscience & Petrotechnical Internship,Operations,"Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14460-en_US%201
-Qatar,SLB,Operator,Operations,"Doha, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14136-en_US%201
-Kuwait,SLB,Petrophysicist,Operations,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13558-en_US%201
-Kuwait,SLB,Planner - Integrated Segments,Operations Support/Management,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14763-en_US%201
-Saudi Arabia,SLB,Project Manager,Operations Support/Management,Saudi Arabia,2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134959
-Egypt,SLB,Recruiter,Human Resources,Egypt,2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134768
-Kuwait,SLB,Senior Geophysicist,Operations,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13556-en_US%201
-Egypt,SLB,Stimulation Equipment Operator,Operations,"Madinat Sittah Uktubar, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14885-en_US%201
-Egypt,SLB,Well Services Specialist,Operations,"Madinat Sittah Uktubar, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14886-en_US%201
+India,SLB,Division GeoUnit Controller - WC INM,Finance,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13177-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14075-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14074-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14076-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14072-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14073-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Duliajan, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14489-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14081-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Duliajan, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14490-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14078-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14080-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14079-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14077-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13187-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13186-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13184-en_US 1
+India,SLB,Drilling Data Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12174-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13185-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13181-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13178-en_US 1
+India,SLB,Drilling Data Analyst,Operations Support/Management,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12172-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13182-en_US 1
+India,SLB,Drilling Data Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13179-en_US 1
+Canada,SLB,Drilling Fluids Plant Operator,Operations Support/Management,"St. John's, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14183-en_US 1
+Libya,SLB,Drilling Product Sales Engineer,Sales & Commercial,"103 Oilfield, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13446-en_US 1
+Gabon,SLB,Early Careers - Accounting and Finance Internships,Finance,"Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=AcctFinanceIntern&location='GabonMulti-Location'
+United States,SLB,Early Careers - Commercial and Business,Sales & Commercial,"Multi-Location, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10079-en_US 1
+Romania,SLB,Early Careers - Commercial and Business,Sales & Commercial,"Multi-Location, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12076-en_US 1
+Australia,SLB,Early Careers - Commercial and Business,Sales & Commercial,"Multi-Location, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12055-en_US 1
+Malaysia,SLB,Early Careers - Commercial and Business,Sales & Commercial,"Multi-Location, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12058-en_US 1
+India,SLB,Early Careers - Commercial and Business,Sales & Commercial,"Multi-Location, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12069-en_US 1
+Indonesia,SLB,Early Careers - Commercial and Business,Sales & Commercial,"Multi-Location, Indonesia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12064-en_US 1
+Saudi Arabia,SLB,Early Careers - Commercial and Business,Sales & Commercial,"Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6456-en_US 1
+Malaysia,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12059-en_US 1
+India,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12070-en_US 1
+China,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ITSystEng&location='ChinaMulti-Location'
+Australia,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12057-en_US 1
+Philippines,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Philippines",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12059-en_US 6
+Myanmar,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Myanmar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12059-en_US 7
+Singapore,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Singapore",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12059-en_US 2
+Thailand,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Thailand",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12059-en_US 3
+Indonesia,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Indonesia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12066-en_US 1
+Vietnam,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Vietnam",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12059-en_US 4
+Brunei,SLB,Early Careers - Digital Technology,Digital Technology & Research,"Multi-Location, Brunei",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12059-en_US 5
+China,SLB,Early Careers - Engineering and Manufacturing,Digital Technology & Research,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EngManf&location='ChinaMulti-Location'
+Azerbaijan,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Azerbaijan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='AzerbaijanMulti-Location'
+Angola,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='AngolaMulti-Location'
+Namibia,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='NamibiaMulti-Location'
+Equatorial Guinea,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Equatorial Guinea",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='Equatorial GuineaMulti-Location'
+Nigeria,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='NigeriaMulti-Location'
+France,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, France",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='FranceMulti-Location'
+Gabon,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='GabonMulti-Location'
+Republic of Congo,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Republic of Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='Republic of CongoMulti-Location'
+Ghana,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='GhanaMulti-Location'
+Mozambique,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Mozambique",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='MozambiqueMulti-Location'
+Kazakhstan,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='KazakhstanMulti-Location'
+Ivory Coast,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='Ivory CoastMulti-Location'
+South Sudan,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, South Sudan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='South SudanMulti-Location'
+Uganda,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='UgandaMulti-Location'
+United Kingdom,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='United KingdomMulti-Location'
+China,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='ChinaMulti-Location'
+Japan,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Japan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='JapanMulti-Location'
+Cameroon,SLB,Early Careers - Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldEng&location='CameroonMulti-Location'
+United States,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10064-en_US 1
+Myanmar,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Myanmar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12052-en_US 7
+Australia,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12051-en_US 1
+Oman,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Oman",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US 6
+Thailand,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Thailand",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12052-en_US 3
+Saudi Arabia,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US 1
+Vietnam,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Vietnam",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12052-en_US 4
+Qatar,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US 2
+Kuwait,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US 5
+Pakistan,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Pakistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US 7
+Brazil,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3390-en_US 1
+Guyana,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3390-en_US 2
+Colombia,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Cota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3383-en_US 1
+Indonesia,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Indonesia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12062-en_US 1
+Brunei,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Brunei",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12052-en_US 5
+Philippines,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Philippines",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12052-en_US 6
+United Arab Emirates,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Arab Emirates",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US 3
+Bahrain,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Bahrain",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6446-en_US 4
+Suriname,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Suriname",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3390-en_US 3
+Malaysia,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12052-en_US 1
+Singapore,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Singapore",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12052-en_US 2
+India,SLB,Early Careers - Field Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12067-en_US 1
+South Sudan,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, South Sudan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='South SudanMulti-Location'
+Equatorial Guinea,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Equatorial Guinea",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='Equatorial GuineaMulti-Location'
+China,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='ChinaMulti-Location'
+Senegal,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Senegal",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='SenegalMulti-Location'
+Cameroon,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='CameroonMulti-Location'
+Mozambique,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Mozambique",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='MozambiqueMulti-Location'
+United Kingdom,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='United KingdomMulti-Location'
+Uganda,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='UgandaMulti-Location'
+Angola,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='AngolaMulti-Location'
+France,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, France",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='FranceMulti-Location'
+Gabon,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='GabonMulti-Location'
+Namibia,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='NamibiaMulti-Location'
+Japan,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Japan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='JapanMulti-Location'
+Azerbaijan,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Azerbaijan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='AzerbaijanMulti-Location'
+Republic of Congo,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Republic of Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='Republic of CongoMulti-Location'
+Ghana,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='GhanaMulti-Location'
+Kazakhstan,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='KazakhstanMulti-Location'
+Nigeria,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='NigeriaMulti-Location'
+Ivory Coast,SLB,Early Careers - Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldSpec&location='Ivory CoastMulti-Location'
+Ghana,SLB,Early Careers - Field Technical Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldTechAnalyst&location='GhanaMulti-Location'
+Ivory Coast,SLB,Early Careers - Field Technical Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldTechAnalyst&location='Ivory CoastMulti-Location'
+Namibia,SLB,Early Careers - Field Technical Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldTechAnalyst&location='NamibiaMulti-Location'
+Angola,SLB,Early Careers - Field Technical Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldTechAnalyst&location='AngolaMulti-Location'
+Gabon,SLB,Early Careers - Field Technical Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FieldTechAnalyst&location='GabonMulti-Location'
+Gabon,SLB,Early Careers - Finance,Finance,"Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-Finance&location='GabonMulti-Location'
+Malaysia,SLB,Early Careers - Finance Internships,Finance,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12125-en_US 1
+Egypt,SLB,Early Careers - Functions Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14459-en_US 1
+Kazakhstan,SLB,Early Careers - Geologist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geologist&location='KazakhstanMulti-Location'
+Angola,SLB,Early Careers - Geologist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geologist&location='AngolaMulti-Location'
+China,SLB,Early Careers - Geologist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geologist&location='ChinaMulti-Location'
+Japan,SLB,Early Careers - Geologist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Japan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geologist&location='JapanMulti-Location'
+South Sudan,SLB,Early Careers - Geologist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, South Sudan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geologist&location='South SudanMulti-Location'
+China,SLB,Early Careers - Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geophysicist&location='ChinaMulti-Location'
+Angola,SLB,Early Careers - Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geophysicist&location='AngolaMulti-Location'
+Japan,SLB,Early Careers - Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Japan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geophysicist&location='JapanMulti-Location'
+Kazakhstan,SLB,Early Careers - Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geophysicist&location='KazakhstanMulti-Location'
+Nigeria,SLB,Early Careers - Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Geophysicist&location='NigeriaMulti-Location'
+Kazakhstan,SLB,Early Careers - Geoscience and Petrotechnical Internships,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=INT-Petro&location='KazakhstanMulti-Location'
+Myanmar,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Myanmar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12053-en 5
+Thailand,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Thailand",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12053-en 6
+Indonesia,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Indonesia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12063-en 1
+Australia,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12054-en 1
+India,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12068-en_US 1
+Malaysia,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12053-en 1
+vietnam,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, vietnam",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12053-en 2
+brunei,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, brunei",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12053-en 3
+Philippines,SLB,Early Careers - Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Philippines",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12053-en 4
+Malaysia,SLB,Early Careers - HR Internships,Human Resources,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12127-en_US 1
+Nigeria,SLB,Early Careers - Human Resources,Human Resources,"Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=HRPro&location='NigeriaMulti-Location'
+Angola,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='AngolaMulti-Location'
+Morocco,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Morocco",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='MoroccoMulti-Location'
+Azerbaijan,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Azerbaijan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='AzerbaijanMulti-Location'
+Venezuela,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Venezuela",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='VenezuelaMulti-Location'
+Mauritania,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Mauritania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='MauritaniaMulti-Location'
+Nigeria,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='NigeriaMulti-Location'
+Niger,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Niger",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='NigerMulti-Location'
+Republic of Congo,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Republic of Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='Republic of CongoMulti-Location'
+São Tomé and Príncipe,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, São Tomé and Príncipe",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='São Tomé and PríncipeMulti-Location'
+Japan,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Japan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='JapanMulti-Location'
+South Sudan,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, South Sudan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='South SudanMulti-Location'
+Congo,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='CongoMulti-Location'
+Uganda,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='UgandaMulti-Location'
+Kazakhstan,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='KazakhstanMulti-Location'
+Ivory Coast,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='Ivory CoastMulti-Location'
+Cameroon,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='CameroonMulti-Location'
+Ghana,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='GhanaMulti-Location'
+Senegal,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Senegal",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='SenegalMulti-Location'
+Uzbekistan,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Uzbekistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='UzbekistanMulti-Location'
+Gabon,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='GabonMulti-Location'
+China,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='ChinaMulti-Location'
+Equatorial Guinea,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Equatorial Guinea",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='Equatorial GuineaMulti-Location'
+Jordan,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Jordan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='JordanMulti-Location'
+Mozambique,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Mozambique",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='MozambiqueMulti-Location'
+South Africa,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, South Africa",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='South AfricaMulti-Location'
+Namibia,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='NamibiaMulti-Location'
+Ethiopia,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Ethiopia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='EthiopiaMulti-Location'
+Tanzania,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Tanzania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='TanzaniaMulti-Location'
+Kenya,SLB,Early Careers - Human Resources Internships,Human Resources,"Multi-Location, Kenya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=73230&location='KenyaMulti-Location'
+Angola,SLB,Early Careers - Information Technology,Digital Technology & Research,"Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ITServEng&location='AngolaMulti-Location'
+China,SLB,Early Careers - Information Technology,Digital Technology & Research,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ITServEng&location='ChinaMulti-Location'
+Malaysia,SLB,Early Careers - IT & Digital Internships,Digital Technology & Research,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12129-en_US 1
+Malaysia,SLB,Early Careers - Legal Internships,Legal,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12131-en_US 1
+Ivory Coast,SLB,Early Careers - Logistics Specialist,Sales & Commercial,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupplyChain&location='Ivory CoastMulti-Location'
+Namibia,SLB,Early Careers - Logistics Specialist,Sales & Commercial,"Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupplyChain&location='NamibiaMulti-Location'
+Ghana,SLB,Early Careers - Logistics Specialist,Sales & Commercial,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupplyChain&location='GhanaMulti-Location'
+China,SLB,Early Careers - Logistics Specialist,Sales & Commercial,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupplyChain&location='ChinaMulti-Location'
+Uganda,SLB,Early Careers - Logistics Specialist,Sales & Commercial,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupplyChain&location='UgandaMulti-Location'
+Cameroon,SLB,Early Careers - Logistics Specialist,Sales & Commercial,"Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupplyChain&location='CameroonMulti-Location'
+Gabon,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='GabonMulti-Location'
+Ghana,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='GhanaMulti-Location'
+China,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='ChinaMulti-Location'
+Nigeria,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='NigeriaMulti-Location'
+Republic of Congo,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Republic of Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='Republic of CongoMulti-Location'
+Ivory Coast,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='Ivory CoastMulti-Location'
+Angola,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='AngolaMulti-Location'
+Uganda,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='UgandaMulti-Location'
+Azerbaijan,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Azerbaijan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='AzerbaijanMulti-Location'
+Kazakhstan,SLB,Early Careers - Maintenance Engineer,Maintenance,"Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Eng&location='KazakhstanMulti-Location'
+Egypt,SLB,Early Careers - Maintenance Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14458-en_US 1
+Ghana,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='GhanaMulti-Location'
+Uganda,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='UgandaMulti-Location'
+Ivory Coast,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='Ivory CoastMulti-Location'
+China,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='ChinaMulti-Location'
+Azerbaijan,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Azerbaijan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='AzerbaijanMulti-Location'
+Equatorial Guinea,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Equatorial Guinea",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='Equatorial GuineaMulti-Location'
+Gabon,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='GabonMulti-Location'
+Mozambique,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Mozambique",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='MozambiqueMulti-Location'
+Kazakhstan,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='KazakhstanMulti-Location'
+Namibia,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='NamibiaMulti-Location'
+Nigeria,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='NigeriaMulti-Location'
+Angola,SLB,Early Careers - Maintenance Technician,Maintenance,"Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=MAINT-Tech&location='AngolaMulti-Location'
+Ivory Coast,SLB,Early Careers - Materials Specialist,Sales & Commercial,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=67998&location='Ivory CoastMulti-Location'
+Namibia,SLB,Early Careers - Materials Specialist,Sales & Commercial,"Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=67998&location='NamibiaMulti-Location'
+Uganda,SLB,Early Careers - Materials Specialist,Sales & Commercial,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=67998&location='UgandaMulti-Location'
+China,SLB,Early Careers - Materials Specialist,Sales & Commercial,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=67998&location='ChinaMulti-Location'
+Cameroon,SLB,Early Careers - Materials Specialist,Sales & Commercial,"Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=67998&location='CameroonMulti-Location'
+Ghana,SLB,Early Careers - Materials Specialist,Sales & Commercial,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=67998&location='GhanaMulti-Location'
+Egypt,SLB,Early Careers - Operations,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12074-en_US 1
+Ukraine,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Ukraine",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12654-en_US 8
+Turkiye,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Turkiye",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12654-en_US 6
+Hungary,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Hungary",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12654-en_US 7
+Romania,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12654-en_US 1
+Netherlands,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Netherlands",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12654-en_US 4
+Germany,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Germany",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12654-en_US 5
+,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Saudi Arabia,",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US 2
+,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Qatar,",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US 3
+Saudi Arabia,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US 1
+United Kingdom,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12654-en_US 2
+Italy,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Italy",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12654-en_US 3
+,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","United Arab Emirates,",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US 4
+,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Bahrain,",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US 5
+,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Pakistan,",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US 8
+,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Kuwait,",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US 6
+,SLB,Early Careers - Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Oman,",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9016-en_US 7
+Kazakhstan,SLB,Early Careers - Operations Internships,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=INT-FieldEng&location='KazakhstanMulti-Location'
+United Kingdom,SLB,Early Careers - Operations Internships,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=INT-FieldEng&location='United KingdomMulti-Location'
+China,SLB,Early Careers - Operations Internships,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=INT-FieldEng&location='ChinaMulti-Location'
+France,SLB,Early Careers - Operations Internships,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, France",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=INT-FieldEng&location='FranceMulti-Location'
+Bahrain,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Bahrain",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US 4
+Kuwait,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US 5
+Saudi Arabia,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US 1
+Oman,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Oman",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US 6
+Pakistan,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Pakistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US 7
+United Arab Emirates,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, United Arab Emirates",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US 3
+Qatar,SLB,Early Careers - Operations Maintenance,Maintenance,"Multi-Location, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6448-en_US 2
+Kazakhstan,SLB,Early Careers - Petrophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Petrophysicist&location='KazakhstanMulti-Location'
+China,SLB,Early Careers - Petrophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=Petrophysicist&location='ChinaMulti-Location'
+Cameroon,SLB,Early Careers - Procurement Specialist,Sales & Commercial,"Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProcurementSpecialist&location='CameroonMulti-Location'
+Ivory Coast,SLB,Early Careers - Procurement Specialist,Sales & Commercial,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProcurementSpecialist&location='Ivory CoastMulti-Location'
+Uganda,SLB,Early Careers - Procurement Specialist,Sales & Commercial,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProcurementSpecialist&location='UgandaMulti-Location'
+Namibia,SLB,Early Careers - Procurement Specialist,Sales & Commercial,"Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProcurementSpecialist&location='NamibiaMulti-Location'
+Ghana,SLB,Early Careers - Procurement Specialist,Sales & Commercial,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProcurementSpecialist&location='GhanaMulti-Location'
+China,SLB,Early Careers - Procurement Specialist,Sales & Commercial,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProcurementSpecialist&location='ChinaMulti-Location'
+Nigeria,SLB,Early Careers - Production Optimization Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProdOptEng&location='NigeriaMulti-Location'
+China,SLB,Early Careers - Production Optimization Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProdOptEng&location='ChinaMulti-Location'
+Angola,SLB,Early Careers - Production Optimization Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ProdOptEng&location='AngolaMulti-Location'
+Angola,SLB,Early Careers - Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ReservoirEng&location='AngolaMulti-Location'
+China,SLB,Early Careers - Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ReservoirEng&location='ChinaMulti-Location'
+United Kingdom,SLB,Early Careers - Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ReservoirEng&location='United KingdomMulti-Location'
+Nigeria,SLB,Early Careers - Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ReservoirEng&location='NigeriaMulti-Location'
+Kazakhstan,SLB,Early Careers - Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ReservoirEng&location='KazakhstanMulti-Location'
+Japan,SLB,Early Careers - Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Japan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ReservoirEng&location='JapanMulti-Location'
+Uganda,SLB,Early Careers - Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=ReservoirEng&location='UgandaMulti-Location'
+Nigeria,SLB,Early Careers - Sales Representative,Sales & Commercial,"Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SALES&location='NigeriaMulti-Location'
+Ghana,SLB,Early Careers - Sourcing Specialist,Sales & Commercial,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SourcingSpecialist&location='GhanaMulti-Location'
+China,SLB,Early Careers - Sourcing Specialist,Sales & Commercial,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SourcingSpecialist&location='ChinaMulti-Location'
+Cameroon,SLB,Early Careers - Sourcing Specialist,Sales & Commercial,"Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SourcingSpecialist&location='CameroonMulti-Location'
+Uganda,SLB,Early Careers - Sourcing Specialist,Sales & Commercial,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SourcingSpecialist&location='UgandaMulti-Location'
+Ivory Coast,SLB,Early Careers - Sourcing Specialist,Sales & Commercial,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SourcingSpecialist&location='Ivory CoastMulti-Location'
+Namibia,SLB,Early Careers - Sourcing Specialist,Sales & Commercial,"Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SourcingSpecialist&location='NamibiaMulti-Location'
+China,SLB,Early Careers - Supply Chain,Sales & Commercial,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupportFunct&location='ChinaMulti-Location'
+Cameroon,SLB,Early Careers - Supply Chain,Sales & Commercial,"Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupportFunct&location='CameroonMulti-Location'
+Ghana,SLB,Early Careers - Supply Chain,Sales & Commercial,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupportFunct&location='GhanaMulti-Location'
+Ivory Coast,SLB,Early Careers - Supply Chain,Sales & Commercial,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupportFunct&location='Ivory CoastMulti-Location'
+Uganda,SLB,Early Careers - Supply Chain,Sales & Commercial,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupportFunct&location='UgandaMulti-Location'
+Namibia,SLB,Early Careers - Supply Chain,Sales & Commercial,"Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=FO-SupportFunct&location='NamibiaMulti-Location'
+Malaysia,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12126-en_US 1
+Kazakhstan,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Kazakhstan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='KazakhstanMulti-Location'
+Angola,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='AngolaMulti-Location'
+Uganda,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Uganda",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='UgandaMulti-Location'
+Jordan,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Jordan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='JordanMulti-Location'
+Cameroon,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Cameroon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='CameroonMulti-Location'
+Tanzania,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Tanzania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='TanzaniaMulti-Location'
+Azerbaijan,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Azerbaijan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='AzerbaijanMulti-Location'
+Mauritania,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Mauritania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='MauritaniaMulti-Location'
+Kenya,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Kenya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='KenyaMulti-Location'
+Namibia,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='NamibiaMulti-Location'
+Nigeria,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='NigeriaMulti-Location'
+Uzbekistan,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Uzbekistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='UzbekistanMulti-Location'
+Equatorial Guinea,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Equatorial Guinea",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='Equatorial GuineaMulti-Location'
+Morocco,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Morocco",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='MoroccoMulti-Location'
+Niger,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Niger",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='NigerMulti-Location'
+Gabon,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='GabonMulti-Location'
+Ivory Coast,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='Ivory CoastMulti-Location'
+Ethiopia,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Ethiopia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='EthiopiaMulti-Location'
+Congo,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='CongoMulti-Location'
+Ghana,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='GhanaMulti-Location'
+Japan,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Japan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='JapanMulti-Location'
+São Tomé and Príncipe,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, São Tomé and Príncipe",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='São Tomé and PríncipeMulti-Location'
+Venezuela,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Venezuela",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='VenezuelaMulti-Location'
+South Africa,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, South Africa",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='South AfricaMulti-Location'
+Mozambique,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Mozambique",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='MozambiqueMulti-Location'
+Republic of Congo,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Republic of Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='Republic of CongoMulti-Location'
+South Sudan,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, South Sudan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='South SudanMulti-Location'
+Senegal,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, Senegal",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='SenegalMulti-Location'
+China,SLB,Early Careers - Supply Chain Internships,Supply Chain,"Multi-Location, China",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=SupplyChainIntern&location='ChinaMulti-Location'
+Myanmar,SLB,Early Careers - Technology Development,Digital Technology & Research,"Multi-Location, Myanmar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12060-en_US 7
+Malaysia,SLB,Early Careers - Technology Development,Digital Technology & Research,"Multi-Location, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12060-en_US 1
+Singapore,SLB,Early Careers - Technology Development,Digital Technology & Research,"Multi-Location, Singapore",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12060-en_US 2
+United States,SLB,Early Careers - Technology Development,Digital Technology & Research,"Multi-Location, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9954-en_US 1
+Thailand,SLB,Early Careers - Technology Development,Digital Technology & Research,"Multi-Location, Thailand",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12060-en_US 3
+Vietnam,SLB,Early Careers - Technology Development,Digital Technology & Research,"Multi-Location, Vietnam",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12060-en_US 4
+Brunei,SLB,Early Careers - Technology Development,Digital Technology & Research,"Multi-Location, Brunei",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12060-en_US 5
+Philippines,SLB,Early Careers - Technology Development,Digital Technology & Research,"Multi-Location, Philippines",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12060-en_US 6
+Saudi Arabia,SLB,Early Careers -Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Saudi Arabia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US 1
+Qatar,SLB,Early Careers -Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US 2
+Kuwait,SLB,Early Careers -Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US 5
+Oman,SLB,Early Careers -Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Oman",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US 6
+United Arab Emirates,SLB,Early Careers -Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Arab Emirates",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US 3
+Bahrain,SLB,Early Careers -Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Bahrain",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US 4
+Pakistan,SLB,Early Careers -Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Pakistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF6447-en_US 7
+Romania,SLB,Early Careers-Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12075-en_US 1
+Italy,SLB,Early Careers-Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Italy",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12075-en_US 2
+United Kingdom,SLB,Early Careers-Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12075-en_US 3
+Austria,SLB,Early Careers-Geoscience&Petrotechnical,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Austria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12075-en_US 4
+Romania,SLB,Early Carreers - Wellsite Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12073-en 1
+Germany,SLB,Early Carreers - Wellsite Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Germany",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12073-en 4
+Turkiye,SLB,Early Carreers - Wellsite Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Turkiye",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12073-en 5
+Netherlands,SLB,Early Carreers - Wellsite Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Netherlands",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12073-en 2
+Italy,SLB,Early Carreers - Wellsite Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Italy",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12073-en 3
+Hungary,SLB,Early Carreers - Wellsite Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, Hungary",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12073-en 6
+United Kingdom,SLB,Early Carreers - Wellsite Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12073-en 7
+United States,SLB,EarlyCareers - Geoscience and Petrotechn,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10590-en_US 1
+Ecuador,SLB,Ecuador Internship Program,"Operations (Engineers, Geoscience, Specialists, Operators)","Quito, Ecuador",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF5557-en_US 1
+,SLB,Ecuador Internship Program,"Operations (Engineers, Geoscience, Specialists, Operators)","Ecuador,",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF5557-en_US 2
+Libya,SLB,Edge Support Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13361-en_US 1
+United Kingdom,SLB,Electrical Engineer Intern (12 months),Digital Technology & Research,"Stonehouse, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=84817
+Romania,SLB,Electrical Maintenance Technician,Maintenance,"Campina, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13217-en_US 1
+United States,SLB,Electrical Manufacturing Engineer,Digital Technology & Research,"Shreveport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13087-en_US 1
+Guyana,SLB,Electrician,Administration,"Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13707-en_US 1
+United States,SLB,Electronic Technician,"Operations (Engineers, Geoscience, Specialists, Operators)","Lafayette, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14266-en_US 1
+Algeria,SLB,Electronic Technician Trainee,Maintenance,"Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14336-en_US 1
+Algeria,SLB,Electronic Technician Trainee,Maintenance,"Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14337-en_US 1
+United States,SLB,Electronics Technician,Other,"Tulsa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134814
+United States,SLB,Electronics Technician - Night shift,Other,"Tulsa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132735
+United States,SLB,Electronics Test Technician,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134980
+India,SLB,Embedded Software Engineer,Maintenance,"Pune, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13899-en_US 1
+United Kingdom,SLB,Embedded Software Engineer Intern (12 months),Digital Technology & Research,"Stonehouse, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=84814
+Brazil,SLB,Engenheiro (a) de Projetos,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14299-en_US 1
+United States,SLB,Engineer II,Other,"Freeport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134728
+Netherlands,SLB,Engineering Graduate Internship – Well Integrity Technology (Well Cementing),Other,"Coevorden, Netherlands",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85454
+Ecuador,SLB,EOR Account Manager,Sales & Commercial,"Quito, Ecuador",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135127
+United Arab Emirates,SLB,EPC Contracts Manager,Legal,"Dubai, United Arab Emirates",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14911-en_US 1
+Iraq,SLB,Equipment Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","Basrah, Iraq",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13641-en_US 1
+India,SLB,Equipment Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12320-en_US 1
+United States,SLB,Equipment Readiness Engineer,Maintenance,"Lafayette, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10645-en_US 1
+Brazil,SLB,Especialista de Campo - MPD,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13062-en_US 1
+Brazil,SLB,Especialista de Campo de Completação,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14425-en_US 1
+Argentina,SLB,Especialista de Campo Direccional o MWD,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF5225-en_US 1
+Argentina,SLB,Especialista de Campo Fractura,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF8108-en_US 1
+Argentina,SLB,Especialista de Campo HSE,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13100-en_US 1
+Brazil,SLB,Especialista em Fluídos de Perfuração,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11908-en_US 1
+Argentina,SLB,Especialista en Fluidos - Inyeccionista,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF5103-en_US 1
+Brazil,SLB,Estágio - Banco de Talentos | Aracaju/SE,Administration,"Nossa Senhora Do Socorro, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11924-en_US 1
+Brazil,SLB,Estágio - Banco de Talentos | Catu/BA,Administration,"Nossa Senhora Do Socorro, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11925-en_US 1
+Brazil,SLB,Estágio - Banco de Talentos | Macaé/RJ,Administration,"Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11926-en_US 1
+Brazil,SLB,Estágio - Banco de Talentos | Rio/RJ,Administration,"Rio De Janeiro, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF8062-en_US 1
+Brazil,SLB,Estágio - Banco de Talentos | Taubaté/SP,Administration,"Taubate, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11927-en_US 1
+United States,SLB,ETO Electrical Engineer,Digital Technology & Research,"Mobile, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11788-en_US 1
+United States,SLB,ETO Process Engineer,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12206-en_US 1
+India,SLB,ETO Project Engineering Manager,Digital Technology & Research,"Coimbatore, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13156-en_US 1
+India,SLB,Expert Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12321-en_US 1
+United States,SLB,Export Planner,Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134866
+Guyana,SLB,Facilities Project Engineer,Administration,"Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14019-en_US 1
+Ghana,SLB,Facility Specialist Intern,Other,"Accra, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85784
+Ivory Coast,SLB,Field Engineer Trainee,Other,"Abidjan, Ivory Coast",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85854
+United States,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Prudhoe Bay, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12681-en_US 1
+Guyana,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13436-en_US 1
+Suriname,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Sara Maria, Suriname",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13435-en_US 1
+Algeria,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13024-en_US 1
+Algeria,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13023-en_US 1
+Guyana,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13434-en_US 1
+Libya,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","103 Oilfield, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12982-en_US 1
+Algeria,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13020-en_US 1
+Algeria,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13022-en_US 1
+Algeria,SLB,Field Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13021-en_US 1
+Pakistan,SLB,Field Engineer Trainee - Completions,"Operations (Engineers, Geoscience, Specialists, Operators)","Islamabad, Pakistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14176-en_US 1
+United States,SLB,Field Engineer Trainee - Offshore,"Operations (Engineers, Geoscience, Specialists, Operators)","Houma, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12163-en_US 1
+Canada,SLB,Field Sales Representative Drill Bits,Sales & Commercial,"Nisku, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14133-en_US 1
+United States,SLB,Field Service Technician,Other,"Hobbs, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134829
+United States,SLB,Field Service Technician,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134635
+Canada,SLB,Field Service Technician,Other,"Slave Lake, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135176
+United States,SLB,Field Service Technician Trainee,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134989
+Australia,SLB,Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Brisbane, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12228-en_US 1
+Canada,SLB,Field Specialist - Fluid Analysis,"Operations (Engineers, Geoscience, Specialists, Operators)","Nisku, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14275-en_US 1
+United States,SLB,Field Specialist Helper,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135112
+Algeria,SLB,Field Specialist Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14452-en_US 1
+Gabon,SLB,Field Technical Internship,Other,"Port-Gentil, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85697
+Romania,SLB,Finance Intern,Finance,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14886-en_US 1
+Republic of the Congo,SLB,Finance Intern,Other,"POINTE NOIRE, Republic of the Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85896
+United States,SLB,Finance Student Intern,Finance,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10623-en_US 1
+United States,SLB,Finance Student Intern,Finance,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10869-en_US 1
+Australia,SLB,Fitter Machinist,Maintenance,"Perth, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12495-en_US 1
+United States,SLB,Fleet Mechanic,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134147
+United States,SLB,FLOWBACK SPECIALIST,"Operations (Engineers, Geoscience, Specialists, Operators)","Longview, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13343-en_US 1
+United States,SLB,Forklift Mechanic,Digital Technology & Research,"Ville Platte, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13816-en_US 1
+Pakistan,SLB,Frac Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","Khaskheli, Pakistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14751-en_US 1
+Egypt,SLB,Fresh Graduate Geosolutions Geophysicist,Operations Support/Management,"Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14223-en_US 1
+United States,SLB,Gas Lift Service Technician,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135107
+Malaysia,SLB,GBS Digital Developer,Digital Technology & Research,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14695-en_US 1
+Canada,SLB,General Labour & Field Support,Other,"Lloydminster, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135175
+United Kingdom,SLB,Geological Modelling Intern (3-6 months),Digital Technology & Research,"Abingdon, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85753
+Kuwait,SLB,Geologist,"Operations (Engineers, Geoscience, Specialists, Operators)","Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13555-en_US 1
+Kuwait,SLB,Geologist,"Operations (Engineers, Geoscience, Specialists, Operators)","Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13554-en_US 1
+United States,SLB,Geologist,"Operations (Engineers, Geoscience, Specialists, Operators)","Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13602-en_US 1
+Colombia,SLB,Geomechanics Engineer,Sales & Commercial,"Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11761-en_US 1
+Malaysia,SLB,Geomechanics Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13355-en_US 1
+United Kingdom,SLB,Geomechanics Intern (3 months),Digital Technology & Research,"Crawley, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85476
+United States,SLB,Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14728-en_US 1
+Kuwait,SLB,Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13557-en_US 1
+Egypt,SLB,Geoscience & Petrotechnical Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Cairo, Egypt",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14460-en_US 1
+United States,SLB,Geoscience and Petrotechnical Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11783-en_US 1
+Malaysia,SLB,Geoservices Intern,Administration,"Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14328-en_US 1
+United Kingdom,SLB,Geosolutions Geophysicist,Other,"Crawley, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85992
+Libya,SLB,Geosolutions Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11560-en_US 1
+Algeria,SLB,Geosolutions Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Algiers, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13364-en_US 1
+Algeria,SLB,Geosolutions Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Algiers, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11390-en_US 1
+Brazil,SLB,Geosolutions Geophysicist - entry-level,"Operations (Engineers, Geoscience, Specialists, Operators)","Rio De Janeiro, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13594-en_US 1
+Malaysia,SLB,Global Business Services Hub Student Intern,Other,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=66351
+Libya,SLB,Graduate Geosolutions Geophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14125-en_US 1
+India,SLB,GSS Data Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Pune, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14107-en_US 1
+United States,SLB,GSS Field Technical Analysts,"Operations (Engineers, Geoscience, Specialists, Operators)","New Iberia, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14162-en_US 1
+Brazil,SLB,GSS Mud Logging Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12934-en_US 1
+United States,SLB,GSS Well Operations Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Anchorage, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14875-en_US 1
+United States,SLB,"Guide Operator - Williston, ND",Other,"Williston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135170
+Indonesia,SLB,Health Safety & Environment Intern,"Operations (Engineers, Geoscience, Specialists, Operators)","Cikarang, Indonesia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14528-en_US 1
+Malaysia,SLB,HR - Talent Acquisition Intern,Human Resources,"Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14535-en_US 1
+Guyana,SLB,HR Intern,Human Resources,"Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14809-en_US 1
+United Kingdom,SLB,HR Intern (12 months),Digital Technology & Research,"Abingdon, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=84803
+United States,SLB,HR Manager,Human Resources,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134886
+Guyana,SLB,HR Recruiting Intern,Human Resources,"Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13709-en_US 1
+United States,SLB,HR Representative,Human Resources,"New Iberia, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14102-en_US 1
+Romania,SLB,HSE Intern,HSE & Quality,"Ploiesti, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14247-en_US 1
+United Kingdom,SLB,HSE Intern (12 months),Digital Technology & Research,"Stonehouse, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=84961
+Malaysia,SLB,Human Resources Student Internship Program,Other,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=82050
+Turkmenistan,SLB,Immigration Intern,Other,"Ashgabat, Turkmenistan",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=84771
+Romania,SLB,Import-Export Intern,Supply Chain,"Aricestii-Rahtivani, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14172-en_US 1
+Argentina,SLB,Ingeniera para Mantenimiento,Maintenance,"Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13499-en_US 1
+Argentina,SLB,Ingeniería de Perforación Direccional,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13496-en_US 1
+Argentina,SLB,Ingenieria Tecnica para Mantenimiento,Maintenance,"Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13568-en_US 1
+Ecuador,SLB,Ingeniero de Aplicacion Sr,Other,"Quito, Ecuador",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00129904
+United States,SLB,Installation Technician,Other,"Fairmont, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134746
+United States,SLB,Intellectual Property Attorney,Legal,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12388-en_US 1
+United States,SLB,Intellectual Property Attorney,Legal,"Rosharon, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13975-en_US 1
+Argentina,SLB,Intern,Other,"Buenos Aires, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135163
+United States,SLB,Intern - Geophysics,Digital Technology & Research,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14499-en_US 1
+United States,SLB,Internal Auditor,Finance,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13933-en_US 1
+Romania,SLB,Internship Finance,Finance,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12742-en_US 1
+Republic of the Congo,SLB,"Internship Opportunities – Procurement, Finance & Human Resources",Other,"POINTE NOIRE, Republic of the Congo",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=79047
+Angola,SLB,"Internship Opportunities – Procurement, Finance & Human Resources",Other,"Luanda, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=79048
+Gabon,SLB,"Internship Opportunities – Procurement, Finance & Human Resources",Other,"Port-Gentil, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=79049
+Mexico,SLB,IT Application Support Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Villahermosa, Mexico",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13518-en_US 1
+Mexico,SLB,IT Infrastructure - Recien Egresado,"Operations (Engineers, Geoscience, Specialists, Operators)","Villahermosa, Mexico",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12894-en_US 1
+United States,SLB,IT Student Intern,Finance,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10624-en_US 1
+Mexico,SLB,IT Wellsite Infrastructure,"Operations (Engineers, Geoscience, Specialists, Operators)","Villahermosa, Mexico",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13517-en_US 1
+Canada,SLB,Journeyperson Millwright,Other,"Edmonton, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135142
+United States,SLB,Laboratory Technician Offshore,Operations Support/Management,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14497-en_US 1
+India,SLB,Legal Attorney,Legal,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12950-en_US 1
+Malaysia,SLB,Legal Intern,Other,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=74867
+United States,SLB,Local HazMat CDL Driver,Other,"Hobbs, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133005
+United States,SLB,Local HazMat CDL Driver,Other,"Weatherford, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133635
+United States,SLB,Local HazMat CDL Driver,Other,"Dilley, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132711
+United States,SLB,Local HazMat CDL Driver,Other,"Aztec, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134918
+United States,SLB,Local HazMat CDL Driver,Other,"Anchorage, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134640
+United States,SLB,Local HazMat CDL Driver,Other,"Triadelphia, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133399
+United States,SLB,Local Hazmat CDL Driver,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132902
+United States,SLB,Local Hazmat CDL Driver,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134979
+United States,SLB,Local HazMat CDL Driver,Other,"Bakersfield, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133473
+United States,SLB,Logistics Lead,Supply Chain,"Anchorage, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14647-en_US 1
+United States,SLB,Logistics Specialist,Supply Chain,"Shreveport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10512-en_US 1
+United States,SLB,Logistics Specialist,Supply Chain,"Youngsville, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14775-en_US 1
+India,SLB,Logistics Specialist,Supply Chain,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13026-en_US 1
+Malaysia,SLB,LSC Patent Agent,Legal,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14658-en_US 1
+United States,SLB,Machine Maintenance Technician,Operations Support/Management,"Oklahoma City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12336-en_US 1
+Malaysia,SLB,Machinist,Digital Technology & Research,"Tanjung Pelepas, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13538-en_US 1
+United States,SLB,MACHINIST,Digital Technology & Research,"Ville Platte, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13758-en_US 1
+United States,SLB,Machinist 2nd Shift,Operations Support/Management,"Oklahoma City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9952-en_US 1
+Guyana,SLB,Maintenance Associate,Maintenance,"Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10906-en_US 1
+Brunei Darussalam,SLB,Maintenance Associate,Maintenance,"Seria, Brunei Darussalam",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14878-en_US 1
+United States,SLB,Maintenance Electrician,Maintenance,"Bartlesville, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14680-en_US 1
+Algeria,SLB,Maintenance Engineer,Maintenance,"Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13445-en_US 1
+Romania,SLB,Maintenance Engineer Intern,"Operations (Engineers, Geoscience, Specialists, Operators)","Aricestii-Rahtivani, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14111-en_US 1
+Romania,SLB,Maintenance Engineer Trainee,Maintenance,"Aricestii-Rahtivani, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13537-en_US 1
+Guyana,SLB,Maintenance Intern - Mechanical,Maintenance,"Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14025-en_US 1
+United States,SLB,Maintenance Mechanic,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00131504
+Canada,SLB,Maintenance Operations Intern,"Operations (Engineers, Geoscience, Specialists, Operators)","Nisku, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14188-en_US 1
+Nigeria,SLB,Maintenance Technician,Other,"Port Harcourt, Nigeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85933
+Guyana,SLB,Maintenance Technician Intern,Maintenance,"Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12695-en_US 1
+Netherlands,SLB,Maintenance Technician Trainee,Other,"Coevorden, Netherlands",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85975
+Malaysia,SLB,Manufacturing Engineer,Digital Technology & Research,"Tanjung Pelepas, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13950-en_US 1
+United States,SLB,Manufacturing Engineer,Other,"West Valley City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134875
+Canada,SLB,Manufacturing Operations Intern,"Operations (Engineers, Geoscience, Specialists, Operators)","Calgary, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14184-en_US 1
+Indonesia,SLB,Manufacturing Production Supervisor,Digital Technology & Research,"Batam, Indonesia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14505-en_US 1
+United States,SLB,Manufacturing Technician,Digital Technology & Research,"Shreveport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10333-en_US 1
+United States,SLB,Manufacturing Welder,"Operations (Engineers, Geoscience, Specialists, Operators)","Mobile, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF8818-en_US 1
+United States,SLB,Manufacturing Welder,"Operations (Engineers, Geoscience, Specialists, Operators)","Mobile, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12640-en_US 1
+United States,SLB,Material Handler- Straightener,Other,"Tulsa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135141
+United States,SLB,Materials Specialist,Supply Chain,"Shreveport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14322-en_US 1
+India,SLB,Measurements Performance Live Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Pune, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13903-en_US 1
+Canada,SLB,Mechanic / Industrial Mechanic,Other,"Peace River, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134785
+Mexico,SLB,Mechanical CAD Designer - Delivery,Digital Technology & Research,"Monterrey, Mexico",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13660-en_US 1
+United States,SLB,Mechanical Engineer,Digital Technology & Research,"Mobile, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10797-en_US 1
+United States,SLB,Mechanical Engineer,Other,"Crowley, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134975
+India,SLB,Mechanical Engineer - Delivery,Digital Technology & Research,"Multi-Location, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12072-en_US 1
+India,SLB,Mechanical Technician,Maintenance,"Barmer, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14740-en_US 1
+United States,SLB,Mechanical Technician,Maintenance,"New Iberia, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13617-en_US 1
+United States,SLB,Mechanical Technician,Maintenance,"Patterson, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10548-en_US 1
+United States,SLB,Mechanical Technician,Maintenance,"Houma, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14187-en_US 1
+India,SLB,Mechanical Technician,Operations Support/Management,"Kakinada, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12412-en_US 1
+United Kingdom,SLB,Mechanical Technician,Other,"Southampton, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133147
+Canada,SLB,Mechanical Technician Completion Tools,Maintenance,"Mount Pearl, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12011-en_US 1
+Algeria,SLB,Mechanical Technician Trainee,Maintenance,"Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14335-en_US 1
+Algeria,SLB,Mechanical Technician Trainee,Maintenance,"Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14334-en_US 1
+United States,SLB,MIG Welder,Digital Technology & Research,"Ville Platte, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9129-en_US 1
+United States,SLB,Millwright,Digital Technology & Research,"Ville Platte, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9975-en_US 1
+United States,SLB,Minerals Mining Manager,Operations Support/Management,"Battle Mountain, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14475-en_US 1
+United States,SLB,Mobile Fleet Mechanic,Other,"Williston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134145
+Myanmar,SLB,MPD Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Yangon, Myanmar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12504-en_US 1
+Canada,SLB,Multiphase Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Nisku, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14443-en_US 1
+Romania,SLB,Neurodiversity Internship Program,Human Resources,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12383-en_US 1
+Australia,SLB,Offshore Chemist,Sales & Commercial,"Bentley, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134695
+United States,SLB,Oilfield Chemical Sales Representative,Other,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132650
+United States,SLB,Oilfield Chemical Sales Representative,Other,"Woodward, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132773
+Argentina,SLB,Operaciones de Choque,Operations Support/Management,"Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF5108-en_US 1
+Argentina,SLB,Operaciones de Equipo RCD,Operations Support/Management,"Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF5107-en_US 1
+Argentina,SLB,Operaciones de Fractura,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF5167-en_US 1
+Mexico,SLB,Operaciones en Campo - Con Experiencia,"Operations (Engineers, Geoscience, Specialists, Operators)","Villahermosa, Mexico",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF7645-en_US 1
+Campeche,SLB,Operaciones en Campo - Con Experiencia,"Operations (Engineers, Geoscience, Specialists, Operators)","Ciudad Del Carmen, Campeche",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF7645-en_US 2
+Campeche,SLB,Operaciones en Campo - Recién Graduados,"Operations (Engineers, Geoscience, Specialists, Operators)","Ciudad Del Carmen, Campeche",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF7644-en_US 2
+Mexico,SLB,Operaciones en Campo - Recién Graduados,"Operations (Engineers, Geoscience, Specialists, Operators)","Villahermosa, Mexico",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF7644-en_US 1
+Argentina,SLB,Operador u Operadora de Cementación,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12662-en_US 1
+Casanare,SLB,Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Yopal, Casanare",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3387-en_US 4
+Santander,SLB,Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Barrancabermeja, Santander",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3387-en_US 5
+Colombia,SLB,Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Cota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3387-en_US 1
+Cundinamarca,SLB,Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Cota, Cundinamarca",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3387-en_US 2
+Bogota,SLB,Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Bogotá, Bogota",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3387-en_US 3
+United States,SLB,Operations Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Multi-Location, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11772-en_US 1
+Colombia,SLB,Operations Support Technician,Operations Support/Management,"Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14877-en_US 1
+Colombia,SLB,Operations Support Technician,Operations Support/Management,"Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14876-en_US 1
+Qatar,SLB,Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","Doha, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14136-en_US 1
+United States,SLB,Optilift Software Architect,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14732-en_US 1
+Malaysia,SLB,P2P Specialist - Japanese Speaker,Supply Chain,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14237-en_US 1
+Argentina,SLB,"Pasante de Administración, Neuquén",Human Resources,"Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9915-en_US 1
+Argentina,SLB,Pasante de área técnica,Supply Chain,"Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9918-en_US 1
+Argentina,SLB,Pasantia en Buenos Aires,"Operations (Engineers, Geoscience, Specialists, Operators)","Buenos Aires, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF8335-en_US 1
+India,SLB,Performance Live Engineer - Measurements,"Operations (Engineers, Geoscience, Specialists, Operators)","Pune, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13986-en_US 1
+Kuwait,SLB,Petrophysicist,"Operations (Engineers, Geoscience, Specialists, Operators)","Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13558-en_US 1
+United States,SLB,Pipeline Integrity Engineer/SME,Operations Support/Management,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14444-en_US 1
+Kuwait,SLB,Planner - Integrated Segments,Operations Support/Management,"Ahmadi, Kuwait",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14763-en_US 1
+United States,SLB,Plant Manager,Other,"Freeport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133455
+United States,SLB,Plunger Lift Automation Service Representative,Other,"El Reno, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134869
+United States,SLB,Plunger Lift Service Representative,Sales & Commercial,"Calsbad, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135173
+United Kingdom,SLB,Postdoctoral Researcher - Modelling of Fluid Flow and Heat Transfer in Enhanced Geothermal Systems,Digital Technology & Research,"Cambridge, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85693
+United States,SLB,Principal Engineer II,Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133918
+United States,SLB,Principal Lab Technician,Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134309
+United Kingdom,SLB,Process Engineer,Other,"Southampton, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134385
+United Kingdom,SLB,Procurement Intern (12 months) - Starting April 2026,Digital Technology & Research,"Stonehouse, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85474
+United States,SLB,PROCUREMENT SPECIALIST,Digital Technology & Research,"Ville Platte, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14190-en_US 1
+United States,SLB,Product Quality Engineer - Artificial Lift,Other,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135146
+India,SLB,Production Chemistry Field Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Kakinada, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14540-en_US 1
+Libya,SLB,Production Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14118-en_US 1
+Libya,SLB,Production Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13360-en_US 1
+,SLB,Production Supervisor,Other,,2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135119
+Argentina,SLB,Profesionales con Experiencia (Genérico),"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF7612-en_US 1
+India,SLB,Project Coordinator (Drilling Data),Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13189-en_US 1
+India,SLB,Project Coordinator - Drilling Data,Administration,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13188-en_US 1
+India,SLB,Project Engineer,Operations Support/Management,"Gurgaon, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12642-en_US 1
+United Arab Emirates,SLB,Project Manager Direct,"Operations (Engineers, Geoscience, Specialists, Operators)","Dubai, United Arab Emirates",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14090-en_US 1
+United States,SLB,Project Services Specialist,Operations Support/Management,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12209-en_US 1
+Iraq,SLB,PS Technical Sales Support Engineer,Sales & Commercial,"Basrah, Iraq",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14492-en_US 1
+Qatar,SLB,PS Technical Sales Support Engineer,Sales & Commercial,"Doha, Qatar",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13174-en_US 1
+Malaysia,SLB,PSD Assistant,Operations Support/Management,"Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14788-en_US 1
+United States,SLB,Pump Repair Technician,Other,"Garden City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134904
+United States,SLB,Pump Repair Technician,Other,"Hobbs, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134606
+United States,SLB,Pump Repair Technician,Other,"Dickinson, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134703
+United States,SLB,Pump Repair Technician,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134968
+India,SLB,QA Automation Engineer,Digital Technology & Research,"Pune, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14707-en_US 1
+United States,SLB,Quality Assurance Associate,Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135077
+Brazil,SLB,Quality Engineer,Digital Technology & Research,"Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14159-en_US 1
+United States,SLB,Quality Engineer,Other,"West Valley City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134943
+United States,SLB,Quality Operations Support Engineer,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12204-en_US 1
+United States,SLB,Quality Supervisor,Digital Technology & Research,"Shreveport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14354-en_US 1
+United States,SLB,R&D Mechanical & Controls Technologist,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10909-en_US 1
+United States,SLB,R&E Geophysicist,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14290-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14421-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14420-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14422-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14419-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13251-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13249-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14071-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14069-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14068-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13248-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13245-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13246-en_US 1
+India,SLB,Real Time Drilling Ops Centre Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13191-en_US 1
+India,SLB,Real Time Field Support Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Vadodara, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13585-en_US 1
+India,SLB,Real Time Field Support Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Gurgaon, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13589-en_US 1
+India,SLB,Real Time Support Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13590-en_US 1
+United States,SLB,Receivable Center Student Intern,Finance,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11931-en_US 1
+United States,SLB,Regional Sales Lead - Permian,Other,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134978
+United States,SLB,Regional Sales Manager - South Texas Region,Sales & Commercial,"Kenedy, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134291
+United States,SLB,Regional Sales Manager- New Mexico,Sales & Commercial,"Carlsbad, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134404
+United States,SLB,Regional Sales Representative,Sales & Commercial,"Evans, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134946
+Angola,SLB,Regulatory Compliance Specialist Intern,Other,"Luanda, Angola",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85898
+Gabon,SLB,Regulatory Compliance Specialist Intern,Other,"Port-Gentil, Gabon",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85899
+Colombia,SLB,Relocation Representative,Human Resources,"Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14893-en_US 1
+Colombia,SLB,Representante Tecnico de Servicios EOR II,Sales & Commercial,"Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133338
+Australia,SLB,Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Brisbane, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14082-en_US 1
+Malaysia,SLB,Reservoir Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12503-en_US 1
+Brazil,SLB,Reservoir Engineer - entry-level,"Operations (Engineers, Geoscience, Specialists, Operators)","Rio De Janeiro, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13592-en_US 1
+Romania,SLB,Reservoir Engineer Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13588-en_US 1
+Canada,SLB,Reservoir Simulation Student Intern,Administration,"Calgary, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13655-en_US 1
+India,SLB,RTOC Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14418-en_US 1
+India,SLB,RTOC Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14416-en_US 1
+India,SLB,RTOC Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14065-en_US 1
+India,SLB,RTOC Analyst,Administration,"Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14064-en_US 1
+India,SLB,RTOC Analyst,"Operations (Engineers, Geoscience, Specialists, Operators)","Dehradun, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12176-en_US 1
+United States,SLB,"Safety, Health, & Environment Manager",Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134179
+United States,SLB,Sales Engineer,Sales & Commercial,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12211-en_US 1
+Iraq,SLB,Sales Engineer,Sales & Commercial,"Basrah, Iraq",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14491-en_US 1
+United States,SLB,Sales Engineer II,Other,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134691
+United States,SLB,Sales Representative,Sales & Commercial,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14600-en_US 1
+Australia,SLB,Sales Representative,Sales & Commercial,"Perth, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14199-en_US 1
+United States,SLB,Sales Representative,Sales & Commercial,"Garden City, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134751
+United States,SLB,Senior Front End Software Engineer,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14264-en_US 1
+United Arab Emirates,SLB,SHE Manager,Other,United Arab Emirates,2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134811
+United States,SLB,Shop Technician - Gas Lift,Sales & Commercial,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135097
+United States,SLB,Shop Technician I,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135048
+United States,SLB,Shop Technicians,Other,"Broken Arrow, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134999
+United States,SLB,Shop Technicians 2nd shift,Other,"Broken Arrow, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134581
+United States,SLB,"Shop/Warehouse Worker, Norris - Williston, ND",Other,"Williston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135134
+United States,SLB,"Shop/Warehouse Worker, Norris - Williston, ND",Other,"Williston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135102
+Malaysia,SLB,SLB Graduate Program,Administration,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14174-en_US 1
+United States,SLB,Software Architect,Digital Technology & Research,"Menlo Park, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14157-en_US 1
+United States,SLB,Software Architect,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13946-en_US 1
+Malaysia,SLB,Software Design & Development Intern,Digital Technology & Research,"Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14692-en_US 1
+United Kingdom,SLB,Software Engineer Intern (12 months),Digital Technology & Research,"Cambridge, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=84828
+United States,SLB,Software Team Leader,Digital Technology & Research,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14214-en_US 1
+United States,SLB,Solids Control Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","New Iberia, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13511-en_US 1
+Colombia,SLB,Solutions Integration Engineer,Operations Support/Management,"Bogota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11782-en_US 1
+Mozambique,SLB,Sourcing and Supplier Specialist,Other,"Costa Do Sol, Mozambique",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=86172
+United States,SLB,Sr. Account Manager,Other,"Bakersfield, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134765
+United States,SLB,Sr. Technical Project Manager,Sales & Commercial,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134529
+United Kingdom,SLB,Storekeeper,Digital Technology & Research,"Stonehouse, United Kingdom",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85734
+United States,SLB,Storekeeper,Digital Technology & Research,"Rosharon, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13964-en_US 1
+Australia,SLB,Storekeeper,Supply Chain,"Perth, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14198-en_US 1
+India,SLB,Student Intern,Legal,"Pune, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14699-en_US 1
+India,SLB,Student Intern,"Operations (Engineers, Geoscience, Specialists, Operators)","Pune, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14660-en_US 1
+Brazil,SLB,Student Intern,Administration,"Catu, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13233-en_US 1
+United States,SLB,Summer 2026 HR Internship,Other,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135111
+Colombia,SLB,Supervisor Laboratory,Other,"Soledad, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135086
+United States,SLB,Supply Chain Engineer Co-Op,Other,"Freeport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133607
+United States,SLB,Supply Chain Engineer Intern,Other,"Freeport, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133643
+Canada,SLB,Supply Chain Intern,Supply Chain,"Calgary, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14565-en_US 1
+United States,SLB,Supply Chain Intern,Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133606
+Romania,SLB,Supply Chain Intern (with French),Supply Chain,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13440-en_US 1
+Romania,SLB,Supply Chain Intern (with Italian),Supply Chain,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13441-en_US 1
+Romania,SLB,Supply Chain Internship,Supply Chain,"Bucharest, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12748-en_US 1
+United States,SLB,Supply Chain Manufacturing Co-ops/Intern,Other,"Sugar Land, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133604
+Namibia,SLB,Supply Chain Specialist Intern,Other,"Walvis Bay, Namibia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85897
+United States,SLB,Surface Well Testing Field Engineer,Operations Support/Management,"Houma, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10844-en_US 1
+Libya,SLB,Systems Specialist - SIS,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13362-en_US 1
+India,SLB,Tax Analyst (Indirect Tax),Finance,"Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12961-en_US 1
+Ghana,SLB,Tax Supervisor,Other,"Accra, Ghana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=85814
+Brazil,SLB,Technical Process Support Engineer,Sales & Commercial,"Rio De Janeiro, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14566-en_US 1
+United States,SLB,Technical Sales Representative,Sales & Commercial,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134098
+Australia,SLB,Technical Sales Support Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Perth, Australia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13407-en_US 1
+United States,SLB,Technical Service Representative,Sales & Commercial,"Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133217
+Brunei,SLB,Technical Service Representative II,Sales & Commercial,"Kuala Belait, Brunei",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134434
+Brunei,SLB,Technical Service Representative II,Sales & Commercial,"Kuala Belait, Brunei",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00133548
+United States,SLB,Technology Center HSE Manager,Digital Technology & Research,"Ville Platte, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13753-en_US 1
+Norway,SLB,Technology Summer Intern (3 months),Digital Technology & Research,"Lysaker, Norway",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=84955
+Argentina,SLB,Técnica o Técnico en Electrónica,Maintenance,"Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11886-en_US 1
+Argentina,SLB,Técnica o Técnico en Mecánica,Maintenance,"Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF11891-en_US 1
+Brazil,SLB,Técnico de Operações de Campo Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9873-en_US 1
+Brazil,SLB,Técnico de Operações de Campo Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","Aracaju, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9874-en_US 1
+Brazil,SLB,Técnico(a) de Completação,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14677-en_US 1
+United States,SLB,Tender Manager,Sales & Commercial,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14558-en_US 1
+Guyana,SLB,TLM Maintenance Intern,Maintenance,"Georgetown, Guyana",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF8079-en_US 1
+Argentina,SLB,Trainee de Ingeniería,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF4772-en_US 1
+Argentina,SLB,Trainee de Tecnicatura,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF3138-en_US 1
+Algeria,SLB,Trainee Laboratory Technician,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13960-en_US 1
+United States,SLB,Transaction Tax Analyst- Intern,Finance,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10583-en_US 1
+Malaysia,SLB,Transfer Pricing Analyst,Finance,"Petaling Jaya, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14200-en_US 1
+United States,SLB,Variable Speed Drive Supervisor,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00135193
+United States,SLB,Warehouse Specialist,Other,"Odessa, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00132692
+Brazil,SLB,WCF Cementing Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12915-en_US 1
+United States,SLB,WCF Cementing Specialist,"Operations (Engineers, Geoscience, Specialists, Operators)","Midland, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13339-en_US 1
+United States,SLB,Web UI/UX Specialist,Marketing,"Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14130-en_US 1
+Algeria,SLB,WEC Field Engineer - Measurements,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13444-en_US 1
+United States,SLB,WEC Field Engineer - Measurements,"Operations (Engineers, Geoscience, Specialists, Operators)","Prudhoe Bay, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10200-en_US 1
+Colombia,SLB,WEC Specialist - DD,"Operations (Engineers, Geoscience, Specialists, Operators)","Cota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12310-en_US 1
+Colombia,SLB,WEC Specialist - DD,"Operations (Engineers, Geoscience, Specialists, Operators)","Cota, Colombia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12311-en_US 1
+Brazil,SLB,WEC Specialist - DD Cross Train DX,"Operations (Engineers, Geoscience, Specialists, Operators)","Macae, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF10677-en_US 1
+Brazil,SLB,Well Site Coordinator,"Operations (Engineers, Geoscience, Specialists, Operators)","Rio De Janeiro, Brazil",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13276-en_US 1
+Argentina,SLB,Well Site Coordinator,"Operations (Engineers, Geoscience, Specialists, Operators)","Neuquen, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13231-en_US 1
+United States,SLB,Well Site Coordinator Offshore,"Operations (Engineers, Geoscience, Specialists, Operators)","Houston, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF9573-en_US 1
+Libya,SLB,Well Superintendent,"Operations (Engineers, Geoscience, Specialists, Operators)","Tripoli, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14040-en_US 1
+Romania,SLB,Wellsite Engineer Summer Internship,"Operations (Engineers, Geoscience, Specialists, Operators)","Aricestii-Rahtivani, Romania",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14169-en_US 1
+Libya,SLB,Wellsite Supervisor Trainee,"Operations (Engineers, Geoscience, Specialists, Operators)","103 Oilfield, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14448-en_US 1
+Canada,SLB,Wireline or Coil Tubing Operator,"Operations (Engineers, Geoscience, Specialists, Operators)","St. John's, Canada",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF7363-en_US 1
+United States,SLB,Wireline Professional Field Engineer,"Operations (Engineers, Geoscience, Specialists, Operators)","Youngsville, United States",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF12717-en_US 1
+Malaysia,SLB,Workforce Coordinator Intern,Administration,"Kuala Lumpur, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13882-en_US 1
+Malaysia,SLB,WS Field Engineer - WIS,"Operations (Engineers, Geoscience, Specialists, Operators)","Cukai, Malaysia",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13722-en_US 1
+Libya,SLB,WS Field Engineer - WIT,"Operations (Engineers, Geoscience, Specialists, Operators)","103 Oilfield, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13450-en_US 1
+Algeria,SLB,WS Field Engineer - WIT,"Operations (Engineers, Geoscience, Specialists, Operators)","Hassi Messaoud, Algeria",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13447-en_US 1
+Libya,SLB,WS Field Engineer - WIT,"Operations (Engineers, Geoscience, Specialists, Operators)","103 Oilfield, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13449-en_US 1
+Libya,SLB,WS Field Engineer - WIT,"Operations (Engineers, Geoscience, Specialists, Operators)","103 Oilfield, Libya",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF13448-en_US 1
+India,SLB,WS Field Specialist - WIS,"Operations (Engineers, Geoscience, Specialists, Operators)","Navi Mumbai, India",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=EF14733-en_US 1
+Argentina,SLB,Young Professionals Program – Junior Finance Analyst,Other,"Buenos Aires, Argentina",2026-03-05,https://careers.slb.com/jobdescription.aspx?id=WDR00134081
