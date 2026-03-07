@@ -210,6 +210,15 @@
 - **Pagination**: None needed — all results on single page (currently only 2 jobs)
 - **Notes**: All jobs in Qatar. Very small number of openings. NOC is a Qatar Petroleum / TotalEnergies JV for the Al-Shaheen offshore field. Departments map to categories: "Health and Industrial Hygiene" → HSE, "Human Resources" (for internship postings) → Internship.
 
+### 23. Dragon Oil (8 jobs)
+- **URL**: https://career22.sapsf.com/career?company=dragonoilh
+- **Platform**: SAP SuccessFactors career portal
+- **Method**: Navigate to portal, click "Search Jobs" to load results. All 8 jobs on single page. Extract from `tr.jobResultItem` rows: title from `a.jobTitle`, requisition info from row `innerText` matching regex `Requisition ID: (\d+) - Posted on (\S+) - (.+)`. Location code on a separate line starting with `DOTL` or `DOHL`.
+- **DOM Selectors**: `tr.jobResultItem` for job rows. `a.jobTitle` for title link. Requisition line parsed with regex. Location line starts with `DOTL-` (Turkmenistan) or `DOHL` (Dubai HQ).
+- **Link Format**: `https://career22.sapsf.com/career?career_ns=job_listing&company=dragonoilh&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id={reqId}&selected_lang=en_GB`
+- **Pagination**: None needed — all results on single page
+- **Notes**: Dragon Oil is an ENOC subsidiary. Jobs split between Turkmenistan (DOTL = Dragon Oil Turkmenistan Limited, locations: Hazar offshore, Ashgabat) and UAE (DOHL = Dragon Oil Holdings Ltd, Dubai Corporate Head Office). No department field on listing — categories inferred from title. The dragonoil.com/careers/ page links to the SAP SuccessFactors portal via "Current Vacancies". Chrome extension blocks href extraction due to query strings — click through to detail page or use reqId to construct links.
+
 ### Middle East Only Companies (unchanged)
 - **ENOC**
 - **OQ Group**
@@ -218,7 +227,6 @@
 - **NIOC**
 - **INOC**
 - **Bapco**
-- **Dragon Oil**
 
 ---
 
