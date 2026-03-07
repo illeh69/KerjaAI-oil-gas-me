@@ -96,8 +96,14 @@
 - **Notes**: Workday backend (wd1.myworkdayjobs.com) may be down during maintenance windows. The custom careers.conocophillips.com page still serves job listings even when Workday UI is down.
 
 ### 13. Petronas (30 jobs)
-- **URL**: Worldwide scrape
-- **Notes**: Scraped worldwide.
+- **URL**: https://careers.petronas.com/en/sites/CX_1/jobs?mode=location
+- **Platform**: Oracle CX Recruiting
+- **Method**: All jobs load on single page (scroll to bottom triggers lazy-load for remaining cards). Extract from `.job-tile` parent divs; the `a[href*="/job/"]` links inside are empty — data is in the parent div's `innerText`.
+- **Data structure**: Each tile shows title (first line), location + posting date (second line, format "Location Posting DateMM/DD/YYYY"), and optional TRENDING badge.
+- **Title cleanup**: Some titles have numeric prefixes like "100004709_" or "100005288 - " that need stripping via regex `^\d+[_ -]+`.
+- **Multi-location**: Some jobs show "Location and 1 more" — strip the suffix.
+- **Build script**: `build_petronas.py` — categories classified by title keywords. All jobs currently in Malaysia.
+- **Notes**: All 30 jobs are in Malaysia (Kuala Lumpur, Perak, Putrajaya). Heavy on academic/research roles (university positions).
 
 ### 14. Suncor (27 jobs)
 - **URL**: https://suncor.wd1.myworkdayjobs.com/Suncor_External
