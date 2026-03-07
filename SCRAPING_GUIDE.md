@@ -108,6 +108,27 @@
 - **Data Format**: `title~location~country~~~link` (no category or date available)
 - **Notes**: Client-rendered SPA — JavaScript state (`window._mubJobs`) is lost on page navigation. Must extract and dump each page independently. "Tax Associate Energy Sector" has no location — defaults to Abu Dhabi, UAE (Mubadala HQ). Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`.
 
+### 16. INPEX (72 jobs — 2 sites combined)
+
+#### INPEX Australia (24 jobs)
+- **URL**: https://careers.inpex.com.au/search/?q=&searchResultView=LIST
+- **Platform**: SAP SuccessFactors (UI5 Web Components with Shadow DOM)
+- **Method**: POST API `https://careers.inpex.com.au/services/recruiting/v1/jobs` + UI pagination fallback
+- **API Payload**: `{"locale": "en_GB", "firstResult": N, "maxResults": 10, "query": "", "sortBy": "date_desc"}`
+- **Pagination**: 10 per page, 3 pages. API has a bug returning duplicates and missing some jobs — must supplement with UI page scraping via accessibility tree.
+- **Data**: `jobSearchResult[].response` contains `unifiedStandardTitle`, `id`, `jobLocationShort[]`, `urlTitle`, `unifiedStandardStart`
+- **Link Format**: `https://careers.inpex.com.au/job/{urlTitle}/{id}-en_GB`
+- **Notes**: Shadow DOM prevents direct DOM queries — use accessibility tree (`read_page`) to extract links. API returns max ~17 unique of 24; remaining must be collected from UI pages 2-3.
+
+#### INPEX Indonesia (48 jobs)
+- **URL**: https://career.inpex.co.id/home#jobsearch
+- **Platform**: ASP.NET WebForms
+- **Method**: DOM scraping with postback pagination
+- **Pagination**: 10 per page, 5 pages. Uses `WebForm_DoPostBackWithOptions` for page navigation (click pagination links)
+- **DOM Selectors**: `a[href*="/jobdetail/"]` for job links
+- **Link Format**: `https://career.inpex.co.id/jobdetail/{title}/{jobId}`
+- **Notes**: No category or date info available. All jobs are in Jakarta, Indonesia. JavaScript state preserved across postback pages. Must click through each page and collect links.
+
 ### Middle East Only Companies (unchanged)
 - **ADNOC** (57 jobs)
 - **QatarEnergy LNG**
