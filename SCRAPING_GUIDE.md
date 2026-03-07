@@ -174,6 +174,15 @@
 - **Pagination**: Client-side rendered — `fetch()` returns HTML shell without job data. Must navigate browser to each page URL and extract from live DOM.
 - **Notes**: All jobs in UAE (Abu Dhabi, Offshore Islands, Onshore Site/Ruwais, Rigs). Categories come from Phenom facets. Subsidiaries include ADNOC GAS O&M, ADNOC Distribution, ADNOC HQ, ADNOC Drilling, ADNOC Onshore, ADNOC Offshore, ADNOC Logistics & Services. Chatbot widget may overlay results — close it first.
 
+### 19. CNOOC International (3 jobs)
+- **URL**: https://cnoocinternational.com/careers/currentopportunities/
+- **Platform**: Lumesse TalentLink (custom CMS integration)
+- **Method**: DOM scraping from single page. All jobs visible on one page (no pagination). Job cards contain title, category (Functional Area), country, city, and posted date.
+- **DOM Selectors**: Job cards are `div` blocks with fields using `SLOVLIST1` (category), `SLOVLIST2` (country), `SLOVLIST3` (city) class identifiers. Detail links use `a` tags with "See requisition details" text.
+- **Link Format**: `https://cnoocinternational.com/careers/currentopportunities/details/?jobId={ID}&jobTitle={ENCODED_TITLE}`
+- **Pagination**: None — all jobs on single page (currently only 3 openings)
+- **Notes**: CNOOC International is the overseas arm of CNOOC (China National Offshore Oil Corporation). Currently all jobs are in Calgary, Canada. Very small number of openings. The Chrome extension blocks JS output containing query strings — use `url.searchParams.get()` to extract individual parameters.
+
 ### Middle East Only Companies (unchanged)
 - **QatarEnergy LNG**
 - **ENOC**
