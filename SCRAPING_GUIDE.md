@@ -165,8 +165,16 @@
 - **Link Format**: `https://careers.woodside.com.au/job/{slug}/{id}/`
 - **Notes**: Small job count (14). Country codes need mapping to full names. No Shadow DOM — standard DOM queries work fine.
 
+### 18. ADNOC (63 jobs)
+- **URL**: https://jobs.adnoc.ae/us/en/search-results
+- **Platform**: Phenom People (Vue.js, client-side rendered)
+- **Method**: DOM scraping with page-by-page navigation. 10 jobs per page, 7 pages. Navigate to `?from=N&s=1` (N=0,10,20,...60). Extract `a[href*="/job/"]` links from each page.
+- **DOM Selectors**: `a[href*="/job/"]` for job links. Parent card element contains category (line 2), country (line 3), subsidiary (line 4), city (line 5) in `innerText` split by newlines.
+- **Link Format**: `https://jobs.adnoc.ae/us/en/job/{jobId}`
+- **Pagination**: Client-side rendered — `fetch()` returns HTML shell without job data. Must navigate browser to each page URL and extract from live DOM.
+- **Notes**: All jobs in UAE (Abu Dhabi, Offshore Islands, Onshore Site/Ruwais, Rigs). Categories come from Phenom facets. Subsidiaries include ADNOC GAS O&M, ADNOC Distribution, ADNOC HQ, ADNOC Drilling, ADNOC Onshore, ADNOC Offshore, ADNOC Logistics & Services. Chatbot widget may overlay results — close it first.
+
 ### Middle East Only Companies (unchanged)
-- **ADNOC** (57 jobs)
 - **QatarEnergy LNG**
 - **ENOC**
 - **PDO**
