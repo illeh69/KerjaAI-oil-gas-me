@@ -270,6 +270,19 @@
 - **Categories**: No department/category field in API — inferred from job titles (heavy marine/dredging/construction focus)
 - **Notes**: NMDC Group is an Abu Dhabi-based marine and dredging company. All 52 jobs are in the UAE (Abu Dhabi). Roles are predominantly marine operations (marine supervisor, tug master, seaman), dredging (dredge mechanic, electrician), construction (crane operator, fabrication, rigging, welding), and engineering (electrical, mechanical). Very specialized workforce.
 
+### 28. Larsen & Toubro (904 jobs)
+- **URL**: https://larsentoubrocareers.peoplestrong.com/job/joblist
+- **Platform**: PeopleStrong AltOne
+- **Method**: REST API POST with pagination
+- **API Endpoint**: `POST https://larsentoubrocareers.peoplestrong.com/api/cp/rest/altone/cp/jobs/v1?offset=N&limit=100`
+- **Request Body**: Empty JSON `{}`
+- **Pagination**: `offset` increments by `limit`, `totalRecords` in response indicates total count
+- **Response Fields**: `response[]` array, each item has `jobTitle`, `locationHierarchyComplete` (Country>State>City), `organizationUnit`, `industry`, `functionalArea`, `jobPostedDate`, `jobDetailUrl`, `jobCode`
+- **Link Format**: `https://larsentoubrocareers.peoplestrong.com/job/detail/{jobCode}`
+- **Country Extraction**: Parse `locationHierarchyComplete` hierarchy — last segment is country. Normalize "United Arab Emirates" → "UAE"
+- **Categories**: Inferred from jobTitle, industry, and functionalArea fields using keyword matching
+- **Notes**: L&T is a major Indian multinational in engineering, construction, and technology. 904 jobs across 9 countries (India 784, Saudi Arabia 50, Oman 32, UAE 19, Kuwait 6, Indonesia 6, Qatar 3, Uzbekistan 3, Guinea 1). Heavy concentration in engineering, management, construction, and structural/civil roles. API accepts empty body and returns rich metadata including organizational unit and industry classification.
+
 ### Middle East Only Companies (unchanged)
 - **ENOC**
 - **OQ Group**
