@@ -183,10 +183,18 @@
 - **Pagination**: None — all jobs on single page (currently only 3 openings)
 - **Notes**: CNOOC International is the overseas arm of CNOOC (China National Offshore Oil Corporation). Currently all jobs are in Calgary, Canada. Very small number of openings. The Chrome extension blocks JS output containing query strings — use `url.searchParams.get()` to extract individual parameters.
 
+### 20. PDO (8 jobs)
+- **URL**: https://www.petrojobs.om/en-us/Pages/Job/Search_result.aspx?Keyword=&cpn=1&depid=-1&type=s
+- **Platform**: PetroJobs Oman (ASP.NET WebForms, shared Oman O&G recruitment portal)
+- **Method**: Navigate to search results page with `cpn=1` (company ID for PDO). All 8 jobs visible on one page. Job cards in `div.thumbnail.panel_bg` containers contain title, discipline, job ID (PDO####), position type, dates. Detail page IDs extracted from `a` elements with `Details.aspx?i={id}` pattern.
+- **DOM Selectors**: `div.thumbnail.panel_bg` for job cards. Title in first line of `innerText`. Discipline, Job ID, dates in tab-separated label rows. Detail link IDs via regex `i=(\d+)` on anchor `innerHTML`.
+- **Link Format**: `https://www.petrojobs.om/en-us/Pages/Job/Details.aspx?i={detailId}`
+- **Pagination**: None needed — all results on single page (8 jobs currently)
+- **Notes**: PetroJobs.om is a joint recruitment portal for 9 Oman O&G operators (PDO, OQ, BP, Daleel, CC Energy, Oxy, OLNG, ARA, Masar). Company filter value for PDO is `cpn=1`. All PDO jobs are in Oman, no specific city/location provided. Chrome extension may block URLs with query strings in JS output — use document.title or get_page_text for extraction.
+
 ### Middle East Only Companies (unchanged)
 - **QatarEnergy LNG**
 - **ENOC**
-- **PDO**
 - **OQ Group**
 - **KPC**
 - **KNPC**
