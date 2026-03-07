@@ -85,9 +85,15 @@
 - **Method**: URL-based pagination `/page/{N}`
 - **Notes**: 55 jobs total. Used `fetch()` to load all pages and extract job data from DOM. Clean "and 1 additional location" from country field.
 
-### 12. ConocoPhillips (31 jobs)
-- **URL**: Worldwide scrape
-- **Notes**: Scraped worldwide.
+### 12. ConocoPhillips (30 jobs)
+- **URL**: https://careers.conocophillips.com/job-search-results/?query=&location=
+- **Platform**: Custom careers site (non-Workday UI) with Workday backend (wd1.myworkdayjobs.com). Apply links point to Workday.
+- **Method**: Click "Search" with no filters. All jobs load on single page — no pagination. Extract from `.job_search_list_item` elements with grid sub-items.
+- **Data structure**: Each job has 4 grid items: (1) category label + job title, (2) Location, (3) Job ID, (4) Apply link to Workday.
+- **Multi-location**: Some jobs list multiple locations separated by whitespace; take first location for CSV.
+- **Country mapping**: US states (TEXAS, ALASKA, etc.) → United States; QUEENSLAND → Australia; CANADA/NORWAY/UNITED KINGDOM directly.
+- **Build script**: `build_conocophillips.py` — categories come directly from the page (Marine, Upstream Production, etc.).
+- **Notes**: Workday backend (wd1.myworkdayjobs.com) may be down during maintenance windows. The custom careers.conocophillips.com page still serves job listings even when Workday UI is down.
 
 ### 13. Petronas (30 jobs)
 - **URL**: Worldwide scrape
