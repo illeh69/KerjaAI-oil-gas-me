@@ -219,6 +219,19 @@
 - **Pagination**: None needed — all results on single page
 - **Notes**: Dragon Oil is an ENOC subsidiary. Jobs split between Turkmenistan (DOTL = Dragon Oil Turkmenistan Limited, locations: Hazar offshore, Ashgabat) and UAE (DOHL = Dragon Oil Holdings Ltd, Dubai Corporate Head Office). No department field on listing — categories inferred from title. The dragonoil.com/careers/ page links to the SAP SuccessFactors portal via "Current Vacancies". Chrome extension blocks href extraction due to query strings — click through to detail page or use reqId to construct links.
 
+### 24. McDermott (357 jobs)
+- **URL**: https://www.mcdermott.com/careers/search-apply
+- **Platform**: Oracle HCM Cloud (embedded iframe to `edsv.fa.us2.oraclecloud.com`)
+- **Method**: REST API pagination from Oracle HCM portal
+- **API Endpoint**: `https://edsv.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations,flexFieldsFacet.values&finder=findReqs;siteNumber=CX_1,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BWORKPLACE_TYPES%3BTITLES%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES%3BFLEX_FIELDS,limit=25,offset=N,sortBy=POSTING_DATES_DESC`
+- **Pagination**: 25 per page, offset increments of 25, total in `items[0].TotalJobsCount`
+- **Job Data Path**: `items[0].requisitionList` array, each item has `Id`, `Title`, `PrimaryLocation` (full), `PostedDate`
+- **Location Parsing**: `PrimaryLocation` format "City, State/Province, Country" — split by comma, last part = country, first part = city
+- **Link Format**: `https://edsv.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/{Id}`
+- **Country Normalization**: "United Arab Emirates" → "UAE"
+- **Categories**: No department/category field in API — inferred from job titles using keyword matching (see `build_mcdermott.py` categorize function)
+- **Notes**: mcdermott.com embeds Oracle HCM in an iframe. CORS blocks cross-origin API calls from mcdermott.com — must navigate browser directly to the Oracle HCM portal (`edsv.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/`) and make API calls from the same origin. Jobs span 18+ countries worldwide (UAE 78, Malaysia 65, India 55, Indonesia 41, US 36, UK 19, etc.).
+
 ### Middle East Only Companies (unchanged)
 - **ENOC**
 - **OQ Group**
