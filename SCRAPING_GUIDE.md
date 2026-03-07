@@ -201,6 +201,15 @@
 - **Pagination**: None needed — all 12 results on single page
 - **Notes**: All jobs in Qatar (Doha or Ras Laffan 2 South). Categories include National Graduates, Finance & Accounting, Information Technology, Internship, HSE. Some jobs may have empty department field — infer category from title. Location format includes ", QA" suffix which should be stripped.
 
+### 22. North Oil Company (2 jobs)
+- **URL**: https://careers.noc.qa/search/?q=&sortColumn=referencedate&sortDirection=desc
+- **Platform**: Taleo (Oracle) career site — same platform as QatarEnergy LNG
+- **Method**: Single-page search results. Navigate to URL with sort params. Extract from `tr.data-row` elements: title from `a.jobTitle-link`, department from `span.jobDepartment`, location from `span.jobLocation`, date from cell matching date regex, href from link attribute.
+- **DOM Selectors**: `tr.data-row` for job rows. `a.jobTitle-link` for title + href. Department in `span.jobDepartment`. Location in `span.jobLocation` (just "QA").
+- **Link Format**: `https://careers.noc.qa{href}` where href is `/job/Title-Slug/NumericId/`
+- **Pagination**: None needed — all results on single page (currently only 2 jobs)
+- **Notes**: All jobs in Qatar. Very small number of openings. NOC is a Qatar Petroleum / TotalEnergies JV for the Al-Shaheen offshore field. Departments map to categories: "Health and Industrial Hygiene" → HSE, "Human Resources" (for internship postings) → Internship.
+
 ### Middle East Only Companies (unchanged)
 - **ENOC**
 - **OQ Group**
@@ -210,7 +219,6 @@
 - **INOC**
 - **Bapco**
 - **Dragon Oil**
-- **North Oil Company**
 
 ---
 
