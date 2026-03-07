@@ -54,9 +54,14 @@
 - **Config Source**: `window.search.client.transporter.queryParameters` (appId, apiKey), `search.mainIndex` (index name)
 - **Notes**: Single API call with `hitsPerPage=1000`. Returns title, primary_country[], location[], professional_function[], posting_date[], slug[]. Job links use format: `https://careers.bp.com/job-description/{RQ_ID}` (NOT `/listing/{slug}` which returns 404).
 
-### 7. QatarEnergy (293 jobs)
-- **URL**: Middle East only (original scrape)
-- **Notes**: ME-only company, unchanged from original scrape.
+### 7. QatarEnergy (284 jobs)
+- **URL**: https://careerportal.qatarenergy.qa/jobs
+- **Platform**: Jibe (Angular Material) with REST API
+- **Method**: REST API at `/api/jobs?page=N&sortBy=relevance&descending=false&internal=false&limit=100&deviceId=undefined&domain=qatarenergy.jibeapply.com`. `limit=100` works — 3 API calls fetch all 292 results (284 unique after dedup).
+- **Data Structure**: `response.jobs[].data` contains: `title`, `slug` (numeric ID used in link), `req_id`, `city`, `location_name`, `short_location`, `category` (array), `department`, `posted_date` (YYYY-MM-DD), `country`, `country_code`.
+- **Link Format**: `https://careerportal.qatarenergy.qa/jobs/{slug}`
+- **UI Notes**: Angular Material `mat-paginator` shows 10 per page. Lazy loads more on scroll. API `limit` param bypasses pagination entirely.
+- **Notes**: All jobs in Qatar (Doha, Mesaieed, Ras Laffan, Dukhan, Offshore). Categories come directly from API data. 8 duplicate slugs removed.
 
 ### 8. Saudi Aramco (220 jobs)
 - **URL**: Middle East only (original scrape)
