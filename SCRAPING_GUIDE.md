@@ -129,6 +129,15 @@
 - **Link Format**: `https://career.inpex.co.id/jobdetail/{title}/{jobId}`
 - **Notes**: No category or date info available. All jobs are in Jakarta, Indonesia. JavaScript state preserved across postback pages. Must click through each page and collect links.
 
+### 17. Woodside Energy (14 jobs)
+- **URL**: https://careers.woodside.com.au/go/View-All-Opportunities/9784266/
+- **Platform**: Taleo (Oracle)
+- **Method**: DOM scraping — all 14 jobs on a single page, no pagination needed
+- **DOM Selectors**: `a[href*="/job/"]` for job links (deduplicate by href as each job has multiple link elements). Walk up parent elements until finding one with `Location` + `Posting Date` text to get the full job card context.
+- **Data Fields**: Structured text in each card: `Title`, `Location` (country codes: US, MX, AU, SG), `Business Unit` (used as category), `Requisition ID`, `Posting Date` (format: `D Mon YYYY`, e.g., "4 Mar 2026")
+- **Link Format**: `https://careers.woodside.com.au/job/{slug}/{id}/`
+- **Notes**: Small job count (14). Country codes need mapping to full names. No Shadow DOM — standard DOM queries work fine.
+
 ### Middle East Only Companies (unchanged)
 - **ADNOC** (57 jobs)
 - **QatarEnergy LNG**
