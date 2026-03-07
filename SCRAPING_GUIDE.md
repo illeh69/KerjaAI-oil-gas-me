@@ -232,6 +232,20 @@
 - **Categories**: No department/category field in API — inferred from job titles using keyword matching (see `build_mcdermott.py` categorize function)
 - **Notes**: mcdermott.com embeds Oracle HCM in an iframe. CORS blocks cross-origin API calls from mcdermott.com — must navigate browser directly to the Oracle HCM portal (`edsv.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/`) and make API calls from the same origin. Jobs span 18+ countries worldwide (UAE 78, Malaysia 65, India 55, Indonesia 41, US 36, UK 19, etc.).
 
+### 25. Saipem (195 jobs)
+- **URL**: https://jobs.saipem.com/
+- **Platform**: Custom job board powered by NCorePlat (app.ncoreplat.com)
+- **Method**: Static JSON file fetch — all jobs in a single `positions_saipem.json`
+- **Data Source**: `https://jobs.saipem.com/positions_saipem.json`
+- **JSON Structure**: `data.Positions` object keyed by subsidiary name (17 subsidiaries), each containing array of job objects
+- **Job Fields**: `title`, `countryText`, `sectorText`, `url`, `orderDate`, `root-node` (subsidiary)
+- **Pagination**: None — all jobs in single JSON file
+- **Link Format**: Direct URLs to `app.ncoreplat.com/jobposition/{id}/...`
+- **Subsidiaries**: Global Projects Services AG, Saipem Romania Srl, Saipem SA (France), Saipem Limited (UK), Saipem India, Saipem Luxembourg Angola Branch, Petromar Lda, Saipem Australia, Saipem Spa (Italy), Saipem Offshore Construction, Saipem SpA Qatar Branch, Saipem do Brasil, SAIPEM SpA Abu Dhabi Branch, SEI Spa Ivory Coast Branch, Saudi Arabian Saipem Co. Ltd., Snamprogetti Saudi Arabia Co. Ltd., Saipem America Inc
+- **Country Normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA", "Cote d'Ivoire" → "Ivory Coast"
+- **Categories**: Sector field available (`sectorText`) plus title-based inference for granular categories
+- **Notes**: Very straightforward scraping — static JSON with all data. Jobs span 15+ countries (Italy 50, France 32, Offshore 25, Qatar 13, Angola 11, Saudi Arabia 11, etc.). Many French-language internship postings ("STAGE ...") from Saipem SA. The "Offshore" country designation means vessel/offshore-based roles with no fixed country.
+
 ### Middle East Only Companies (unchanged)
 - **ENOC**
 - **OQ Group**
