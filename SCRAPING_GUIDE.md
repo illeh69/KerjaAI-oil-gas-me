@@ -246,6 +246,19 @@
 - **Categories**: Sector field available (`sectorText`) plus title-based inference for granular categories
 - **Notes**: Very straightforward scraping — static JSON with all data. Jobs span 15+ countries (Italy 50, France 32, Offshore 25, Qatar 13, Angola 11, Saudi Arabia 11, etc.). Many French-language internship postings ("STAGE ...") from Saipem SA. The "Offshore" country designation means vessel/offshore-based roles with no fixed country.
 
+### 26. Technip Energies (172 jobs)
+- **URL**: https://hcxg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs
+- **Platform**: Oracle HCM Cloud (same as McDermott but different instance: `hcxg.fa.em2.oraclecloud.com`)
+- **Method**: REST API pagination from Oracle HCM portal
+- **API Endpoint**: `https://hcxg.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations,flexFieldsFacet.values&finder=findReqs;siteNumber=CX_1,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BWORKPLACE_TYPES%3BTITLES%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES%3BFLEX_FIELDS,limit=25,offset=N,sortBy=POSTING_DATES_DESC`
+- **Pagination**: 25 per page (default is 9), offset increments of 25, total in `items[0].TotalJobsCount`
+- **Job Data Path**: `items[0].requisitionList` array, each item has `Id`, `Title`, `PrimaryLocation`, `PostedDate`
+- **Location Parsing**: `PrimaryLocation` format "City, Region, Country" — split by comma, last part = country, first part = city
+- **Link Format**: `https://hcxg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/{Id}`
+- **Country Normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA", "Korea, Republic of" → "South Korea"
+- **Categories**: No department/category field in API — inferred from job titles using keyword matching
+- **Notes**: T.EN (Technip Energies) career site. Jobs span 15 countries (France 58, UK 27, India 20, Malaysia 15, UAE 11, USA 10, Colombia 9, Spain 8, etc.). Many French-language and V.I.E (Volontariat International en Entreprise) postings. Headquarters in Nanterre, France. UAE jobs are predominantly for UAE Nationals.
+
 ### Middle East Only Companies (unchanged)
 - **ENOC**
 - **OQ Group**
