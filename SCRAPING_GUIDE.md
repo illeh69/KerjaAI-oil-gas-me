@@ -69,9 +69,15 @@
 - **Body**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`
 - **Notes**: Links must include `/ShellCareers/` in path (e.g., `myworkdayjobs.com/ShellCareers/job/...`). Workday was intermittently down for maintenance.
 
-### 10. Chevron (176 jobs)
-- **URL**: Worldwide scrape
-- **Notes**: Scraped worldwide.
+### 10. Chevron (179 jobs)
+- **URL**: https://careers.chevron.com/search-jobs
+- **Platform**: TalentBrew (Radancy/TMP) with ElasticSearch backend
+- **Method**: Click-based pagination through 12 pages (15 jobs/page). Extract `a[href*="/job/"]` links; title and location parsed from link text (split by newline). Slugs captured directly from href paths.
+- **Pagination**: AJAX pagination via "next page" link click; URL params (`&p=N`) don't work as direct navigation. `window.elasticSearch.searchOptions` provides TotalResults/TotalPages metadata.
+- **API Notes**: `window.elasticSearch.search()` exists but DOM updates unreliably. `/search-jobs/results` endpoint returns empty results. Only click-based pagination works reliably.
+- **Country mapping**: Location format "City, State/Country" — US states mapped to "United States", other countries extracted from location suffix.
+- **Build script**: `build_chevron.py` — includes category classification based on title keywords.
+- **Notes**: Scraped worldwide. 15 countries including India (58), US (32), Philippines (31), Argentina (27).
 
 ### 11. Petrofac (55 jobs)
 - **URL**: https://petrofac.referrals.selectminds.com
