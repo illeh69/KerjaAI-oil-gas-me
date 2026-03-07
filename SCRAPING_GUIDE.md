@@ -259,6 +259,17 @@
 - **Categories**: No department/category field in API — inferred from job titles using keyword matching
 - **Notes**: T.EN (Technip Energies) career site. Jobs span 15 countries (France 58, UK 27, India 20, Malaysia 15, UAE 11, USA 10, Colombia 9, Spain 8, etc.). Many French-language and V.I.E (Volontariat International en Entreprise) postings. Headquarters in Nanterre, France. UAE jobs are predominantly for UAE Nationals.
 
+### 27. NMDC (52 jobs)
+- **URL**: https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/nmdccareers/jobs
+- **Platform**: Oracle HCM Cloud (`fa-evft-saasfaprod1.fa.ocs.oraclecloud.com`)
+- **Method**: REST API pagination from Oracle HCM portal
+- **API Endpoint**: `https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations,flexFieldsFacet.values&finder=findReqs;siteNumber=CX_1,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BWORKPLACE_TYPES%3BTITLES%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES%3BFLEX_FIELDS,limit=25,offset=N,sortBy=POSTING_DATES_DESC`
+- **Pagination**: 25 per page, offset increments of 25, total in `items[0].TotalJobsCount`
+- **Job Data Path**: `items[0].requisitionList` array, each item has `Id`, `Title`, `PrimaryLocation`, `PostedDate`
+- **Link Format**: `https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/nmdccareers/job/{Id}`
+- **Categories**: No department/category field in API — inferred from job titles (heavy marine/dredging/construction focus)
+- **Notes**: NMDC Group is an Abu Dhabi-based marine and dredging company. All 52 jobs are in the UAE (Abu Dhabi). Roles are predominantly marine operations (marine supervisor, tug master, seaman), dredging (dredge mechanic, electrician), construction (crane operator, fabrication, rigging, welding), and engineering (electrical, mechanical). Very specialized workforce.
+
 ### Middle East Only Companies (unchanged)
 - **ENOC**
 - **OQ Group**
