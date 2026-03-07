@@ -63,9 +63,13 @@
 - **UI Notes**: Angular Material `mat-paginator` shows 10 per page. Lazy loads more on scroll. API `limit` param bypasses pagination entirely.
 - **Notes**: All jobs in Qatar (Doha, Mesaieed, Ras Laffan, Dukhan, Offshore). Categories come directly from API data. 8 duplicate slugs removed.
 
-### 8. Saudi Aramco (220 jobs)
-- **URL**: Middle East only (original scrape)
-- **Notes**: ME-only company, unchanged from original scrape.
+### 8. Saudi Aramco (221 jobs)
+- **URL**: https://careers.aramco.com/search/?q=&sortColumn=referencedate&sortDirection=desc
+- **Platform**: Custom careers site (careers.aramco.com) with server-rendered HTML pagination
+- **Method**: Fetch HTML pages via `?startrow=N` (multiples of 25). Parse `tr.data-row` elements; extract title from `a.jobTitle-link`, href from link attribute. Additional columns: Job Req ID (`td[1]`), Location (`td[2]`), Department (`td[3]`).
+- **Pagination**: 25 jobs per page, `startrow=0,25,50,...` up to 9 pages. Empty `tr.data-row` set signals end.
+- **Link Format**: `https://careers.aramco.com/{path}` where path is `/expat_uk/job/SLUG/ID/`, `/expat_us/job/SLUG/ID/`, or `/saudi/job/SLUG/ID/`
+- **Notes**: All jobs in Saudi Arabia (location always "SA"). Category assigned by title keywords (not available on listing page). Cannot fetch from Python (blocked), must use browser. New job "IP Docketing Specialist" found compared to previous scrape.
 
 ### 9. Shell (181 jobs)
 - **URL**: https://shell.wd3.myworkdayjobs.com/ShellCareers
