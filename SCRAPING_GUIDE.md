@@ -95,6 +95,19 @@
 - **Detail API**: GET `/wday/cxs/suncor/Suncor_External/job/{path}` for country info
 - **Notes**: API sometimes returns 400 on repeated calls. DOM scraping works as fallback (page 1: 20 jobs, page 2: 7 jobs). Job links: `https://suncor.wd1.myworkdayjobs.com/Suncor_External/job/{path}`. Country from detail API: `jobPostingInfo.country.descriptor`.
 
+### 15. Mubadala Energy (40 jobs)
+- **URL**: https://www.careers-page.com/mubadalaenergy#openings
+- **Platform**: careers-page.com (client-rendered SPA)
+- **Method**: Live DOM scraping (fetch+DOMParser does NOT work — SPA requires live browser rendering)
+- **Pagination**: `?page=N` (20 jobs per page, 2 pages)
+- **DOM Selectors**:
+  - Job links: `a[href*="/mubadalaenergy/job/"]`
+  - Title: link text content
+  - Location: `span.is-block` (first span after title)
+  - Country: parsed from location string
+- **Data Format**: `title~location~country~~~link` (no category or date available)
+- **Notes**: Client-rendered SPA — JavaScript state (`window._mubJobs`) is lost on page navigation. Must extract and dump each page independently. "Tax Associate Energy Sector" has no location — defaults to Abu Dhabi, UAE (Mubadala HQ). Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`.
+
 ### Middle East Only Companies (unchanged)
 - **ADNOC** (57 jobs)
 - **QatarEnergy LNG**
