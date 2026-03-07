@@ -192,8 +192,16 @@
 - **Pagination**: None needed — all results on single page (8 jobs currently)
 - **Notes**: PetroJobs.om is a joint recruitment portal for 9 Oman O&G operators (PDO, OQ, BP, Daleel, CC Energy, Oxy, OLNG, ARA, Masar). Company filter value for PDO is `cpn=1`. All PDO jobs are in Oman, no specific city/location provided. Chrome extension may block URLs with query strings in JS output — use document.title or get_page_text for extraction.
 
+### 21. QatarEnergy LNG (12 jobs)
+- **URL**: https://careers.qatarenergylng.qa/search/?q=&sortColumn=referencedate&sortDirection=desc
+- **Platform**: Taleo (Oracle) career site — server-rendered HTML with `tr.data-row` table rows
+- **Method**: Single-page search results. Navigate to URL with `sortColumn=referencedate&sortDirection=desc` to get all jobs sorted by date. Extract from `tr.data-row` elements: title from `a.jobTitle-link`, department from `span.jobDepartment`, location from `span.jobLocation`, date from cell matching date regex, job ID from numeric cell, href from link attribute.
+- **DOM Selectors**: `tr.data-row` for job rows. `a.jobTitle-link` for title + href. Location in `span.jobLocation` (format "City, QA"). Department in `span.jobDepartment`. Date in td matching `/^\d+ [A-Z][a-z]{2} \d{4}$/`.
+- **Link Format**: `https://careers.qatarenergylng.qa{href}` where href is `/job/City-Title-Slug/NumericId/`
+- **Pagination**: None needed — all 12 results on single page
+- **Notes**: All jobs in Qatar (Doha or Ras Laffan 2 South). Categories include National Graduates, Finance & Accounting, Information Technology, Internship, HSE. Some jobs may have empty department field — infer category from title. Location format includes ", QA" suffix which should be stripped.
+
 ### Middle East Only Companies (unchanged)
-- **QatarEnergy LNG**
 - **ENOC**
 - **OQ Group**
 - **KPC**
