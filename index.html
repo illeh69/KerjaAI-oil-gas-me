@@ -121,7 +121,7 @@ function render() {
   const list = document.getElementById('jobList');
   list.innerHTML = slice.map(j => `
     <div class="job-card">
-      <div class="job-top"><div class="job-title">${j.title}</div><a class="btn-apply" href="${j.link}" target="_blank" rel="noopener">Apply →</a></div>
+      <div class="job-top"><div class="job-title">${j.title}</div><a class="btn-apply" href="${j.link}" target="_blank" rel="noopener">View →</a></div>
       <div class="job-meta">
         <span class="badge badge-company">${j.company}</span>
         <span class="badge badge-country">${j.country}</span>
