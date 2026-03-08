@@ -83,24 +83,48 @@
 - **Country normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA", strip "/ XX" suffixes
 - **Deduplication**: Deduplicate by `title + '|' + href` after collection
 
-### 4. ExxonMobil (542 jobs)
+### 4. ExxonMobil (536 jobs)
 - **URL**: https://jobs.exxonmobil.com/search/?createNewAlert=false&q=&locationsearch=
 - **Platform**: SuccessFactors (SAP)
-- **Method**: Server-side pagination via `startrow` parameter (25 per page)
+- **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `tr.data-row` elements.
+- **Pagination**: URL parameter `startrow` in increments of 25: `/search/?q=&sortColumn=referencedate&sortDirection=desc&startrow={N}` (N = 0, 25, 50, ...).
+- **Total jobs check**: `.paginationLabel` element shows "Results 1 – 25 of N".
+- **Total pages**: `ceil(totalJobs / 25)`.
 - **DOM Selectors**:
-  - Job rows: `table.searchResults tr.data-row`
-  - Title link: `a.jobTitle-link`
-  - Columns (td): location, career field, job type, post date
-- **Pagination URL**: `/search/?q=&sortColumn=referencedate&sortDirection=desc&startrow={N}`
-- **Notes**: Country is a 2-letter code at end of location string (e.g., "Houston, TX, US"). Needs country code mapping. Can fetch pages via `fetch()` and parse with DOMParser.
+  - Job rows: `tr.data-row`
+  - Title link: `a.jobTitle-link` → `.textContent.trim()` for title, `.getAttribute('href')` for link (prepend `https://jobs.exxonmobil.com` if relative)
+  - Columns (td index): [0]=title, [1]=location, [2]=career field/category, [3]=job type, [4]=post date
+- **Country extraction**: Location string ends with 2-letter ISO country code (e.g., "Houston, TX, US"). Extract with regex `/,\s*([A-Z]{2})\s*$/`. Map codes to full names using a lookup table (US→USA, GB→UK, AE→UAE, etc.).
+- **Batch strategy**: Fetch 3 pages sequentially per JS call. Each page fetch takes ~2-3 sec. Total ~22 pages.
+- **Notes**: Method is stable and works as documented. No API changes detected.
 
-### 5. Halliburton (523 jobs)
+### 5. Halliburton (522 jobs)
 - **URL**: https://careers.halliburton.com/en/search-jobs
 - **Platform**: TalentBrew
-- **Method**: AJAX API endpoint `/en/search-jobs/results?CurrentPage={N}&RecordsPerPage={N}`
-- **Notes**: Set `RecordsPerPage=600` to get all jobs in one call. HTML response has literal `\r\n` — must replace `\\r\\n` with spaces before DOMParser. Job links from `href` attribute on `<a data-job-id>` elements (NOT `?jobId=` which redirects to search page). Title from `<h2>`, location from `span.job-location`, category from `span.jobCategories`.
+- **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `a[data-job-id]` elements.
+- **Pagination**: URL parameter `?p=N` (N = 1, 2, 3, ...). Each fetched page returns 15 jobs. First page URL has no `?p` parameter.
+- **Total jobs check**: Page body text contains "N results" (e.g., "522 results").
+- **Total pages**: `ceil(totalJobs / 15)` — typically ~35 pages.
+- **Data extraction per page**:
+  1. Fetch HTML: `fetch('https://careers.halliburton.com/en/search-jobs?p=' + pageNum)` (page 1: no `?p` param)
+  2. Parse with `new DOMParser().parseFromString(html, 'text/html')`
+  3. Select all `a[data-job-id]` elements
+  4. For each element:
+     - **Title**: `a.querySelector('h2').textContent.trim()`
+     - **Link**: `a.getAttribute('href')` — relative path, prepend `https://careers.halliburton.com`
+     - **Location**: `a.querySelector('span.job-location').textContent.trim()` — contains city, state/province, country (with embedded newlines to clean)
+     - **Category**: `a.querySelector('span.job-jobCategories').textContent.trim()` (NOTE: class is `job-jobCategories`, NOT `jobCategories`)
+  5. **Country**: Last comma-separated part of location string after cleaning whitespace
+- **Batch strategy**: Fetch 3 pages sequentially per JS call. Each page fetch takes ~3-5 sec due to large HTML (~840KB). Do NOT try more than 3 per call — 60s JS timeout.
+- **IMPORTANT — What does NOT work**:
+  - The old AJAX endpoint `/en/search-jobs/results?CurrentPage=1&RecordsPerPage=600` now returns `{"filters":"","results":"","hasJobs":true,"hasContent":false}` — empty results regardless of parameters or headers
+  - Adding `X-Requested-With: XMLHttpRequest` header does not help
+  - Setting geo location first via POST to `SetSearchRequestGeoLocation` does not help
+  - The live page renders 23 jobs (more than the 15 in fetched HTML) because extra jobs are loaded by client-side JS after initial render
+- **Country normalization**: Clean whitespace from location text, then extract last segment after final comma. "United States" → "USA", "United Kingdom" → "UK", "United Arab Emirates" → "UAE"
+- **Notes**: No date posted field available in the listing page — leave Date Posted column empty in CSV.
 
-### 6. BP (416 jobs)
+### 6. BP (397 jobs)
 - **URL**: https://careers.bp.com/listing
 - **Platform**: Algolia Search
 - **Method**: REST API POST to `https://UM59DWRPA1-dsn.algolia.net/1/indexes/production_bp_jobs/query`
