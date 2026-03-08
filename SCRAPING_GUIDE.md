@@ -13,21 +13,75 @@
 ### 2. Baker Hughes (742 jobs)
 - **URL**: https://careers.bakerhughes.com/global/en/search-results
 - **Platform**: Phenom People
-- **Method**: Phenom API endpoint
-- **Notes**: Re-scraped worldwide via Phenom platform.
+- **Method**: Fetch each page's HTML via `fetch()`, then extract embedded `eagerLoadRefineSearch` JSON using bracket-matching (NOT regex).
+- **Pagination**: URL-based: `?from=N&s=1` where N increments by 10. Total pages = `ceil(totalHits / 10)`.
+- **Total jobs check**: On page load, `window.phApp.ddo.eagerLoadRefineSearch.totalHits` gives the total count.
+- **Data extraction per page**:
+  1. Fetch HTML: `fetch('https://careers.bakerhughes.com/global/en/search-results?from=${offset}&s=1')`
+  2. Find `"eagerLoadRefineSearch":` in the HTML string
+  3. Use bracket-matching (count `{` and `}`) to extract the full JSON object — do NOT use regex (`.*?` fails on nested JSON)
+  4. Parse JSON → `.data.jobs` array contains: `title`, `country`, `city`, `multi_category[0]`, `postedDate`, `applyUrl`
+- **Bracket-matching code**:
+  ```javascript
+  const key = '"eagerLoadRefineSearch":';
+  const idx = html.indexOf(key);
+  const start = idx + key.length;
+  let depth = 0, end = start;
+  for (let i = start; i < html.length; i++) {
+    if (html[i] === '{') depth++;
+    else if (html[i] === '}') { depth--; if (depth === 0) { end = i + 1; break; } }
+  }
+  const obj = JSON.parse(html.substring(start, end));
+  // obj.data.jobs = [{title, country, city, multi_category, postedDate, applyUrl, ...}]
+  ```
+- **Batch strategy**: Fetch 3 pages in parallel with `Promise.all()`, process in sequential batches to avoid browser timeout (60s limit per JS call). Each batch of 3 pages takes ~15-20 sec.
+- **IMPORTANT — What does NOT work**:
+  - The Phenom widget API (`POST /widgets` with `ddoKey: "eagerLoadRefineSearch"`) returns server errors for all page sizes
+  - `POST /widgets` with `ddoKey: "refineSearch"` returns 0 results
+  - Regex extraction of the embedded JSON fails because lazy `.*?` stops at inner `}` braces
+  - Reading `window.phApp.ddo` directly only works on the currently loaded page (data is lost on navigation)
+  - Fetching all 75 pages in a single JS call times out — must split into batches
+- **Country normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA"
+- **Deduplication**: Some jobs appear on multiple pages — deduplicate by `title + '|' + applyUrl`
 
 ### 3. TotalEnergies (658 jobs)
-- **URL**: https://jobs.totalenergies.com/en_US/careers/SearchJobs/?listFilterMode=1&jobRecordsPerPage=20
-- **Platform**: Custom careers portal
-- **Method**: Server-side pagination via `jobOffset` parameter (20 per page, 34 pages)
-- **DOM Selectors**:
-  - Job container: `.article--result`
-  - Title/link: `a.link`
-  - Date: `.list-item-jobCreationDate`
-  - Country: `.list-item-jobCountry`
-  - Employment type: `.list-item-employmentType`
-  - Company: `.list-item-jobEmployerCompany`
-- **Notes**: Pages are slow (~5 sec each). Site returns many duplicate jobs across pages — must deduplicate by URL. Pagination: `?listFilterMode=1&jobRecordsPerPage=20&jobOffset={N}`. Sync XHR limited to ~2 pages per browser call.
+- **URL**: https://jobs.totalenergies.com/en_US/careers/SearchJobs/
+- **Platform**: Custom careers portal (server-rendered HTML)
+- **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `.article--result` elements.
+- **Pagination**: URL parameter `jobOffset` in increments of 20: `?jobRecordsPerPage=20&jobOffset=N` (N = 0, 20, 40, ...).
+- **Total jobs check**: Bottom of page shows "1-20 of N results". Also page title says "Page X".
+- **Total pages**: `ceil(totalJobs / 20)` — typically ~34 pages.
+- **Data extraction per page**:
+  1. Fetch HTML: `fetch('https://jobs.totalenergies.com/en_US/careers/SearchJobs/?jobRecordsPerPage=20&jobOffset=${offset}')`
+  2. Parse with `new DOMParser().parseFromString(html, 'text/html')`
+  3. Select all `.article--result` elements
+  4. For each article, get:
+     - **Title**: `art.querySelector('h3 a, h2 a').textContent.trim()`
+     - **Link**: `art.querySelector('h3 a, h2 a').getAttribute('href')` — full URL like `https://jobs.totalenergies.com/en_US/careers/JobDetail/TITLE/ID`
+     - **Full text**: `art.textContent.trim().replace(/\s+/g, ' ')` — contains: `Title DATE Country ContractType CompanyEntity Apply`
+     - **Date**: regex `(\d{2}-\d{2}-\d{4})` from full text (format: DD-MM-YYYY)
+     - **Country**: text between date and contract type keyword
+  5. Contract type keywords to split on: `Regular position`, `Fixed term position`, `Internship`, `Apprenticeship`, `Full-Time Apprenticeship`, `Alternance`, `Full-Time`, `Graduate`, `VIE`, `Sponsorship`
+- **Country parsing code**:
+  ```javascript
+  const afterDate = text.substring(text.indexOf(dateMatch[1]) + dateMatch[1].length).trim();
+  const contractTypes = ['Regular position', 'Fixed term position', 'Internship', 'Apprenticeship',
+    'Full-Time Apprenticeship', 'Alternance', 'Full-Time', 'Graduate', 'VIE', 'Sponsorship'];
+  let country = '';
+  for (const ct of contractTypes) {
+    const idx = afterDate.indexOf(ct);
+    if (idx > 0) { country = afterDate.substring(0, idx).trim(); break; }
+  }
+  ```
+- **Post-processing (Python)**: After extracting CSV, clean country field by stripping anything after contract type keywords. Some countries have suffixes like "/ US" or "/ FR" — strip with `.replace(/ \/ \w+$/, '')`.
+- **Batch strategy**: Fetch 3 pages sequentially per JS call (each `fetch()` takes ~3-5 sec). Each JS call handles 3 pages (~15 sec). Do NOT try more than 3 sequential fetches per call — it will timeout at 60s.
+- **IMPORTANT — What does NOT work**:
+  - Fetching more than ~5 pages in a single JS execution times out (60s limit)
+  - Parallel `Promise.all()` with many pages causes browser disconnection
+  - The DOM selectors `.list-item-jobCreationDate`, `.list-item-jobCountry` etc. do NOT exist on the fetched HTML — the data is in unstructured text within `.article--result`
+  - Country cannot be extracted from CSS class selectors — must parse from text between date and contract type
+- **Country normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA", strip "/ XX" suffixes
+- **Deduplication**: Deduplicate by `title + '|' + href` after collection
 
 ### 4. ExxonMobil (542 jobs)
 - **URL**: https://jobs.exxonmobil.com/search/?createNewAlert=false&q=&locationsearch=
