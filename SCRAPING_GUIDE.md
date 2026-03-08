@@ -2,7 +2,7 @@
 
 ## Company Scraping Methods
 
-### 1. SLB (824 jobs)
+### 1. SLB (843 jobs)
 - **URL**: https://careers.slb.com/job-listing
 - **Platform**: Coveo Atomic Search
 - **Method**: REST API POST to `{apiBase}/rest/search/v2?organizationId={orgId}`
@@ -10,7 +10,7 @@
 - **Credentials**: orgId=`schlumbergerproduction0cs2zrh7`, Bearer token from engine state
 - **Notes**: Single API call with `numberOfResults: 1000` returns all jobs. Returns structured JSON with `raw.country`, `raw.city`, `raw.category` arrays.
 
-### 2. Baker Hughes (741 jobs)
+### 2. Baker Hughes (742 jobs)
 - **URL**: https://careers.bakerhughes.com/global/en/search-results
 - **Platform**: Phenom People
 - **Method**: Phenom API endpoint
