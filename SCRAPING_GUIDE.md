@@ -132,7 +132,7 @@
 - **Config Source**: `window.search.client.transporter.queryParameters` (appId, apiKey), `search.mainIndex` (index name)
 - **Notes**: Single API call with `hitsPerPage=1000`. Returns title, primary_country[], location[], professional_function[], posting_date[], slug[]. Job links use format: `https://careers.bp.com/job-description/{RQ_ID}` (NOT `/listing/{slug}` which returns 404).
 
-### 7. QatarEnergy (284 jobs)
+### 7. QatarEnergy (287 jobs)
 - **URL**: https://careerportal.qatarenergy.qa/jobs
 - **Platform**: Jibe (Angular Material) with REST API
 - **Method**: REST API at `/api/jobs?page=N&sortBy=relevance&descending=false&internal=false&limit=100&deviceId=undefined&domain=qatarenergy.jibeapply.com`. `limit=100` works — 3 API calls fetch all 292 results (284 unique after dedup).
@@ -149,12 +149,16 @@
 - **Link Format**: `https://careers.aramco.com/{path}` where path is `/expat_uk/job/SLUG/ID/`, `/expat_us/job/SLUG/ID/`, or `/saudi/job/SLUG/ID/`
 - **Notes**: All jobs in Saudi Arabia (location always "SA"). Category assigned by title keywords (not available on listing page). Cannot fetch from Python (blocked), must use browser. New job "IP Docketing Specialist" found compared to previous scrape.
 
-### 9. Shell (181 jobs)
-- **URL**: https://shell.wd3.myworkdayjobs.com/ShellCareers
+### 9. Shell (175 jobs)
+- **URL**: https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers
 - **Platform**: Workday
 - **Method**: JSON API POST to `/wday/cxs/shell/ShellCareers/jobs`
-- **Body**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`
-- **Notes**: Links must include `/ShellCareers/` in path (e.g., `myworkdayjobs.com/ShellCareers/job/...`). Workday was intermittently down for maintenance.
+- **Body**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`. Response has `total` field and `jobPostings[]` array.
+- **Pagination**: 20 per page, use `offset=0,20,40,...` up to `Math.ceil(total/20)` pages. All pages can be fetched in a single async loop (9 pages, fast).
+- **Data Structure**: Each `jobPostings[]` item: `title`, `externalPath` (relative URL), `locationsText` (city-level, NOT country), `postedOn` (e.g., "Posted 2 Days Ago"), `bulletFields[]` (contains req ID).
+- **Link Format**: `https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers` + `externalPath`
+- **Country Extraction**: Location text is city-based (e.g., "Scotford - Refinery", "Houston - EP Center Americas"). Must map to country using keyword matching: Houston/California/Michigan/Chicago → US, London/Aberdeen → UK, Bangalore/Chennai → India, Kuala Lumpur/Cyberjaya/Miri → Malaysia, Rotterdam/Pernis → Netherlands, Manila/Tabangao → Philippines, etc. "N Locations" entries → "Multiple".
+- **Notes**: Links must include `/en-US/ShellCareers/` in path. Dedup by `externalPath`. All 175 jobs fetched in ~9 sequential API calls (no batching needed).
 
 ### 10. Chevron (179 jobs)
 - **URL**: https://careers.chevron.com/search-jobs
