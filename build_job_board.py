@@ -45,16 +45,21 @@ companies = sorted(by_company)
 countries = sorted(by_country)
 categories = sorted(by_category)
 
-# Build option tags
-company_opts = "".join(
-    f'<option value="{c}">{c} ({by_company[c]})</option>' for c in companies
-)
-country_opts = "".join(
-    f'<option value="{c}">{c} ({by_country[c]})</option>' for c in countries
-)
-category_opts = "".join(
-    f'<option value="{c}">{c} ({by_category[c]})</option>' for c in categories
-)
+# Build multi-select checkbox option items
+import html as htmlmod
+
+def ms_option(value, count):
+    # Use HTML entity escaping only for display text and attribute value
+    safe_attr = htmlmod.escape(value, quote=True)
+    return (
+        f'<div class="ms-option" data-value="{safe_attr}" onclick="toggleOpt(this)">'
+        f'<input type="checkbox" tabindex="-1"><span class="ms-option-label">{safe_attr}</span>'
+        f'<span class="ms-option-count">{count}</span></div>'
+    )
+
+company_opts = "".join(ms_option(c, by_company[c]) for c in companies)
+country_opts = "".join(ms_option(c, by_country[c]) for c in countries)
+category_opts = "".join(ms_option(c, by_category[c]) for c in categories)
 
 # Read template and fill placeholders
 with open(TEMPLATE, "r", encoding="utf-8") as f:

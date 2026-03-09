@@ -16,10 +16,48 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .stat .label { font-size:0.8em; opacity:0.7; }
 .container { max-width:1200px; margin:0 auto; padding:20px; }
 .filters { background:white; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
-.filter-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-.filter-row input, .filter-row select { padding:10px 14px; border:1px solid #ddd; border-radius:8px; font-size:14px; background:white; }
-.filter-row input { flex:1; min-width:200px; }
-.filter-row select { min-width:160px; }
+.filter-row { display:flex; gap:12px; flex-wrap:wrap; align-items:flex-start; }
+.filter-row input[type="text"] { padding:10px 14px; border:1px solid #ddd; border-radius:8px; font-size:14px; background:white; flex:1; min-width:200px; }
+.filter-actions { display:flex; gap:8px; margin-top:10px; }
+.btn-clear-all { padding:6px 16px; background:#f0f2f5; color:#666; border:1px solid #ddd; border-radius:6px; font-size:13px; cursor:pointer; transition:background 0.2s; }
+.btn-clear-all:hover { background:#e0e2e5; }
+
+/* Multi-select dropdown */
+.multi-select { position:relative; min-width:180px; user-select:none; }
+.multi-select-btn { display:flex; align-items:center; justify-content:space-between; padding:10px 14px; border:1px solid #ddd; border-radius:8px; font-size:14px; background:white; cursor:pointer; gap:8px; min-height:42px; transition:border-color 0.2s; }
+.multi-select-btn:hover { border-color:#aaa; }
+.multi-select-btn.active { border-color:#0f3460; box-shadow:0 0 0 2px rgba(15,52,96,0.1); }
+.multi-select-btn .ms-label { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#333; }
+.multi-select-btn .ms-label.placeholder { color:#999; }
+.multi-select-btn .ms-count { background:#0f3460; color:white; border-radius:10px; padding:1px 8px; font-size:12px; font-weight:600; flex-shrink:0; }
+.multi-select-btn .ms-arrow { flex-shrink:0; font-size:10px; color:#999; transition:transform 0.2s; }
+.multi-select-btn.active .ms-arrow { transform:rotate(180deg); }
+.multi-select-dropdown { position:absolute; top:calc(100% + 4px); left:0; right:0; background:white; border:1px solid #ddd; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.12); z-index:1000; display:none; max-height:320px; overflow:hidden; flex-direction:column; min-width:240px; }
+.multi-select-dropdown.open { display:flex; }
+.ms-search { padding:8px 12px; border-bottom:1px solid #eee; }
+.ms-search input { width:100%; padding:8px 10px; border:1px solid #ddd; border-radius:6px; font-size:13px; outline:none; }
+.ms-search input:focus { border-color:#0f3460; }
+.ms-actions { display:flex; gap:4px; padding:6px 12px; border-bottom:1px solid #eee; }
+.ms-actions button { flex:1; padding:4px 8px; font-size:12px; border:none; border-radius:4px; cursor:pointer; background:#f0f2f5; color:#666; transition:background 0.2s; }
+.ms-actions button:hover { background:#e0e2e5; }
+.ms-options { overflow-y:auto; max-height:230px; padding:4px 0; }
+.ms-option { display:flex; align-items:center; gap:8px; padding:8px 12px; cursor:pointer; font-size:13px; transition:background 0.15s; }
+.ms-option:hover { background:#f5f7fa; }
+.ms-option.selected { background:#e8f0fe; }
+.ms-option input[type="checkbox"] { accent-color:#0f3460; width:16px; height:16px; cursor:pointer; flex-shrink:0; }
+.ms-option-label { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ms-option-count { color:#999; font-size:12px; flex-shrink:0; }
+.ms-no-results { padding:16px 12px; text-align:center; color:#999; font-size:13px; }
+
+/* Selected tags row */
+.selected-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+.sel-tag { display:inline-flex; align-items:center; gap:4px; padding:4px 10px; background:#e8f0fe; color:#1a73e8; border-radius:16px; font-size:12px; font-weight:500; }
+.sel-tag.tag-company { background:#e8f0fe; color:#1a73e8; }
+.sel-tag.tag-country { background:#fce8e6; color:#d93025; }
+.sel-tag.tag-category { background:#e6f4ea; color:#137333; }
+.sel-tag .tag-x { cursor:pointer; font-weight:700; margin-left:2px; opacity:0.6; transition:opacity 0.2s; }
+.sel-tag .tag-x:hover { opacity:1; }
+
 .results-count { padding:10px 0; font-size:14px; color:#666; }
 .job-list { display:flex; flex-direction:column; gap:10px; }
 .job-card { background:white; border-radius:10px; padding:18px 20px; box-shadow:0 1px 4px rgba(0,0,0,0.06); transition:transform 0.2s, box-shadow 0.2s; border-left:4px solid #0f3460; }
@@ -41,7 +79,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 footer { text-align:center; padding:20px; color:#999; font-size:0.8em; }
 @media (max-width:768px) {
   .filter-row { flex-direction:column; }
-  .filter-row input, .filter-row select { width:100%; }
+  .filter-row input[type="text"], .multi-select { width:100%; min-width:unset; }
+  .multi-select-dropdown { min-width:unset; }
   .stats { gap:15px; }
   .header h1 { font-size:1.5em; }
 }
@@ -64,20 +103,45 @@ footer { text-align:center; padding:20px; color:#999; font-size:0.8em; }
 <div class="filters">
 <div class="filter-row">
 <input type="text" id="searchInput" placeholder="Search jobs by title, company, or location..." oninput="filterJobs()">
-<select id="companyFilter" onchange="filterJobs()">
-<option value="">All Companies</option>
-{{COMPANY_OPTIONS}}
-</select>
-<select id="countryFilter" onchange="filterJobs()">
-<option value="">All Countries</option>
-{{COUNTRY_OPTIONS}}
-</select>
-<select id="categoryFilter" onchange="filterJobs()">
-<option value="">All Categories</option>
-{{CATEGORY_OPTIONS}}
-</select>
+<div class="multi-select" id="msCompany" data-filter="company">
+  <div class="multi-select-btn" onclick="toggleDropdown('msCompany')">
+    <span class="ms-label placeholder">All Companies</span>
+    <span class="ms-arrow">▼</span>
+  </div>
+  <div class="multi-select-dropdown">
+    <div class="ms-search"><input type="text" placeholder="Search companies..." oninput="searchOptions('msCompany', this.value)"></div>
+    <div class="ms-actions"><button onclick="selectAll('msCompany')">Select All</button><button onclick="clearAll('msCompany')">Clear</button></div>
+    <div class="ms-options">{{COMPANY_OPTIONS}}</div>
+  </div>
 </div>
+<div class="multi-select" id="msCountry" data-filter="country">
+  <div class="multi-select-btn" onclick="toggleDropdown('msCountry')">
+    <span class="ms-label placeholder">All Countries</span>
+    <span class="ms-arrow">▼</span>
+  </div>
+  <div class="multi-select-dropdown">
+    <div class="ms-search"><input type="text" placeholder="Search countries..." oninput="searchOptions('msCountry', this.value)"></div>
+    <div class="ms-actions"><button onclick="selectAll('msCountry')">Select All</button><button onclick="clearAll('msCountry')">Clear</button></div>
+    <div class="ms-options">{{COUNTRY_OPTIONS}}</div>
+  </div>
+</div>
+<div class="multi-select" id="msCategory" data-filter="category">
+  <div class="multi-select-btn" onclick="toggleDropdown('msCategory')">
+    <span class="ms-label placeholder">All Categories</span>
+    <span class="ms-arrow">▼</span>
+  </div>
+  <div class="multi-select-dropdown">
+    <div class="ms-search"><input type="text" placeholder="Search categories..." oninput="searchOptions('msCategory', this.value)"></div>
+    <div class="ms-actions"><button onclick="selectAll('msCategory')">Select All</button><button onclick="clearAll('msCategory')">Clear</button></div>
+    <div class="ms-options">{{CATEGORY_OPTIONS}}</div>
+  </div>
+</div>
+</div>
+<div class="selected-tags" id="selectedTags"></div>
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
 <div class="results-count" id="resultsCount"></div>
+<button class="btn-clear-all" id="btnClearAll" onclick="clearAllFilters()" style="display:none;">Clear All Filters</button>
+</div>
 </div>
 
 <div class="job-list" id="jobList"></div>
@@ -95,19 +159,173 @@ const PER_PAGE = 25;
 let filtered = JOBS;
 let page = 1;
 
+/* Multi-select state: { msCompany: Set, msCountry: Set, msCategory: Set } */
+const selections = { msCompany: new Set(), msCountry: new Set(), msCategory: new Set() };
+const labels = { msCompany: 'All Companies', msCountry: 'All Countries', msCategory: 'All Categories' };
+const tagClass = { msCompany: 'tag-company', msCountry: 'tag-country', msCategory: 'tag-category' };
+const filterKey = { msCompany: 'company', msCountry: 'country', msCategory: 'category' };
+
+function toggleDropdown(id) {
+  const el = document.getElementById(id);
+  const dd = el.querySelector('.multi-select-dropdown');
+  const btn = el.querySelector('.multi-select-btn');
+  const isOpen = dd.classList.contains('open');
+  // Close all others first
+  document.querySelectorAll('.multi-select-dropdown.open').forEach(d => {
+    d.classList.remove('open');
+    d.closest('.multi-select').querySelector('.multi-select-btn').classList.remove('active');
+  });
+  if (!isOpen) {
+    dd.classList.add('open');
+    btn.classList.add('active');
+    const searchInput = dd.querySelector('.ms-search input');
+    searchInput.value = '';
+    searchOptions(id, '');
+    setTimeout(() => searchInput.focus(), 50);
+  }
+}
+
+function searchOptions(id, query) {
+  const el = document.getElementById(id);
+  const options = el.querySelectorAll('.ms-option');
+  const q = query.toLowerCase();
+  let visible = 0;
+  options.forEach(opt => {
+    const text = opt.querySelector('.ms-option-label').textContent.toLowerCase();
+    const show = !q || text.includes(q);
+    opt.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  let noRes = el.querySelector('.ms-no-results');
+  if (visible === 0) {
+    if (!noRes) {
+      noRes = document.createElement('div');
+      noRes.className = 'ms-no-results';
+      noRes.textContent = 'No results found';
+      el.querySelector('.ms-options').appendChild(noRes);
+    }
+    noRes.style.display = '';
+  } else if (noRes) {
+    noRes.style.display = 'none';
+  }
+}
+
+function toggleOption(id, value) {
+  const set = selections[id];
+  if (set.has(value)) set.delete(value);
+  else set.add(value);
+  updateMultiSelect(id);
+  filterJobs();
+}
+/* Called from onclick on .ms-option elements — reads data-value from DOM to avoid escaping issues */
+function toggleOpt(el) {
+  const id = el.closest('.multi-select').id;
+  const value = el.getAttribute('data-value');
+  toggleOption(id, value);
+}
+
+function selectAll(id) {
+  const el = document.getElementById(id);
+  const visibleOpts = el.querySelectorAll('.ms-option');
+  visibleOpts.forEach(opt => {
+    if (opt.style.display === 'none') return;
+    const val = opt.getAttribute('data-value');
+    selections[id].add(val);
+  });
+  updateMultiSelect(id);
+  filterJobs();
+}
+
+function clearAll(id) {
+  selections[id].clear();
+  updateMultiSelect(id);
+  filterJobs();
+}
+
+function removeTag(id, value) {
+  selections[id].delete(value);
+  updateMultiSelect(id);
+  filterJobs();
+}
+
+function clearAllFilters() {
+  document.getElementById('searchInput').value = '';
+  Object.keys(selections).forEach(id => selections[id].clear());
+  Object.keys(selections).forEach(id => updateMultiSelect(id));
+  filterJobs();
+}
+
+function updateMultiSelect(id) {
+  const el = document.getElementById(id);
+  const set = selections[id];
+  const btn = el.querySelector('.multi-select-btn');
+  const labelEl = btn.querySelector('.ms-label');
+  // Update button label
+  if (set.size === 0) {
+    labelEl.textContent = labels[id];
+    labelEl.classList.add('placeholder');
+    const existing = btn.querySelector('.ms-count');
+    if (existing) existing.remove();
+  } else {
+    const items = Array.from(set);
+    labelEl.textContent = items.length === 1 ? items[0] : items[0] + ' +' + (items.length - 1);
+    labelEl.classList.remove('placeholder');
+    let countBadge = btn.querySelector('.ms-count');
+    if (!countBadge) {
+      countBadge = document.createElement('span');
+      countBadge.className = 'ms-count';
+      btn.insertBefore(countBadge, btn.querySelector('.ms-arrow'));
+    }
+    countBadge.textContent = set.size;
+  }
+  // Update checkboxes
+  el.querySelectorAll('.ms-option').forEach(opt => {
+    const val = opt.getAttribute('data-value');
+    const cb = opt.querySelector('input[type="checkbox"]');
+    const isSelected = set.has(val);
+    cb.checked = isSelected;
+    opt.classList.toggle('selected', isSelected);
+  });
+  // Update tags
+  renderTags();
+}
+
+function renderTags() {
+  const container = document.getElementById('selectedTags');
+  container.innerHTML = '';
+  let totalSelected = 0;
+  Object.keys(selections).forEach(id => {
+    selections[id].forEach(val => {
+      totalSelected++;
+      const tag = document.createElement('span');
+      tag.className = 'sel-tag ' + tagClass[id];
+      tag.textContent = val;
+      const x = document.createElement('span');
+      x.className = 'tag-x';
+      x.innerHTML = '&times;';
+      x.addEventListener('click', () => removeTag(id, val));
+      tag.appendChild(x);
+      container.appendChild(tag);
+    });
+  });
+  document.getElementById('btnClearAll').style.display = (totalSelected > 0 || document.getElementById('searchInput').value) ? '' : 'none';
+}
+
 function filterJobs() {
   const q = document.getElementById('searchInput').value.toLowerCase();
-  const comp = document.getElementById('companyFilter').value;
-  const ctry = document.getElementById('countryFilter').value;
-  const cat = document.getElementById('categoryFilter').value;
+  const compSet = selections.msCompany;
+  const ctrySet = selections.msCountry;
+  const catSet = selections.msCategory;
+
   filtered = JOBS.filter(j => {
     if (q && !(j.title.toLowerCase().includes(q) || j.company.toLowerCase().includes(q) || j.location.toLowerCase().includes(q) || j.category.toLowerCase().includes(q))) return false;
-    if (comp && j.company !== comp) return false;
-    if (ctry && j.country !== ctry) return false;
-    if (cat && j.category !== cat) return false;
+    if (compSet.size > 0 && !compSet.has(j.company)) return false;
+    if (ctrySet.size > 0 && !ctrySet.has(j.country)) return false;
+    if (catSet.size > 0 && !catSet.has(j.category)) return false;
     return true;
   });
   page = 1;
+  renderTags();
   render();
 }
 
@@ -116,18 +334,18 @@ function render() {
   const end = start + PER_PAGE;
   const slice = filtered.slice(start, end);
 
-  document.getElementById('resultsCount').textContent = `Showing ${start+1}-${Math.min(end, filtered.length)} of ${filtered.length} jobs`;
+  document.getElementById('resultsCount').textContent = filtered.length === 0 ? 'No jobs found' : `Showing ${start+1}\u2013${Math.min(end, filtered.length)} of ${filtered.length} jobs`;
 
   const list = document.getElementById('jobList');
   list.innerHTML = slice.map(j => `
     <div class="job-card">
-      <div class="job-top"><div class="job-title">${j.title}</div><a class="btn-apply" href="${j.link}" target="_blank" rel="noopener">View →</a></div>
+      <div class="job-top"><div class="job-title">${j.title}</div><a class="btn-apply" href="${j.link}" target="_blank" rel="noopener">View \u2192</a></div>
       <div class="job-meta">
         <span class="badge badge-company">${j.company}</span>
         <span class="badge badge-country">${j.country}</span>
         ${j.category ? '<span class="badge badge-category">' + j.category + '</span>' : ''}
-        <span>📍 ${j.location}</span>
-        <span>📅 ${j.date}</span>
+        <span>\uD83D\uDCCD ${j.location}</span>
+        <span>\uD83D\uDCC5 ${j.date}</span>
       </div>
     </div>
   `).join('');
@@ -136,17 +354,27 @@ function render() {
   const pag = document.getElementById('pagination');
   if (pages <= 1) { pag.innerHTML = ''; return; }
   let btns = '';
-  if (page > 1) btns += `<button onclick="goPage(${page-1})">← Prev</button>`;
+  if (page > 1) btns += `<button onclick="goPage(${page-1})">\u2190 Prev</button>`;
   const startP = Math.max(1, page - 3);
   const endP = Math.min(pages, page + 3);
   if (startP > 1) btns += `<button onclick="goPage(1)">1</button><button disabled>...</button>`;
   for (let i = startP; i <= endP; i++) btns += `<button class="${i===page?'active':''}" onclick="goPage(${i})">${i}</button>`;
   if (endP < pages) btns += `<button disabled>...</button><button onclick="goPage(${pages})">${pages}</button>`;
-  if (page < pages) btns += `<button onclick="goPage(${page+1})">Next →</button>`;
+  if (page < pages) btns += `<button onclick="goPage(${page+1})">Next \u2192</button>`;
   pag.innerHTML = btns;
 }
 
 function goPage(p) { page = p; render(); window.scrollTo(0, document.querySelector('.filters').offsetTop - 10); }
+
+/* Close dropdowns when clicking outside */
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.multi-select')) {
+    document.querySelectorAll('.multi-select-dropdown.open').forEach(d => {
+      d.classList.remove('open');
+      d.closest('.multi-select').querySelector('.multi-select-btn').classList.remove('active');
+    });
+  }
+});
 
 filterJobs();
 </script>
