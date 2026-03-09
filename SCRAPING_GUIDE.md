@@ -124,13 +124,22 @@
 - **Country normalization**: Clean whitespace from location text, then extract last segment after final comma. "United States" → "USA", "United Kingdom" → "UK", "United Arab Emirates" → "UAE"
 - **Notes**: No date posted field available in the listing page — leave Date Posted column empty in CSV.
 
-### 6. BP (397 jobs)
-- **URL**: https://careers.bp.com/listing
-- **Platform**: Algolia Search
-- **Method**: REST API POST to `https://UM59DWRPA1-dsn.algolia.net/1/indexes/production_bp_jobs/query`
-- **Credentials**: AppId=`UM59DWRPA1`, API Key=`33719eb8d9f28725f375583b7e78dbab`, Index=`production_bp_jobs`
-- **Config Source**: `window.search.client.transporter.queryParameters` (appId, apiKey), `search.mainIndex` (index name)
-- **Notes**: Single API call with `hitsPerPage=1000`. Returns title, primary_country[], location[], professional_function[], posting_date[], slug[]. Job links use format: `https://careers.bp.com/job-description/{RQ_ID}` (NOT `/listing/{slug}` which returns 404).
+### 6. BP (393 jobs)
+- **URL**: https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers
+- **Platform**: Workday (primary), Algolia Search (backup)
+- **Method (Primary — Workday)**: JSON API POST to `/wday/cxs/bpinternational/bpCareers/jobs`
+- **Body**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`. Response has `total` field and `jobPostings[]` array.
+- **Pagination**: 20 per page, use `offset=0,20,40,...` up to `Math.ceil(total/20)` pages (~20 pages for 393 jobs). Fetch in batches of 5 pages per JS call to avoid 60s timeout.
+- **Data Structure**: Each `jobPostings[]` item: `title`, `externalPath` (relative URL), `locationsText` (format: "Country - City" e.g., "India - Pune", or country code prefix "IN: Pune"), `postedOn` (e.g., "Posted Today"), `bulletFields[]` (contains RQ ID).
+- **Link Format**: `https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers` + `externalPath`
+- **Country Extraction**: Location text starts with country name ("India - Mumbai") or 2-letter code prefix ("IN:", "CN:", "GB:", "AU:", "US:", "HU:", "BR:", "PL:", "SG:", "ZA:", "TR:", "AE:", "OM:"). "N Locations" → "Multiple". Some jobs have null `locationsText` → "Unknown".
+- **Notes**: Dedup by `externalPath`. 2 jobs may have null location. Navigate to Workday URL first, then use fetch() API from that page.
+- **Method (Backup — Algolia Search)**:
+  - URL: `https://careers.bp.com/listing`
+  - REST API POST to `https://UM59DWRPA1-dsn.algolia.net/1/indexes/production_bp_jobs/query`
+  - Credentials: AppId=`UM59DWRPA1`, API Key=`33719eb8d9f28725f375583b7e78dbab`, Index=`production_bp_jobs`
+  - Config Source: `window.search.client.transporter.queryParameters` (appId, apiKey), `search.mainIndex` (index name)
+  - Single API call with `hitsPerPage=1000`. Returns title, primary_country[], location[], professional_function[], posting_date[], slug[]. Job links: `https://careers.bp.com/job-description/{RQ_ID}`
 
 ### 7. QatarEnergy (287 jobs)
 - **URL**: https://careerportal.qatarenergy.qa/jobs
