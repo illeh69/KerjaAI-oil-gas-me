@@ -560,6 +560,30 @@
 - **Locations**: Houston 28, Midland 16, Corpus Christi 5, New Albany OH 4, Malvern OH 3, others
 - **Output**: `EOG_Resources_Jobs.csv`
 
+### 39. Bapco Energies (11 jobs) — Re-scraped
+- **URL**: `https://iadygs.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs`
+- **Platform**: Oracle HCM Cloud (iadygs.fa.ocs.oraclecloud.com)
+- **Discovery**: Old `careers.bapco.net` is down. `bapcoenergies.com/careers` is an info page linking to TWO Oracle HCM portals: (1) Bapco Refining at `epih.fa.em2.oraclecloud.com` (CX_1) — 0 open jobs, (2) Bapco Energies at `iadygs.fa.ocs.oraclecloud.com` (CX_1) — 11 open jobs.
+- **Method**: Navigate to `/requisitions` (redirects to `/jobs`). All 11 jobs load on one page. Extract from DOM: `div.search-results.job-tile` containers, title from `span.job-tile__title`, link from `a[href*="/job/"]` on parent tile div, location/date from innerText parsing (pattern: `{location} • Posting Date{MM/DD/YYYY}`).
+- **API Note**: Oracle HCM REST API (`/hcmRestApi/resources/latest/recruitingCEJobRequisitions`) calls get BLOCKED by browser extension cookie/query filter. DOM extraction works.
+- **Link Format**: `https://iadygs.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/{id}`
+- **Date Format**: "MM/DD/YYYY" → "YYYY-MM-DD"
+- **Country**: All jobs are in Bahrain (Awali, Manama/Sea Front, Al-Rumamin)
+- **Company name**: Changed from "Bapco" to "Bapco Energies" (rebranded)
+- **Output**: `Bapco_Jobs.csv`
+
+### 40. NIOC (0 jobs) — Re-scraped
+- **URL**: `https://nioc.ir/en/careers`
+- **Status**: INACCESSIBLE — Returns 403 Access Denied. Iranian government site is geo-restricted.
+- **Previous data**: Had 4 placeholder/fake jobs that were removed.
+- **Output**: `NIOC_Jobs.csv` (header only, 0 jobs)
+
+### 41. INOC (0 jobs) — Re-scraped
+- **URL**: `https://oil.gov.iq/`
+- **Status**: INACCESSIBLE — Site has CAPTCHA/verification gate that cannot be automated.
+- **Previous data**: Had 4 placeholder/fake jobs that were removed.
+- **Output**: `INOC_Jobs.csv` (header only, 0 jobs)
+
 ---
 
 ## Common Patterns
