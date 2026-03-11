@@ -117,7 +117,7 @@
 - **Notes**: Method is stable and works as documented. ExxonMobil pages are relatively small (~100KB vs Baker Hughes ~500KB), so 4 pages per call is safe.
 - **Output**: `ExxonMobil_Jobs.csv`
 
-### 5. Halliburton (522 jobs)
+### 5. Halliburton (537 jobs)
 - **URL**: https://careers.halliburton.com/en/search-jobs
 - **Platform**: TalentBrew
 - **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `a[data-job-id]` elements.
@@ -143,7 +143,7 @@
 - **Country normalization**: Clean whitespace from location text, then extract last segment after final comma. "United States" → "USA", "United Kingdom" → "UK", "United Arab Emirates" → "UAE"
 - **Notes**: No date posted field available in the listing page — leave Date Posted column empty in CSV.
 
-### 6. BP (393 jobs)
+### 6. BP (407 jobs)
 - **URL**: https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers
 - **Platform**: Workday (primary), Algolia Search (backup)
 - **Method (Primary — Workday)**: JSON API POST to `/wday/cxs/bpinternational/bpCareers/jobs`
@@ -160,16 +160,16 @@
   - Config Source: `window.search.client.transporter.queryParameters` (appId, apiKey), `search.mainIndex` (index name)
   - Single API call with `hitsPerPage=1000`. Returns title, primary_country[], location[], professional_function[], posting_date[], slug[]. Job links: `https://careers.bp.com/job-description/{RQ_ID}`
 
-### 7. QatarEnergy (287 jobs)
+### 7. QatarEnergy (289 jobs)
 - **URL**: https://careerportal.qatarenergy.qa/jobs
 - **Platform**: Jibe (Angular Material) with REST API
-- **Method**: REST API at `/api/jobs?page=N&sortBy=relevance&descending=false&internal=false&limit=100&deviceId=undefined&domain=qatarenergy.jibeapply.com`. `limit=100` works — 3 API calls fetch all 292 results (284 unique after dedup).
+- **Method**: REST API at `/api/jobs?page=N&sortBy=relevance&descending=false&internal=false&limit=100&deviceId=undefined&domain=qatarenergy.jibeapply.com`. `limit=100` works — 3 API calls fetch all results (289 unique after dedup).
 - **Data Structure**: `response.jobs[].data` contains: `title`, `slug` (numeric ID used in link), `req_id`, `city`, `location_name`, `short_location`, `category` (array), `department`, `posted_date` (YYYY-MM-DD), `country`, `country_code`.
 - **Link Format**: `https://careerportal.qatarenergy.qa/jobs/{slug}`
 - **UI Notes**: Angular Material `mat-paginator` shows 10 per page. Lazy loads more on scroll. API `limit` param bypasses pagination entirely.
 - **Notes**: All jobs in Qatar (Doha, Mesaieed, Ras Laffan, Dukhan, Offshore). Categories come directly from API data. 8 duplicate slugs removed.
 
-### 8. Saudi Aramco (221 jobs)
+### 8. Saudi Aramco (222 jobs)
 - **URL**: https://careers.aramco.com/search/?q=&sortColumn=referencedate&sortDirection=desc
 - **Platform**: Custom careers site (careers.aramco.com) with server-rendered HTML pagination
 - **Method**: Fetch HTML pages via `?startrow=N` (multiples of 25). Parse `tr.data-row` elements; extract title from `a.jobTitle-link`, href from link attribute. Additional columns: Job Req ID (`td[1]`), Location (`td[2]`), Department (`td[3]`).
