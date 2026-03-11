@@ -521,6 +521,18 @@
 - **Countries**: Spain 29, United States 19, Bolivia 1, Italy 1, Luxembourg 1
 - **Output**: `Repsol_Jobs.csv`
 
+### 36. Sasol (72 jobs)
+- **URL**: `https://jobs.sasol.com/search/?createNewAlert=false&q=&optionsFacetsDD_customfield4=&optionsFacetsDD_customfield2=&optionsFacetsDD_customfield3=`
+- **Platform**: Custom tile-based job portal (jobs.sasol.com)
+- **Method**: Page loads 25 jobs at a time. Click "More Search Results" button to load next 25. Three clicks needed for 72 jobs. All jobs render as `.job-tile` elements in the DOM.
+- **DOM Selectors**: `.job-tile` for each job card. Each contains: `a[href*="/job/"]` for title+link, text fields for "City", "Posting Date", "Other Locations"
+- **Data Extraction**: Parse `.innerText` with regex: `City\n(.+)`, `Posting Date\n(.+)`, `Other Locations\n(.+)`
+- **Link Format**: `https://jobs.sasol.com/job/{City}-{Title-Slug}/{JobId}/`
+- **Country Mapping**: "Other Locations" field sometimes has "City, Country" format. For entries without country, map by city: Secunda/Sandton/Sasolburg/Durban/Komatipoort → South Africa, Lake Charles/Houston/Tucson → United States, Hamburg/Marl/Brunsbüttel → Germany, Inhambane → Mozambique
+- **Date Format**: "Mar 11, 2026" → parse with `datetime.strptime('%b %d, %Y')` → "2026-03-11"
+- **Countries**: South Africa 30, Germany 21, United States 12, Mozambique 9
+- **Output**: `Sasol_Jobs.csv`
+
 ### Middle East Only Companies (unchanged)
 - **NIOC**
 - **INOC**
