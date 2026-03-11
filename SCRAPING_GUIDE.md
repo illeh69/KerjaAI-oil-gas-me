@@ -549,6 +549,17 @@
 - **INOC**
 - **Bapco**
 
+### 38. EOG Resources (65 jobs)
+- **URL**: `https://careers.eogresources.com/process_jobsearch.asp?jobTitle=&cityZip=&proximity=`
+- **Platform**: Custom ASP career portal (careers.eogresources.com)
+- **Method**: Page loads all results (no pagination needed for current 65 jobs). Parse `document.body.innerText` — pattern is repeating blocks of "Job Details\n{Title}\n{Location}\nPosted {date}". Job IDs extracted from `a[href]` containing `jo_num=` parameter.
+- **DOM Notes**: JS execution that references `href` attributes with query strings gets BLOCKED by the browser extension's cookie/query string filter. Workaround: extract job IDs via regex `href.match(/jo_num=(\d+)/)` separately, then combine with text-parsed data.
+- **Link Format**: `https://careers.eogresources.com/jobdetails.asp?jo_num={id}`
+- **Date Format**: "Posted M/D/YYYY" → parse with `datetime.strptime('%m/%d/%Y')` → "YYYY-MM-DD"
+- **Country**: All jobs are United States only
+- **Locations**: Houston 28, Midland 16, Corpus Christi 5, New Albany OH 4, Malvern OH 3, others
+- **Output**: `EOG_Resources_Jobs.csv`
+
 ---
 
 ## Common Patterns
