@@ -228,9 +228,9 @@
 - **Notes**: Client-rendered SPA — JavaScript state is lost on page navigation. Must extract and dump each page independently. No posting dates available. Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`. Clean duplicate city names in location (e.g., "Jakarta, Jakarta, Indonesia" → "Jakarta, Indonesia"). Note: `mubadalaenergy.careers-page.com` returns 404, must use `www.careers-page.com/mubadalaenergy`.
 - **Last scraped**: 2026-03-11 (40 jobs)
 
-### 16. INPEX (72 jobs — 2 sites combined)
+### 16. INPEX (73 jobs — 2 sites combined)
 
-#### INPEX Australia (24 jobs)
+#### INPEX Australia (25 jobs)
 - **URL**: https://careers.inpex.com.au/search/?q=&searchResultView=LIST
 - **Platform**: SAP SuccessFactors (UI5 Web Components with Shadow DOM)
 - **Method**: POST API `https://careers.inpex.com.au/services/recruiting/v1/jobs` + UI pagination fallback
@@ -238,7 +238,8 @@
 - **Pagination**: 10 per page, 3 pages. API has a bug returning duplicates and missing some jobs — must supplement with UI page scraping via accessibility tree.
 - **Data**: `jobSearchResult[].response` contains `unifiedStandardTitle`, `id`, `jobLocationShort[]`, `urlTitle`, `unifiedStandardStart`
 - **Link Format**: `https://careers.inpex.com.au/job/{urlTitle}/{id}-en_GB`
-- **Notes**: Shadow DOM prevents direct DOM queries — use accessibility tree (`read_page`) to extract links. API returns max ~17 unique of 24; remaining must be collected from UI pages 2-3.
+- **Notes**: Shadow DOM prevents direct DOM queries — use accessibility tree (`read_page`) to extract links. API returns max ~18 unique of 25; remaining must be collected from UI pages 2-3.
+- **Last scraped**: 2026-03-11 (25 jobs)
 
 #### INPEX Indonesia (48 jobs)
 - **URL**: https://career.inpex.co.id/home#jobsearch
@@ -248,24 +249,27 @@
 - **DOM Selectors**: `a[href*="/jobdetail/"]` for job links
 - **Link Format**: `https://career.inpex.co.id/jobdetail/{title}/{jobId}`
 - **Notes**: No category or date info available. All jobs are in Jakarta, Indonesia. JavaScript state preserved across postback pages. Must click through each page and collect links.
+- **Last scraped**: 2026-03-11 (48 jobs)
 
-### 17. Woodside Energy (14 jobs)
+### 17. Woodside Energy (15 jobs)
 - **URL**: https://careers.woodside.com.au/go/View-All-Opportunities/9784266/
 - **Platform**: Taleo (Oracle)
-- **Method**: DOM scraping — all 14 jobs on a single page, no pagination needed
+- **Method**: DOM scraping — all 15 jobs on a single page, no pagination needed
 - **DOM Selectors**: `a[href*="/job/"]` for job links (deduplicate by href as each job has multiple link elements). Walk up parent elements until finding one with `Location` + `Posting Date` text to get the full job card context.
 - **Data Fields**: Structured text in each card: `Title`, `Location` (country codes: US, MX, AU, SG), `Business Unit` (used as category), `Requisition ID`, `Posting Date` (format: `D Mon YYYY`, e.g., "4 Mar 2026")
 - **Link Format**: `https://careers.woodside.com.au/job/{slug}/{id}/`
-- **Notes**: Small job count (14). Country codes need mapping to full names. No Shadow DOM — standard DOM queries work fine.
+- **Notes**: Small job count (15). Country codes need mapping to full names. No Shadow DOM — standard DOM queries work fine. Card container is `.sub-section` class (not `tr` or generic `div`).
+- **Last scraped**: 2026-03-11 (15 jobs)
 
-### 18. ADNOC (63 jobs)
+### 18. ADNOC (67 jobs)
 - **URL**: https://jobs.adnoc.ae/us/en/search-results
 - **Platform**: Phenom People (Vue.js, client-side rendered)
 - **Method**: DOM scraping with page-by-page navigation. 10 jobs per page, 7 pages. Navigate to `?from=N&s=1` (N=0,10,20,...60). Extract `a[href*="/job/"]` links from each page.
 - **DOM Selectors**: `a[href*="/job/"]` for job links. Parent card element contains category (line 2), country (line 3), subsidiary (line 4), city (line 5) in `innerText` split by newlines.
 - **Link Format**: `https://jobs.adnoc.ae/us/en/job/{jobId}`
 - **Pagination**: Client-side rendered — `fetch()` returns HTML shell without job data. Must navigate browser to each page URL and extract from live DOM.
-- **Notes**: All jobs in UAE (Abu Dhabi, Offshore Islands, Onshore Site/Ruwais, Rigs). Categories come from Phenom facets. Subsidiaries include ADNOC GAS O&M, ADNOC Distribution, ADNOC HQ, ADNOC Drilling, ADNOC Onshore, ADNOC Offshore, ADNOC Logistics & Services. Chatbot widget may overlay results — close it first.
+- **Notes**: All jobs in UAE (Abu Dhabi, Offshore Islands, Onshore Site/Ruwais, Rigs). Categories come from Phenom facets. Subsidiaries include ADNOC GAS O&M, ADNOC Distribution, ADNOC HQ, ADNOC Drilling, ADNOC Onshore, ADNOC Offshore, ADNOC Logistics & Services. Chatbot widget may overlay results — close it first. ALL CAPS titles should be converted to Title Case.
+- **Last scraped**: 2026-03-11 (67 jobs)
 
 ### 19. CNOOC International (3 jobs)
 - **URL**: https://cnoocinternational.com/careers/currentopportunities/
