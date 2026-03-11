@@ -533,6 +533,17 @@
 - **Countries**: South Africa 30, Germany 21, United States 12, Mozambique 9
 - **Output**: `Sasol_Jobs.csv`
 
+### 37. Occidental (24 jobs)
+- **URL**: `https://oxy.wd5.myworkdayjobs.com/Corporate`
+- **Platform**: Workday (wd5)
+- **API**: `POST /wday/cxs/oxy/Corporate/jobs` with `{"appliedFacets":{},"limit":20,"offset":N,"searchText":""}`
+- **Detail API**: `GET /wday/cxs/oxy/Corporate{externalPath}` — returns `jobPostingInfo` with `title`, `location`, `country.descriptor`, `startDate`
+- **Link Format**: `https://oxy.wd5.myworkdayjobs.com/en-US/Corporate{externalPath}`
+- **Country Mapping**: `country.descriptor` from detail API. "United States of America" → "United States". One job has no location/country — defaults to United States
+- **Note**: Includes Direct Air Capture (DAC-Stratos) positions in Ector County, TX — carbon capture technology division
+- **Countries**: United States 21, Algeria 2, Canada 1
+- **Output**: `Occidental_Jobs.csv`
+
 ### Middle East Only Companies (unchanged)
 - **NIOC**
 - **INOC**
