@@ -2,7 +2,7 @@
 
 ## Company Scraping Methods
 
-### 1. SLB (843 jobs)
+### 1. SLB (862 jobs)
 - **URL**: https://careers.slb.com/job-listing
 - **Platform**: Coveo Atomic Search
 - **Method**: REST API POST to `{apiBase}/rest/search/v2?organizationId={orgId}`
@@ -10,7 +10,7 @@
 - **Credentials**: orgId=`schlumbergerproduction0cs2zrh7`, Bearer token from engine state
 - **Notes**: Single API call with `numberOfResults: 1000` returns all jobs. Returns structured JSON with `raw.country`, `raw.city`, `raw.category` arrays.
 
-### 2. Baker Hughes (742 jobs)
+### 2. Baker Hughes (761 jobs)
 - **URL**: https://careers.bakerhughes.com/global/en/search-results
 - **Platform**: Phenom People
 - **Method**: Fetch each page's HTML via `fetch()`, then extract embedded `eagerLoadRefineSearch` JSON using bracket-matching (NOT regex).
@@ -44,7 +44,7 @@
 - **Country normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA"
 - **Deduplication**: Some jobs appear on multiple pages — deduplicate by `title + '|' + applyUrl`
 
-### 3. TotalEnergies (658 jobs)
+### 3. TotalEnergies (670 jobs)
 - **URL**: https://jobs.totalenergies.com/en_US/careers/SearchJobs/
 - **Platform**: Custom careers portal (server-rendered HTML)
 - **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `.article--result` elements.
@@ -83,7 +83,7 @@
 - **Country normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA", strip "/ XX" suffixes
 - **Deduplication**: Deduplicate by `title + '|' + href` after collection
 
-### 4. ExxonMobil (536 jobs)
+### 4. ExxonMobil (521 jobs)
 - **URL**: https://jobs.exxonmobil.com/search/?createNewAlert=false&q=&locationsearch=
 - **Platform**: SuccessFactors (SAP)
 - **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `tr.data-row` elements.
@@ -543,11 +543,6 @@
 - **Note**: Includes Direct Air Capture (DAC-Stratos) positions in Ector County, TX — carbon capture technology division
 - **Countries**: United States 21, Algeria 2, Canada 1
 - **Output**: `Occidental_Jobs.csv`
-
-### Middle East Only Companies (unchanged)
-- **NIOC**
-- **INOC**
-- **Bapco**
 
 ### 38. EOG Resources (65 jobs)
 - **URL**: `https://careers.eogresources.com/process_jobsearch.asp?jobTitle=&cityZip=&proximity=`
