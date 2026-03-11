@@ -469,9 +469,21 @@
 - **Notes**: OQ (formerly Oman Oil Company) is Oman's integrated energy company. All 16 jobs in Oman (Muscat 12, Duqm 2, Sohar 1, Office 1). Departments from site: Exploration & Productions, Commercial, Downstream Operations, People and Culture, Gas Networks Engineering, Information Digital Solutions and Technology, Finance & Accounting, Legal. Several OQ8 (retail subsidiary) senior positions.
 - **Last scraped**: 2026-03-11 — 16 jobs
 
+### 31. KPC (0 jobs)
+- **URL**: `https://recruitment.kpc.com.kw/recruitment2/`
+- **Platform**: KPC E-Recruitment System (custom ASP.NET portal). Covers KPC and all subsidiaries (KNPC, KIPIC, KOC, KGOC, PIC, etc.)
+- **Method**: Navigate to recruitment portal homepage. Active campaigns are displayed when available. No search needed — campaigns appear automatically.
+- **Notes**: KPC (Kuwait Petroleum Corporation) is Kuwait's national oil company. Recruitment is campaign-based — jobs only appear when a specific hiring campaign is active. As of 2026-03-11: "No active campaigns for KPC." Internal campaigns only visible from KPC network. Contact: Recruitment@kpc.com.kw
+- **Last scraped**: 2026-03-11 — 0 jobs (no active campaigns)
+
+### 32. KNPC (0 jobs)
+- **URL**: No dedicated careers page. KNPC recruits through the KPC E-Recruitment System at `https://recruitment.kpc.com.kw/recruitment2/`
+- **Platform**: Same as KPC (#31) — shared E-Recruitment portal
+- **Method**: Same as KPC. Check the KPC portal for any KNPC-specific campaigns.
+- **Notes**: KNPC (Kuwait National Petroleum Company) is a KPC subsidiary responsible for refining. Website at `https://www.knpc.com/en` has no careers section. All recruitment goes through parent company KPC's portal. As of 2026-03-11: no active campaigns.
+- **Last scraped**: 2026-03-11 — 0 jobs (no active campaigns)
+
 ### Middle East Only Companies (unchanged)
-- **KPC**
-- **KNPC**
 - **NIOC**
 - **INOC**
 - **Bapco**
