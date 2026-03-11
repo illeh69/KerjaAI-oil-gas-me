@@ -495,6 +495,20 @@
 - **Notes**: AECOM is a global infrastructure consulting firm. Energy is one of 6 business lines (Transportation, B&P, Water, Environment, Energy, Program Management). 361 Energy jobs across 11 countries (UK 144, US 131, India 30, Romania 13, Ireland 11, Australia 7, Poland 7, Spain 7, Canada 6, New Zealand 4, Philippines 1). Location format from site uses 3-letter country codes (GBR, IND, AUS, ROM) or US state codes (TX, CA, etc.).
 - **Last scraped**: 2026-03-11 — 361 jobs (Energy business line only)
 
+### 34. ENI (80 jobs)
+- **URL**: `https://www.eni.com/en-IT/careers.html` → Click "Discover EniJobs" → `https://jobs.eni.com/en/sites/CX_1004/jobs`
+- **Platform**: Oracle HCM Cloud (same pattern as NMDC #27)
+- **Oracle Host**: `fa-evkm-saasfaprod1.fa.ocs.oraclecloud.com`
+- **Site Number**: `CX_1004`
+- **API**: `GET /hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations,flexFieldsFacet.values&finder=findReqs;siteNumber=CX_1004,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BWORKPLACE_TYPES%3BTITLES%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES%3BFLEX_FIELDS,limit=25,offset={N},sortBy=POSTING_DATES_DESC`
+- **Pagination**: 25 per page, increment offset by 25. `TotalJobsCount` in first response item gives total.
+- **Fields**: `Id`, `Title`, `PostedDate`, `PrimaryLocation` (full location string), `PrimaryLocationCountry` (2-letter code), `CategoryCode` (empty for all ENI jobs), `secondaryLocations` array
+- **Link Format**: `https://fa-evkm-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1004/job/{Id}`
+- **Country Extraction**: Parse from `PrimaryLocation` — last comma-separated part is country name (e.g., "San Donato Milanese, Milano, Italy" → "Italy")
+- **Categorization**: Standard `categorize()` function (CategoryCode is empty)
+- **Countries**: Italy 39, Germany 7, Netherlands 7, Spain 5, United Kingdom 5, Iraq 3, Egypt 2, France 2, UAE 2, and 8 others
+- **Output**: `ENI_Jobs.csv`
+
 ### Middle East Only Companies (unchanged)
 - **NIOC**
 - **INOC**
