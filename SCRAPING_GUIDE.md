@@ -271,32 +271,35 @@
 - **Notes**: All jobs in UAE (Abu Dhabi, Offshore Islands, Onshore Site/Ruwais, Rigs). Categories come from Phenom facets. Subsidiaries include ADNOC GAS O&M, ADNOC Distribution, ADNOC HQ, ADNOC Drilling, ADNOC Onshore, ADNOC Offshore, ADNOC Logistics & Services. Chatbot widget may overlay results — close it first. ALL CAPS titles should be converted to Title Case.
 - **Last scraped**: 2026-03-11 (67 jobs)
 
-### 19. CNOOC International (3 jobs)
+### 19. CNOOC International (0 jobs)
 - **URL**: https://cnoocinternational.com/careers/currentopportunities/
 - **Platform**: Lumesse TalentLink (custom CMS integration)
 - **Method**: DOM scraping from single page. All jobs visible on one page (no pagination). Job cards contain title, category (Functional Area), country, city, and posted date.
 - **DOM Selectors**: Job cards are `div` blocks with fields using `SLOVLIST1` (category), `SLOVLIST2` (country), `SLOVLIST3` (city) class identifiers. Detail links use `a` tags with "See requisition details" text.
 - **Link Format**: `https://cnoocinternational.com/careers/currentopportunities/details/?jobId={ID}&jobTitle={ENCODED_TITLE}`
 - **Pagination**: None — all jobs on single page (currently only 3 openings)
-- **Notes**: CNOOC International is the overseas arm of CNOOC (China National Offshore Oil Corporation). Currently all jobs are in Calgary, Canada. Very small number of openings. The Chrome extension blocks JS output containing query strings — use `url.searchParams.get()` to extract individual parameters.
+- **Notes**: CNOOC International is the overseas arm of CNOOC (China National Offshore Oil Corporation). Very small number of openings — may have 0 at times. The Chrome extension blocks JS output containing query strings — use `url.searchParams.get()` to extract individual parameters.
+- **Last scraped**: 2026-03-11 (0 jobs)
 
-### 20. PDO (8 jobs)
+### 20. PDO (0 jobs)
 - **URL**: https://www.petrojobs.om/en-us/Pages/Job/Search_result.aspx?Keyword=&cpn=1&depid=-1&type=s
 - **Platform**: PetroJobs Oman (ASP.NET WebForms, shared Oman O&G recruitment portal)
 - **Method**: Navigate to search results page with `cpn=1` (company ID for PDO). All 8 jobs visible on one page. Job cards in `div.thumbnail.panel_bg` containers contain title, discipline, job ID (PDO####), position type, dates. Detail page IDs extracted from `a` elements with `Details.aspx?i={id}` pattern.
 - **DOM Selectors**: `div.thumbnail.panel_bg` for job cards. Title in first line of `innerText`. Discipline, Job ID, dates in tab-separated label rows. Detail link IDs via regex `i=(\d+)` on anchor `innerHTML`.
 - **Link Format**: `https://www.petrojobs.om/en-us/Pages/Job/Details.aspx?i={detailId}`
 - **Pagination**: None needed — all results on single page (8 jobs currently)
-- **Notes**: PetroJobs.om is a joint recruitment portal for 9 Oman O&G operators (PDO, OQ, BP, Daleel, CC Energy, Oxy, OLNG, ARA, Masar). Company filter value for PDO is `cpn=1`. All PDO jobs are in Oman, no specific city/location provided. Chrome extension may block URLs with query strings in JS output — use document.title or get_page_text for extraction.
+- **Notes**: PetroJobs.om is a joint recruitment portal for 9 Oman O&G operators (PDO, OQ, BP, Daleel, CC Energy, Oxy, OLNG, ARA, Masar). Company filter value for PDO is `cpn=1`. All PDO jobs are in Oman, no specific city/location provided. Chrome extension may block URLs with query strings in JS output — use document.title or get_page_text for extraction. PDO may have 0 jobs at times — check "Jobs By Company" filter to see if PDO appears.
+- **Last scraped**: 2026-03-11 (0 jobs)
 
-### 21. QatarEnergy LNG (12 jobs)
+### 21. QatarEnergy LNG (17 jobs)
 - **URL**: https://careers.qatarenergylng.qa/search/?q=&sortColumn=referencedate&sortDirection=desc
 - **Platform**: Taleo (Oracle) career site — server-rendered HTML with `tr.data-row` table rows
 - **Method**: Single-page search results. Navigate to URL with `sortColumn=referencedate&sortDirection=desc` to get all jobs sorted by date. Extract from `tr.data-row` elements: title from `a.jobTitle-link`, department from `span.jobDepartment`, location from `span.jobLocation`, date from cell matching date regex, job ID from numeric cell, href from link attribute.
 - **DOM Selectors**: `tr.data-row` for job rows. `a.jobTitle-link` for title + href. Location in `span.jobLocation` (format "City, QA"). Department in `span.jobDepartment`. Date in td matching `/^\d+ [A-Z][a-z]{2} \d{4}$/`.
 - **Link Format**: `https://careers.qatarenergylng.qa{href}` where href is `/job/City-Title-Slug/NumericId/`
 - **Pagination**: None needed — all 12 results on single page
-- **Notes**: All jobs in Qatar (Doha or Ras Laffan 2 South). Categories include National Graduates, Finance & Accounting, Information Technology, Internship, HSE. Some jobs may have empty department field — infer category from title. Location format includes ", QA" suffix which should be stripped.
+- **Notes**: All jobs in Qatar (Doha, Ras Laffan North, Ras Laffan 2 South, Offshore 2 South). Categories include National Graduates, Finance & Accounting, Information Technology, Internship, HSE, Onshore & Offshore Operations. Some jobs may have empty department field — infer category from title. Location format includes ", QA" suffix which should be stripped.
+- **Last scraped**: 2026-03-11 (17 jobs)
 
 ### 22. North Oil Company (2 jobs)
 - **URL**: https://careers.noc.qa/search/?q=&sortColumn=referencedate&sortDirection=desc
