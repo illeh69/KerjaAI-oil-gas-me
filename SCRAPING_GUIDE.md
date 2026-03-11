@@ -459,8 +459,17 @@
 - **Notes**: ENOC (Emirates National Oil Company) is a UAE state-owned company. All jobs in Dubai, UAE. Categories from site: IT (2), Retail operations (1). Previously had 8 jobs (2026-03-03), now down to 3.
 - **Last scraped**: 2026-03-11 — 3 jobs
 
+### 30. OQ Group (16 jobs)
+- **URL**: `https://careers.oq.com/search/?createNewAlert=false&q=&locationsearch=`
+- **Platform**: Standard careers portal (tile-based search results, same platform as ENOC — likely TalentBrew/TMP)
+- **Method**: Navigate to search page with empty keyword/location. All jobs displayed on single page.
+- **DOM Selectors**: `tr.data-row` for job rows. `a[href*="/job/"]` for title link. `span.jobLocation` for location, `span.jobDate` for date, `span.jobDepartment` for department.
+- **Link Format**: `https://careers.oq.com/job/{City}-{title-slug}/{jobId}/`
+- **Pagination**: None needed — all results on single page (currently 16 jobs)
+- **Notes**: OQ (formerly Oman Oil Company) is Oman's integrated energy company. All 16 jobs in Oman (Muscat 12, Duqm 2, Sohar 1, Office 1). Departments from site: Exploration & Productions, Commercial, Downstream Operations, People and Culture, Gas Networks Engineering, Information Digital Solutions and Technology, Finance & Accounting, Legal. Several OQ8 (retail subsidiary) senior positions.
+- **Last scraped**: 2026-03-11 — 16 jobs
+
 ### Middle East Only Companies (unchanged)
-- **OQ Group**
 - **KPC**
 - **KNPC**
 - **NIOC**
