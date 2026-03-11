@@ -7,8 +7,14 @@
 - **Platform**: Coveo Atomic Search
 - **Method**: REST API POST to `{apiBase}/rest/search/v2?organizationId={orgId}`
 - **Config Source**: `document.querySelector('atomic-search-interface').engine.state.configuration`
-- **Credentials**: orgId=`schlumbergerproduction0cs2zrh7`, Bearer token from engine state
-- **Notes**: Single API call with `numberOfResults: 1000` returns all jobs. Returns structured JSON with `raw.country`, `raw.city`, `raw.category` arrays.
+- **Credentials**: orgId=`schlumbergerproduction0cs2zrh7`, Bearer token from `engine.state.configuration.accessToken`
+- **API Base**: Extracted from `engine.state.configuration.search?.apiBaseUrl` (fallback: `https://schlumbergerproduction0cs2zrh7.org.coveo.com/rest/search/v2`)
+- **Single API call**: POST with body `{aq: '@source=="ATS_Jobs_Source - Prod"', numberOfResults: 1000, sortCriteria: '@title ascending'}` returns ALL jobs at once (no pagination needed)
+- **Response structure**: `d.results[]` — each result has `raw.title`, `raw.country` (ARRAY), `raw.city` (string), `raw.category` (ARRAY), `raw.date` (Unix timestamp ms), `clickUri` (job URL)
+- **IMPORTANT — Data types**: `raw.country` and `raw.category` are ARRAYS, not strings. Use `Array.isArray(raw.country) ? raw.country.join('; ') : raw.country`. Date is Unix ms timestamp — convert with `new Date(raw.date).toISOString().split('T')[0]`.
+- **Console dump strategy**: 862 results is too large for one console.log. Split into 2 batches (~430 each), store in `window._slbBatch1` and `window._slbBatch2`, then dump each batch to console in chunks of 50 lines using `console.log('PREFIX|||' + chunk)`. Extract from tool-result file using Python.
+- **Deduplication**: By full line (title+country+city+url)
+- **Output**: `SLB_Jobs.csv`
 
 ### 2. Baker Hughes (761 jobs)
 - **URL**: https://careers.bakerhughes.com/global/en/search-results
@@ -17,7 +23,7 @@
 - **Pagination**: URL-based: `?from=N&s=1` where N increments by 10. Total pages = `ceil(totalHits / 10)`.
 - **Total jobs check**: On page load, `window.phApp.ddo.eagerLoadRefineSearch.totalHits` gives the total count.
 - **Data extraction per page**:
-  1. Fetch HTML: `fetch('https://careers.bakerhughes.com/global/en/search-results?from=${offset}&s=1')`
+  1. Fetch HTML: `fetch('/global/en/search-results?from=' + offset + '&s=1')` — use RELATIVE path to avoid query string blocking
   2. Find `"eagerLoadRefineSearch":` in the HTML string
   3. Use bracket-matching (count `{` and `}`) to extract the full JSON object — do NOT use regex (`.*?` fails on nested JSON)
   4. Parse JSON → `.data.jobs` array contains: `title`, `country`, `city`, `multi_category[0]`, `postedDate`, `applyUrl`
@@ -34,30 +40,42 @@
   const obj = JSON.parse(html.substring(start, end));
   // obj.data.jobs = [{title, country, city, multi_category, postedDate, applyUrl, ...}]
   ```
-- **Batch strategy**: Fetch 3 pages in parallel with `Promise.all()`, process in sequential batches to avoid browser timeout (60s limit per JS call). Each batch of 3 pages takes ~15-20 sec.
+- **CRITICAL — Batch strategy (3 pages max per JS call)**:
+  - Fetch EXACTLY 3 pages (30 jobs) per `javascript_exec` call. Each page HTML is ~500KB+; more than 3 sequential fetches causes browser disconnection ("Detached while handling command").
+  - Use a loop: `for (let offset = startOff; offset <= startOff+20; offset += 10)` — this fetches 3 pages.
+  - After each batch, immediately `console.log('BHP{N}|||' + lines.join('\n'))` to persist data before the next call.
+  - Do NOT use `Promise.all()` for parallel fetches — causes disconnection.
+  - Do NOT try 5+ pages in a single call — WILL disconnect.
+  - Total: 77 pages ÷ 3 = ~26 separate JS calls needed.
+- **Console data extraction**:
+  - Console messages auto-save to tool-result files when exceeding size limit
+  - Extract with Python: parse JSON array, split on `\n`, filter lines containing `|||` with 5+ fields, strip `BHP{N}|||` prefix from chunk-start lines
+  - Deduplicate by `title + '|' + applyUrl`
 - **IMPORTANT — What does NOT work**:
-  - The Phenom widget API (`POST /widgets` with `ddoKey: "eagerLoadRefineSearch"`) returns server errors for all page sizes
+  - The Phenom widget API (`POST /widgets` with `ddoKey: "eagerLoadRefineSearch"`) returns 200 but 0 jobs
   - `POST /widgets` with `ddoKey: "refineSearch"` returns 0 results
   - Regex extraction of the embedded JSON fails because lazy `.*?` stops at inner `}` braces
   - Reading `window.phApp.ddo` directly only works on the currently loaded page (data is lost on navigation)
-  - Fetching all 75 pages in a single JS call times out — must split into batches
-- **Country normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA"
+  - Fetching 5+ pages in a single JS call causes browser disconnection (NOT just timeout — full detach)
+  - Using `Promise.all()` for parallel page fetches causes disconnection
+  - Using absolute URLs in fetch may trigger cookie/query string blocking — use relative paths
 - **Deduplication**: Some jobs appear on multiple pages — deduplicate by `title + '|' + applyUrl`
+- **Output**: `Baker_Hughes_Jobs.csv`
 
 ### 3. TotalEnergies (670 jobs)
 - **URL**: https://jobs.totalenergies.com/en_US/careers/SearchJobs/
 - **Platform**: Custom careers portal (server-rendered HTML)
 - **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `.article--result` elements.
 - **Pagination**: URL parameter `jobOffset` in increments of 20: `?jobRecordsPerPage=20&jobOffset=N` (N = 0, 20, 40, ...).
-- **Total jobs check**: Bottom of page shows "1-20 of N results". Also page title says "Page X".
+- **Total jobs check**: Page text contains "of N results". Extract with regex `/of\s+(\d+)\s+results/`.
 - **Total pages**: `ceil(totalJobs / 20)` — typically ~34 pages.
 - **Data extraction per page**:
-  1. Fetch HTML: `fetch('https://jobs.totalenergies.com/en_US/careers/SearchJobs/?jobRecordsPerPage=20&jobOffset=${offset}')`
+  1. Fetch HTML: `fetch('/en_US/careers/SearchJobs/?jobRecordsPerPage=20&jobOffset=' + offset)` — use RELATIVE path
   2. Parse with `new DOMParser().parseFromString(html, 'text/html')`
   3. Select all `.article--result` elements
   4. For each article, get:
      - **Title**: `art.querySelector('h3 a, h2 a').textContent.trim()`
-     - **Link**: `art.querySelector('h3 a, h2 a').getAttribute('href')` — full URL like `https://jobs.totalenergies.com/en_US/careers/JobDetail/TITLE/ID`
+     - **Link**: `art.querySelector('h3 a, h2 a').getAttribute('href')` — prepend `https://jobs.totalenergies.com` if relative
      - **Full text**: `art.textContent.trim().replace(/\s+/g, ' ')` — contains: `Title DATE Country ContractType CompanyEntity Apply`
      - **Date**: regex `(\d{2}-\d{2}-\d{4})` from full text (format: DD-MM-YYYY)
      - **Country**: text between date and contract type keyword
@@ -73,30 +91,31 @@
     if (idx > 0) { country = afterDate.substring(0, idx).trim(); break; }
   }
   ```
-- **Post-processing (Python)**: After extracting CSV, clean country field by stripping anything after contract type keywords. Some countries have suffixes like "/ US" or "/ FR" — strip with `.replace(/ \/ \w+$/, '')`.
-- **Batch strategy**: Fetch 3 pages sequentially per JS call (each `fetch()` takes ~3-5 sec). Each JS call handles 3 pages (~15 sec). Do NOT try more than 3 sequential fetches per call — it will timeout at 60s.
+- **Post-processing (Python)**: Clean country field: strip "/ XX" suffixes with `re.sub(r'\s*/\s*\w+$', '', c)`. Strip trailing contract type words that may leak in.
+- **Batch strategy**: Can safely fetch 4 pages (80 jobs) per JS call. Define a global helper function `window._teFetch(startOff, endOff)` and call it repeatedly. Each 4-page batch takes ~15 sec. Total: ~9 JS calls for 34 pages.
 - **IMPORTANT — What does NOT work**:
-  - Fetching more than ~5 pages in a single JS execution times out (60s limit)
-  - Parallel `Promise.all()` with many pages causes browser disconnection
   - The DOM selectors `.list-item-jobCreationDate`, `.list-item-jobCountry` etc. do NOT exist on the fetched HTML — the data is in unstructured text within `.article--result`
   - Country cannot be extracted from CSS class selectors — must parse from text between date and contract type
-- **Country normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA", strip "/ XX" suffixes
-- **Deduplication**: Deduplicate by `title + '|' + href` after collection
+- **Deduplication**: Deduplicate by `title + '|' + href` after collection. Expect ~1-2% duplicates from pagination overlap.
+- **Output**: `TotalEnergies_Jobs.csv`
 
 ### 4. ExxonMobil (521 jobs)
-- **URL**: https://jobs.exxonmobil.com/search/?createNewAlert=false&q=&locationsearch=
+- **URL**: https://jobs.exxonmobil.com/search/?q=&sortColumn=referencedate&sortDirection=desc&startrow=0
 - **Platform**: SuccessFactors (SAP)
 - **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `tr.data-row` elements.
 - **Pagination**: URL parameter `startrow` in increments of 25: `/search/?q=&sortColumn=referencedate&sortDirection=desc&startrow={N}` (N = 0, 25, 50, ...).
-- **Total jobs check**: `.paginationLabel` element shows "Results 1 – 25 of N".
+- **Total jobs check**: `.paginationLabel` element on the loaded page shows "Results 1 – 25 of N". Extract with `text.match(/of\s+(\d+)/)`.
 - **Total pages**: `ceil(totalJobs / 25)`.
-- **DOM Selectors**:
+- **DOM Selectors** (on DOMParser-parsed fetched HTML):
   - Job rows: `tr.data-row`
   - Title link: `a.jobTitle-link` → `.textContent.trim()` for title, `.getAttribute('href')` for link (prepend `https://jobs.exxonmobil.com` if relative)
   - Columns (td index): [0]=title, [1]=location, [2]=career field/category, [3]=job type, [4]=post date
-- **Country extraction**: Location string ends with 2-letter ISO country code (e.g., "Houston, TX, US"). Extract with regex `/,\s*([A-Z]{2})\s*$/`. Map codes to full names using a lookup table (US→USA, GB→UK, AE→UAE, etc.).
-- **Batch strategy**: Fetch 3 pages sequentially per JS call. Each page fetch takes ~2-3 sec. Total ~22 pages.
-- **Notes**: Method is stable and works as documented. No API changes detected.
+- **Country extraction**: Location string ends with 2-letter ISO country code (e.g., "Houston, TX, US"). Extract with regex `/,\s*([A-Z]{2})\s*$/`. Map codes to full names using a comprehensive lookup table stored in `window._ccMap` (US→United States, GB→United Kingdom, AE→United Arab Emirates, IN→India, MY→Malaysia, SG→Singapore, etc.).
+- **Batch strategy**: Can safely fetch 4 pages (100 jobs) per JS call. Define global helper `window._emFetch(startRow, endRow)`. Total: ~5-6 JS calls for 21 pages. More stable than Baker Hughes — pages are smaller.
+- **Console dump**: Each batch logged as `console.log('EM{N}|||' + lines.join('\n'))`. Auto-saves to tool-result file for extraction.
+- **Deduplication**: By `title + '|' + url`. Expect ~2% overlap from pagination boundaries.
+- **Notes**: Method is stable and works as documented. ExxonMobil pages are relatively small (~100KB vs Baker Hughes ~500KB), so 4 pages per call is safe.
+- **Output**: `ExxonMobil_Jobs.csv`
 
 ### 5. Halliburton (522 jobs)
 - **URL**: https://careers.halliburton.com/en/search-jobs
