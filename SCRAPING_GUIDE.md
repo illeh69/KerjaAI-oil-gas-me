@@ -509,6 +509,18 @@
 - **Countries**: Italy 39, Germany 7, Netherlands 7, Spain 5, United Kingdom 5, Iraq 3, Egypt 2, France 2, UAE 2, and 8 others
 - **Output**: `ENI_Jobs.csv`
 
+### 35. Repsol (51 jobs)
+- **URL**: `https://repsol.wd3.myworkdayjobs.com/en-US/Repsol`
+- **Platform**: Workday (wd3)
+- **API**: `POST /wday/cxs/repsol/Repsol/jobs` with `{"appliedFacets":{},"limit":20,"offset":N,"searchText":""}`
+- **Detail API**: `GET /wday/cxs/repsol/Repsol{externalPath}` — returns `jobPostingInfo` with `title`, `location`, `country.descriptor`, `startDate`
+- **Link Format**: `https://repsol.wd3.myworkdayjobs.com/en-US/Repsol{externalPath}`
+- **Country Mapping**: `country.descriptor` from detail API. "United States of America" → "United States"
+- **Categorization**: Standard `categorize()` function with added Spanish terms (prácticas, curso, prevención, mantenimiento, fiabilidad, producción, laboratorio, jefe, vendedor, expendedor, planta, infraestructura tid)
+- **Note**: One job has no location/country — generic "Join our team" posting, defaults to Spain
+- **Countries**: Spain 29, United States 19, Bolivia 1, Italy 1, Luxembourg 1
+- **Output**: `Repsol_Jobs.csv`
+
 ### Middle East Only Companies (unchanged)
 - **NIOC**
 - **INOC**
