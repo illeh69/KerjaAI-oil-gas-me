@@ -449,8 +449,17 @@
 - **Notes**: L&T is a major Indian multinational in engineering, construction, and technology. 928 jobs across 8 countries (India 789, Saudi Arabia 50, UAE 42, Oman 30, Kuwait 6, Indonesia 6, Uzbekistan 4, Qatar 1). Heavy concentration in engineering, management, construction, and structural/civil roles. Many duplicate positions (same role in multiple locations).
 - **Last scraped**: 2026-03-11 — 928 jobs
 
+### 29. ENOC (3 jobs)
+- **URL**: `https://careers.enoc.com/search/`
+- **Platform**: Standard careers portal (tile-based search results)
+- **Method**: Navigate to search page, click "Search Jobs" with empty filters. All jobs displayed on single page.
+- **DOM Selectors**: `a[href*="/job/"]` for job links. Cards contain Title, Job Category, and Location fields.
+- **Link Format**: `https://careers.enoc.com/job/DUBAI-{title-slug}/{jobId}/`
+- **Pagination**: None needed — all results on single page (currently only 3 jobs)
+- **Notes**: ENOC (Emirates National Oil Company) is a UAE state-owned company. All jobs in Dubai, UAE. Categories from site: IT (2), Retail operations (1). Previously had 8 jobs (2026-03-03), now down to 3.
+- **Last scraped**: 2026-03-11 — 3 jobs
+
 ### Middle East Only Companies (unchanged)
-- **ENOC**
 - **OQ Group**
 - **KPC**
 - **KNPC**
