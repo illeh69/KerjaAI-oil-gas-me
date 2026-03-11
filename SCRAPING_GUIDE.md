@@ -299,42 +299,144 @@
 - **Raw data file**: Write raw data to `/tmp/aramco_raw.txt`. Build CSV with `build_aramco.py` using the standard categorize function.
 - **Notes**: All jobs in Saudi Arabia (location always "SA" in listing). Country = "Saudi Arabia", Location = "Saudi Arabia" in CSV. No date posted field available — leave empty. Categories assigned by title keywords (department names from listing are not standardized enough for direct use). Cannot fetch from Python (blocked by Aramco), must use browser JS.
 
-### 9. Shell (175 jobs)
+### 9. Shell (178 jobs)
 - **URL**: https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers
 - **Platform**: Workday
 - **Method**: JSON API POST to `/wday/cxs/shell/ShellCareers/jobs`
 - **Body**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`. Response has `total` field and `jobPostings[]` array.
 - **Pagination**: 20 per page, use `offset=0,20,40,...` up to `Math.ceil(total/20)` pages. All pages can be fetched in a single async loop (9 pages, fast).
+- **CRITICAL**: `data.total` is ONLY reliable from the FIRST API call — subsequent pages may return `total:0`. Must save total from the first call and use it for the loop condition. Do NOT overwrite `total` from later responses.
 - **Data Structure**: Each `jobPostings[]` item: `title`, `externalPath` (relative URL), `locationsText` (city-level, NOT country), `postedOn` (e.g., "Posted 2 Days Ago"), `bulletFields[]` (contains req ID).
 - **Link Format**: `https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers` + `externalPath`
-- **Country Extraction**: Location text is city-based (e.g., "Scotford - Refinery", "Houston - EP Center Americas"). Must map to country using keyword matching: Houston/California/Michigan/Chicago → US, London/Aberdeen → UK, Bangalore/Chennai → India, Kuala Lumpur/Cyberjaya/Miri → Malaysia, Rotterdam/Pernis → Netherlands, Manila/Tabangao → Philippines, etc. "N Locations" entries → "Multiple".
-- **Notes**: Links must include `/en-US/ShellCareers/` in path. Dedup by `externalPath`. All 175 jobs fetched in ~9 sequential API calls (no batching needed).
+- **Country Extraction**: Location text is city-based (e.g., "Scotford - Refinery", "Houston - EP Center Americas"). Must map to country using keyword matching: Houston/California/Washington DC/Chicago/San Diego → US, London/Aberdeen → UK, Bangalore/Chennai → India, Kuala Lumpur/Cyberjaya/Miri/Bintulu/Kota Kinabalu/Kuching/Lutong/Menara Shell → Malaysia, Rotterdam/Pernis/The Hague/Klundert → Netherlands, Manila/Dela Rosa/Cagayan/Tabangao/Finance Centre BGC → Philippines, Singapore → Singapore, Calgary/Scotford → Canada, Denmark/Odense/Holsted/Korskro/Lolland/Trige/Vaarst → Denmark, Marunouchi → Japan, Bangkok → Thailand, Turkey/Mersin/Istanbul/Esentepe → Turkey, Hamburg/Altmannshofen → Germany, Shell Business Operations-DOT/Krakow → Poland, China/Shanghai/Beijing/Guangzhou/Chengdu → China, Qatar/Ras Laffan → Qatar, Rio de Janeiro → Brazil, Hong Kong → Hong Kong, Congo → Congo. "N Locations" entries → "Multiple".
+- **Working JS code**:
+```javascript
+(async () => {
+  let allJobs = [];
+  let resp = await fetch('/wday/cxs/shell/ShellCareers/jobs', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({appliedFacets:{}, limit:20, offset:0, searchText:''})
+  });
+  let data = await resp.json();
+  let total = data.total; // SAVE from first call only
+  if (data.jobPostings) allJobs = allJobs.concat(data.jobPostings);
+  for (let offset = 20; offset < total; offset += 20) {
+    resp = await fetch('/wday/cxs/shell/ShellCareers/jobs', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({appliedFacets:{}, limit:20, offset, searchText:''})
+    });
+    data = await resp.json();
+    if (data.jobPostings) allJobs = allJobs.concat(data.jobPostings);
+    if (!data.jobPostings || data.jobPostings.length === 0) break;
+  }
+  let seen = new Set(); let unique = [];
+  for (let j of allJobs) { if (!seen.has(j.externalPath)) { seen.add(j.externalPath); unique.push(j); } }
+  window._shellRaw = unique.map(j => {
+    let title = (j.title||'').trim(), loc = (j.locationsText||'').trim();
+    let posted = (j.postedOn||'').trim();
+    let url = 'https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers' + j.externalPath;
+    return [title, loc, posted, url].join('|||');
+  });
+  return unique.length + ' unique jobs (total from first call: ' + total + ')';
+})()
+```
+- **Notes**: Links must include `/en-US/ShellCareers/` in path. Dedup by `externalPath`. 20 countries including India (24), Multiple (26), Philippines (16), Malaysia (15), US (14), UK (13).
+- **Last scraped**: 2026-03-12 (178 jobs)
 
-### 10. Chevron (179 jobs)
+### 10. Chevron (199 jobs)
 - **URL**: https://careers.chevron.com/search-jobs
 - **Platform**: TalentBrew (Radancy/TMP) with ElasticSearch backend
-- **Method**: Click-based pagination through 12 pages (15 jobs/page). Extract `a[href*="/job/"]` links; title and location parsed from link text (split by newline). Slugs captured directly from href paths.
-- **Pagination**: AJAX pagination via "next page" link click; URL params (`&p=N`) don't work as direct navigation. `window.elasticSearch.searchOptions` provides TotalResults/TotalPages metadata.
-- **API Notes**: `window.elasticSearch.search()` exists but DOM updates unreliably. `/search-jobs/results` endpoint returns empty results. Only click-based pagination works reliably.
-- **Country mapping**: Location format "City, State/Country" — US states mapped to "United States", other countries extracted from location suffix.
-- **Build script**: `build_chevron.py` — includes category classification based on title keywords.
-- **Notes**: Scraped worldwide. 15 countries including India (58), US (32), Philippines (31), Argentina (27).
+- **Method**: Click-based pagination. Extract `a[href*="/job/"]` links from `#search-results-list li` items; title from `h2` element, location from `span.job-location` or last text line in link.
+- **Pagination**: AJAX pagination via `.pagination-paging a.next` click; URL params (`&p=N`) don't work as direct navigation. `window.elasticSearch.searchOptions` provides `TotalResults`/`TotalPages`/`CurrentPage` metadata. 15 jobs per page.
+- **IMPORTANT**: Cannot use a single async loop with clicks inside — the tab detaches during navigation. Must use separate JS calls: (1) extract current page jobs + click next, (2) wait 3s, (3) repeat. Store results in `window._chevAll` array across calls.
+- **DOM Selectors**: `.jlr_right_hldr` does NOT exist here. Use `#search-results-list li` for job items, `a[href*="/job/"]` for links, `h2` for title, last span/text for location.
+- **Link Format**: `https://careers.chevron.com` + `a.getAttribute('href')` (href is relative like `/job/bengaluru/data-engineer/38138/91079240736`)
+- **Country mapping**: Location format "City, State/Country" — US states (texas, california, new mexico, north dakota, louisiana, mississippi, illinois) mapped to "United States". Direct country matches: India, Argentina, Philippines, Singapore, China, Australia, Netherlands, Israel, Egypt, Guatemala, Thailand, Japan, El Salvador.
+- **Working JS code** (run per page, store in window._chevAll):
+```javascript
+// Initialize on page 1:
+window._chevAll = [];
+// Run on each page (extract + click next):
+let items = document.querySelectorAll('#search-results-list li');
+items.forEach(li => {
+  let a = li.querySelector('a[href*="/job/"]');
+  if (!a) return;
+  let title = a.querySelector('h2')?.textContent?.trim() || '';
+  let loc = li.querySelector('span.job-location')?.textContent?.trim() || '';
+  if (!loc) { let lines = a.textContent.trim().split('\n').map(l=>l.trim()).filter(Boolean); if(lines.length>1) loc=lines[lines.length-1]; }
+  let href = 'https://careers.chevron.com' + a.getAttribute('href');
+  if (title) window._chevAll.push(title + '|||' + loc + '|||' + href);
+});
+document.querySelector('.pagination-paging a.next')?.click();
+// Wait 3s between calls. After last page, dedup by URL.
+```
+- **Notes**: Scraped worldwide. 14 countries: India (56), US (42), Philippines (35), Argentina (29), China (17), Israel (5), Australia (4), Netherlands (3), Singapore (2), Thailand (2), Guatemala (1), El Salvador (1), Japan (1), Egypt (1).
+- **Last scraped**: 2026-03-12 (199 jobs)
 
 ### 11. Petrofac (55 jobs)
 - **URL**: https://petrofac.referrals.selectminds.com
 - **Platform**: SelectMinds/iCIMS
-- **Method**: URL-based pagination `/page/{N}`
-- **Notes**: 55 jobs total. Used `fetch()` to load all pages and extract job data from DOM. Clean "and 1 additional location" from country field.
+- **Method**: Click "Search" with empty fields to get all jobs → lands on `/jobs/search/{searchId}`. Hash-based pagination (`#page2`, `#page3`, etc.) via `.pagination a[href="#pageN"]` clicks. 10 jobs per page, 6 pages.
+- **DOM Selectors**: `.jlr_right_hldr` for job card containers. Inside each: `a.job_link` for title+URL, `span.location` for location, `span.category` for category.
+- **IMPORTANT**: The `.jlr_right_hldr` selector picks up ALL visible cards, which may include cards from previous pages still in DOM (hash-based navigation). Must dedup by URL after all pages extracted.
+- **Location format**: "City, Country" (e.g., "ABERDEEN, United Kingdom", "Abu Dhabi, United Arab Emirates"). Extract country from last comma-separated part.
+- **Clean location**: Remove "and N additional location(s)" suffix with regex `/\s+and \d+ additional location[s]?/i`.
+- **Working JS code** (run per page):
+```javascript
+// Initialize:
+window._petroAll = [];
+// Per page:
+document.querySelectorAll('.jlr_right_hldr').forEach(card => {
+  let link = card.querySelector('a.job_link');
+  if (!link) return;
+  let title = link.textContent.trim();
+  let url = link.getAttribute('href');
+  if (!url.startsWith('http')) url = 'https://petrofac.referrals.selectminds.com' + url;
+  let loc = card.querySelector('span.location')?.textContent?.trim() || '';
+  let cat = card.querySelector('span.category')?.textContent?.trim() || '';
+  loc = loc.replace(/\s+and \d+ additional location[s]?/i, '').trim();
+  window._petroAll.push(title + '|||' + loc + '|||' + cat + '|||' + url);
+});
+document.querySelector('.pagination a[href="#pageN"]')?.click(); // N = next page number
+// Wait 3s between calls. After last page, dedup by URL.
+```
+- **Notes**: 9 countries: United Kingdom (23), Malaysia (10), UAE (8), India (5), Equatorial Guinea (4), Turkmenistan (2), Ghana (1), Bahrain (1), Lithuania (1).
+- **Last scraped**: 2026-03-12 (55 jobs)
 
-### 12. ConocoPhillips (30 jobs)
+### 12. ConocoPhillips (38 jobs)
 - **URL**: https://careers.conocophillips.com/job-search-results/?query=&location=
 - **Platform**: Custom careers site (non-Workday UI) with Workday backend (wd1.myworkdayjobs.com). Apply links point to Workday.
-- **Method**: Click "Search" with no filters. All jobs load on single page — no pagination. Extract from `.job_search_list_item` elements with grid sub-items.
-- **Data structure**: Each job has 4 grid items: (1) category label + job title, (2) Location, (3) Job ID, (4) Apply link to Workday.
-- **Multi-location**: Some jobs list multiple locations separated by whitespace; take first location for CSV.
-- **Country mapping**: US states (TEXAS, ALASKA, etc.) → United States; QUEENSLAND → Australia; CANADA/NORWAY/UNITED KINGDOM directly.
-- **Build script**: `build_conocophillips.py` — categories come directly from the page (Marine, Upstream Production, etc.).
-- **Notes**: Workday backend (wd1.myworkdayjobs.com) may be down during maintenance windows. The custom careers.conocophillips.com page still serves job listings even when Workday UI is down.
+- **Method**: Navigate to URL (all jobs load on single page, no pagination needed). Reject cookies first. Extract from `.job_search_list_item` elements.
+- **DOM Selectors**: `.job_search_list_item` for each job. Inside each: `.job_search_list_item_col_title` divs for labels (first one = category, "Location" = location label, "Job ID" = job ID label). `.job_search_list_item_title_link` for job title. `a[href*="workday"]` for apply URL. Location values in `li` elements under the Location section.
+- **Data structure**: Each `.job_search_list_item_col_title` with text content gives the label. The next sibling element gives the value. Category is the first col_title text (e.g., "Aviation", "Upstream Production"). Location value is in `li` element. Apply link has Workday URL.
+- **Country mapping**: US states (TEXAS, ALASKA, NORTH DAKOTA, LOUISIANA, CALIFORNIA) → United States; QUEENSLAND → Australia; CANADA/NORWAY directly. Location format is "CITY, STATE" (uppercase).
+- **Categories from page**: Aviation, General Administration, Commercial, Upstream Production, Health Safety & Environmental, Finance & Accounting, Supply Chain, Engineering, Human Resources, Legal, Information Technology, Marine, Land. Map to standard categories.
+- **Working JS code**:
+```javascript
+let items = document.querySelectorAll('.job_search_list_item');
+let jobs = [];
+items.forEach(item => {
+  let cols = item.querySelectorAll('.job_search_list_item_col_title');
+  let category = '', title = '', location = '';
+  cols.forEach(col => {
+    let label = col.textContent.trim();
+    let nextVal = col.nextElementSibling;
+    if (label === 'Location') {
+      let lis = nextVal ? nextVal.querySelectorAll('li') : [];
+      if (lis.length > 0) location = lis[0].textContent.trim();
+      else if (nextVal) location = nextVal.textContent.trim();
+    } else if (label !== 'Job ID') { category = label; }
+  });
+  let titleEl = item.querySelector('.job_search_list_item_title_link');
+  if (titleEl) title = titleEl.textContent.trim();
+  let applyLink = item.querySelector('a[href*="workday"]');
+  let url = applyLink ? applyLink.getAttribute('href') : '';
+  if (title) jobs.push(title + '|||' + category + '|||' + location + '|||' + url);
+});
+console.log('CONORAW|||' + jobs.join('\n'));
+```
+- **Notes**: 4 countries: United States (32), Canada (3), Norway (2), Australia (1). Workday backend (wd1.myworkdayjobs.com) may be down during maintenance windows.
+- **Last scraped**: 2026-03-12 (38 jobs)
 
 ### 13. Petronas (29 jobs)
 - **URL**: https://careers.petronas.com/en/sites/CX_1/jobs?mode=location
