@@ -309,6 +309,7 @@
 - **Link Format**: `https://careers.noc.qa{href}` where href is `/job/Title-Slug/NumericId/`
 - **Pagination**: None needed — all results on single page (currently only 2 jobs)
 - **Notes**: All jobs in Qatar. Very small number of openings. NOC is a Qatar Petroleum / TotalEnergies JV for the Al-Shaheen offshore field. Departments map to categories: "Health and Industrial Hygiene" → HSE, "Human Resources" (for internship postings) → Internship.
+- **Last scraped**: 2026-03-11 — 2 jobs
 
 ### 23. Dragon Oil (8 jobs)
 - **URL**: https://career22.sapsf.com/career?company=dragonoilh
@@ -319,7 +320,7 @@
 - **Pagination**: None needed — all results on single page
 - **Notes**: Dragon Oil is an ENOC subsidiary. Jobs split between Turkmenistan (DOTL = Dragon Oil Turkmenistan Limited, locations: Hazar offshore, Ashgabat) and UAE (DOHL = Dragon Oil Holdings Ltd, Dubai Corporate Head Office). No department field on listing — categories inferred from title. The dragonoil.com/careers/ page links to the SAP SuccessFactors portal via "Current Vacancies". Chrome extension blocks href extraction due to query strings — click through to detail page or use reqId to construct links.
 
-### 24. McDermott (357 jobs)
+### 24. McDermott (375 jobs)
 - **URL**: https://www.mcdermott.com/careers/search-apply
 - **Platform**: Oracle HCM Cloud (embedded iframe to `edsv.fa.us2.oraclecloud.com`)
 - **Method**: REST API pagination from Oracle HCM portal
@@ -330,9 +331,10 @@
 - **Link Format**: `https://edsv.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/{Id}`
 - **Country Normalization**: "United Arab Emirates" → "UAE"
 - **Categories**: No department/category field in API — inferred from job titles using keyword matching (see `build_mcdermott.py` categorize function)
-- **Notes**: mcdermott.com embeds Oracle HCM in an iframe. CORS blocks cross-origin API calls from mcdermott.com — must navigate browser directly to the Oracle HCM portal (`edsv.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/`) and make API calls from the same origin. Jobs span 18+ countries worldwide (UAE 78, Malaysia 65, India 55, Indonesia 41, US 36, UK 19, etc.).
+- **Notes**: mcdermott.com embeds Oracle HCM in an iframe. CORS blocks cross-origin API calls from mcdermott.com — must navigate browser directly to the Oracle HCM portal (`edsv.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/`) and make API calls from the same origin. Jobs span 19 countries worldwide (UAE 83, Malaysia 74, India 58, Indonesia 42, USA 36, UK 21, Qatar 14, Mexico 11, etc.).
+- **Last scraped**: 2026-03-11 — 375 jobs
 
-### 25. Saipem (195 jobs)
+### 25. Saipem (202 jobs)
 - **URL**: https://jobs.saipem.com/
 - **Platform**: Custom job board powered by NCorePlat (app.ncoreplat.com)
 - **Method**: Static JSON file fetch — all jobs in a single `positions_saipem.json`
@@ -344,7 +346,8 @@
 - **Subsidiaries**: Global Projects Services AG, Saipem Romania Srl, Saipem SA (France), Saipem Limited (UK), Saipem India, Saipem Luxembourg Angola Branch, Petromar Lda, Saipem Australia, Saipem Spa (Italy), Saipem Offshore Construction, Saipem SpA Qatar Branch, Saipem do Brasil, SAIPEM SpA Abu Dhabi Branch, SEI Spa Ivory Coast Branch, Saudi Arabian Saipem Co. Ltd., Snamprogetti Saudi Arabia Co. Ltd., Saipem America Inc
 - **Country Normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA", "Cote d'Ivoire" → "Ivory Coast"
 - **Categories**: Sector field available (`sectorText`) plus title-based inference for granular categories
-- **Notes**: Very straightforward scraping — static JSON with all data. Jobs span 15+ countries (Italy 50, France 32, Offshore 25, Qatar 13, Angola 11, Saudi Arabia 11, etc.). Many French-language internship postings ("STAGE ...") from Saipem SA. The "Offshore" country designation means vessel/offshore-based roles with no fixed country.
+- **Notes**: Very straightforward scraping — static JSON with all data. Jobs span 20 countries (Italy 56, France 32, Offshore 25, Qatar 15, Saudi Arabia 11, Angola 10, UK 9, Ivory Coast 8, Mozambique 7, etc.). Many French-language internship postings ("STAGE ...") from Saipem SA. The "Offshore" country designation means vessel/offshore-based roles with no fixed country.
+- **Last scraped**: 2026-03-11 — 202 jobs
 
 ### 26. Technip Energies (172 jobs)
 - **URL**: https://hcxg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs
