@@ -195,23 +195,25 @@
 - **Build script**: `build_conocophillips.py` — categories come directly from the page (Marine, Upstream Production, etc.).
 - **Notes**: Workday backend (wd1.myworkdayjobs.com) may be down during maintenance windows. The custom careers.conocophillips.com page still serves job listings even when Workday UI is down.
 
-### 13. Petronas (30 jobs)
+### 13. Petronas (29 jobs)
 - **URL**: https://careers.petronas.com/en/sites/CX_1/jobs?mode=location
 - **Platform**: Oracle CX Recruiting
-- **Method**: All jobs load on single page (scroll to bottom triggers lazy-load for remaining cards). Extract from `.job-tile` parent divs; the `a[href*="/job/"]` links inside are empty — data is in the parent div's `innerText`.
-- **Data structure**: Each tile shows title (first line), location + posting date (second line, format "Location Posting DateMM/DD/YYYY"), and optional TRENDING badge.
+- **Method**: All jobs load on single page (scroll to bottom triggers lazy-load for remaining cards). Extract from `.job-tile` parent divs.
+- **DOM Selectors**: `.job-tile` for cards, `.job-tile__title` for title, `.job-list-item__job-info-item` for location/date, `a[href*="/job/"]` for links.
 - **Title cleanup**: Some titles have numeric prefixes like "100004709_" or "100005288 - " that need stripping via regex `^\d+[_ -]+`.
 - **Multi-location**: Some jobs show "Location and 1 more" — strip the suffix.
-- **Build script**: `build_petronas.py` — categories classified by title keywords. All jobs currently in Malaysia.
-- **Notes**: All 30 jobs are in Malaysia (Kuala Lumpur, Perak, Putrajaya). Heavy on academic/research roles (university positions).
+- **Notes**: All 29 jobs are in Malaysia (Kuala Lumpur, Perak, Putrajaya). Heavy on academic/research roles (university positions). Date format on page: MM/DD/YYYY → convert to YYYY-MM-DD for CSV.
+- **Last scraped**: 2026-03-11 (29 jobs)
 
-### 14. Suncor (27 jobs)
+### 14. Suncor (20 jobs)
 - **URL**: https://suncor.wd1.myworkdayjobs.com/Suncor_External
 - **Platform**: Workday
 - **Method**: Workday JSON API POST to `/wday/cxs/suncor/Suncor_External/jobs`
-- **Body**: `{"appliedFacets":{},"limit":50,"offset":0,"searchText":""}`
-- **Detail API**: GET `/wday/cxs/suncor/Suncor_External/job/{path}` for country info
-- **Notes**: API sometimes returns 400 on repeated calls. DOM scraping works as fallback (page 1: 20 jobs, page 2: 7 jobs). Job links: `https://suncor.wd1.myworkdayjobs.com/Suncor_External/job/{path}`. Country from detail API: `jobPostingInfo.country.descriptor`.
+- **Body**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`
+- **Response**: `{total, jobPostings[{title, externalPath, locationsText, postedOn, bulletFields[]}]}`
+- **Country mapping**: Most jobs in Canada (Calgary, Fort McMurray, Sarnia, Oakville, Montreal). US locations: Houston, Commerce City, Fort Lupton.
+- **Notes**: All 20 jobs fetched in single API call. Posted dates are relative ("Posted Yesterday", "Posted N Days Ago"). Link format: `https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External{externalPath}`.
+- **Last scraped**: 2026-03-11 (20 jobs)
 
 ### 15. Mubadala Energy (40 jobs)
 - **URL**: https://www.careers-page.com/mubadalaenergy#openings
@@ -219,12 +221,12 @@
 - **Method**: Live DOM scraping (fetch+DOMParser does NOT work — SPA requires live browser rendering)
 - **Pagination**: `?page=N` (20 jobs per page, 2 pages)
 - **DOM Selectors**:
-  - Job links: `a[href*="/mubadalaenergy/job/"]`
-  - Title: link text content
-  - Location: `span.is-block` (first span after title)
-  - Country: parsed from location string
-- **Data Format**: `title~location~country~~~link` (no category or date available)
-- **Notes**: Client-rendered SPA — JavaScript state (`window._mubJobs`) is lost on page navigation. Must extract and dump each page independently. "Tax Associate Energy Sector" has no location — defaults to Abu Dhabi, UAE (Mubadala HQ). Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`.
+  - Job links: `a[href*="/mubadalaenergy/job/"]` (filter out "Apply" button text)
+  - Title: link text content (deduplicate by href)
+  - Location: find span with comma (location format) in parent div
+  - Country: parsed from location string (Malaysia, Indonesia, UAE)
+- **Notes**: Client-rendered SPA — JavaScript state is lost on page navigation. Must extract and dump each page independently. No posting dates available. Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`. Clean duplicate city names in location (e.g., "Jakarta, Jakarta, Indonesia" → "Jakarta, Indonesia"). Note: `mubadalaenergy.careers-page.com` returns 404, must use `www.careers-page.com/mubadalaenergy`.
+- **Last scraped**: 2026-03-11 (40 jobs)
 
 ### 16. INPEX (72 jobs — 2 sites combined)
 
