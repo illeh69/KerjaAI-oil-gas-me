@@ -483,6 +483,18 @@
 - **Notes**: KNPC (Kuwait National Petroleum Company) is a KPC subsidiary responsible for refining. Website at `https://www.knpc.com/en` has no careers section. All recruitment goes through parent company KPC's portal. As of 2026-03-11: no active campaigns.
 - **Last scraped**: 2026-03-11 — 0 jobs (no active campaigns)
 
+### 33. AECOM (361 jobs — Energy business line only)
+- **URL**: `https://aecom.jobs/business-line/energy/jobs/`
+- **Platform**: Custom Nuxt.js frontend powered by SmartRecruiters (API: `prod-search-api.jobsyn.org`)
+- **Method**: Navigate to Energy business line filtered URL. Page loads 10 jobs initially. Click "More" button (`#jobListingContent button.btn`) repeatedly to load all jobs (10 per click). ~35 clicks needed for 361 jobs. Do in batches of 10 clicks to avoid browser timeouts.
+- **DOM Selectors**: `ul.pb-10 > li` for job items. Each `li` contains: `a` with href for link, `h2` for title. Text content has "Career Area:" and "Business Line:" labels. Location is between title and "Career Area:".
+- **Link Format**: `https://aecom.jobs/{city-code}/{title-slug}/{HASH}/job/`
+- **API**: `GET https://prod-search-api.jobsyn.org/api/v1/solr/search?page=1&offset=N&businessline=energy&num_items=10` — requires origin header from aecom.jobs domain (cannot call directly from JS fetch due to CORS).
+- **Data extraction**: After loading all jobs via "More" clicks, extract via JS: iterate `ul.pb-10 > li`, parse title/location/career area from text content, get link from `a[href]`. Store in `window._aecomJobs` array, dump via `console.log()` with markers, save persisted output to file, parse with Python.
+- **Pagination**: Click-based "More" button. Use batches of 10 clicks with 1.2s delays: `for (let i=0; i<10; i++) { btn.click(); await new Promise(r=>setTimeout(r,1200)); }`
+- **Notes**: AECOM is a global infrastructure consulting firm. Energy is one of 6 business lines (Transportation, B&P, Water, Environment, Energy, Program Management). 361 Energy jobs across 11 countries (UK 144, US 131, India 30, Romania 13, Ireland 11, Australia 7, Poland 7, Spain 7, Canada 6, New Zealand 4, Philippines 1). Location format from site uses 3-letter country codes (GBR, IND, AUS, ROM) or US state codes (TX, CA, etc.).
+- **Last scraped**: 2026-03-11 — 361 jobs (Energy business line only)
+
 ### Middle East Only Companies (unchanged)
 - **NIOC**
 - **INOC**
