@@ -120,12 +120,37 @@
 ### 5. Halliburton (537 jobs)
 - **URL**: https://careers.halliburton.com/en/search-jobs
 - **Platform**: TalentBrew
-- **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `a[data-job-id]` elements.
+- **Method**: Define a helper function `window._halFetch(startPage, endPage)` on the careers page, then call it in batches of 3 pages. The function fetches each page's HTML via `fetch()`, parses with `DOMParser`, and extracts job data from `a[data-job-id]` elements.
 - **Pagination**: URL parameter `?p=N` (N = 1, 2, 3, ...). Each fetched page returns 15 jobs. First page URL has no `?p` parameter.
-- **Total jobs check**: Page body text contains "N results" (e.g., "522 results").
-- **Total pages**: `ceil(totalJobs / 15)` — typically ~35 pages.
+- **Total pages**: `ceil(totalJobs / 15)` — typically ~36 pages for 537 jobs.
+- **Helper function**:
+  ```javascript
+  window._halFetch = async function(startPage, endPage) {
+    let all = [];
+    for (let p = startPage; p <= endPage; p++) {
+      let url = p === 1 ? '/en/search-jobs' : '/en/search-jobs?p=' + p;
+      let resp = await fetch(url);
+      let html = await resp.text();
+      let parser = new DOMParser();
+      let doc = parser.parseFromString(html, 'text/html');
+      let links = doc.querySelectorAll('a[data-job-id]');
+      links.forEach(a => {
+        let title = (a.querySelector('h2') || {}).textContent || '';
+        title = title.trim();
+        let href = a.getAttribute('href') || '';
+        if (href && !href.startsWith('http')) href = 'https://careers.halliburton.com' + href;
+        let locEl = a.querySelector('span.job-location');
+        let loc = locEl ? locEl.textContent.replace(/\s+/g, ' ').trim() : '';
+        let catEl = a.querySelector('span.job-jobCategories');
+        let cat = catEl ? catEl.textContent.replace(/\s+/g, ' ').trim() : '';
+        if (title) all.push([title, loc, cat, href].join('|||'));
+      });
+    }
+    return all;
+  };
+  ```
 - **Data extraction per page**:
-  1. Fetch HTML: `fetch('https://careers.halliburton.com/en/search-jobs?p=' + pageNum)` (page 1: no `?p` param)
+  1. Fetch HTML: `fetch('/en/search-jobs?p=' + pageNum)` (page 1: no `?p` param). Use RELATIVE paths.
   2. Parse with `new DOMParser().parseFromString(html, 'text/html')`
   3. Select all `a[data-job-id]` elements
   4. For each element:
@@ -134,48 +159,145 @@
      - **Location**: `a.querySelector('span.job-location').textContent.trim()` — contains city, state/province, country (with embedded newlines to clean)
      - **Category**: `a.querySelector('span.job-jobCategories').textContent.trim()` (NOTE: class is `job-jobCategories`, NOT `jobCategories`)
   5. **Country**: Last comma-separated part of location string after cleaning whitespace
-- **Batch strategy**: Fetch 3 pages sequentially per JS call. Each page fetch takes ~3-5 sec due to large HTML (~840KB). Do NOT try more than 3 per call — 60s JS timeout.
+- **Batch strategy**: Fetch 3 pages sequentially per JS call via `window._halFetch(start, end)`. Each page fetch takes ~3-5 sec due to large HTML (~840KB). Do NOT try more than 3 per call — 60s JS timeout. For 36 pages: 12 JS calls (pages 1-3, 4-6, ..., 34-36).
+- **Console dump**: After each batch, dump the returned array to console: `console.log('HAL_N|||' + result.join('\n'))`. Format is `title|||location|||category|||url` per line.
+- **Raw data file**: Extract all `HAL_N` chunks from console tool-result JSON files using Python. Write to `/tmp/hal_raw.txt`. Build CSV with `build_hal.py` using the standard categorize function.
 - **IMPORTANT — What does NOT work**:
   - The old AJAX endpoint `/en/search-jobs/results?CurrentPage=1&RecordsPerPage=600` now returns `{"filters":"","results":"","hasJobs":true,"hasContent":false}` — empty results regardless of parameters or headers
   - Adding `X-Requested-With: XMLHttpRequest` header does not help
-  - Setting geo location first via POST to `SetSearchRequestGeoLocation` does not help
   - The live page renders 23 jobs (more than the 15 in fetched HTML) because extra jobs are loaded by client-side JS after initial render
 - **Country normalization**: Clean whitespace from location text, then extract last segment after final comma. "United States" → "USA", "United Kingdom" → "UK", "United Arab Emirates" → "UAE"
 - **Notes**: No date posted field available in the listing page — leave Date Posted column empty in CSV.
 
 ### 6. BP (407 jobs)
-- **URL**: https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers
-- **Platform**: Workday (primary), Algolia Search (backup)
-- **Method (Primary — Workday)**: JSON API POST to `/wday/cxs/bpinternational/bpCareers/jobs`
-- **Body**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`. Response has `total` field and `jobPostings[]` array.
-- **Pagination**: 20 per page, use `offset=0,20,40,...` up to `Math.ceil(total/20)` pages (~20 pages for 393 jobs). Fetch in batches of 5 pages per JS call to avoid 60s timeout.
-- **Data Structure**: Each `jobPostings[]` item: `title`, `externalPath` (relative URL), `locationsText` (format: "Country - City" e.g., "India - Pune", or country code prefix "IN: Pune"), `postedOn` (e.g., "Posted Today"), `bulletFields[]` (contains RQ ID).
-- **Link Format**: `https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers` + `externalPath`
-- **Country Extraction**: Location text starts with country name ("India - Mumbai") or 2-letter code prefix ("IN:", "CN:", "GB:", "AU:", "US:", "HU:", "BR:", "PL:", "SG:", "ZA:", "TR:", "AE:", "OM:"). "N Locations" → "Multiple". Some jobs have null `locationsText` → "Unknown".
-- **Notes**: Dedup by `externalPath`. 2 jobs may have null location. Navigate to Workday URL first, then use fetch() API from that page.
-- **Method (Backup — Algolia Search)**:
-  - URL: `https://careers.bp.com/listing`
+- **URL**: https://careers.bp.com/listing (Algolia — recommended) or https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers (Workday — backup)
+- **Platform**: Algolia Search (primary), Workday (backup — often down for maintenance)
+- **Method (Primary — Algolia Search)**:
+  - Navigate to `https://careers.bp.com/listing` first, then run fetch from that page
   - REST API POST to `https://UM59DWRPA1-dsn.algolia.net/1/indexes/production_bp_jobs/query`
   - Credentials: AppId=`UM59DWRPA1`, API Key=`33719eb8d9f28725f375583b7e78dbab`, Index=`production_bp_jobs`
   - Config Source: `window.search.client.transporter.queryParameters` (appId, apiKey), `search.mainIndex` (index name)
-  - Single API call with `hitsPerPage=1000`. Returns title, primary_country[], location[], professional_function[], posting_date[], slug[]. Job links: `https://careers.bp.com/job-description/{RQ_ID}`
+  - Single API call with `hitsPerPage=1000` returns ALL jobs at once (no pagination needed)
+  ```javascript
+  const appId = 'UM59DWRPA1';
+  const apiKey = '33719eb8d9f28725f375583b7e78dbab';
+  const indexName = 'production_bp_jobs';
+  const url = `https://${appId}-dsn.algolia.net/1/indexes/${indexName}/query`;
+  const resp = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Algolia-Application-Id': appId,
+      'X-Algolia-API-Key': apiKey
+    },
+    body: JSON.stringify({ params: 'hitsPerPage=1000&page=0' })
+  });
+  const data = await resp.json();
+  // data.hits[] contains all jobs, data.nbHits = total count
+  ```
+  - **Data Structure**: Each `data.hits[]` item has: `title`, `primary_country` (array), `location` (array), `professional_function` (array), `posting_date` (array, format "YYYY-MM-DD"), `slug` (array, contains RQ_ID)
+  - **Link Format**: `https://careers.bp.com/job-description/{slug[0]}` where slug[0] is the RQ ID
+  - **Country Extraction**: `primary_country[0]` gives the country directly (e.g., "United Kingdom", "India", "United States")
+  - **Console dump**: Store results in `window._bpRaw`, dump as pipe-delimited lines: `title|||country|||location|||category|||date|||url`
+  - **Build script**: `build_bp.py` reads from `/tmp/bp_raw.txt`, applies standard categorize function
+- **Method (Backup — Workday)**: NOTE: Workday is frequently down for maintenance (redirects to `community.workday.com/maintenance-page`). Try Algolia first.
+  - JSON API POST to `/wday/cxs/bpinternational/bpCareers/jobs`
+  - Body: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`. Response has `total` field and `jobPostings[]` array.
+  - Pagination: 20 per page, use `offset=0,20,40,...`. Fetch in batches of 5 pages per JS call.
+  - Data: `title`, `externalPath` (relative URL), `locationsText` ("Country - City"), `postedOn` ("Posted Today")
+  - Link: `https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers` + `externalPath`
+  - Must navigate to Workday URL first, then use fetch() from that page.
 
 ### 7. QatarEnergy (289 jobs)
 - **URL**: https://careerportal.qatarenergy.qa/jobs
 - **Platform**: Jibe (Angular Material) with REST API
-- **Method**: REST API at `/api/jobs?page=N&sortBy=relevance&descending=false&internal=false&limit=100&deviceId=undefined&domain=qatarenergy.jibeapply.com`. `limit=100` works — 3 API calls fetch all results (289 unique after dedup).
+- **Method**: Navigate to the QatarEnergy careers page first, then use fetch() to call the REST API. `limit=100` works — 3-4 API calls fetch all jobs.
+  ```javascript
+  (async () => {
+    let allJobs = [];
+    for (let page = 1; page <= 4; page++) {
+      let url = '/api/jobs?page=' + page + '&sortBy=relevance&descending=false&internal=false&limit=100&deviceId=undefined&domain=qatarenergy.jibeapply.com';
+      let resp = await fetch(url);
+      let data = await resp.json();
+      if (data.jobs) allJobs = allJobs.concat(data.jobs);
+      if (!data.jobs || data.jobs.length < 100) break;
+    }
+    // Deduplicate by slug
+    let seen = new Set();
+    let unique = [];
+    for (let j of allJobs) {
+      let slug = j.data.slug;
+      if (!seen.has(slug)) { seen.add(slug); unique.push(j); }
+    }
+    // Store as pipe-delimited raw data
+    window._qeRaw = unique.map(j => {
+      let d = j.data;
+      let title = (d.title || '').trim();
+      let city = (d.city || d.short_location || '').trim().toUpperCase();
+      let cat = (d.category && d.category[0]) || '';
+      let date = (d.posted_date || '').substring(0, 10);
+      let url = 'https://careerportal.qatarenergy.qa/jobs/' + d.slug;
+      return [title, city, cat, date, url].join('|||');
+    });
+    return window._qeRaw.length + ' unique jobs';
+  })()
+  ```
 - **Data Structure**: `response.jobs[].data` contains: `title`, `slug` (numeric ID used in link), `req_id`, `city`, `location_name`, `short_location`, `category` (array), `department`, `posted_date` (YYYY-MM-DD), `country`, `country_code`.
 - **Link Format**: `https://careerportal.qatarenergy.qa/jobs/{slug}`
-- **UI Notes**: Angular Material `mat-paginator` shows 10 per page. Lazy loads more on scroll. API `limit` param bypasses pagination entirely.
-- **Notes**: All jobs in Qatar (Doha, Mesaieed, Ras Laffan, Dukhan, Offshore). Categories come directly from API data. 8 duplicate slugs removed.
+- **Console dump**: Dump all raw data in one `console.log('QERAW_ALL|||' + window._qeRaw.join('\n'))`. Format: `title|||city|||category_raw|||date|||url` per line. For ~289 jobs this fits in one dump. Read back via `read_console_messages` with pattern `QERAW_ALL` — data gets saved to tool-result file when total exceeds ~50KB.
+- **Raw data file**: Extract lines from tool-result JSON file, write to `/tmp/qe_raw.txt`. Build CSV with `build_qe.py` using the standard categorize function (do NOT use raw categories directly — they are department-level, not standardized).
+- **IMPORTANT — Console data persistence**: If the console data is small enough to return inline (not saved to a tool-result file), Python extraction from files will fail. In that case, write the raw data directly from the inline tool result output to `/tmp/qe_raw.txt` using a heredoc in bash.
+- **Notes**: All jobs in Qatar (Doha, Mesaieed, Ras Laffan, Dukhan, Offshore). Location format in CSV: `"CITY, Qatar"`. Categories assigned by standard categorize function (title-based), not API categories.
 
 ### 8. Saudi Aramco (222 jobs)
 - **URL**: https://careers.aramco.com/search/?q=&sortColumn=referencedate&sortDirection=desc
 - **Platform**: Custom careers site (careers.aramco.com) with server-rendered HTML pagination
-- **Method**: Fetch HTML pages via `?startrow=N` (multiples of 25). Parse `tr.data-row` elements; extract title from `a.jobTitle-link`, href from link attribute. Additional columns: Job Req ID (`td[1]`), Location (`td[2]`), Department (`td[3]`).
-- **Pagination**: 25 jobs per page, `startrow=0,25,50,...` up to 9 pages. Empty `tr.data-row` set signals end.
+- **Method**: Navigate to the Saudi Aramco careers page first, then use a single async JS function to fetch all pages and collect jobs. All pages are fetched in one JS call (9 pages takes ~5-10 sec total).
+  ```javascript
+  (async () => {
+    let allJobs = [];
+    let page = 0;
+    while (true) {
+      let startrow = page * 25;
+      let url = '/search/?q=&sortColumn=referencedate&sortDirection=desc&startrow=' + startrow;
+      let resp = await fetch(url);
+      let html = await resp.text();
+      let parser = new DOMParser();
+      let doc = parser.parseFromString(html, 'text/html');
+      let rows = doc.querySelectorAll('tr.data-row');
+      if (rows.length === 0) break;
+      rows.forEach(row => {
+        let link = row.querySelector('a.jobTitle-link');
+        if (!link) return;
+        let title = link.textContent.trim();
+        let href = link.getAttribute('href') || '';
+        if (href && !href.startsWith('http')) href = 'https://careers.aramco.com' + href;
+        let tds = row.querySelectorAll('td');
+        let reqId = tds.length > 1 ? tds[1].textContent.trim() : '';
+        let location = tds.length > 2 ? tds[2].textContent.trim() : '';
+        let department = tds.length > 3 ? tds[3].textContent.trim() : '';
+        allJobs.push(title + '|||' + location + '|||' + department + '|||' + href);
+      });
+      page++;
+      if (page > 20) break; // safety limit
+    }
+    // Deduplicate by URL
+    let seen = new Set();
+    let unique = [];
+    for (let j of allJobs) {
+      let url = j.split('|||')[3];
+      if (!seen.has(url)) { seen.add(url); unique.push(j); }
+    }
+    window._aramcoRaw = unique;
+    return unique.length + ' unique jobs from ' + page + ' pages';
+  })()
+  ```
+- **Pagination**: 25 jobs per page, `startrow=0,25,50,...` up to ~9 pages. Empty `tr.data-row` set signals end. All pages fetched in a single async JS call.
+- **Data extraction per row**: `tr.data-row` → `a.jobTitle-link` for title & href, `td[1]` for Req ID, `td[2]` for Location (always "SA"), `td[3]` for Department.
 - **Link Format**: `https://careers.aramco.com/{path}` where path is `/expat_uk/job/SLUG/ID/`, `/expat_us/job/SLUG/ID/`, or `/saudi/job/SLUG/ID/`
-- **Notes**: All jobs in Saudi Arabia (location always "SA"). Category assigned by title keywords (not available on listing page). Cannot fetch from Python (blocked), must use browser. New job "IP Docketing Specialist" found compared to previous scrape.
+- **Console dump**: `console.log('ARAMCO_ALL|||' + window._aramcoRaw.join('\n'))`. Format: `title|||location|||department|||url` per line. For ~222 jobs this fits in one dump.
+- **Raw data file**: Write raw data to `/tmp/aramco_raw.txt`. Build CSV with `build_aramco.py` using the standard categorize function.
+- **Notes**: All jobs in Saudi Arabia (location always "SA" in listing). Country = "Saudi Arabia", Location = "Saudi Arabia" in CSV. No date posted field available — leave empty. Categories assigned by title keywords (department names from listing are not standardized enough for direct use). Cannot fetch from Python (blocked by Aramco), must use browser JS.
 
 ### 9. Shell (175 jobs)
 - **URL**: https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers
