@@ -433,21 +433,21 @@
 - **Notes**: NMDC Group is an Abu Dhabi-based marine and dredging company. All 68 jobs are in the UAE. Roles are predominantly marine operations (marine supervisor, tug master, seaman, chief officer), dredging (dredge mechanic, electrician), construction (crane operator, fabrication, rigging, welding, grouting), and engineering (electrical, mechanical). Very specialized workforce. Categories: Operations & Technical 24, Engineering 14, General 8, Management 4, Finance & Accounting 3, IT & Digital 3.
 - **Last scraped**: 2026-03-11 — 68 jobs
 
-### 28. Larsen & Toubro (99 jobs)
+### 28. Larsen & Toubro (928 jobs)
 - **URL**: https://larsentoubrocareers.peoplestrong.com/job/joblist
 - **Platform**: PeopleStrong AltOne
 - **Method**: REST API POST with pagination
 - **API Endpoint**: `POST https://larsentoubrocareers.peoplestrong.com/api/cp/rest/altone/cp/jobs/v1?offset=N&limit=100`
 - **Request Body**: Empty JSON `{}`
-- **Pagination**: `offset` increments by `limit`, `count` in response indicates total count. Auto-paginate until all fetched.
+- **Pagination**: `offset` increments by `limit`, **`totalRecords`** (NOT `count`) in response indicates total count. Auto-paginate until `all.length >= totalRecords`. CRITICAL: the key is `totalRecords`, not `count` — using `count` returns undefined and stops after first page.
 - **Response Fields**: `response[]` array, each item has `jobTitle`, `locationHierarchyComplete` (Country>State>City), `organizationUnit`, `industry`, `functionalArea`, `jobPostedDate`, `jobDetailUrl`, `jobCode`
 - **Link Format**: `https://larsentoubrocareers.peoplestrong.com/job/detail/{jobCode}` — use last numeric segment of jobCode
-- **Country Extraction**: Parse `locationHierarchyComplete` hierarchy — first segment is country. Normalize "United Arab Emirates" → "UAE". Check for country keywords (India, Saudi Arabia, UAE, Oman, Qatar, Kuwait, etc.) in the full location string.
+- **Country Extraction**: Parse `locationHierarchyComplete` hierarchy — first segment is country. Normalize "United Arab Emirates" → "UAE". Check for country keywords (India, Saudi Arabia, UAE, Oman, Qatar, Kuwait, Indonesia, Uzbekistan, etc.) in the full location string.
 - **Location**: Last segment of `locationHierarchyComplete` (after last `>`) gives the specific city/site.
 - **Categories**: Inferred from jobTitle using keyword matching. L&T has heavy engineering (MEP, HVAC, civil, QA/QC), EHS, and construction roles especially in UAE.
-- **Notes**: L&T is a major Indian engineering conglomerate. Jobs span India (66), UAE (29), Saudi Arabia (2), Oman (2). UAE roles are predominantly MEP engineers, civil QA/QC, EHS, and planning/construction. India roles cover electronics, power electronics, embedded systems, manufacturing, and corporate functions. Many duplicate positions (same role in multiple locations).
-- **Last scraped**: 2026-03-11 — 99 jobs
-- **Notes**: L&T is a major Indian multinational in engineering, construction, and technology. 904 jobs across 9 countries (India 784, Saudi Arabia 50, Oman 32, UAE 19, Kuwait 6, Indonesia 6, Qatar 3, Uzbekistan 3, Guinea 1). Heavy concentration in engineering, management, construction, and structural/civil roles. API accepts empty body and returns rich metadata including organizational unit and industry classification.
+- **Data extraction**: With ~930 jobs, the div-based get_page_text approach hits the body-too-large limit. Extract in chunks of 200 divs using `window._ltLines` array stored in JS, render 200 at a time, extract via `get_page_text`, save each chunk to `/tmp/lt_chunkN.txt`, then concatenate all chunks with `cat` and parse with Python.
+- **Notes**: L&T is a major Indian multinational in engineering, construction, and technology. 928 jobs across 8 countries (India 789, Saudi Arabia 50, UAE 42, Oman 30, Kuwait 6, Indonesia 6, Uzbekistan 4, Qatar 1). Heavy concentration in engineering, management, construction, and structural/civil roles. Many duplicate positions (same role in multiple locations).
+- **Last scraped**: 2026-03-11 — 928 jobs
 
 ### Middle East Only Companies (unchanged)
 - **ENOC**
