@@ -311,14 +311,15 @@
 - **Notes**: All jobs in Qatar. Very small number of openings. NOC is a Qatar Petroleum / TotalEnergies JV for the Al-Shaheen offshore field. Departments map to categories: "Health and Industrial Hygiene" → HSE, "Human Resources" (for internship postings) → Internship.
 - **Last scraped**: 2026-03-11 — 2 jobs
 
-### 23. Dragon Oil (8 jobs)
+### 23. Dragon Oil (6 jobs)
 - **URL**: https://career22.sapsf.com/career?company=dragonoilh
 - **Platform**: SAP SuccessFactors career portal
-- **Method**: Navigate to portal, click "Search Jobs" to load results. All 8 jobs on single page. Extract from `tr.jobResultItem` rows: title from `a.jobTitle`, requisition info from row `innerText` matching regex `Requisition ID: (\d+) - Posted on (\S+) - (.+)`. Location code on a separate line starting with `DOTL` or `DOHL`.
+- **Method**: Navigate to portal, click "Search Jobs" to load results. All jobs on single page. Extract from `tr.jobResultItem` rows: title from `a.jobTitle`, requisition info from row `innerText` matching regex `Requisition ID: (\d+) - Posted on (\S+) - (.+)`. Location code on a separate line starting with `DOTL` or `DOHL`.
 - **DOM Selectors**: `tr.jobResultItem` for job rows. `a.jobTitle` for title link. Requisition line parsed with regex. Location line starts with `DOTL-` (Turkmenistan) or `DOHL` (Dubai HQ).
 - **Link Format**: `https://career22.sapsf.com/career?career_ns=job_listing&company=dragonoilh&navBarLevel=JOB_SEARCH&rcm_site_locale=en_US&career_job_req_id={reqId}&selected_lang=en_GB`
 - **Pagination**: None needed — all results on single page
-- **Notes**: Dragon Oil is an ENOC subsidiary. Jobs split between Turkmenistan (DOTL = Dragon Oil Turkmenistan Limited, locations: Hazar offshore, Ashgabat) and UAE (DOHL = Dragon Oil Holdings Ltd, Dubai Corporate Head Office). No department field on listing — categories inferred from title. The dragonoil.com/careers/ page links to the SAP SuccessFactors portal via "Current Vacancies". Chrome extension blocks href extraction due to query strings — click through to detail page or use reqId to construct links.
+- **Notes**: Dragon Oil is an ENOC subsidiary. Jobs split between Turkmenistan (DOTL = Dragon Oil Turkmenistan Limited, locations: Hazar offshore, Ashgabat) and UAE (DOHL = Dragon Oil Holdings Ltd, Dubai Corporate Head Office). No department field on listing — categories inferred from title. The dragonoil.com/careers/ page links to the SAP SuccessFactors portal via "Current Vacancies". Chrome extension blocks href extraction due to query strings — click through to detail page or use reqId to construct links. Country distribution: Turkmenistan 2, UAE 4.
+- **Last scraped**: 2026-03-11 — 6 jobs
 
 ### 24. McDermott (375 jobs)
 - **URL**: https://www.mcdermott.com/careers/search-apply
@@ -406,7 +407,7 @@
 - **Notes**: Jobs span 20 countries (Italy 56, France 32, Offshore 25, Qatar 15, Saudi Arabia 11, Angola 10, UK 9, Ivory Coast 8, Mozambique 7, etc.). Many French-language internship postings ("STAGE ...") from Saipem SA.
 - **Last scraped**: 2026-03-11 — 202 jobs
 
-### 26. Technip Energies (172 jobs)
+### 26. Technip Energies (171 jobs)
 - **URL**: https://hcxg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs
 - **Platform**: Oracle HCM Cloud (same as McDermott but different instance: `hcxg.fa.em2.oraclecloud.com`)
 - **Method**: REST API pagination from Oracle HCM portal
@@ -417,9 +418,10 @@
 - **Link Format**: `https://hcxg.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/{Id}`
 - **Country Normalization**: "United Arab Emirates" → "UAE", "United Kingdom" → "UK", "United States" → "USA", "Korea, Republic of" → "South Korea"
 - **Categories**: No department/category field in API — inferred from job titles using keyword matching
-- **Notes**: T.EN (Technip Energies) career site. Jobs span 15 countries (France 58, UK 27, India 20, Malaysia 15, UAE 11, USA 10, Colombia 9, Spain 8, etc.). Many French-language and V.I.E (Volontariat International en Entreprise) postings. Headquarters in Nanterre, France. UAE jobs are predominantly for UAE Nationals.
+- **Notes**: T.EN (Technip Energies) career site. Jobs span 15 countries (France 57, UK 26, India 21, Malaysia 14, UAE 11, USA 11, Colombia 9, Spain 8, Germany 4, Mexico 3, Netherlands 2, South Korea 2, Italy 1, Thailand 1, Qatar 1). Many French-language and V.I.E (Volontariat International en Entreprise) postings. Headquarters in Nanterre, France. UAE jobs are predominantly for UAE Nationals.
+- **Last scraped**: 2026-03-11 — 171 jobs
 
-### 27. NMDC (52 jobs)
+### 27. NMDC (68 jobs)
 - **URL**: https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/nmdccareers/jobs
 - **Platform**: Oracle HCM Cloud (`fa-evft-saasfaprod1.fa.ocs.oraclecloud.com`)
 - **Method**: REST API pagination from Oracle HCM portal
@@ -428,19 +430,23 @@
 - **Job Data Path**: `items[0].requisitionList` array, each item has `Id`, `Title`, `PrimaryLocation`, `PostedDate`
 - **Link Format**: `https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/nmdccareers/job/{Id}`
 - **Categories**: No department/category field in API — inferred from job titles (heavy marine/dredging/construction focus)
-- **Notes**: NMDC Group is an Abu Dhabi-based marine and dredging company. All 52 jobs are in the UAE (Abu Dhabi). Roles are predominantly marine operations (marine supervisor, tug master, seaman), dredging (dredge mechanic, electrician), construction (crane operator, fabrication, rigging, welding), and engineering (electrical, mechanical). Very specialized workforce.
+- **Notes**: NMDC Group is an Abu Dhabi-based marine and dredging company. All 68 jobs are in the UAE. Roles are predominantly marine operations (marine supervisor, tug master, seaman, chief officer), dredging (dredge mechanic, electrician), construction (crane operator, fabrication, rigging, welding, grouting), and engineering (electrical, mechanical). Very specialized workforce. Categories: Operations & Technical 24, Engineering 14, General 8, Management 4, Finance & Accounting 3, IT & Digital 3.
+- **Last scraped**: 2026-03-11 — 68 jobs
 
-### 28. Larsen & Toubro (904 jobs)
+### 28. Larsen & Toubro (99 jobs)
 - **URL**: https://larsentoubrocareers.peoplestrong.com/job/joblist
 - **Platform**: PeopleStrong AltOne
 - **Method**: REST API POST with pagination
 - **API Endpoint**: `POST https://larsentoubrocareers.peoplestrong.com/api/cp/rest/altone/cp/jobs/v1?offset=N&limit=100`
 - **Request Body**: Empty JSON `{}`
-- **Pagination**: `offset` increments by `limit`, `totalRecords` in response indicates total count
+- **Pagination**: `offset` increments by `limit`, `count` in response indicates total count. Auto-paginate until all fetched.
 - **Response Fields**: `response[]` array, each item has `jobTitle`, `locationHierarchyComplete` (Country>State>City), `organizationUnit`, `industry`, `functionalArea`, `jobPostedDate`, `jobDetailUrl`, `jobCode`
-- **Link Format**: `https://larsentoubrocareers.peoplestrong.com/job/detail/{jobCode}`
-- **Country Extraction**: Parse `locationHierarchyComplete` hierarchy — last segment is country. Normalize "United Arab Emirates" → "UAE"
-- **Categories**: Inferred from jobTitle, industry, and functionalArea fields using keyword matching
+- **Link Format**: `https://larsentoubrocareers.peoplestrong.com/job/detail/{jobCode}` — use last numeric segment of jobCode
+- **Country Extraction**: Parse `locationHierarchyComplete` hierarchy — first segment is country. Normalize "United Arab Emirates" → "UAE". Check for country keywords (India, Saudi Arabia, UAE, Oman, Qatar, Kuwait, etc.) in the full location string.
+- **Location**: Last segment of `locationHierarchyComplete` (after last `>`) gives the specific city/site.
+- **Categories**: Inferred from jobTitle using keyword matching. L&T has heavy engineering (MEP, HVAC, civil, QA/QC), EHS, and construction roles especially in UAE.
+- **Notes**: L&T is a major Indian engineering conglomerate. Jobs span India (66), UAE (29), Saudi Arabia (2), Oman (2). UAE roles are predominantly MEP engineers, civil QA/QC, EHS, and planning/construction. India roles cover electronics, power electronics, embedded systems, manufacturing, and corporate functions. Many duplicate positions (same role in multiple locations).
+- **Last scraped**: 2026-03-11 — 99 jobs
 - **Notes**: L&T is a major Indian multinational in engineering, construction, and technology. 904 jobs across 9 countries (India 784, Saudi Arabia 50, Oman 32, UAE 19, Kuwait 6, Indonesia 6, Qatar 3, Uzbekistan 3, Guinea 1). Heavy concentration in engineering, management, construction, and structural/civil roles. API accepts empty body and returns rich metadata including organizational unit and industry classification.
 
 ### Middle East Only Companies (unchanged)
