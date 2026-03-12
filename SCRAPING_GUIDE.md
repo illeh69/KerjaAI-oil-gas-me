@@ -984,6 +984,16 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **Output**: `Cenovus_Energy_Jobs.csv`
 - **Last scraped**: 2026-03-12
 
+### 45. Marathon Petroleum (117 jobs)
+- **URL**: `https://mpc.wd1.myworkdayjobs.com/MPCCareers`
+- **Platform**: Workday (wd1)
+- **Method**: Standard Workday REST API — `POST /wday/cxs/mpc/MPCCareers/jobs` with `{appliedFacets:{}, limit:20, offset:N, searchText:''}`. Total: 117. Paginated (20 per page, 6 pages).
+- **Job fields**: `title`, `locationsText`, `postedOn`, `externalPath` from `jobPostings` array.
+- **Detail link format**: `https://mpc.wd1.myworkdayjobs.com/MPCCareers{externalPath}`
+- **Country**: All jobs in USA. Locations use "City, State" format. Multi-location jobs show "N Locations".
+- **Output**: `Marathon_Petroleum_Jobs.csv`
+- **Last scraped**: 2026-03-12
+
 ---
 
 ## Common Patterns
