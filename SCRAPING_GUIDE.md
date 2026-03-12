@@ -577,21 +577,66 @@ window._inpexID = (window._inpexID||[]).concat(jobs);
 - **URL**: https://careers.woodside.com.au/go/View-All-Opportunities/9784266/
 - **Platform**: Taleo (Oracle)
 - **Method**: DOM scraping — all 15 jobs on a single page, no pagination needed
-- **DOM Selectors**: `a[href*="/job/"]` for job links (deduplicate by href as each job has multiple link elements). Walk up parent elements until finding one with `Location` + `Posting Date` text to get the full job card context.
-- **Data Fields**: Structured text in each card: `Title`, `Location` (country codes: US, MX, AU, SG), `Business Unit` (used as category), `Requisition ID`, `Posting Date` (format: `D Mon YYYY`, e.g., "4 Mar 2026")
+- **DOM Selectors**: `.sub-section` for job cards, `a[href*="/job/"]` for links (deduplicate by href). Each card has structured text: Title, Location, Business Unit, Requisition ID, Posting Date.
+- **Extraction JS**:
+```javascript
+let cards = document.querySelectorAll('.sub-section');
+let seen = new Set(); let jobs = [];
+cards.forEach(card => {
+  let linkEl = card.querySelector('a[href*="/job/"]');
+  if (!linkEl) return;
+  let href = linkEl.getAttribute('href');
+  if (seen.has(href)) return; seen.add(href);
+  let title = linkEl.textContent.trim();
+  let lines = card.innerText.split('\n').map(l=>l.trim()).filter(Boolean);
+  let loc='', bizUnit='', postDate='';
+  for (let i=0; i<lines.length; i++) {
+    if (lines[i]==='Location' && lines[i+1]) loc=lines[i+1];
+    if (lines[i]==='Business Unit' && lines[i+1]) bizUnit=lines[i+1];
+    if (lines[i]==='Posting Date' && lines[i+1]) postDate=lines[i+1];
+  }
+  let url = href.startsWith('http') ? href : 'https://careers.woodside.com.au'+href;
+  jobs.push(title+'|||'+loc+'|||'+bizUnit+'|||'+postDate+'|||'+url);
+});
+console.log('WOODSIDE|||'+jobs.join('\n'));
+```
+- **Country mapping**: MX→Mexico, US/TX→United States, AU→Australia, SG→Singapore
+- **Date format**: `D Mon YYYY` (e.g., "4 Mar 2026") → convert to YYYY-MM-DD
 - **Link Format**: `https://careers.woodside.com.au/job/{slug}/{id}/`
-- **Notes**: Small job count (15). Country codes need mapping to full names. No Shadow DOM — standard DOM queries work fine. Card container is `.sub-section` class (not `tr` or generic `div`).
-- **Last scraped**: 2026-03-11 (15 jobs)
+- **Notes**: Small job count (15). No Shadow DOM — standard DOM queries work fine.
+- **Last scraped**: 2026-03-12 (15 jobs)
 
-### 18. ADNOC (67 jobs)
+### 18. ADNOC (56 jobs)
 - **URL**: https://jobs.adnoc.ae/us/en/search-results
 - **Platform**: Phenom People (Vue.js, client-side rendered)
-- **Method**: DOM scraping with page-by-page navigation. 10 jobs per page, 7 pages. Navigate to `?from=N&s=1` (N=0,10,20,...60). Extract `a[href*="/job/"]` links from each page.
-- **DOM Selectors**: `a[href*="/job/"]` for job links. Parent card element contains category (line 2), country (line 3), subsidiary (line 4), city (line 5) in `innerText` split by newlines.
-- **Link Format**: `https://jobs.adnoc.ae/us/en/job/{jobId}`
-- **Pagination**: Client-side rendered — `fetch()` returns HTML shell without job data. Must navigate browser to each page URL and extract from live DOM.
-- **Notes**: All jobs in UAE (Abu Dhabi, Offshore Islands, Onshore Site/Ruwais, Rigs). Categories come from Phenom facets. Subsidiaries include ADNOC GAS O&M, ADNOC Distribution, ADNOC HQ, ADNOC Drilling, ADNOC Onshore, ADNOC Offshore, ADNOC Logistics & Services. Chatbot widget may overlay results — close it first. ALL CAPS titles should be converted to Title Case.
-- **Last scraped**: 2026-03-11 (67 jobs)
+- **Method**: DOM scraping with page-by-page navigation. 10 jobs per page. Navigate to `?from=N&s=1` (N=0,10,20,...). Extract `a[href*="/us/en/job/"]` links from each page.
+- **IMPORTANT**: Chrome extension blocks JS output containing query strings. Strip query strings from URLs using `.split('?')[0]`.
+- **Extraction JS** (run per page, dump via console.log):
+```javascript
+let links = document.querySelectorAll('a[href*="/us/en/job/"]');
+let seen = new Set(); let jobs = [];
+links.forEach(a => {
+  let path = (a.getAttribute('href')||'').split('?')[0];
+  if (seen.has(path)) return; seen.add(path);
+  let card = a;
+  for (let i=0; i<10; i++) { if (!card.parentElement) break; card=card.parentElement; if (card.innerText&&card.innerText.length>100) break; }
+  let lines = (card.innerText||'').split('\n').map(l=>l.trim()).filter(Boolean);
+  let title = lines[0]||'';
+  // Metadata lines: Category, {cat}, United Arab Emirates, {subsidiary}, {city}, Job Id, {id}
+  let meta = [];
+  let inMeta = false;
+  for (let l of lines.slice(1)) {
+    if (l==='Category') { inMeta=true; meta.push(l); continue; }
+    if (inMeta) { if (l.match(/^\d{5}$/)||l.startsWith('Job Id')) { meta.push(l); inMeta=false; } else if (l.length<80) meta.push(l); else inMeta=false; }
+  }
+  jobs.push(title+'|||'+meta.join(' // ')+'|||'+path);
+});
+console.log('ADNOC_PN|||'+jobs.join('\n'));
+```
+- **Link Format**: `https://jobs.adnoc.ae/us/en/job/{jobId}/{slug}` (path only, no query string)
+- **Pagination**: Client-side rendered — `fetch()` returns HTML shell without job data. Must navigate browser to each page URL and extract from live DOM. SPA state lost on navigation — must dump via console per page.
+- **Notes**: All jobs in UAE (Abu Dhabi, Offshore Islands, Onshore Site/Ruwais, Rigs). Subsidiaries: ADNOC GAS O&M, ADNOC Distribution, ADNOC HQ, ADNOC Drilling, ADNOC Onshore, ADNOC Offshore. Chatbot widget may overlay — close it first. ALL CAPS titles → Title Case.
+- **Last scraped**: 2026-03-12 (56 jobs)
 
 ### 19. CNOOC International (0 jobs)
 - **URL**: https://cnoocinternational.com/careers/currentopportunities/
@@ -601,7 +646,7 @@ window._inpexID = (window._inpexID||[]).concat(jobs);
 - **Link Format**: `https://cnoocinternational.com/careers/currentopportunities/details/?jobId={ID}&jobTitle={ENCODED_TITLE}`
 - **Pagination**: None — all jobs on single page (currently only 3 openings)
 - **Notes**: CNOOC International is the overseas arm of CNOOC (China National Offshore Oil Corporation). Very small number of openings — may have 0 at times. The Chrome extension blocks JS output containing query strings — use `url.searchParams.get()` to extract individual parameters.
-- **Last scraped**: 2026-03-11 (0 jobs)
+- **Last scraped**: 2026-03-12 (0 jobs)
 
 ### 20. PDO (0 jobs)
 - **URL**: https://www.petrojobs.om/en-us/Pages/Job/Search_result.aspx?Keyword=&cpn=1&depid=-1&type=s
@@ -611,7 +656,7 @@ window._inpexID = (window._inpexID||[]).concat(jobs);
 - **Link Format**: `https://www.petrojobs.om/en-us/Pages/Job/Details.aspx?i={detailId}`
 - **Pagination**: None needed — all results on single page (8 jobs currently)
 - **Notes**: PetroJobs.om is a joint recruitment portal for 9 Oman O&G operators (PDO, OQ, BP, Daleel, CC Energy, Oxy, OLNG, ARA, Masar). Company filter value for PDO is `cpn=1`. All PDO jobs are in Oman, no specific city/location provided. Chrome extension may block URLs with query strings in JS output — use document.title or get_page_text for extraction. PDO may have 0 jobs at times — check "Jobs By Company" filter to see if PDO appears.
-- **Last scraped**: 2026-03-11 (0 jobs)
+- **Last scraped**: 2026-03-12 (0 jobs)
 
 ### 21. QatarEnergy LNG (17 jobs)
 - **URL**: https://careers.qatarenergylng.qa/search/?q=&sortColumn=referencedate&sortDirection=desc
