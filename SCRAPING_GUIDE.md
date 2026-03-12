@@ -946,6 +946,17 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **Previous data**: Had 4 placeholder/fake jobs that were removed.
 - **Output**: `INOC_Jobs.csv` (header only, 0 jobs)
 
+### 42. Santos (7 jobs)
+- **URL**: `https://recruitment.santos.com/careers/SearchJobs`
+- **Platform**: Custom careers portal (PageUp People ATS)
+- **Method**: Browser scraping — paginated job list (6 per page), 2 pages total.
+- **Job card structure**: `<article>` elements with title as first text line, metadata as second line in format: `Location • Ref #XXX • Posted DD-MMM-YYYY`. Some jobs (Vacation Program, Graduate Program) have no location.
+- **Detail links**: `a[href*="/careers/JobDetail/"]` inside each article.
+- **Country extraction**: Map location city names to countries. Santos operates primarily in Australia (Brisbane, Adelaide, Perth, Moomba, Darwin, etc.) and Papua New Guinea (Port Moresby). Default to Australia for unknown/empty locations.
+- **Countries**: Australia 5, Papua New Guinea 2.
+- **Output**: `Santos_Jobs.csv`
+- **Last scraped**: 2026-03-12
+
 ---
 
 ## Common Patterns
