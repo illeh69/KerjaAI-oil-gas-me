@@ -110,7 +110,7 @@
   - Job rows: `tr.data-row`
   - Title link: `a.jobTitle-link` → `.textContent.trim()` for title, `.getAttribute('href')` for link (prepend `https://jobs.exxonmobil.com` if relative)
   - Columns (td index): [0]=title, [1]=location, [2]=career field/category, [3]=job type, [4]=post date
-- **Country extraction**: Location string ends with 2-letter ISO country code (e.g., "Houston, TX, US"). Extract with regex `/,\s*([A-Z]{2})\s*$/`. Map codes to full names using a comprehensive lookup table stored in `window._ccMap` (US→United States, GB→United Kingdom, AE→United Arab Emirates, IN→India, MY→Malaysia, SG→Singapore, etc.).
+- **Country extraction**: Location string ends with 2-letter ISO country code (e.g., "Houston, TX, US"). Extract with regex `/,\s*([A-Z]{2})\s*$/`. Map codes to full names using a comprehensive lookup table stored in `window._ccMap` (US→USA, GB→United Kingdom, AE→United Arab Emirates, IN→India, MY→Malaysia, SG→Singapore, etc.).
 - **Batch strategy**: Can safely fetch 4 pages (100 jobs) per JS call. Define global helper `window._emFetch(startRow, endRow)`. Total: ~5-6 JS calls for 21 pages. More stable than Baker Hughes — pages are smaller.
 - **Console dump**: Each batch logged as `console.log('EM{N}|||' + lines.join('\n'))`. Auto-saves to tool-result file for extraction.
 - **Deduplication**: By `title + '|' + url`. Expect ~2% overlap from pagination boundaries.
@@ -351,7 +351,7 @@
 - **IMPORTANT**: Cannot use a single async loop with clicks inside — the tab detaches during navigation. Must use separate JS calls: (1) extract current page jobs + click next, (2) wait 3s, (3) repeat. Store results in `window._chevAll` array across calls.
 - **DOM Selectors**: `.jlr_right_hldr` does NOT exist here. Use `#search-results-list li` for job items, `a[href*="/job/"]` for links, `h2` for title, last span/text for location.
 - **Link Format**: `https://careers.chevron.com` + `a.getAttribute('href')` (href is relative like `/job/bengaluru/data-engineer/38138/91079240736`)
-- **Country mapping**: Location format "City, State/Country" — US states (texas, california, new mexico, north dakota, louisiana, mississippi, illinois) mapped to "United States". Direct country matches: India, Argentina, Philippines, Singapore, China, Australia, Netherlands, Israel, Egypt, Guatemala, Thailand, Japan, El Salvador.
+- **Country mapping**: Location format "City, State/Country" — US states (texas, california, new mexico, north dakota, louisiana, mississippi, illinois) mapped to "USA". Direct country matches: India, Argentina, Philippines, Singapore, China, Australia, Netherlands, Israel, Egypt, Guatemala, Thailand, Japan, El Salvador.
 - **Working JS code** (run per page, store in window._chevAll):
 ```javascript
 // Initialize on page 1:
@@ -409,7 +409,7 @@ document.querySelector('.pagination a[href="#pageN"]')?.click(); // N = next pag
 - **Method**: Navigate to URL (all jobs load on single page, no pagination needed). Reject cookies first. Extract from `.job_search_list_item` elements.
 - **DOM Selectors**: `.job_search_list_item` for each job. Inside each: `.job_search_list_item_col_title` divs for labels (first one = category, "Location" = location label, "Job ID" = job ID label). `.job_search_list_item_title_link` for job title. `a[href*="workday"]` for apply URL. Location values in `li` elements under the Location section.
 - **Data structure**: Each `.job_search_list_item_col_title` with text content gives the label. The next sibling element gives the value. Category is the first col_title text (e.g., "Aviation", "Upstream Production"). Location value is in `li` element. Apply link has Workday URL.
-- **Country mapping**: US states (TEXAS, ALASKA, NORTH DAKOTA, LOUISIANA, CALIFORNIA) → United States; QUEENSLAND → Australia; CANADA/NORWAY directly. Location format is "CITY, STATE" (uppercase).
+- **Country mapping**: US states (TEXAS, ALASKA, NORTH DAKOTA, LOUISIANA, CALIFORNIA) → USA; QUEENSLAND → Australia; CANADA/NORWAY directly. Location format is "CITY, STATE" (uppercase).
 - **Categories from page**: Aviation, General Administration, Commercial, Upstream Production, Health Safety & Environmental, Finance & Accounting, Supply Chain, Engineering, Human Resources, Legal, Information Technology, Marine, Land. Map to standard categories.
 - **Working JS code**:
 ```javascript
@@ -435,7 +435,7 @@ items.forEach(item => {
 });
 console.log('CONORAW|||' + jobs.join('\n'));
 ```
-- **Notes**: 4 countries: United States (32), Canada (3), Norway (2), Australia (1). Workday backend (wd1.myworkdayjobs.com) may be down during maintenance windows.
+- **Notes**: 4 countries: USA (32), Canada (3), Norway (2), Australia (1). Workday backend (wd1.myworkdayjobs.com) may be down during maintenance windows.
 - **Last scraped**: 2026-03-12 (38 jobs)
 
 ### 13. Petronas (29 jobs)
@@ -600,7 +600,7 @@ cards.forEach(card => {
 });
 console.log('WOODSIDE|||'+jobs.join('\n'));
 ```
-- **Country mapping**: MX→Mexico, US/TX→United States, AU→Australia, SG→Singapore
+- **Country mapping**: MX→Mexico, US/TX→USA, AU→Australia, SG→Singapore
 - **Date format**: `D Mon YYYY` (e.g., "4 Mar 2026") → convert to YYYY-MM-DD
 - **Link Format**: `https://careers.woodside.com.au/job/{slug}/{id}/`
 - **Notes**: Small job count (15). No Shadow DOM — standard DOM queries work fine.
@@ -722,7 +722,7 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
      fetch('/positions_saipem.json').then(r=>r.json()).then(data=>{
        let P=data.data.Positions;
        let cm={'United Arab Emirates':'UAE','United Kingdom':'UK',
-               "Cote d'Ivoire":'Ivory Coast','United States':'USA'};
+               "Cote d'Ivoire":'Ivory Coast','USA':'USA'};
        let jobs=[];
        for(let s of Object.keys(P)){
          for(let j of P[s]){
@@ -754,7 +754,7 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
      # Country names that appear in the data (used as record boundary markers):
      countries = '(?:Italy|France|UK|Angola|Offshore|Qatar|Indonesia|China|' \
                  'Ivory Coast|Mozambique|Australia|Romania|Saudi Arabia|Nigeria|' \
-                 'UAE|India|Brazil|Guyana|USA|Unknown|United States)'
+                 'UAE|India|Brazil|Guyana|USA|Unknown)'
      records = re.findall(
          rf'({countries}\|[^|]*?\|[^|]*?\|\d{{4}}-\d{{2}}-\d{{2}}\|\d+\|[^\|]+?)' \
          rf'(?={countries}\||$)', raw)
@@ -882,10 +882,10 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **API**: `POST /wday/cxs/repsol/Repsol/jobs` with `{"appliedFacets":{},"limit":20,"offset":N,"searchText":""}`
 - **Detail API**: `GET /wday/cxs/repsol/Repsol{externalPath}` — returns `jobPostingInfo` with `title`, `location`, `country.descriptor`, `startDate`
 - **Link Format**: `https://repsol.wd3.myworkdayjobs.com/en-US/Repsol{externalPath}`
-- **Country Mapping**: `country.descriptor` from detail API. "United States of America" → "United States"
+- **Country Mapping**: `country.descriptor` from detail API. "United States of America" → "USA"
 - **Categorization**: Standard `categorize()` function with added Spanish terms (prácticas, curso, prevención, mantenimiento, fiabilidad, producción, laboratorio, jefe, vendedor, expendedor, planta, infraestructura tid)
 - **Note**: One job has no location/country — generic "Join our team" posting, defaults to Spain
-- **Countries**: Spain 29, United States 19, Bolivia 1, Italy 1, Luxembourg 1
+- **Countries**: Spain 29, USA 19, Bolivia 1, Italy 1, Luxembourg 1
 - **Output**: `Repsol_Jobs.csv`
 
 ### 36. Sasol (72 jobs)
@@ -895,9 +895,9 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **DOM Selectors**: `.job-tile` for each job card. Each contains: `a[href*="/job/"]` for title+link, text fields for "City", "Posting Date", "Other Locations"
 - **Data Extraction**: Parse `.innerText` with regex: `City\n(.+)`, `Posting Date\n(.+)`, `Other Locations\n(.+)`
 - **Link Format**: `https://jobs.sasol.com/job/{City}-{Title-Slug}/{JobId}/`
-- **Country Mapping**: "Other Locations" field sometimes has "City, Country" format. For entries without country, map by city: Secunda/Sandton/Sasolburg/Durban/Komatipoort → South Africa, Lake Charles/Houston/Tucson → United States, Hamburg/Marl/Brunsbüttel → Germany, Inhambane → Mozambique
+- **Country Mapping**: "Other Locations" field sometimes has "City, Country" format. For entries without country, map by city: Secunda/Sandton/Sasolburg/Durban/Komatipoort → South Africa, Lake Charles/Houston/Tucson → USA, Hamburg/Marl/Brunsbüttel → Germany, Inhambane → Mozambique
 - **Date Format**: "Mar 11, 2026" → parse with `datetime.strptime('%b %d, %Y')` → "2026-03-11"
-- **Countries**: South Africa 30, Germany 21, United States 12, Mozambique 9
+- **Countries**: South Africa 30, Germany 21, USA 12, Mozambique 9
 - **Output**: `Sasol_Jobs.csv`
 
 ### 37. Occidental (24 jobs)
@@ -906,9 +906,9 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **API**: `POST /wday/cxs/oxy/Corporate/jobs` with `{"appliedFacets":{},"limit":20,"offset":N,"searchText":""}`
 - **Detail API**: `GET /wday/cxs/oxy/Corporate{externalPath}` — returns `jobPostingInfo` with `title`, `location`, `country.descriptor`, `startDate`
 - **Link Format**: `https://oxy.wd5.myworkdayjobs.com/en-US/Corporate{externalPath}`
-- **Country Mapping**: `country.descriptor` from detail API. "United States of America" → "United States". One job has no location/country — defaults to United States
+- **Country Mapping**: `country.descriptor` from detail API. "United States of America" → "USA". One job has no location/country — defaults to USA
 - **Note**: Includes Direct Air Capture (DAC-Stratos) positions in Ector County, TX — carbon capture technology division
-- **Countries**: United States 21, Algeria 2, Canada 1
+- **Countries**: USA 21, Algeria 2, Canada 1
 - **Output**: `Occidental_Jobs.csv`
 
 ### 38. EOG Resources (65 jobs)
@@ -918,7 +918,7 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **DOM Notes**: JS execution that references `href` attributes with query strings gets BLOCKED by the browser extension's cookie/query string filter. Workaround: extract job IDs via regex `href.match(/jo_num=(\d+)/)` separately, then combine with text-parsed data.
 - **Link Format**: `https://careers.eogresources.com/jobdetails.asp?jo_num={id}`
 - **Date Format**: "Posted M/D/YYYY" → parse with `datetime.strptime('%m/%d/%Y')` → "YYYY-MM-DD"
-- **Country**: All jobs are United States only
+- **Country**: All jobs are USA only
 - **Locations**: Houston 28, Midland 16, Corpus Christi 5, New Albany OH 4, Malvern OH 3, others
 - **Output**: `EOG_Resources_Jobs.csv`
 
