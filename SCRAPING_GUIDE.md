@@ -971,6 +971,19 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **Output**: `CNRL_Jobs.csv`
 - **Last scraped**: 2026-03-12
 
+### 44. Cenovus Energy (42 jobs)
+- **URLs**: Two career sites:
+  - Workday: `https://cenovus.wd3.myworkdayjobs.com/careers` (32 jobs)
+  - Contract Portal: `https://cenovus-portal.clientconnections.com/jobs?lang=en` (10 contract jobs)
+- **Platform 1 (Workday)**: Standard Workday REST API — `POST /wday/cxs/cenovus/careers/jobs` with `{appliedFacets:{}, limit:20, offset:N, searchText:''}`. Total from first API call: 32. Paginated (20 per page, 2 pages).
+- **Job fields**: `title`, `locationsText`, `postedOn`, `externalPath` from `jobPostings` array.
+- **Detail link format**: `https://cenovus.wd3.myworkdayjobs.com/careers{externalPath}`
+- **Platform 2 (Portal)**: Client Connections SPA (React/MUI). Job cards in `.MuiPaper-root.MuiPaper-elevation` divs. No individual job URLs — SPA-only, use portal base URL as link.
+- **Country extraction**: Workday locations use `CA-XX-City` (Canada) / `US-XX-City` (USA) format. Portal locations use city + province/state abbreviation.
+- **Countries**: Canada 25, USA 17.
+- **Output**: `Cenovus_Energy_Jobs.csv`
+- **Last scraped**: 2026-03-12
+
 ---
 
 ## Common Patterns
