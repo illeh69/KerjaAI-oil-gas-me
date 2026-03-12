@@ -442,57 +442,136 @@ console.log('CONORAW|||' + jobs.join('\n'));
 - **URL**: https://careers.petronas.com/en/sites/CX_1/jobs?mode=location
 - **Platform**: Oracle CX Recruiting
 - **Method**: All jobs load on single page (scroll to bottom triggers lazy-load for remaining cards). Extract from `.job-tile` parent divs.
-- **DOM Selectors**: `.job-tile` for cards, `.job-tile__title` for title, `.job-list-item__job-info-item` for location/date, `a[href*="/job/"]` for links.
+- **DOM Selectors**: `.job-tile` for cards, `a[href*="/job/"]` for links. Parse title from first line of `tile.innerText`, location/date by splitting on "Posting Date".
 - **Title cleanup**: Some titles have numeric prefixes like "100004709_" or "100005288 - " that need stripping via regex `^\d+[_ -]+`.
 - **Multi-location**: Some jobs show "Location and 1 more" — strip the suffix.
+- **Extraction JS**:
+```javascript
+let tiles = document.querySelectorAll('.job-tile');
+let seen = new Set(); let jobs = [];
+tiles.forEach(tile => {
+  let a = tile.querySelector('a[href*="/job/"]');
+  if (!a) return;
+  let href = a.getAttribute('href');
+  if (seen.has(href)) return; seen.add(href);
+  let lines = tile.innerText.split('\n').map(l=>l.trim()).filter(Boolean);
+  let title = (lines[0]||'').replace(/^\d+[_ -]+/, '');
+  let loc='', date='';
+  for (let line of lines) {
+    if ((line.includes('Malaysia')||line.includes('Perak')) && !line.startsWith('Posting')) {
+      let parts = line.split(/Posting Date/i);
+      loc = parts[0].replace(/[•]/g,'').replace(/and \d+ more/i,'').trim();
+      if (parts[1]) date = parts[1].trim();
+    }
+  }
+  let url = href.startsWith('http') ? href : 'https://careers.petronas.com'+href;
+  jobs.push(title+'|||'+loc+'|||'+date+'|||'+url);
+});
+```
 - **Notes**: All 29 jobs are in Malaysia (Kuala Lumpur, Perak, Putrajaya). Heavy on academic/research roles (university positions). Date format on page: MM/DD/YYYY → convert to YYYY-MM-DD for CSV.
-- **Last scraped**: 2026-03-11 (29 jobs)
+- **Last scraped**: 2026-03-12 (29 jobs)
 
-### 14. Suncor (20 jobs)
+### 14. Suncor (21 jobs)
 - **URL**: https://suncor.wd1.myworkdayjobs.com/Suncor_External
 - **Platform**: Workday
 - **Method**: Workday JSON API POST to `/wday/cxs/suncor/Suncor_External/jobs`
 - **Body**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`
 - **Response**: `{total, jobPostings[{title, externalPath, locationsText, postedOn, bulletFields[]}]}`
-- **Country mapping**: Most jobs in Canada (Calgary, Fort McMurray, Sarnia, Oakville, Montreal). US locations: Houston, Commerce City, Fort Lupton.
-- **Notes**: All 20 jobs fetched in single API call. Posted dates are relative ("Posted Yesterday", "Posted N Days Ago"). Link format: `https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External{externalPath}`.
-- **Last scraped**: 2026-03-11 (20 jobs)
+- **Country mapping**: Most jobs in Canada (Calgary, Fort McMurray, Sarnia, Oakville, Montreal, St. John's). US locations: Houston, Fort Lupton.
+- **Extraction JS**:
+```javascript
+(async () => {
+  let allJobs = [];
+  let resp = await fetch('/wday/cxs/suncor/Suncor_External/jobs', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({"appliedFacets":{},"limit":20,"offset":0,"searchText":""})
+  });
+  let data = await resp.json();
+  let total = data.total; allJobs = data.jobPostings || [];
+  if (total > 20) {
+    for (let off=20; off<total; off+=20) {
+      let r = await fetch('/wday/cxs/suncor/Suncor_External/jobs', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({"appliedFacets":{},"limit":20,"offset":off,"searchText":""})
+      });
+      let d = await r.json(); allJobs = allJobs.concat(d.jobPostings||[]);
+    }
+  }
+  return allJobs.map(j => j.title+'|||'+(j.locationsText||'')+'|||'+(j.postedOn||'')+'|||https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External'+j.externalPath);
+})()
+```
+- **Notes**: All 21 jobs fetched in two API calls (20+1). Posted dates are relative ("Posted Yesterday", "Posted N Days Ago"). Link format: `https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External{externalPath}`. IMPORTANT: `data.total` is only reliable from the FIRST API call.
+- **Last scraped**: 2026-03-12 (21 jobs)
 
 ### 15. Mubadala Energy (40 jobs)
 - **URL**: https://www.careers-page.com/mubadalaenergy#openings
 - **Platform**: careers-page.com (client-rendered SPA)
 - **Method**: Live DOM scraping (fetch+DOMParser does NOT work — SPA requires live browser rendering)
-- **Pagination**: `?page=N` (20 jobs per page, 2 pages)
+- **Pagination**: `?page=N` (20 jobs per page, 2 pages). Page 3 returns 0 results.
 - **DOM Selectors**:
-  - Job links: `a[href*="/mubadalaenergy/job/"]` (filter out "Apply" button text)
+  - Job links: `a[href*="/mubadalaenergy/job/"]` (filter out "Apply" button text where `text.length < 3`)
   - Title: link text content (deduplicate by href)
   - Location: find span with comma (location format) in parent div
   - Country: parsed from location string (Malaysia, Indonesia, UAE)
-- **Notes**: Client-rendered SPA — JavaScript state is lost on page navigation. Must extract and dump each page independently. No posting dates available. Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`. Clean duplicate city names in location (e.g., "Jakarta, Jakarta, Indonesia" → "Jakarta, Indonesia"). Note: `mubadalaenergy.careers-page.com` returns 404, must use `www.careers-page.com/mubadalaenergy`.
-- **Last scraped**: 2026-03-11 (40 jobs)
+- **Extraction JS** (run per page):
+```javascript
+let links = document.querySelectorAll('a[href*="/mubadalaenergy/job/"]');
+let seen = new Set(); let jobs = [];
+links.forEach(a => {
+  let href = a.getAttribute('href');
+  if (seen.has(href)) return;
+  let text = a.textContent.trim();
+  if (text.toLowerCase()==='apply' || text.length<3) return;
+  seen.add(href);
+  let parent = a.closest('div') || a.parentElement;
+  let locSpans = parent ? parent.querySelectorAll('span') : [];
+  let loc = '';
+  for (let s of locSpans) {
+    let st = s.textContent.trim();
+    if (st.includes(',') && st.length<100 && st!==text) { loc=st; break; }
+  }
+  jobs.push(text+'|||'+loc+'|||https://www.careers-page.com'+href);
+});
+console.log('MUB_PAGE|||'+jobs.join('\n'));
+```
+- **Notes**: Client-rendered SPA — JavaScript state is lost on page navigation. Must extract and dump each page independently via console.log. No posting dates available. Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`. Clean duplicate city names in location (e.g., "Jakarta, Jakarta, Indonesia" → "Jakarta, Indonesia"). Note: `mubadalaenergy.careers-page.com` returns 404, must use `www.careers-page.com/mubadalaenergy`.
+- **Last scraped**: 2026-03-12 (40 jobs)
 
 ### 16. INPEX (73 jobs — 2 sites combined)
 
 #### INPEX Australia (25 jobs)
 - **URL**: https://careers.inpex.com.au/search/?q=&searchResultView=LIST
 - **Platform**: SAP SuccessFactors (UI5 Web Components with Shadow DOM)
-- **Method**: POST API `https://careers.inpex.com.au/services/recruiting/v1/jobs` + UI pagination fallback
-- **API Payload**: `{"locale": "en_GB", "firstResult": N, "maxResults": 10, "query": "", "sortBy": "date_desc"}`
-- **Pagination**: 10 per page, 3 pages. API has a bug returning duplicates and missing some jobs — must supplement with UI page scraping via accessibility tree.
-- **Data**: `jobSearchResult[].response` contains `unifiedStandardTitle`, `id`, `jobLocationShort[]`, `urlTitle`, `unifiedStandardStart`
+- **Method**: Use accessibility tree (`read_page` tool with `ref_id` on main element) to extract job links and locations from each page. Shadow DOM prevents direct DOM queries. API supplement optional.
+- **API** (optional): POST `https://careers.inpex.com.au/services/recruiting/v1/jobs` with `{"locale":"en_GB","firstResult":N,"maxResults":10,"query":"","sortBy":"date_desc"}` — returns `jobSearchResult[].response` with `unifiedStandardTitle`, `id`, `jobLocationShort[]`, `urlTitle`. BUT API has bug returning many duplicates (100 raw → only 18 unique). Must use UI pagination.
+- **Pagination**: 10 per page, 3 pages. Click "Go to page N" buttons found via `find` tool.
+- **Accessibility tree structure**: `listitem` → `link "Title, job posting N of 25" href="/job/{urlTitle}/{id}-en_GB"` → `generic "Location"`.
 - **Link Format**: `https://careers.inpex.com.au/job/{urlTitle}/{id}-en_GB`
-- **Notes**: Shadow DOM prevents direct DOM queries — use accessibility tree (`read_page`) to extract links. API returns max ~18 unique of 25; remaining must be collected from UI pages 2-3.
-- **Last scraped**: 2026-03-11 (25 jobs)
+- **Notes**: All jobs in Australia (Perth WA or Darwin NT). Trailing comma in location text — strip it.
+- **Last scraped**: 2026-03-12 (25 jobs)
 
 #### INPEX Indonesia (48 jobs)
 - **URL**: https://career.inpex.co.id/home#jobsearch
 - **Platform**: ASP.NET WebForms
-- **Method**: DOM scraping with postback pagination
-- **Pagination**: 10 per page, 5 pages. Uses `WebForm_DoPostBackWithOptions` for page navigation (click pagination links)
-- **DOM Selectors**: `a[href*="/jobdetail/"]` for job links
+- **Method**: DOM scraping with postback pagination. Click pagination links found via `find` tool ("pagination page N link").
+- **Pagination**: 10 per page, 5 pages (last page has 8). JavaScript state preserved across postback pages.
+- **DOM Selectors**: `a[href*="/jobdetail/"]` for job links. Title from `a.textContent`, URL from href.
+- **Extraction JS** (run per page, accumulate in `window._inpexID`):
+```javascript
+let links = document.querySelectorAll('a[href*="/jobdetail/"]');
+let seen = new Set(); let jobs = [];
+links.forEach(a => {
+  let href = a.getAttribute('href');
+  if (seen.has(href)) return; seen.add(href);
+  let title = a.textContent.trim();
+  let url = href.startsWith('http') ? href : 'https://career.inpex.co.id'+href;
+  jobs.push(title+'|||'+url);
+});
+window._inpexID = (window._inpexID||[]).concat(jobs);
+```
 - **Link Format**: `https://career.inpex.co.id/jobdetail/{title}/{jobId}`
-- **Notes**: No category or date info available. All jobs are in Jakarta, Indonesia. JavaScript state preserved across postback pages. Must click through each page and collect links.
-- **Last scraped**: 2026-03-11 (48 jobs)
+- **Notes**: No category or date info available. All jobs are in Jakarta, Indonesia. Must click through each page and collect links.
+- **Last scraped**: 2026-03-12 (48 jobs)
 
 ### 17. Woodside Energy (15 jobs)
 - **URL**: https://careers.woodside.com.au/go/View-All-Opportunities/9784266/
