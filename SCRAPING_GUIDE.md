@@ -957,6 +957,20 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **Output**: `Santos_Jobs.csv`
 - **Last scraped**: 2026-03-12
 
+### 43. CNRL (27 jobs)
+- **URLs**: Three Oracle HCM Cloud career sites:
+  - Professional: `https://ehaa.fa.ca2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CNRL-Professional/jobs` (CX_1, 17 jobs)
+  - New Graduate: `https://ehaa.fa.ca2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CNRL-New-Graduate/jobs` (CX_2, 1 job)
+  - Campus: `https://ehaa.fa.ca2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CNRL-Campus/jobs` (CX_3, 9 jobs)
+- **Platform**: Oracle HCM Cloud (Candidate Experience)
+- **Method**: REST API — `GET /hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.workLocation,requisitionList.secondaryLocations&finder=findReqs;siteNumber={CX_N},facetsList=LOCATIONS%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES,limit=25,sortBy=POSTING_DATES_DESC`
+- **Job fields**: `Title`, `PrimaryLocation`, `PostedDate`, `Id` from `items[0].requisitionList` array.
+- **Detail link format**: `https://ehaa.fa.ca2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/{SITE}/job/{Id}`
+- **Country**: All jobs are in Canada (Alberta). Location format: "City, AB, Canada" or "AB, Canada".
+- **Deduplication**: Check job IDs across all 3 sites to avoid duplicates.
+- **Output**: `CNRL_Jobs.csv`
+- **Last scraped**: 2026-03-12
+
 ---
 
 ## Common Patterns
