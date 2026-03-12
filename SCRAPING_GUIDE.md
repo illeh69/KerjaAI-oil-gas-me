@@ -110,7 +110,7 @@
   - Job rows: `tr.data-row`
   - Title link: `a.jobTitle-link` → `.textContent.trim()` for title, `.getAttribute('href')` for link (prepend `https://jobs.exxonmobil.com` if relative)
   - Columns (td index): [0]=title, [1]=location, [2]=career field/category, [3]=job type, [4]=post date
-- **Country extraction**: Location string ends with 2-letter ISO country code (e.g., "Houston, TX, US"). Extract with regex `/,\s*([A-Z]{2})\s*$/`. Map codes to full names using a comprehensive lookup table stored in `window._ccMap` (US→USA, GB→United Kingdom, AE→United Arab Emirates, IN→India, MY→Malaysia, SG→Singapore, etc.).
+- **Country extraction**: Location string ends with 2-letter ISO country code (e.g., "Houston, TX, US"). Extract with regex `/,\s*([A-Z]{2})\s*$/`. Map codes to full names using a comprehensive lookup table stored in `window._ccMap` (US→USA, GB→UK, AE→UAE, IN→India, MY→Malaysia, SG→Singapore, etc.).
 - **Batch strategy**: Can safely fetch 4 pages (100 jobs) per JS call. Define global helper `window._emFetch(startRow, endRow)`. Total: ~5-6 JS calls for 21 pages. More stable than Baker Hughes — pages are smaller.
 - **Console dump**: Each batch logged as `console.log('EM{N}|||' + lines.join('\n'))`. Auto-saves to tool-result file for extraction.
 - **Deduplication**: By `title + '|' + url`. Expect ~2% overlap from pagination boundaries.
@@ -379,7 +379,7 @@ document.querySelector('.pagination-paging a.next')?.click();
 - **Method**: Click "Search" with empty fields to get all jobs → lands on `/jobs/search/{searchId}`. Hash-based pagination (`#page2`, `#page3`, etc.) via `.pagination a[href="#pageN"]` clicks. 10 jobs per page, 6 pages.
 - **DOM Selectors**: `.jlr_right_hldr` for job card containers. Inside each: `a.job_link` for title+URL, `span.location` for location, `span.category` for category.
 - **IMPORTANT**: The `.jlr_right_hldr` selector picks up ALL visible cards, which may include cards from previous pages still in DOM (hash-based navigation). Must dedup by URL after all pages extracted.
-- **Location format**: "City, Country" (e.g., "ABERDEEN, United Kingdom", "Abu Dhabi, United Arab Emirates"). Extract country from last comma-separated part.
+- **Location format**: "City, Country" (e.g., "ABERDEEN, UK", "Abu Dhabi, UAE"). Extract country from last comma-separated part.
 - **Clean location**: Remove "and N additional location(s)" suffix with regex `/\s+and \d+ additional location[s]?/i`.
 - **Working JS code** (run per page):
 ```javascript
@@ -400,7 +400,7 @@ document.querySelectorAll('.jlr_right_hldr').forEach(card => {
 document.querySelector('.pagination a[href="#pageN"]')?.click(); // N = next page number
 // Wait 3s between calls. After last page, dedup by URL.
 ```
-- **Notes**: 9 countries: United Kingdom (23), Malaysia (10), UAE (8), India (5), Equatorial Guinea (4), Turkmenistan (2), Ghana (1), Bahrain (1), Lithuania (1).
+- **Notes**: 9 countries: UK (23), Malaysia (10), UAE (8), India (5), Equatorial Guinea (4), Turkmenistan (2), Ghana (1), Bahrain (1), Lithuania (1).
 - **Last scraped**: 2026-03-12 (55 jobs)
 
 ### 12. ConocoPhillips (38 jobs)
@@ -873,7 +873,7 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **Link Format**: `https://fa-evkm-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1004/job/{Id}`
 - **Country Extraction**: Parse from `PrimaryLocation` — last comma-separated part is country name (e.g., "San Donato Milanese, Milano, Italy" → "Italy")
 - **Categorization**: Standard `categorize()` function (CategoryCode is empty)
-- **Countries**: Italy 39, Germany 7, Netherlands 7, Spain 5, United Kingdom 5, Iraq 3, Egypt 2, France 2, UAE 2, and 8 others
+- **Countries**: Italy 39, Germany 7, Netherlands 7, Spain 5, UK 5, Iraq 3, Egypt 2, France 2, UAE 2, and 8 others
 - **Output**: `ENI_Jobs.csv`
 
 ### 35. Repsol (51 jobs)
