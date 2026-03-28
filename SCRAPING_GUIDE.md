@@ -534,7 +534,7 @@ links.forEach(a => {
 });
 console.log('MUB_PAGE|||'+jobs.join('\n'));
 ```
-- **Notes**: Client-rendered SPA — JavaScript state is lost on page navigation. Must extract and dump each page independently via console.log. No posting dates available. Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`. Clean duplicate city names in location (e.g., "Jakarta, Jakarta, Indonesia" → "Jakarta, Indonesia"). Note: `mubadalaenergy.careers-page.com` returns 404, must use `www.careers-page.com/mubadalaenergy`.
+- **Notes**: Client-rendered SPA — JavaScript state is lost on page navigation. Must extract and dump each page independently via console.log. **No posting dates available — confirmed**: checked listing page rendered text, individual job detail pages, Vue component data, all network requests, and the main mubadalaenergy.com website. careers-page.com platform does not expose posting dates anywhere for this company. Do not attempt to re-scrape for dates. Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`. Clean duplicate city names in location (e.g., "Jakarta, Jakarta, Indonesia" → "Jakarta, Indonesia"). Note: `mubadalaenergy.careers-page.com` returns 404, must use `www.careers-page.com/mubadalaenergy`.
 - **Last scraped**: 2026-03-12 (40 jobs)
 
 ### 16. INPEX (73 jobs — 2 sites combined)
