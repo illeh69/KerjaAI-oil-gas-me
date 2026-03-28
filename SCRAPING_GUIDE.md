@@ -994,6 +994,25 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **Output**: `Marathon_Petroleum_Jobs.csv`
 - **Last scraped**: 2026-03-12
 
+### 46. SATORP (19 jobs)
+- **Full name**: Saudi Aramco Total Refining and Petrochemical Company
+- **URL**: `https://career-sa20.hr.cloud.sap/career?company=SATORPPROD`
+- **Platform**: SAP SuccessFactors (hosted on career-sa20.hr.cloud.sap)
+- **Method**: Browser-based scraping via `read_page` accessibility tree (JS execution blocked due to CSRF token `_s.crb` appended to URL after search). Steps:
+  1. Navigate to `https://career-sa20.hr.cloud.sap/career?company=SATORPPROD`
+  2. Click "Search Jobs" button → 19 jobs returned
+  3. Change items-per-page dropdown to 25 (shows all on one page)
+  4. Use `read_page` with `ref_id` of the Job Results region (depth=8) to extract accessibility tree
+  5. Parse job titles, req IDs, and posted dates from the tree
+- **Job selectors**: `a[class*="jobTitle"]` returns 19 elements (use for JS-based extraction if CSRF allows)
+- **Job fields**: Title from link text, Requisition ID from note element, Date from "Posted on MM/DD/YYYY" text
+- **Detail link format**: `https://career-sa20.hr.cloud.sap/career?career%5fns=job%5flisting&company=SATORPPROD&navBarLevel=JOB%5fSEARCH&rcm%5fsite%5flocale=en%5fUS&career_job_req_id={REQ_ID}&selected_lang=en_US`
+- **Country**: Saudi Arabia. Location: Jubail Industrial City (all roles on-site).
+- **Pagination**: 1 page (19 jobs total, fits in 25-per-page view)
+- **Date format**: MM/DD/YYYY in portal → convert to YYYY-MM-DD for CSV
+- **Output**: `SATORP_Jobs.csv`
+- **Last scraped**: 2026-03-28
+
 ---
 
 ## Common Patterns
