@@ -117,7 +117,7 @@
 - **Notes**: Method is stable and works as documented. ExxonMobil pages are relatively small (~100KB vs Baker Hughes ~500KB), so 4 pages per call is safe.
 - **Output**: `ExxonMobil_Jobs.csv`
 
-### 5. Halliburton (537 jobs)
+### 5. Halliburton (580 jobs)
 - **URL**: https://careers.halliburton.com/en/search-jobs
 - **Platform**: TalentBrew
 - **Method**: Define a helper function `window._halFetch(startPage, endPage)` on the careers page, then call it in batches of 3 pages. The function fetches each page's HTML via `fetch()`, parses with `DOMParser`, and extracts job data from `a[data-job-id]` elements.
@@ -167,7 +167,7 @@
   - Adding `X-Requested-With: XMLHttpRequest` header does not help
   - The live page renders 23 jobs (more than the 15 in fetched HTML) because extra jobs are loaded by client-side JS after initial render
 - **Country normalization**: Clean whitespace from location text, then extract last segment after final comma. "United States" → "USA", "United Kingdom" → "UK", "United Arab Emirates" → "UAE"
-- **Notes**: No date posted field available in the listing page — leave Date Posted column empty in CSV.
+- **Notes**: Dates available on individual job detail pages via JSON-LD `datePosted` field (format: `YYYY-M-D`, convert to `YYYY-MM-DD`). Fetch each job URL and extract with regex `/"datePosted"s*:s*"([^"]+)"`. Use `Promise.all` in batches of 20 for parallel fetching.
 
 ### 6. BP (407 jobs)
 - **URL**: https://careers.bp.com/listing (Algolia — recommended) or https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers (Workday — backup)
