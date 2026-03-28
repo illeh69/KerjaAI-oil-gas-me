@@ -911,7 +911,7 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **Countries**: USA 21, Algeria 2, Canada 1
 - **Output**: `Occidental_Jobs.csv`
 
-### 38. EOG Resources (65 jobs)
+### 38. EOG Resources (80 jobs)
 - **URL**: `https://careers.eogresources.com/process_jobsearch.asp?jobTitle=&cityZip=&proximity=`
 - **Platform**: Custom ASP career portal (careers.eogresources.com)
 - **Method**: Page loads all results (no pagination needed for current 65 jobs). Parse `document.body.innerText` — pattern is repeating blocks of "Job Details\n{Title}\n{Location}\nPosted {date}". Job IDs extracted from `a[href]` containing `jo_num=` parameter.
