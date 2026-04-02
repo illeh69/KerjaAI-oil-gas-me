@@ -1013,6 +1013,32 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - **Output**: `SATORP_Jobs.csv`
 - **Last scraped**: 2026-03-28
 
+### 47. Sembcorp Industries (82 jobs)
+- **URL**: `https://hrsembcorp.darwinbox.com/ms/candidatev2/main/careers/allJobs`
+- **Platform**: Darwinbox (Angular SPA)
+- **Method**: Direct REST API call — POST to `/ms/candidateapi/job/alljobs?companyId=main`
+- **API discovery**: Install fetch/XHR interceptor (`window._apiCalls = []`) before clicking "Load More Jobs" to capture the endpoint.
+- **Request body**: `{"page":1,"limit":200,"searchText":"","filters":{}}`
+- **Headers**: `{"Content-Type": "application/json"}`
+- **Full JS call**:
+  ```javascript
+  fetch('/ms/candidateapi/job/alljobs?companyId=main', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({page: 1, limit: 200, searchText: '', filters: {}})
+  }).then(r => r.json()).then(d => { window._sembData = d; });
+  // Then check: window._sembData.data.length  (returns 82)
+  ```
+- **Response structure**: `{status, data: [...], job_counts}` — `data` array has all jobs
+- **Key fields per job**: `title`, `country`, `locations` (city+region+country), `posted_on` (e.g. "1-Apr-2026"), `id` (alphanumeric ID used in URL)
+- **Detail link format**: `https://hrsembcorp.darwinbox.com/ms/candidatev2/main/careers/jobDetails/{id}`
+- **Data transfer**: Extract fields in a loop, pipe-delimited (`|||`), inject into `article.textContent`, read via `get_page_text` tool
+- **Country**: Pulled directly from `job.country` field (Singapore, Vietnam, India, Indonesia, Philippines, Bangladesh)
+- **Date format**: `D-Mon-YYYY` (e.g. `1-Apr-2026`) → parse with `%d-%b-%Y` → output as `YYYY-MM-DD`
+- **Location cleaning**: `"Singapore, Central, Singapore"` → `"Singapore"`; `"Dong Da, Ha Noi, Vietnam"` → `"Hanoi, Vietnam"`; `"South Jakarta, DKI Jakarta, Indonesia"` → `"Jakarta, Indonesia"`
+- **Output**: `Sembcorp_Jobs.csv`
+- **Last scraped**: 2026-04-02
+
 ---
 
 ## Common Patterns
