@@ -1,5 +1,13 @@
 # Oil & Gas Job Board - Scraping Guide
 
+## ⚠️ GLOBAL POLICY: NO COUNTRY/REGION FILTERING
+
+**ALL jobs from ALL countries must be included in every CSV. Never apply any Middle East (ME) country filter, regional filter, or any other geographic filter when scraping. Every job posted by a company must be included regardless of location. This policy applies to ALL companies in this guide, both now and in future scrapes.**
+
+If you see code using `ME_COUNTRIES`, `MIDDLE_EAST`, or any other country allowlist/blocklist — remove it. The job board is global.
+
+---
+
 ## Company Scraping Methods
 
 ### 1. SLB (828 jobs)
