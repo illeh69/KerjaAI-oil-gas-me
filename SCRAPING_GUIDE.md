@@ -2,7 +2,7 @@
 
 ## Company Scraping Methods
 
-### 1. SLB (862 jobs)
+### 1. SLB (828 jobs)
 - **URL**: https://careers.slb.com/job-listing
 - **Platform**: Coveo Atomic Search
 - **Method**: REST API POST to `{apiBase}/rest/search/v2?organizationId={orgId}`
@@ -12,11 +12,12 @@
 - **Single API call**: POST with body `{aq: '@source=="ATS_Jobs_Source - Prod"', numberOfResults: 1000, sortCriteria: '@title ascending'}` returns ALL jobs at once (no pagination needed)
 - **Response structure**: `d.results[]` — each result has `raw.title`, `raw.country` (ARRAY), `raw.city` (string), `raw.category` (ARRAY), `raw.date` (Unix timestamp ms), `clickUri` (job URL)
 - **IMPORTANT — Data types**: `raw.country` and `raw.category` are ARRAYS, not strings. Use `Array.isArray(raw.country) ? raw.country.join('; ') : raw.country`. Date is Unix ms timestamp — convert with `new Date(raw.date).toISOString().split('T')[0]`.
-- **Console dump strategy**: 862 results is too large for one console.log. Split into 2 batches (~430 each), store in `window._slbBatch1` and `window._slbBatch2`, then dump each batch to console in chunks of 50 lines using `console.log('PREFIX|||' + chunk)`. Extract from tool-result file using Python.
+- **Console dump strategy**: 828 results is too large for one console.log. Split into 2 batches (~430 each), store in `window._slbBatch1` and `window._slbBatch2`, then dump each batch to console in chunks of 50 lines using `console.log('PREFIX|||' + chunk)`. Extract from tool-result file using Python.
 - **Deduplication**: By full line (title+country+city+url)
 - **Output**: `SLB_Jobs.csv`
+- **Last scraped**: 2026-04-03 (828 jobs)
 
-### 2. Baker Hughes (761 jobs)
+### 2. Baker Hughes (711 jobs)
 - **URL**: https://careers.bakerhughes.com/global/en/search-results
 - **Platform**: Phenom People
 - **Method**: Fetch each page's HTML via `fetch()`, then extract embedded `eagerLoadRefineSearch` JSON using bracket-matching (NOT regex).
@@ -61,8 +62,9 @@
   - Using absolute URLs in fetch may trigger cookie/query string blocking — use relative paths
 - **Deduplication**: Some jobs appear on multiple pages — deduplicate by `title + '|' + applyUrl`
 - **Output**: `Baker_Hughes_Jobs.csv`
+- **Last scraped**: 2026-04-03 (711 jobs)
 
-### 3. TotalEnergies (670 jobs)
+### 3. TotalEnergies (803 jobs)
 - **URL**: https://jobs.totalenergies.com/en_US/careers/SearchJobs/
 - **Platform**: Custom careers portal (server-rendered HTML)
 - **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `.article--result` elements.
@@ -91,15 +93,17 @@
     if (idx > 0) { country = afterDate.substring(0, idx).trim(); break; }
   }
   ```
-- **Post-processing (Python)**: Clean country field: strip "/ XX" suffixes with `re.sub(r'\s*/\s*\w+$', '', c)`. Strip trailing contract type words that may leak in.
+- **Post-processing (Python)**: Clean country field with two-step process: (1) Strip "/ XX" suffixes with `re.sub(r'\s*/\s*\w+$', '', c)`. (2) Strip ALL known contract type keywords that may leak in as suffixes. Use: `contract_types = ['Regular position','Fixed term position','Internship','Apprenticeship','Full-Time Apprenticeship','Alternance','Full-Time','Graduate','VIE','Sponsorship']` and for each, `c = c.split(ct)[0].strip()` if `ct in c`. This handles cases where the JavaScript picks up "France Full-Time" as the country because "Full-Time" appeared inside "Full-Time Apprenticeship" mid-loop — stripping at Python level is more reliable.
+- **CRITICAL — Country parsing ordering**: The contract type list must be ordered LONGEST-FIRST (e.g., `'Full-Time Apprenticeship'` before `'Full-Time'`, `'Apprenticeship'` before `'Alternance'`) to avoid partial matches that cut country text too early.
 - **Batch strategy**: Can safely fetch 4 pages (80 jobs) per JS call. Define a global helper function `window._teFetch(startOff, endOff)` and call it repeatedly. Each 4-page batch takes ~15 sec. Total: ~9 JS calls for 34 pages.
 - **IMPORTANT — What does NOT work**:
   - The DOM selectors `.list-item-jobCreationDate`, `.list-item-jobCountry` etc. do NOT exist on the fetched HTML — the data is in unstructured text within `.article--result`
   - Country cannot be extracted from CSS class selectors — must parse from text between date and contract type
 - **Deduplication**: Deduplicate by `title + '|' + href` after collection. Expect ~1-2% duplicates from pagination overlap.
 - **Output**: `TotalEnergies_Jobs.csv`
+- **Last scraped**: 2026-04-03 (803 jobs)
 
-### 4. ExxonMobil (521 jobs)
+### 4. ExxonMobil (493 jobs)
 - **URL**: https://jobs.exxonmobil.com/search/?q=&sortColumn=referencedate&sortDirection=desc&startrow=0
 - **Platform**: SuccessFactors (SAP)
 - **Method**: Fetch each page's HTML via `fetch()`, parse with `DOMParser`, extract job data from `tr.data-row` elements.
@@ -107,17 +111,18 @@
 - **Total jobs check**: `.paginationLabel` element on the loaded page shows "Results 1 – 25 of N". Extract with `text.match(/of\s+(\d+)/)`.
 - **Total pages**: `ceil(totalJobs / 25)`.
 - **DOM Selectors** (on DOMParser-parsed fetched HTML):
-  - Job rows: `tr.data-row`
+  - Job rows: `tr.data-row` — **CRITICAL**: `data-row` is a CSS CLASS, NOT an attribute. Use `tr.data-row` (dot notation), NOT `tr[data-row]` (bracket notation). `tr[data-row]` returns 0 results every time.
   - Title link: `a.jobTitle-link` → `.textContent.trim()` for title, `.getAttribute('href')` for link (prepend `https://jobs.exxonmobil.com` if relative)
   - Columns (td index): [0]=title, [1]=location, [2]=career field/category, [3]=job type, [4]=post date
-- **Country extraction**: Location string ends with 2-letter ISO country code (e.g., "Houston, TX, US"). Extract with regex `/,\s*([A-Z]{2})\s*$/`. Map codes to full names using a comprehensive lookup table stored in `window._ccMap` (US→USA, GB→UK, AE→UAE, IN→India, MY→Malaysia, SG→Singapore, etc.).
+- **Country extraction**: Location strings may include zip codes (e.g., "Bangalore, KA, IN, 560066"). Do NOT use `split(',').pop()` — it returns the zip code. Instead, scan ALL comma-separated tokens in REVERSE for the first one matching the 2-letter ISO code lookup table: `const tokens = loc.split(',').map(t=>t.trim()); let country=''; for (let i=tokens.length-1;i>=0;i--) { const cc=tokens[i].toUpperCase(); if (ccMap[cc]) { country=ccMap[cc]; break; } }`. Map codes to full names using `window._ccMap` (US→USA, GB→UK, AE→UAE, IN→India, MY→Malaysia, SG→Singapore, etc.).
 - **Batch strategy**: Can safely fetch 4 pages (100 jobs) per JS call. Define global helper `window._emFetch(startRow, endRow)`. Total: ~5-6 JS calls for 21 pages. More stable than Baker Hughes — pages are smaller.
 - **Console dump**: Each batch logged as `console.log('EM{N}|||' + lines.join('\n'))`. Auto-saves to tool-result file for extraction.
 - **Deduplication**: By `title + '|' + url`. Expect ~2% overlap from pagination boundaries.
 - **Notes**: Method is stable and works as documented. ExxonMobil pages are relatively small (~100KB vs Baker Hughes ~500KB), so 4 pages per call is safe.
 - **Output**: `ExxonMobil_Jobs.csv`
+- **Last scraped**: 2026-04-03 (493 jobs)
 
-### 5. Halliburton (580 jobs)
+### 5. Halliburton (619 jobs)
 - **URL**: https://careers.halliburton.com/en/search-jobs
 - **Platform**: TalentBrew
 - **Method**: Define a helper function `window._halFetch(startPage, endPage)` on the careers page, then call it in batches of 3 pages. The function fetches each page's HTML via `fetch()`, parses with `DOMParser`, and extracts job data from `a[data-job-id]` elements.
@@ -168,8 +173,9 @@
   - The live page renders 23 jobs (more than the 15 in fetched HTML) because extra jobs are loaded by client-side JS after initial render
 - **Country normalization**: Clean whitespace from location text, then extract last segment after final comma. "United States" → "USA", "United Kingdom" → "UK", "United Arab Emirates" → "UAE"
 - **Notes**: Dates available on individual job detail pages via JSON-LD `datePosted` field (format: `YYYY-M-D`, convert to `YYYY-MM-DD`). Fetch each job URL and extract with regex `/"datePosted"s*:s*"([^"]+)"`. Use `Promise.all` in batches of 20 for parallel fetching.
+- **Last scraped**: 2026-04-03 (619 jobs)
 
-### 6. BP (407 jobs)
+### 6. BP (390 jobs)
 - **URL**: https://careers.bp.com/listing (Algolia — recommended) or https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers (Workday — backup)
 - **Platform**: Algolia Search (primary), Workday (backup — often down for maintenance)
 - **Method (Primary — Algolia Search)**:
@@ -207,8 +213,9 @@
   - Data: `title`, `externalPath` (relative URL), `locationsText` ("Country - City"), `postedOn` ("Posted Today")
   - Link: `https://bpinternational.wd3.myworkdayjobs.com/en-US/bpCareers` + `externalPath`
   - Must navigate to Workday URL first, then use fetch() from that page.
+- **Last scraped**: 2026-04-03 (390 jobs)
 
-### 7. QatarEnergy (289 jobs)
+### 7. QatarEnergy (232 jobs)
 - **URL**: https://careerportal.qatarenergy.qa/jobs
 - **Platform**: Jibe (Angular Material) with REST API
 - **Method**: Navigate to the QatarEnergy careers page first, then use fetch() to call the REST API. `limit=100` works — 3-4 API calls fetch all jobs.
@@ -248,8 +255,9 @@
 - **Raw data file**: Extract lines from tool-result JSON file, write to `/tmp/qe_raw.txt`. Build CSV with `build_qe.py` using the standard categorize function (do NOT use raw categories directly — they are department-level, not standardized).
 - **IMPORTANT — Console data persistence**: If the console data is small enough to return inline (not saved to a tool-result file), Python extraction from files will fail. In that case, write the raw data directly from the inline tool result output to `/tmp/qe_raw.txt` using a heredoc in bash.
 - **Notes**: All jobs in Qatar (Doha, Mesaieed, Ras Laffan, Dukhan, Offshore). Location format in CSV: `"CITY, Qatar"`. Categories assigned by standard categorize function (title-based), not API categories.
+- **Last scraped**: 2026-04-03 (232 jobs)
 
-### 8. Saudi Aramco (222 jobs)
+### 8. Saudi Aramco (229 jobs)
 - **URL**: https://careers.aramco.com/search/?q=&sortColumn=referencedate&sortDirection=desc
 - **Platform**: Custom careers site (careers.aramco.com) with server-rendered HTML pagination
 - **Method**: Navigate to the Saudi Aramco careers page first, then use a single async JS function to fetch all pages and collect jobs. All pages are fetched in one JS call (9 pages takes ~5-10 sec total).
@@ -298,8 +306,9 @@
 - **Console dump**: `console.log('ARAMCO_ALL|||' + window._aramcoRaw.join('\n'))`. Format: `title|||location|||department|||url` per line. For ~222 jobs this fits in one dump.
 - **Raw data file**: Write raw data to `/tmp/aramco_raw.txt`. Build CSV with `build_aramco.py` using the standard categorize function.
 - **Notes**: All jobs in Saudi Arabia (location always "SA" in listing). Country = "Saudi Arabia", Location = "Saudi Arabia" in CSV. No date posted field available — leave empty. Categories assigned by title keywords (department names from listing are not standardized enough for direct use). Cannot fetch from Python (blocked by Aramco), must use browser JS.
+- **Last scraped**: 2026-04-03 (229 jobs)
 
-### 9. Shell (178 jobs)
+### 9. Shell (179 jobs)
 - **URL**: https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers
 - **Platform**: Workday
 - **Method**: JSON API POST to `/wday/cxs/shell/ShellCareers/jobs`
@@ -341,9 +350,9 @@
 })()
 ```
 - **Notes**: Links must include `/en-US/ShellCareers/` in path. Dedup by `externalPath`. 20 countries including India (24), Multiple (26), Philippines (16), Malaysia (15), US (14), UK (13).
-- **Last scraped**: 2026-03-12 (178 jobs)
+- **Last scraped**: 2026-04-03 (179 jobs)
 
-### 10. Chevron (199 jobs)
+### 10. Chevron (179 jobs)
 - **URL**: https://careers.chevron.com/search-jobs
 - **Platform**: TalentBrew (Radancy/TMP) with ElasticSearch backend
 - **Method**: Click-based pagination. Extract `a[href*="/job/"]` links from `#search-results-list li` items; title from `h2` element, location from `span.job-location` or last text line in link.
@@ -371,9 +380,9 @@ document.querySelector('.pagination-paging a.next')?.click();
 // Wait 3s between calls. After last page, dedup by URL.
 ```
 - **Notes**: Scraped worldwide. 14 countries: India (56), US (42), Philippines (35), Argentina (29), China (17), Israel (5), Australia (4), Netherlands (3), Singapore (2), Thailand (2), Guatemala (1), El Salvador (1), Japan (1), Egypt (1).
-- **Last scraped**: 2026-03-12 (199 jobs)
+- **Last scraped**: 2026-04-03 (179 jobs)
 
-### 11. Petrofac (55 jobs)
+### 11. Petrofac (46 jobs)
 - **URL**: https://petrofac.referrals.selectminds.com
 - **Platform**: SelectMinds/iCIMS
 - **Method**: Click "Search" with empty fields to get all jobs → lands on `/jobs/search/{searchId}`. Hash-based pagination (`#page2`, `#page3`, etc.) via `.pagination a[href="#pageN"]` clicks. 10 jobs per page, 6 pages.
@@ -401,9 +410,9 @@ document.querySelector('.pagination a[href="#pageN"]')?.click(); // N = next pag
 // Wait 3s between calls. After last page, dedup by URL.
 ```
 - **Notes**: 9 countries: UK (23), Malaysia (10), UAE (8), India (5), Equatorial Guinea (4), Turkmenistan (2), Ghana (1), Bahrain (1), Lithuania (1).
-- **Last scraped**: 2026-03-12 (55 jobs)
+- **Last scraped**: 2026-04-03 (46 jobs)
 
-### 12. ConocoPhillips (38 jobs)
+### 12. ConocoPhillips (37 jobs)
 - **URL**: https://careers.conocophillips.com/job-search-results/?query=&location=
 - **Platform**: Custom careers site (non-Workday UI) with Workday backend (wd1.myworkdayjobs.com). Apply links point to Workday.
 - **Method**: Navigate to URL (all jobs load on single page, no pagination needed). Reject cookies first. Extract from `.job_search_list_item` elements.
@@ -436,9 +445,9 @@ items.forEach(item => {
 console.log('CONORAW|||' + jobs.join('\n'));
 ```
 - **Notes**: 4 countries: USA (32), Canada (3), Norway (2), Australia (1). Workday backend (wd1.myworkdayjobs.com) may be down during maintenance windows.
-- **Last scraped**: 2026-03-12 (38 jobs)
+- **Last scraped**: 2026-04-03 (37 jobs)
 
-### 13. Petronas (29 jobs)
+### 13. Petronas (25 jobs)
 - **URL**: https://careers.petronas.com/en/sites/CX_1/jobs?mode=location
 - **Platform**: Oracle CX Recruiting
 - **Method**: All jobs load on single page (scroll to bottom triggers lazy-load for remaining cards). Extract from `.job-tile` parent divs.
@@ -469,9 +478,9 @@ tiles.forEach(tile => {
 });
 ```
 - **Notes**: All 29 jobs are in Malaysia (Kuala Lumpur, Perak, Putrajaya). Heavy on academic/research roles (university positions). Date format on page: MM/DD/YYYY → convert to YYYY-MM-DD for CSV.
-- **Last scraped**: 2026-03-12 (29 jobs)
+- **Last scraped**: 2026-04-03 (25 jobs)
 
-### 14. Suncor (21 jobs)
+### 14. Suncor (25 jobs)
 - **URL**: https://suncor.wd1.myworkdayjobs.com/Suncor_External
 - **Platform**: Workday
 - **Method**: Workday JSON API POST to `/wday/cxs/suncor/Suncor_External/jobs`
@@ -501,9 +510,9 @@ tiles.forEach(tile => {
 })()
 ```
 - **Notes**: All 21 jobs fetched in two API calls (20+1). Posted dates are relative ("Posted Yesterday", "Posted N Days Ago"). Link format: `https://suncor.wd1.myworkdayjobs.com/en-US/Suncor_External{externalPath}`. IMPORTANT: `data.total` is only reliable from the FIRST API call.
-- **Last scraped**: 2026-03-12 (21 jobs)
+- **Last scraped**: 2026-04-03 (25 jobs)
 
-### 15. Mubadala Energy (40 jobs)
+### 15. Mubadala Energy (37 jobs)
 - **URL**: https://www.careers-page.com/mubadalaenergy#openings
 - **Platform**: careers-page.com (client-rendered SPA)
 - **Method**: Live DOM scraping (fetch+DOMParser does NOT work — SPA requires live browser rendering)
@@ -534,8 +543,8 @@ links.forEach(a => {
 });
 console.log('MUB_PAGE|||'+jobs.join('\n'));
 ```
-- **Notes**: Client-rendered SPA — JavaScript state is lost on page navigation. Must extract and dump each page independently via console.log. **No posting dates available — confirmed**: checked listing page rendered text, individual job detail pages, Vue component data, all network requests, and the main mubadalaenergy.com website. careers-page.com platform does not expose posting dates anywhere for this company. Do not attempt to re-scrape for dates. Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`. Clean duplicate city names in location (e.g., "Jakarta, Jakarta, Indonesia" → "Jakarta, Indonesia"). Note: `mubadalaenergy.careers-page.com` returns 404, must use `www.careers-page.com/mubadalaenergy`.
-- **Last scraped**: 2026-03-12 (40 jobs)
+- **Notes**: Client-rendered SPA — JavaScript state is lost on page navigation. Must extract and dump each page independently via console.log. **CRITICAL — Console cleared on navigation**: When navigating from `?page=1` to `?page=2` (or vice versa), the browser console is cleared automatically. Any `console.log` data from the previous page is permanently lost. Strategy: dump page 1 data (MUB_PAGE1) BEFORE navigating to page 2. If console was already cleared, navigate back to page 1 and re-extract. Do not combine pages in a single batch — treat each page as an independent extraction. **No posting dates available — confirmed**: checked listing page rendered text, individual job detail pages, Vue component data, all network requests, and the main mubadalaenergy.com website. careers-page.com platform does not expose posting dates anywhere for this company. Do not attempt to re-scrape for dates. Link format: `https://www.careers-page.com/mubadalaenergy/job/{CODE}`. Clean duplicate city names in location (e.g., "Jakarta, Jakarta, Indonesia" → "Jakarta, Indonesia"). Note: `mubadalaenergy.careers-page.com` returns 404, must use `www.careers-page.com/mubadalaenergy`.
+- **Last scraped**: 2026-04-03 (37 jobs)
 
 ### 16. INPEX (73 jobs — 2 sites combined)
 
