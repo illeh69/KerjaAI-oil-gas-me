@@ -1058,6 +1058,23 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 
 ---
 
+### 48. Motiva (7 jobs)
+
+- **ATS**: Workday (wd1)
+- **URL**: `https://motiva.wd1.myworkdayjobs.com/MotivaCareers`
+- **API endpoint**: POST `/wday/cxs/motiva/MotivaCareers/jobs`
+- **Payload**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`
+- **Total field**: `data.total` (reliable from first call)
+- **Job fields per posting**: `title`, `locationsText`, `externalPath`, `postedOn`
+- **Link format**: `https://motiva.wd1.myworkdayjobs.com/MotivaCareers` + `externalPath`
+- **Country**: All USA (Texas — Houston, Port Arthur)
+- **Date parsing**: Relative strings ("Posted Yesterday", "Posted 2 Days Ago", "Posted N Days Ago", "Posted 30+ Days Ago") → compute from today's date
+- **Output**: `Motiva_Jobs.csv`
+- **Last scraped**: 2026-04-04
+- **Notes**: Only 7 jobs; single API call sufficient (limit=20 covers all). Standard Workday pattern same as Marathon Petroleum, Repsol, Occidental, Cenovus.
+
+---
+
 ## Common Patterns
 
 ### Workday Sites
