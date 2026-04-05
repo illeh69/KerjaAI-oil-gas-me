@@ -1160,6 +1160,34 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 
 ---
 
+### 52. Wood (958 jobs)
+
+- **ATS**: Oracle HCM Fusion Cloud (Oracle Recruiting Cloud)
+- **URL**: `https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs?mode=location`
+- **API endpoint**: `GET /hcmRestApi/resources/latest/recruitingCEJobRequisitions`
+- **Full URL pattern**: `/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.workLocation,requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=LOCATIONS%3BWORK_LOCATIONS,limit=100,sortBy=POSTING_DATES_DESC,offset={N}`
+- **Pagination**: `offset` parameter, `limit=100` max. Total in `response.items[0].TotalJobsCount`.
+- **Total jobs**: 958 (as of 2026-04-06)
+- **Pages**: 10 pages (958 ÷ 100, rounded up). Use `Promise.all()` with 10 concurrent requests.
+- **Response structure**: `response.items[0].requisitionList` is the array of jobs per page. Deduplicate by `Id` field.
+- **Job fields**: `Id`, `Title`, `PostedDate` (ISO date string), `PrimaryLocation` (full location, e.g. `"Doha, Qatar"` or `"Saudi Arabia"`), `PrimaryLocationCountry` (2-letter ISO code, e.g. `"SA"`)
+- **Country extraction**: Split `PrimaryLocation` by `,`, take last component. Normalize common names (UAE → United Arab Emirates, etc.)
+- **Date**: `PostedDate` is already ISO format `"YYYY-MM-DD"` — use directly
+- **Link format**: `https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/{Id}`
+- **Data export**: VM proxy blocks Oracle domain. Use browser same-origin fetch, store all jobs in `window.__wall__` after dedup, format as `title|||country|||location|||date|||url`, log via `console.log('WOOD_CHUNK_N|||...')`, read via `read_console_messages`.
+- **Sample fetch pattern**:
+  ```javascript
+  const BASE = '/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.workLocation,requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=LOCATIONS%3BWORK_LOCATIONS,limit=100,sortBy=POSTING_DATES_DESC,offset=';
+  const offsets = Array.from({length: 10}, (_, i) => i * 100);
+  const results = await Promise.all(offsets.map(o => fetch(BASE + o, {headers:{Accept:'application/json'}}).then(r=>r.json()).then(d=>(d.items?.[0]?.requisitionList)||[])));
+  const seen = new Set(); window.__wall__ = results.flat().filter(j => seen.has(j.Id) ? false : seen.add(j.Id));
+  ```
+- **Output**: `Wood_Jobs.csv`
+- **Last scraped**: 2026-04-06
+- **Notes**: Global engineering/EPCM firm. Top countries: USA (162), Colombia (119), Chile (110), Canada (82), United Kingdom (81), Thailand (68), Argentina (45), UAE (44), Australia (40), Saudi Arabia (32). Strong Latin America and Asia-Pacific presence. `workLocation[0].TownOrCity` is null for most jobs — rely on `PrimaryLocation` instead.
+
+---
+
 ### CSV Format
 All CSVs use: `Country,Company,Title,Category,Location,Date Posted,Link`
 
