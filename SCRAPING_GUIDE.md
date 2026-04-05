@@ -1075,6 +1075,37 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 
 ---
 
+### 49. Brunel (277 jobs)
+
+- **ATS**: Custom Next.js + Sitecore site with internal API proxy
+- **URL**: `https://www.brunel.net/en/jobs`
+- **API endpoint**: POST `https://www.brunel.net/api/search/PublicationsSearch/Get`
+- **Headers**: `Content-Type: application/json`
+- **Payload**:
+  ```json
+  {
+    "page": 1,
+    "pageSize": 100,
+    "language": "en",
+    "countryPreset": ["AU","BE","BR","CA","CN","DZ","GB","ID","IN","MZ","MY","NL","PG","QA","SG","US","..."],
+    "businessUnitPreset": [],
+    "businessLineFilter": [],
+    "sortOrder": "0"
+  }
+  ```
+- **countryPreset**: 60+ ISO 3166-1 alpha-2 codes from `window.__NEXT_DATA__.props.pageProps.fields["3790a2cc-6c9d-490e-ac71-f5df10957a37"].value` — extracts from `__NEXT_DATA__` on `/en/jobs` page. This filters to English-site jobs (~277) vs. global 2384.
+- **Pagination**: `totalCount` field in response. Loop `page` 1, 2, 3... incrementing until all jobs fetched.
+- **Job fields per posting**: `publicationId`, `title`, `country`, `location`, `publicationDate`
+- **Link format**: `https://www.brunel.net/en/jobs/{slugified-title}-{publicationId.lower()}`
+  - Slugify: `title.lower()` → replace non-alphanumeric with `-` → strip leading/trailing `-` → dedupe consecutive `-`
+- **Country normalization**: Some non-English names appear (Arabic `قطر`→Qatar, Dutch `België`→Belgium, Portuguese `Brasil`→Brazil, `República de Moçambique`→Mozambique). Apply `COUNTRY_MAP` dict and detect Arabic with regex `[\u0600-\u06FF]`.
+- **Date field**: `publicationDate` — ISO 8601 string (e.g. `2026-03-15T00:00:00`)
+- **Output**: `Brunel_Jobs.csv`
+- **Last scraped**: 2026-04-05
+- **Notes**: The API backend is `https://api.brunel.net/publicationsearch/api/PublicationsSearch` (requires `Ocp-Apim-Subscription-Key`), but the same-origin proxy at `/api/search/PublicationsSearch/Get` works without the key. Use the proxy to avoid CORS. Without `countryPreset`, returns all 2384 global jobs from all languages. ISR pages at `/_next/data/.../en/jobs/page/{N}.json` return only 12 static jobs and do NOT paginate — use the API instead.
+
+---
+
 ## Common Patterns
 
 ### Workday Sites
