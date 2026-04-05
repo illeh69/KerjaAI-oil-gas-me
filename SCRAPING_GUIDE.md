@@ -1106,6 +1106,27 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 
 ---
 
+### 50. KBR (1340 jobs)
+
+- **ATS**: Workday (wd5)
+- **URL**: `https://careers.kbr.com/us/en/search-results` (Phenom People frontend — use Workday API directly)
+- **Workday tenant**: `kbr` / **Site**: `KBR_Careers` / **Subdomain**: `kbr.wd5.myworkdayjobs.com`
+- **API endpoint**: POST `/wday/cxs/kbr/KBR_Careers/jobs` (relative, from `kbr.wd5.myworkdayjobs.com`)
+- **Payload**: `{"appliedFacets":{},"limit":20,"offset":0,"searchText":""}`
+- **Total field**: `data.total` (only reliable with `limit:20`; `limit:50` returns empty `total`)
+- **Pagination**: 1340 jobs ÷ 20 = 67 pages; use parallel batches of 20 requests each for speed
+- **Job fields per posting**: `title`, `locationsText`, `externalPath`, `postedOn`, `bulletFields[0]` (job ID)
+- **Link format**: `https://kbr.wd5.myworkdayjobs.com/KBR_Careers` + `externalPath`
+- **Date parsing**: Relative strings ("Posted Today", "Posted N Days Ago", "Posted 30+ Days Ago") → compute from today's date
+- **Country extraction**: Parse last component of `locationsText` (e.g. `"Chennai, Tamil Nadu, India"` → `"India"`). US state names map to `"USA"`. UK county names (Cumbria, Glasgow) → `"United Kingdom"`.
+- **Multi-location jobs**: `locationsText` = `"N Locations"` for jobs posted to multiple sites. Extract country from URL slug: `/job/Houston-Texas/` → USA; `/job/Saudi-Arabia/` → Saudi Arabia.
+- **Data export method**: VM proxy blocks `kbr.wd5.myworkdayjobs.com`. Use browser JS (same-origin fetch), format data as `title|||country|||location|||date|||url` lines, log via `console.log('KBR_CHUNK_N|||...')`, then read via MCP `read_console_messages` which saves to a file the VM can parse.
+- **Output**: `KBR_Jobs.csv`
+- **Last scraped**: 2026-04-06
+- **Notes**: KBR does substantial defense/government logistics work (LOGCAP). Major locations: USA (804), Australia (96), Saudi Arabia (68), Iraq (64), UAE (57), India (47), Diego Garcia/BIOT (46). Duplicate jobs occur at high offsets — deduplicate by `bulletFields[0]` (job ID) after fetching.
+
+---
+
 ## Common Patterns
 
 ### Workday Sites
