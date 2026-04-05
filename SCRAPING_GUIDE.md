@@ -1188,6 +1188,48 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 
 ---
 
+### 53. Worley (793 jobs)
+
+- **ATS**: EightFold.ai PCSX (Proactive Candidate Search Experience)
+- **URL**: `https://jobs.worley.com/careers?start=0&sort_by=hot`
+- **API endpoint**: `GET /api/pcsx/search?domain=worley.com&num=10&start=0&sort_by=hot`
+- **Pagination**: `start` parameter (offset), 10 per page fixed (higher `num` is ignored). Total in `response.data.count`.
+- **Total jobs**: 793 (as of 2026-04-06)
+- **Pages**: 80 pages (793 ÷ 10). Use 8 parallel batches of 10 concurrent requests.
+- **Response structure**: `response.data.positions` — array of job objects per page; `response.data.count` — total count
+- **Job fields**: `id` (numeric), `name` (title), `locations` (array), `standardizedLocations` (array), `postedTs` (Unix timestamp seconds), `department`, `workLocationOption`
+- **Country extraction**: Split `locations[0]` by `,`, take last component. Normalize to standard country names.
+- **Date**: `postedTs` Unix timestamp (seconds) → `new Date(ts * 1000).toISOString().slice(0, 10)`
+- **Link format**: `https://jobs.worley.com/careers/job/{id}`
+- **Key discovery notes**:
+  - `/api/apply/v2/jobs` returns `"Not authorized for PCSX"` — wrong product tier
+  - `/api/pcsx/search` is the correct endpoint; returns 422 with POST, must use GET
+  - `/careers?start=N` pages are SPA shell (162KB, no job data). Jobs rendered client-side by React
+  - Job data accessible via React fiber: `card.__reactInternalInstance$xxx` → walk up 7 levels → `fiber.memoizedProps.position`
+  - `/api/pcsx/similar_positions?domain=worley.com&position_id=X` also works (10 per call, sidebar panel)
+- **Sample parallel fetch**:
+  ```javascript
+  const offsets = Array.from({length: 80}, (_, i) => i * 10);
+  const batchSize = 10;
+  const allJobs = [];
+  for (let i = 0; i < offsets.length; i += batchSize) {
+    const batch = offsets.slice(i, i + batchSize);
+    const results = await Promise.all(batch.map(start =>
+      fetch('/api/pcsx/search?domain=worley.com&num=10&start=' + start + '&sort_by=hot')
+        .then(r => r.json()).then(d => d.data.positions || [])
+    ));
+    results.forEach(jobs => allJobs.push(...jobs));
+  }
+  const seen = new Set();
+  window.__allWorley__ = allJobs.filter(j => seen.has(j.id) ? false : seen.add(j.id));
+  ```
+- **Data export**: Same console.log chunk pattern as other companies (`WORLEY_CHUNK_N|||lines`)
+- **Output**: `Worley_Jobs.csv`
+- **Last scraped**: 2026-04-06
+- **Notes**: Global EPCM firm headquartered in Australia. Top countries: USA (189), Canada (114), India (105), Colombia (54), Argentina (50), Brazil (42), UAE (34), Mexico (32), Qatar (32), Saudi Arabia (23). Strong Americas presence. `standardizedLocations` gives cleaner city/state format; `locations` gives full city/country name for country extraction.
+
+---
+
 ### CSV Format
 All CSVs use: `Country,Company,Title,Category,Location,Date Posted,Link`
 
