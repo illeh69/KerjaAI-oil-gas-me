@@ -1140,6 +1140,26 @@ console.log('ADNOC_PN|||'+jobs.join('\n'));
 - Read via `read_console_messages` tool — auto-persists to file if >50K chars
 - Use markers (e.g., `EMSTART`/`EMEND`) for multi-line dumps
 
+### 51. Fluor (752 jobs)
+
+- **ATS**: EightFold.ai (vscdn.net)
+- **URL**: `https://careers.fluor.com/careers?domain=fluor.com`
+- **API endpoint**: `GET /api/apply/v2/jobs?domain=fluor.com&start=0&num=10&sort_by=relevance`
+- **Pagination**: `start` parameter (offset), always returns 10 per page regardless of `num`. Total in `response.count`.
+- **Total jobs**: 752 (as of 2026-04-06)
+- **Pages**: 76 pages (752 ÷ 10). Use 4 parallel batches of 20 concurrent requests each.
+- **Job fields**: `id`, `name` (title), `location` (e.g. `"Houston, US-TX, United States"`), `t_update` (Unix timestamp), `canonicalPositionUrl`
+- **Country extraction**: Last comma-separated component of `location`. Normalize `"United States"` → `"USA"`.
+- **Date**: `t_update` Unix timestamp → `new Date(ts * 1000).toISOString().slice(0, 10)`
+- **Link**: `canonicalPositionUrl` → `https://careers.fluor.com/careers/job/{id}`
+- **Initial state**: Page SSR-embeds first 10 positions in Redux store (`window.EF_REDUX_STORE`). "Show More Positions" button triggers the API. Total count available at `store.getState().count`.
+- **Data export**: VM proxy blocks `careers.fluor.com`. Use browser same-origin fetch, format as `title|||country|||location|||date|||url`, log via `console.log('FLUOR_CHUNK_N|||...')`, read via `read_console_messages`.
+- **Output**: `Fluor_Jobs.csv`
+- **Last scraped**: 2026-04-06
+- **Notes**: Heavy US presence (592/752). Also Canada (53), India (42), Philippines (16). Includes construction craft roles (pipefitter, boilermaker, ironworker) and large EPC project management.
+
+---
+
 ### CSV Format
 All CSVs use: `Country,Company,Title,Category,Location,Date Posted,Link`
 
